@@ -1,4 +1,4 @@
-package org.testes;
+package org.testes.utils;
 
 import io.appium.java_client.AppiumDriver;
 import lombok.extern.slf4j.Slf4j;

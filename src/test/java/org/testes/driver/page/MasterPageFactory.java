@@ -3,7 +3,7 @@ package org.testes.driver.page;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.support.PageFactory;
-import org.testes.Hooks;
+import org.testes.utils.Hooks;
 import io.appium.java_client.AppiumDriver;
 
 @Slf4j

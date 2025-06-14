@@ -3,7 +3,7 @@ package org.testes.paginas.hotel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebElement;
-import org.testes.Hooks;
+import org.testes.utils.Hooks;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.evidencia.PrintScreen;

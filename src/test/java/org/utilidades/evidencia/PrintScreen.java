@@ -1,11 +1,10 @@
 package org.utilidades.evidencia;
 
-import lombok.Getter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testes.Hooks;
-import org.testes.HooksEvidencia;
+import org.testes.utils.Hooks;
+import org.testes.utils.HooksEvidencia;
 
 import java.io.File;
 import java.io.IOException;

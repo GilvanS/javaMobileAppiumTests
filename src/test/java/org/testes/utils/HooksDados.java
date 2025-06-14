@@ -1,4 +1,4 @@
-package org.testes;
+package org.testes.utils;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import lombok.Getter;

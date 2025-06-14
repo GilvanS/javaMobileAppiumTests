@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
-import org.testes.Hooks;
+import org.testes.utils.Hooks;
 
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertTrue;

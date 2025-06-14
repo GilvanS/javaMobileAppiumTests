@@ -4,13 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.evidencia.PrintScreen;
-import org.testes.Hooks;
+import org.testes.utils.Hooks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static org.testes.Hooks.driver;
+import static org.testes.utils.Hooks.driver;
 
 @Slf4j
 public class AluguelDeCarrosActions {

@@ -7,8 +7,8 @@ import io.cucumber.plugin.event.TestCase;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;
-import org.testes.Hooks;
-import org.testes.HooksEvidencia;
+import org.testes.utils.Hooks;
+import org.testes.utils.HooksEvidencia;
 import org.utilidades.dados.Usuario;
 
 

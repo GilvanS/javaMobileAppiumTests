@@ -4,9 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
-import org.testes.Hooks;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.testes.utils.Hooks;
 
 @Slf4j
 public class PacotesActions {
