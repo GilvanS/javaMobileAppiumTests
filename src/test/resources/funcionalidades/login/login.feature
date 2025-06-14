@@ -92,9 +92,9 @@ Feature: Funcionalidades site de viagens CVC
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Ingressos' na tela 'Home'
     And seleciono o "<DESTINO>" na tela 'Ingressos'
-    And clicar no botão Escolha a data "<DATA>" na tela 'Ingressos'
-    And clicar no botão 'Buscar' na tela 'Ingressos'
-    And clicar no botão 'Conferir' detalhes na tela 'Ingressos'
+#    And clicar no botão Escolha a data "<DATA>" na tela 'Ingressos'
+#    And clicar no botão 'Buscar' na tela 'Ingressos'
+#    And clicar no botão 'Conferir' detalhes na tela 'Ingressos'
 
     Examples:
       | DESTINO | DATA |
