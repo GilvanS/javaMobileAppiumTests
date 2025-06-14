@@ -4,12 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
+import org.testes.Hooks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Slf4j
 public class PacotesActions {
 
     static PrintScreen print = new PrintScreen();
-    static PageBaseActions acoes = new PageBaseActions();
+    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
     public static PacotesPage pacotesPage(){
         return MasterPageFactory.getPage(PacotesPage.class);
     }
@@ -50,18 +53,17 @@ public class PacotesActions {
 
     public static void vldTxtPacoteRecomendado() throws InterruptedException {
         Thread.sleep(10000);
-        acoes.waitElement(pacotesPage().getVlTxtPacoteRecomendado());
+        acoes.waitForVisibility(pacotesPage().getVlTxtPacoteRecomendado());
     }
 
     public static void vldTxtIda() throws InterruptedException {
         Thread.sleep(1000);
-        acoes.swipeOrScrollImproved(pacotesPage().getVlTxtIda());
+        acoes.swipeVertical();
     }
 
     public static void clicarBtnReservarAgora() throws InterruptedException {
         Thread.sleep(1000);
-        acoes.swipeVertical(pacotesPage().getVlTxtReservarAgora());
-
+        acoes.swipeVertical();
     }
 
 

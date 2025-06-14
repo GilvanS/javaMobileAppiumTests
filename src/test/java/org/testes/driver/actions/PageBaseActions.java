@@ -115,7 +115,13 @@ public class PageBaseActions {
      */
     public void hideKeyboard() {
         try {
-            driver.hideKeyboard();
+            if (driver instanceof io.appium.java_client.android.AndroidDriver) {
+                ((io.appium.java_client.android.AndroidDriver) driver).hideKeyboard();
+            } else if (driver instanceof io.appium.java_client.ios.IOSDriver) {
+                ((io.appium.java_client.ios.IOSDriver) driver).hideKeyboard();
+            } else {
+                log.warn("hideKeyboard não suportado para o tipo de driver: " + driver.getClass().getSimpleName());
+            }
         } catch (Exception e) {
             log.warn("Teclado não estava visível ou não pôde ser escondido.");
         }

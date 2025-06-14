@@ -1,12 +1,17 @@
 package org.testes.paginas.home;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.AppiumDriver;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
 
 @Getter
 public class HomePage extends PageBaseActions {
+
+    public HomePage(AppiumDriver driver) {
+        super(driver);
+    }
 
     @AndroidFindBy(xpath = "//*[@content-desc= 'Pular introdução']")
     private WebElement btnPularIntroducao;

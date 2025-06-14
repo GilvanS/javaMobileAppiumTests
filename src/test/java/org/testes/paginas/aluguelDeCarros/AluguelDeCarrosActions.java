@@ -4,14 +4,20 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.evidencia.PrintScreen;
+import org.testes.Hooks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import static org.testes.Hooks.driver;
 
 @Slf4j
 public class AluguelDeCarrosActions {
 
+    private static final Logger log = LoggerFactory.getLogger(AluguelDeCarrosActions.class);
     static PrintScreen printScreen = new PrintScreen();
-    static PageBaseActions acoes = new PageBaseActions();
+    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
     public static AluguelDeCarrosPage aluguelDeCarrosPage() {
         return MasterPageFactory.getPage(AluguelDeCarrosPage.class);
     }
@@ -77,7 +83,7 @@ public class AluguelDeCarrosActions {
 
     public static void SelecionaroCarroToyota() throws InterruptedException {
         log.info("clicar no botão 'Conferir' detalhes na tela 'Aluguel de carros''");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Volkswagen Polo')]")
             , 7);
         if (!found) {
@@ -89,7 +95,7 @@ public class AluguelDeCarrosActions {
 
     public static void validarLblVerRotas() throws InterruptedException {
         log.info("valido a exibição da frase 'Volkswagen Polo' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             aluguelDeCarrosPage().getBySelecionarOcarroVolkswagenPolo(), 7);
         if (!found) {
             throw new AssertionError("Elemento 'Volkswagen Polo' não encontrado após múltiplos swipes");
@@ -98,7 +104,7 @@ public class AluguelDeCarrosActions {
 
     public static void validarCarrosDisponiveis() {
         log.info("valido a exibição da frase 'Carros disponíveis' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Ver detalhes')]")
             , 7);
         if (!found) {
@@ -108,7 +114,7 @@ public class AluguelDeCarrosActions {
 
     public static void validarLblVerDetalhes() throws InterruptedException {
         log.info("valido a exibição da frase 'Marcador do mapa' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Ver detalhes')]")
             , 7);
         if (!found) {
@@ -118,7 +124,7 @@ public class AluguelDeCarrosActions {
 
     public static void validarLblVerMais() {
         log.info("validar a exibição da frase 'Ver mais' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Ver mais')]")
             , 5);
         if (!found) {
@@ -149,7 +155,7 @@ public class AluguelDeCarrosActions {
 
     public static void validarLblEscolherCarro() {
         log.info("validar a exibição da frase 'Escolher carro' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Escolher carro')]")
             , 5);
         if (!found) {
@@ -159,12 +165,28 @@ public class AluguelDeCarrosActions {
 
     public static void validarLblCarroEscolhido() {
         log.info("validar a exibição da frase 'Carro escolhido' na tela 'Aluguel de carros'");
-        boolean found = acoes.swipeUntilElementVisible(
+        boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Carro escolhido')]")
             , 5);
         if (!found) {
             throw new AssertionError("Elemento 'Carro escolhido' não encontrado após múltiplos swipes");
         }
+    }
+
+    // Método utilitário local para swipeUntilElementVisible
+    public static boolean swipeUntilElementVisible(By by, int maxSwipes) {
+        int swipes = 0;
+        while (swipes < maxSwipes) {
+            try {
+                WebElement element = Hooks.getDriver().findElement(by);
+                if (element.isDisplayed()) {
+                    return true;
+                }
+            } catch (Exception e) {}
+            acoes.swipeVertical();
+            swipes++;
+        }
+        return false;
     }
 
 }

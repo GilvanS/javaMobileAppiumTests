@@ -1,5 +1,6 @@
 package org.testes.paginas.login;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,10 @@ import org.testes.driver.actions.PageBaseActions;
 
 @Getter
 public class LoginPage extends PageBaseActions {
+
+    public LoginPage(AppiumDriver driver) {
+        super(driver);
+    }
 
     @AndroidFindBy(xpath = "//*[@content-desc= 'Entre para aproveitar a melhor experiência']")
     private WebElement vldTxtEntreParaAproveitar;

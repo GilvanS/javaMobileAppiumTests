@@ -4,14 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
+import org.testes.Hooks;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 @Slf4j
 public class HomeActions {
-
+    private static final Logger log = LoggerFactory.getLogger(HomeActions.class);
     static PrintScreen print = new PrintScreen();
-    static PageBaseActions acoes = new PageBaseActions();
+    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
     public static HomePage homePage(){
         return MasterPageFactory.getPage(HomePage.class);
     }
@@ -23,7 +26,7 @@ public class HomeActions {
 
     public static void vldTxtOla() throws IOException {
         log.info("valido a exibicao da tela 'Home'");
-        acoes.waitElement(homePage().getVldTxtOla());
+        acoes.waitForVisibility(homePage().getVldTxtOla());
         print.screenshot("tela home");
     }
 
@@ -34,7 +37,7 @@ public class HomeActions {
 
     public static void vldTxtOla4Win() throws IOException {
         log.info("Valido o perfil 4Win logado");
-        acoes.waitElement(homePage().getVldTxtOla4Win());
+        acoes.waitForVisibility(homePage().getVldTxtOla4Win());
         print.screenshot("tela home");
     }
 
@@ -54,14 +57,13 @@ public class HomeActions {
 
     public static void clicarBtnIngressos() {
         log.info("clicar no botão 'Ingressos' na tela 'Home'");
-        acoes.horizontalSwipeLeft(homePage().getBtnCarros(), homePage().getBtnIngressos(), 5);
+        acoes.swipeHorizontal(false);
         acoes.click(homePage().getBtnIngressos());
     }
 
     public static void clicarBtnHoteis() {
-        log.info("clicar no botão 'Pacotes' na tela 'Home'");
-        acoes.swipeOrScrollImproved (homePage().getBtnHoteis());
-        acoes.horizontalSwipeLeft(homePage().getCarrosselHoteis(), homePage().getBtnHotelOrlando(), 5);
-        acoes.click(homePage().getBtnHotelOrlando());
+        log.info("clicar no botão 'Hotéis' na tela 'Home'");
+        acoes.swipeVertical();
+        acoes.click(homePage().getBtnHoteis());
     }
 }

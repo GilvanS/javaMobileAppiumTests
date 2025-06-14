@@ -1,5 +1,6 @@
 package org.testes.paginas.carrinho_de_compras;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,10 @@ import org.testes.driver.actions.PageBaseActions;
 
 @Getter
 public class CarrinhoDeComprasPage extends PageBaseActions {
+
+    public CarrinhoDeComprasPage(AppiumDriver driver) {
+        super(driver);
+    }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Resumo da viagem']")
     private WebElement lblResumoDaViagem;

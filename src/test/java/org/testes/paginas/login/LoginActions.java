@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
+import org.testes.Hooks;
 
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class LoginActions {
 
     static PrintScreen print = new PrintScreen();
-    static PageBaseActions acoes = new PageBaseActions();
+    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
 
     public static LoginPage loginPage(){
         return MasterPageFactory.getPage(LoginPage.class);
@@ -22,7 +23,7 @@ public class LoginActions {
     public static void vldTxtEntreParaAproveitar() throws IOException, InterruptedException {
         log.info("Validat texto 'Entre para aproveitar'");
         Thread.sleep(3000);
-        acoes.waitElement(loginPage().getVldTxtEntreParaAproveitar());
+        acoes.waitForVisibility(loginPage().getVldTxtEntreParaAproveitar());
         PrintScreen.screenshot("teste");
     }
 

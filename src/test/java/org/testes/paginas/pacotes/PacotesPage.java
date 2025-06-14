@@ -1,5 +1,6 @@
 package org.testes.paginas.pacotes;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,10 @@ import org.testes.driver.actions.PageBaseActions;
 
 @Getter
 public class PacotesPage extends PageBaseActions {
+
+    public PacotesPage(AppiumDriver driver) {
+        super(driver);
+    }
 
     @AndroidFindBy(xpath = "(//android.widget.EditText)[1]")
     private WebElement campoDeOndeVocePegaraSeuVoo;
@@ -56,6 +61,5 @@ public class PacotesPage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//*[@text= 'Reservar Agora']")
     private WebElement vlTxtReservarAgora;
-
 
 }

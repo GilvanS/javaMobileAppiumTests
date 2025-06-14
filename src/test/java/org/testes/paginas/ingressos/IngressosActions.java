@@ -4,12 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.evidencia.PrintScreen;
+import org.testes.Hooks;
 
 @Slf4j
 public class IngressosActions {
 
     static PrintScreen printScreen = new PrintScreen();
-    static PageBaseActions acoes = new PageBaseActions();
+    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
     public static IngressosPage ingressosPage() {
         return MasterPageFactory.getPage(IngressosPage.class);
     }

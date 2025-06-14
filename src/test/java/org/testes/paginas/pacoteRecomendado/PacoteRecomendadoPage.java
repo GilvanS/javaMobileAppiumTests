@@ -1,6 +1,7 @@
 package org.testes.paginas.pacoteRecomendado;
 
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,10 @@ import org.testes.driver.actions.PageBaseActions;
 
 @Getter
 public class PacoteRecomendadoPage extends PageBaseActions {
+
+    public PacoteRecomendadoPage(AppiumDriver driver) {
+        super(driver);
+    }
 
     @AndroidFindBy(xpath = "//*[@text= 'Detalhes do hotel']")
     private WebElement btnDetalhesDoHotel;
