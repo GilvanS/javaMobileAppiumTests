@@ -5,16 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/PrintScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/PrintScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
