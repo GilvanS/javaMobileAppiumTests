@@ -1,5 +1,6 @@
 package org.testes.paginas.carrinho_de_compras;
 
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
@@ -8,18 +9,20 @@ import org.testes.utils.Hooks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class CarrinhoDeComprasActions {
     private static final Logger log = LoggerFactory.getLogger(CarrinhoDeComprasActions.class);
-    static PrintScreen print = new PrintScreen();
+
     static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
+
     public static CarrinhoDeComprasPage carrinhoDeComprasPage(){
         return MasterPageFactory.getPage(CarrinhoDeComprasPage.class);
     }
 
+    @SneakyThrows
     public static void validarLblResumoDaViagem() {
         log.info("valido a exibição da mensagem 'Resumo da viagem' na tela 'Carrinho de compras'");
         acoes.waitForVisibility(carrinhoDeComprasPage().getLblResumoDaViagem());
+        acoes.swipeVertical();
     }
 
     public static void validarLblHospedagem() {
@@ -30,12 +33,13 @@ public class CarrinhoDeComprasActions {
     public static void validarLblRegrasECondicoes() {
         log.info("valido a exibição da mensagem 'Regras e condições' na tela 'Carrinho de compras'");
         acoes.waitForVisibility(carrinhoDeComprasPage().getLblRegrasECondicoes());
+        acoes.swipeHorizontal(carrinhoDeComprasPage().getLblRegrasECondicoes().isDisplayed());
     }
 
     public static void clicarBtnVerResumo() throws InterruptedException {
         log.info("clico no botão Ver resumo na tela Carrinho de compras");
-        Thread.sleep(500);
-        acoes.click(carrinhoDeComprasPage().getBtnCheckout());
+        Thread.sleep(5000);
+        acoes.waitForVisibility(carrinhoDeComprasPage().getBtnlVerResumo());
         acoes.click(carrinhoDeComprasPage().getBtnlVerResumo());
         Thread.sleep(500);
     }

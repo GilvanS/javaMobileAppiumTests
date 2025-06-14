@@ -41,16 +41,16 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão 'Detalhes do valor' na tela 'Pacote recomendado'
     And clico no botão 'Fechar' na tela 'Pacote recomendado'
     And clico no botão 'Reservar Agora' na tela 'Pacote recomendado'
-#    And valido a exibição da mensagem 'Viaje com mais conforto!' na tela 'Pacote recomendado'
-#    And clico no botão 'Continuar' na tela 'Pacote recomendado'
+    And valido a exibição da mensagem 'Viaje com mais conforto!' na tela 'Pacote recomendado'
+    And clico no botão 'Continuar' na tela 'Pacote recomendado'
 #    And valido a exibição da mensagem 'Atenção ao inicio da sua estadia' na 'Pacote recomendado'
 #    And clico no botão 'Estou ciente' na tela 'Pacote recomendado'
-#    And valido a exibição das mensagem 'Resumo da viagem' na tela 'Carrinho de compras'
-#    And valido a exibição das mensagem 'Hospedagem' na tela 'Carrinho de compras'
-#    And valido a exibição das mensagem 'Regras e condições' na tela 'Carrinho de compras'
-#    And clico no botão 'Ir para o pagamento' na tela 'Carrinho de compras'
-#    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
-#    And clico no botão Ver Resumo na tela Checkout
+    And valido a exibição das mensagem 'Resumo da viagem' na tela 'Carrinho de compras'
+    And valido a exibição das mensagem 'Hospedagem' na tela 'Carrinho de compras'
+    And valido a exibição das mensagem 'Regras e condições' na tela 'Carrinho de compras'
+    And clico no botão 'Ir para o pagamento' na tela 'Carrinho de compras'
+    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
+    And clico no botão Ver Resumo na tela Checkout
 
     Examples:
       | CIDADE_ORIGEM | CIDADE_DESTINO | DATA_INICIO | DATA_FIM |

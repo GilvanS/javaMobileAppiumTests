@@ -6,24 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/HooksDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/HooksEvidencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksEvidencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/page/MasterPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/driver/page/MasterPageFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/PrintScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/PrintScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +45,9 @@
     "accountId": "f35120e2-f5f8-4318-b405-b2ce44d88c58"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>

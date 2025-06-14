@@ -14,6 +14,8 @@ import org.utilidades.dados.Usuario;
 
 import java.io.*;
 import java.lang.reflect.Field;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -261,7 +263,8 @@ public class GeradorDocx {
                                 paragraph.removeRun(0); // Remove todos os runs existentes
                                 XWPFRun run = paragraph.createRun();
                                 run.setFontFamily("Arial");
-                                run.setText((String) Hooks.getDriver().getCapabilities().getCapability(placeholder)); // Define o texto
+                                Object valor = Hooks.getDriver().getCapabilities().getCapability(placeholder);
+                                run.setText(valor != null ? valor.toString() : ""); // Define o texto
                             }
                         }
                     }
@@ -315,5 +318,12 @@ public class GeradorDocx {
         }
 
         return stepsList;
+    }
+
+    public static URL getURL() throws MalformedURLException {
+        // Se o servidor Appium está rodando com --base-path /wd/hub
+        return new URL("http://127.0.0.1:4723/wd/hub");
+        // Se está rodando sem base-path, use apenas:
+        // return new URL("http://127.0.0.1:4723/");
     }
 }
