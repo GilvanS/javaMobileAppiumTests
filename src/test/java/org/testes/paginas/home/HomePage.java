@@ -37,7 +37,7 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[6]")
     private WebElement btnCarros;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[4]")
+    @AndroidFindBy(xpath = "(//*[@clickable='true'])[count(//android.view.View[@content-desc='Ingressos']/preceding-sibling::android.view.View[@content-desc]) + 1]")
     private WebElement btnIngressos;
 
     @AndroidFindBy(xpath = "//*[@content-desc= 'Promoções']")

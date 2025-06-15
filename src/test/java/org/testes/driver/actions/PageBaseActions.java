@@ -7,11 +7,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Collections;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.Pause;
+
+import static org.testes.adb.AdbActions.swipe;
 
 /**
  * Classe base para ações comuns de páginas mobile.
@@ -338,7 +341,7 @@ public class PageBaseActions {
     /**
      * Swipe vertical para cima usando porcentagem customizada da tela.
      */
-    public void verticalSwipeUp(double startPercentage, double endPercentage) {
+    public void verticalSwipeUp(double startPercentage, double endPercentage) throws IOException {
         double anchorPercentage = 0.5;
         Dimension size = driver.manage().window().getSize();
         int anchor = (int) (size.width * anchorPercentage);
@@ -350,7 +353,7 @@ public class PageBaseActions {
     /**
      * Swipe vertical customizado por porcentagem e âncora.
      */
-    public void verticalSwipe(double anchorPercentage, double startPercentage, double endPercentage) {
+    public void verticalSwipe(double anchorPercentage, double startPercentage, double endPercentage) throws IOException {
         Dimension size = driver.manage().window().getSize();
         int anchor = (int) (size.width * anchorPercentage);
         int startPoint = (int) (size.height * startPercentage);
@@ -361,7 +364,7 @@ public class PageBaseActions {
     /**
      * Swipe horizontal em um elemento por porcentagem.
      */
-    public void horizontalSwipe(WebElement element, double startPercentage, double endPercentage) {
+    public void horizontalSwipe(WebElement element, double startPercentage, double endPercentage) throws IOException {
         Rectangle rect = element.getRect();
         double anchorPercentage = 0.5;
         Dimension size = driver.manage().window().getSize();
@@ -374,7 +377,7 @@ public class PageBaseActions {
     /**
      * Swipe horizontal por âncora e porcentagem.
      */
-    public void horizontalSwipe(int anchor, double startPercentage, double endPercentage) {
+    public void horizontalSwipe(int anchor, double startPercentage, double endPercentage) throws IOException {
         Dimension size = driver.manage().window().getSize();
         int startPoint = (int) (size.width * startPercentage);
         int endPoint = (int) (size.width * endPercentage);
@@ -384,28 +387,28 @@ public class PageBaseActions {
     /**
      * Swipe horizontal para a direita.
      */
-    public boolean horizontalSwipeRight(WebElement ref, WebElement expected, int attempts) {
+    public boolean horizontalSwipeRight(WebElement ref, WebElement expected, int attempts) throws IOException {
         return horizontalSwipe(ref, expected, 0.20, 0.80, attempts);
     }
 
     /**
      * Swipe horizontal para a esquerda.
      */
-    public boolean horizontalSwipeLeft(WebElement ref, WebElement expected, int attempts) {
+    public boolean horizontalSwipeLeft(WebElement ref, WebElement expected, int attempts) throws IOException {
         return horizontalSwipe(ref, expected, 0.80, 0.20, attempts);
     }
 
     /**
      * Swipe horizontal para a esquerda por âncora.
      */
-    public boolean horizontalSwipeLeft(int anchor, WebElement expected, int attempts) {
+    public boolean horizontalSwipeLeft(int anchor, WebElement expected, int attempts) throws IOException {
         return horizontalSwipe(anchor, expected, 0.80, 0.20, attempts);
     }
 
     /**
      * Swipe horizontal com busca de elemento.
      */
-    public boolean horizontalSwipe(WebElement ref, WebElement expected, double startPercentage, double endPercentage, int attempts) {
+    public boolean horizontalSwipe(WebElement ref, WebElement expected, double startPercentage, double endPercentage, int attempts) throws IOException {
         boolean displayed = false;
         boolean swipe = false;
         int counter = 0;
@@ -423,7 +426,7 @@ public class PageBaseActions {
         return displayed;
     }
 
-    public boolean horizontalSwipe(int anchor, WebElement expected, double startPercentage, double endPercentage, int attempts) {
+    public boolean horizontalSwipe(int anchor, WebElement expected, double startPercentage, double endPercentage, int attempts) throws IOException {
         boolean displayed = false;
         boolean swipe = false;
         int counter = 0;
@@ -444,7 +447,7 @@ public class PageBaseActions {
     /**
      * Swipe vertical com busca de elemento (By).
      */
-    public boolean verticalSwipeDownAndSearch(double anchorPercentage, double startPercentage, double endPercentage, By element, int attempts) {
+    public boolean verticalSwipeDownAndSearch(double anchorPercentage, double startPercentage, double endPercentage, By element, int attempts) throws IOException {
         boolean displayed = false;
         boolean swipe = false;
         int counter = 0;
@@ -463,11 +466,11 @@ public class PageBaseActions {
         return displayed;
     }
 
-    public boolean verticalSwipeDownAndSearch(By element, int attempts) {
+    public boolean verticalSwipeDownAndSearch(By element, int attempts) throws IOException {
         return verticalSwipeDownAndSearch(0.50, 0.55, 0.15, element, attempts);
     }
 
-    public boolean verticalSwipeDownAndSearch(double anchorPercentage, double startPercentage, double endPercentage, WebElement element, int attempts) {
+    public boolean verticalSwipeDownAndSearch(double anchorPercentage, double startPercentage, double endPercentage, WebElement element, int attempts) throws IOException {
         boolean displayed = false;
         boolean swipe = false;
         int counter = 0;
@@ -505,11 +508,11 @@ public class PageBaseActions {
         return displayed;
     }
 
-    public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) {
+    public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) throws IOException {
         return verticalSwipeDownAndSearch(0.50, 0.55, 0.15, element, attempts);
     }
 
-    public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, double startPercentage, double endPercentage, int attempts) {
+    public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, double startPercentage, double endPercentage, int attempts) throws IOException {
         Rectangle rect = ref.getRect();
         Dimension size = driver.manage().window().getSize();
         double anchorPercentage = 0.50;
@@ -519,7 +522,7 @@ public class PageBaseActions {
         return verticalSwipeDownAndSearch(anchor, startPoint, endPoint, element, attempts);
     }
 
-    public boolean verticalSwipeDownAndSearch(WebElement element) {
+    public boolean verticalSwipeDownAndSearch(WebElement element) throws IOException {
         return verticalSwipeDownAndSearch(element, 5);
     }
 
@@ -527,45 +530,8 @@ public class PageBaseActions {
         return verticalSwipeUpAndSearch(element, 5);
     }
 
-    public boolean verticalSwipeDownAndSearch(By by) {
+    public boolean verticalSwipeDownAndSearch(By by) throws IOException {
         return verticalSwipeDownAndSearch(by, 5);
     }
 
-    /**
-     * Swipe utilitário para qualquer direção.
-     */
-    public void swipe(int startX, int startY, int endX, int endY) {
-
-    }
-
-    public void horizontalSwipeRight(WebElement btnIngressos) {
-        // Swipe da esquerda (20%) para a direita (80%) sobre o elemento
-        horizontalSwipe(btnIngressos, 0.20, 0.80);
-    }
-
-    /**
-     * Realiza swipe horizontal para a esquerda em um carrossel até encontrar o elemento desejado (By),
-     * ou atingir o número máximo de tentativas.
-     * @param carrossel WebElement do container scrollable (ex: HorizontalScrollView)
-     * @param byDestino By do elemento a ser encontrado
-     * @param maxAttempts Número máximo de swipes
-     * @return true se encontrou, false caso contrário
-     */
-    public boolean horizontalSwipeLeftAndSearch(WebElement carrossel, By byDestino, int maxAttempts) {
-        int attempts = 0;
-        while (attempts < maxAttempts) {
-            try {
-                WebElement el = driver.findElement(byDestino);
-                if (el.isDisplayed()) {
-                    return true;
-                }
-            } catch (NoSuchElementException e) {
-                // Ignora e faz swipe
-            }
-            horizontalSwipeLeft(carrossel, carrossel, 1);
-            delay(500); // Pequeno delay para animação do swipe
-            attempts++;
-        }
-        return false;
-    }
 }

@@ -39,8 +39,8 @@ public class IngressosActions {
 
     public static void clicarNoBotaoConfirmarParque() {
         log.info("Clicando no botão Confirmar parque");
-        acoes.click(ingressosPage().getBtnConfirmarDestino(), 10);
-        acoes.click(ingressosPage().getBtnContinuar(), 5);
+        acoes.click(ingressosPage().getBtnConfirmarParque(), 10);
+//        acoes.click(ingressosPage().getBtnContinuar(), 5);
     }
 
     public static void clicarNoBotaoConfirmarDatas() {
