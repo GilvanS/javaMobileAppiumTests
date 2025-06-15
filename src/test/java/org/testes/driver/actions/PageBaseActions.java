@@ -28,21 +28,44 @@ public class PageBaseActions {
     protected final int DEFAULT_TIMEOUT_SECONDS = 10;
 
     /**
-     * Realiza um swipe horizontal usando coordenadas específicas.
+     * Realiza um swipe horizontal usando coordenadas específicas até encontrar o elemento.
      * Ajuste as coordenadas conforme necessário para cada caso de uso.
      */
-    public void horizontalSwipeFingerAndSearch(int startX, int startY, int endX, int endY) {
-        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        Sequence swipe = new Sequence(finger, 1);
-        
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
-            PointerInput.Origin.viewport(), startX, startY));
-        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
-            PointerInput.Origin.viewport(), endX, endY));
-        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        
-        driver.perform(Collections.singletonList(swipe));
+    public void horizontalSwipeFingerAndSearch(int startX, int startY, int endX, int endY, WebElement element, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        while (attempts < maxAttempts && !elementFound) {
+            // Primeiro faz o swipe
+            PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+            Sequence swipe = new Sequence(finger, 1);
+            
+            swipe.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                PointerInput.Origin.viewport(), startX, startY));
+            swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+            swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000),
+                PointerInput.Origin.viewport(), endX, endY));
+            swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+            
+            driver.perform(Collections.singletonList(swipe));
+            
+            // Depois verifica se o elemento está visível
+            try {
+                delay(1000); // Aguarda a animação do swipe
+                if (element.isDisplayed()) {
+                    elementFound = true;
+                    return;
+                }
+            } catch (Exception e) {
+                // Elemento não encontrado, continua o loop
+            }
+            
+            attempts++;
+        }
+
+        if (!elementFound) {
+            log.warn("Elemento não encontrado após {} tentativas de swipe", maxAttempts);
+        }
     }
 
     /**

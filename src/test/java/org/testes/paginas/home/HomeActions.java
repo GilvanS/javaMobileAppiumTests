@@ -61,7 +61,7 @@ public class HomeActions {
     @SneakyThrows
     public static void clicarBtnIngressos() {
         log.info("clicar no botão 'Ingressos' na tela 'Home'");
-        acoes.horizontalSwipeFingerAndSearch(900, 400, 300, 200);
+        acoes.horizontalSwipeFingerAndSearch(900, 400, 300, 200, homePage().getBtnIngressos(), 3);
         acoes.click(homePage().getBtnIngressos(), 5);
     }
 
