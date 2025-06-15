@@ -61,12 +61,7 @@ public class HomeActions {
     @SneakyThrows
     public static void clicarBtnIngressos() {
         log.info("clicar no botão 'Ingressos' na tela 'Home'");
-        // Coordenadas para swipe left no carrossel
-        int x1 = 900; // início (direita do carrossel)
-        int y1 = 400; // centro vertical do carrossel
-        int x2 = 300; // fim (esquerda do carrossel)
-        int y2 = 400; // centro vertical do carrossel
-        acoes.swipeHorizontalWithCoordinates(900, 400, 300, 400);
+        acoes.horizontalSwipeFingerAndSearch(900, 400, 300, 200);
         acoes.click(homePage().getBtnIngressos(), 5);
     }
 
