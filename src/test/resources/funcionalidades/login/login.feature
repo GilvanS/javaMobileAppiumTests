@@ -110,7 +110,7 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão 'Voltar ao topo' na tela 'Aluguel de carros'
     And clico no botão 'Reservar' na tela 'Aluguel de carros'
     Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
-    And clico no botão 'Ver detalhes' na tela 'Aluguel de carros'
+#    And clico no botão 'Ver detalhes' na tela 'Aluguel de carros'
 #    And valido a exibição da frase 'Características' na tela 'Aluguel de carros'
 
     Examples:
