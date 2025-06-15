@@ -20,7 +20,11 @@ public class CheckoutActions {
     @SneakyThrows
     public static void validarLblResumoDoPedido() {
         log.info("valido a exibicao da mensagem 'Resumo do pedido' na tela 'Checkout'");
+        Thread.sleep(6000);
+        acoes.waitForVisibility(checkoutPage().getBtnCheckout());
+        acoes.click(checkoutPage().getBtnCheckout());
         acoes.waitForVisibility(checkoutPage().getVldLblResumo());
+        acoes.click(checkoutPage().getVldLblResumo());
         PrintScreen.screenshot("resumo do pedido"); // Descomente se quiser evidência
     }
 }

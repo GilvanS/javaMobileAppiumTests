@@ -38,8 +38,14 @@ public class IngressosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Conferir detalhes']")
     private WebElement btnConferirDetalhes;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Reservar']")
+    private WebElement btnReservar;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Resumo do Pedido (1)']")
     private WebElement viewResumoPedido;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
+    private WebElement btnCheckout;
 
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='20']")
     private WebElement btnDia20;

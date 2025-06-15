@@ -13,8 +13,14 @@ public class CheckoutPage extends PageBaseActions {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, 'Resumo do')]")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Ver resumo']")
     private WebElement vldLblResumo;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
+    private WebElement btnCheckout;
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='__next']/android.view.View[5]/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[2]/android.widget.EditText")
+    private WebElement campoPrimeiroNome;
 
 
 

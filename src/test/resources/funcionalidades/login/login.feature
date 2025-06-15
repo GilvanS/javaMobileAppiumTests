@@ -94,8 +94,6 @@ Feature: Funcionalidades site de viagens CVC
     And seleciono o "<DESTINO>" na tela 'Ingressos'
     And clico no botão Confirmar parque na tela Ingressos
     And clicar no botão Escolha a data "<DATA_INICIO>" na tela 'Ingressos'
-#    And seleciono a data "<DATA_FIM>" na tela 'Ingressos'
-#    And clico no botão Continuar na tela Ingressos
     And clico no botão Confirmar datas na tela Ingressos
     And clico no botão Conferir detalhes na tela Ingressos
     And clico o botão Reservar na tela Ingressos

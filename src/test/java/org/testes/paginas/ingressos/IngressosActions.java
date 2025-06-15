@@ -1,6 +1,7 @@
 package org.testes.paginas.ingressos;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
@@ -34,7 +35,9 @@ public class IngressosActions {
         acoes.click(ingressosPage().getCampoParaQualDestino());
         acoes.sendKeys(ingressosPage().getCampoParaQualDestino(), destino);
         Thread.sleep(2000);
-        AdbActions.tap(200,500);
+////        AdbActions.tap(200,500);
+//        acoes.verticalSwipeDownAndSearch(ingressosPage().getDestinoBetoCarreiro(),5);
+        acoes.click(ingressosPage().getDestinoBetoCarreiro());
     }
 
     public static void clicarNoBotaoConfirmarParque() {
@@ -50,21 +53,24 @@ public class IngressosActions {
 
     public static void clicarNoBotaoConferirDetalhes() {
         log.info("Clicando no botão Conferir detalhes");
+        acoes.waitForElementToBeClickable(ingressosPage().getBtnConferirDetalhes(), 10);
         acoes.click(ingressosPage().getBtnConferirDetalhes(), 10);
     }
 
+    @SneakyThrows
     public static void clicarNoBotaoReservar() {
         log.info("Clicando no botão Reservar");
-        // TODO: Adicionar o elemento correto quando disponível
-        // Exemplo: acoes.click(ingressosPage().getBtnReservar(), 10);
+        acoes.verticalSwipeDownAndSearch(ingressosPage().getBtnReservar(), 5);
+        acoes.click(ingressosPage().getBtnReservar());
+        Thread.sleep(2000);
     }
 
+    @SneakyThrows
     public static void validarResumoDePedido(String texto) {
         log.info("Validando exibição do resumo de pedido");
-        org.openqa.selenium.WebElement resumo = ingressosPage().getViewResumoPedido();
-        if (!resumo.isDisplayed() || (texto != null && !resumo.getText().contains(texto))) {
-            throw new AssertionError("Resumo de pedido não exibido ou texto não confere: " + texto);
-        }
+        Thread.sleep(2000);
+        acoes.click(ingressosPage().getBtnCheckout());
+        acoes.waitForElementToBeClickable(ingressosPage().getViewResumoPedido(), 10);
     }
 
     public WebElement getBtnDia(String dia) {
