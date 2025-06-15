@@ -39,8 +39,8 @@ public class HomeSteps {
     }
 
     @Given("clico no botão 'Ingressos' na tela 'Home'")
-    public void clicarNoBotãoIngressosNaTelaHome() {
-        HomeActions.clicarBtnIngressos();
+    public void clicarNoBotaoIngressosNaTelaHome() {
+        HomeActions.swipeCarrosselAteIngressosEClicarView3();
     }
 
     @Given("clico no botão 'Hotéis' na tela 'Home'")

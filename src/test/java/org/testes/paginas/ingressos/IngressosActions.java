@@ -23,6 +23,7 @@ public class IngressosActions {
     }
 
     public static void validarEscolharUmParque() {
+        log.info("Validando exibição da frase Escolhar um parque");
         acoes.waitForVisibility(ingressosPage().getVldLblEscolhaUmParque());
     }
 

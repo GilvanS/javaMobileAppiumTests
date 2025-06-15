@@ -66,4 +66,36 @@ public class HomeActions {
         acoes.swipeVertical();
         acoes.click(homePage().getBtnHoteis());
     }
+
+    /**
+     * Realiza swipe left no carrossel até o botão 'Ingressos' aparecer e clica no elemento [3] (clicável).
+     * Usa o HorizontalScrollView com scrollable='true' como referência para swipe.
+     * @return true se conseguiu clicar, false caso contrário.
+     */
+    public static boolean swipeCarrosselAteIngressosEClicarView3() {
+        int maxTentativas = 7;
+        try {
+            org.openqa.selenium.WebDriver driver = Hooks.getDriver();
+            org.openqa.selenium.WebElement carrossel = driver.findElement(org.openqa.selenium.By.xpath("//android.widget.HorizontalScrollView[@scrollable='true']"));
+            for (int i = 0; i < maxTentativas; i++) {
+                // Verifica se 'Ingressos' está visível
+                java.util.List<org.openqa.selenium.WebElement> ingressos = driver.findElements(org.openqa.selenium.By.xpath("//android.view.View[@content-desc='Ingressos']"));
+                for (org.openqa.selenium.WebElement ingresso : ingressos) {
+                    if (ingresso.isDisplayed()) {
+                        // Clica no elemento [3] do carrossel
+                        org.openqa.selenium.WebElement btnClicavel = driver.findElement(org.openqa.selenium.By.xpath("//android.widget.HorizontalScrollView/android.view.View[3]"));
+                        btnClicavel.click();
+                        log.info("Clique realizado no botão [3] após {} tentativas de swipe", i);
+                        return true;
+                    }
+                }
+                // Se não encontrou, faz swipe no carrossel
+                acoes.horizontalSwipeLeft(carrossel, carrossel, 1);
+            }
+            log.warn("Botão 'Ingressos' não encontrado/clicável após {} tentativas de swipe", maxTentativas);
+        } catch (Exception e) {
+            log.warn("Erro ao tentar realizar swipe/click no carrossel: {}", e.getMessage());
+        }
+        return false;
+    }
 }

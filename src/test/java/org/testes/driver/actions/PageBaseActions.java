@@ -542,4 +542,30 @@ public class PageBaseActions {
         // Swipe da esquerda (20%) para a direita (80%) sobre o elemento
         horizontalSwipe(btnIngressos, 0.20, 0.80);
     }
+
+    /**
+     * Realiza swipe horizontal para a esquerda em um carrossel até encontrar o elemento desejado (By),
+     * ou atingir o número máximo de tentativas.
+     * @param carrossel WebElement do container scrollable (ex: HorizontalScrollView)
+     * @param byDestino By do elemento a ser encontrado
+     * @param maxAttempts Número máximo de swipes
+     * @return true se encontrou, false caso contrário
+     */
+    public boolean horizontalSwipeLeftAndSearch(WebElement carrossel, By byDestino, int maxAttempts) {
+        int attempts = 0;
+        while (attempts < maxAttempts) {
+            try {
+                WebElement el = driver.findElement(byDestino);
+                if (el.isDisplayed()) {
+                    return true;
+                }
+            } catch (NoSuchElementException e) {
+                // Ignora e faz swipe
+            }
+            horizontalSwipeLeft(carrossel, carrossel, 1);
+            delay(500); // Pequeno delay para animação do swipe
+            attempts++;
+        }
+        return false;
+    }
 }
