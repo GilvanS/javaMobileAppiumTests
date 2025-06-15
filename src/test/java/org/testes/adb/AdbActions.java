@@ -44,4 +44,15 @@ public class AdbActions {
         String cmd = String.format("input swipe %d %d %d %d", x1, y1, x2, y2);
         runAdbShellCommand(cmd);
     }
+
+    /**
+     * Executa um tap via adb shell input tap.
+     * @param x coordenada x
+     * @param y coordenada y
+     * @throws IOException se houver erro de execução
+     */
+    public static void tap(int x, int y) throws IOException {
+        String cmd = String.format("input tap %d %d", x, y);
+        runAdbShellCommand(cmd);
+    }
 } 

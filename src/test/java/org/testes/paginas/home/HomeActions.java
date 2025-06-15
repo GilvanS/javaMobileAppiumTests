@@ -57,7 +57,7 @@ public class HomeActions {
 
     public static void clicarBtnIngressos() {
         log.info("clicar no botão 'Ingressos' na tela 'Home'");
-        acoes.swipeHorizontal(false);
+        acoes.horizontalSwipeLeft(homePage().getBtnCarros(), homePage().getBtnIngressos(), 5);
         acoes.click(homePage().getBtnIngressos());
     }
 

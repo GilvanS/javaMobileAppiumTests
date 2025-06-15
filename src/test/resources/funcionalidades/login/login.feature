@@ -91,14 +91,22 @@ Feature: Funcionalidades site de viagens CVC
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Ingressos' na tela 'Home'
+    And valido a exibição da frase Escolhar um parque na tela 'Ingressos'
     And seleciono o "<DESTINO>" na tela 'Ingressos'
-#    And clicar no botão Escolha a data "<DATA>" na tela 'Ingressos'
-#    And clicar no botão 'Buscar' na tela 'Ingressos'
-#    And clicar no botão 'Conferir' detalhes na tela 'Ingressos'
+    And clico no botão Confirmar parque na tela Ingressos
+    And clicar no botão Escolha a data "<DATA_INICIO>" na tela 'Ingressos'
+    And seleciono a data "<DATA_FIM>" na tela 'Ingressos'
+    And clico no botão Continuar na tela Ingressos
+#    And clico no botão Confirmar datas na tela Ingressos
+    And clico no botão Conferir detalhes na tela Ingressos
+    And clico o botão Reservar na tela Ingressos
+    And clico no botão Ver Resumo na tela 'Checkout'
+    And valido a exibição da frase Resumo de Pedido tela 'Checkout'
+
 
     Examples:
-      | DESTINO | DATA |
-      | Beto    | 20   |
+      | DESTINO         | DATA_INICIO | DATA_FIM |
+      | Beto Carreiro   | 23          | 27       |
 
   @CT-1005 @CVC @ATJ-132
   Scenario Outline: Validar Hospedagens

@@ -1,5 +1,6 @@
 package org.testes.paginas.hotel;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class HotelSteps {
@@ -53,8 +54,14 @@ public class HotelSteps {
     public void validoAExibicaoDaMensagemVerMapasNaTelaHoteis() {
         HotelActions.validarLblVerMapas();
     }
-    @Given("seleciono a data {string} no campo Fim na tela Hoteis")
-    public void selecionoADataNoCampoFimNaTelaHoteis(String string) {
+    @And("seleciono a data {string} no campo Início na tela Hoteis")
+    public void selecionoADataNoCampoInicioNaTelaHoteis(String dia) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @And("seleciono a data {string} no campo Fim na tela Hoteis")
+    public void selecionoADataNoCampoFimNaTelaHoteis(String dia) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }

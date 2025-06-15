@@ -28,7 +28,10 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Minhas')]/..//android.widget.Button[contains(@content-desc, 'Explorar')]")
     private WebElement btnExplorar;
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Pacotes']/..//android.view.View[1]")
+    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView")
+    private WebElement scrollView;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Pacotes']")
     private WebElement btnPacotes;
 
     @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[6]")
