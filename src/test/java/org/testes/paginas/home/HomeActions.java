@@ -1,9 +1,6 @@
 package org.testes.paginas.home;
 
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
-import org.testes.adb.AdbActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.utilidades.evidencia.PrintScreen;
@@ -13,11 +10,13 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-@Slf4j
+
 public class HomeActions {
+
     private static final Logger log = LoggerFactory.getLogger(HomeActions.class);
-    static PrintScreen print = new PrintScreen();
+
     static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
+
     public static HomePage homePage(){
         return MasterPageFactory.getPage(HomePage.class);
     }
@@ -30,7 +29,7 @@ public class HomeActions {
     public static void vldTxtOla() throws IOException {
         log.info("valido a exibicao da tela 'Home'");
         acoes.waitForVisibility(homePage().getVldTxtOla());
-        print.screenshot("tela home");
+        PrintScreen.screenshot("tela home");
     }
 
     public static void clicarBtnEntrar() {
@@ -67,7 +66,6 @@ public class HomeActions {
 
     public static void clicarBtnHoteis() {
         log.info("clicar no botão 'Hotéis' na tela 'Home'");
-        acoes.swipeVertical();
         acoes.click(homePage().getBtnHoteis());
     }
 

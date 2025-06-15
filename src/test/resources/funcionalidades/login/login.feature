@@ -115,6 +115,8 @@ Feature: Funcionalidades site de viagens CVC
     And seleciono a data "<DATA_FIM>" no campo Fim na tela Hoteis
     And clico no botão Continuar na tela Hoteis
     And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
+    And clico no botão Marcador do mapa na tela Hoteis
+    And valido os Hoteis "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
     And clico no botão Buscar na tela Hotel
     And clico no botão Ver detalhes na tela Hotel
     And valido a exibição da label Ver quartos disponiveis na tela Hoteis
@@ -122,6 +124,8 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão reservar na tela Hotel
 
     Examples:
-    | CIDADE    | DATA_INICIO | DATA_FIM |
-    | Barcelona | 20          | 30       |
+    | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
+    | Barcelona    | 20          | 30       | Arcelona Hotel                       |
+#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
+#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
 
