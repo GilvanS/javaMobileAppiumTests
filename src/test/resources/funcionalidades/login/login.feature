@@ -116,12 +116,19 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão Continuar na tela Hoteis
     And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
     And clico no botão Marcador do mapa na tela Hoteis
-    And valido os Hoteis "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
-    And clico no botão Buscar na tela Hotel
-    And clico no botão Ver detalhes na tela Hotel
-    And valido a exibição da label Ver quartos disponiveis na tela Hoteis
-    And clico no botão ver quartos disponiveis na tela Hotel
-    And clico no botão reservar na tela Hotel
+    And valido os Hotel "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
+    And valido a exibição da frase Ler mais na tela Hoteis
+    And valido a exibição da frase Ver mais na tela Hoteis
+    And valido a exibição da frase Quartos disponíveis na tela Hoteis
+    And clico no botão 'Voltar ao topo' na tela 'Hoteis'
+    And clico no botão Reservar na tela Hoteis
+    And clico no botão Ver resumo na tela 'Checkout'
+    And valido o Resumo do pedido na tela 'Checkout'
+
+#    And clico no botão Ver detalhes na tela Hotel
+#    And valido a exibição da label Ver quartos disponiveis na tela Hoteis
+#    And clico no botão ver quartos disponiveis na tela Hotel
+#    And clico no botão reservar na tela Hotel
 
     Examples:
     | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |

@@ -24,40 +24,7 @@ public class HotelSteps {
     }
     @Given("valido a exibição da frase {string} na tela Hoteis")
     public void validoAExibicaoDaFraseNaTelaHoteis(String string) {
-
-    }
-
-    @Given("clico no botão Resorts na tela Hotel")
-    public void clicarNoBotaoResortsNaTelaHotel() {
-
-    }
-    @Given("seleciono a data {string} no campo Início na tela Hotel")
-    public void selecionoADataNoCampoInícioNaTelaHotel(String string) {
-
-    }
-    @Given("seleciono a data {string} no campo Fim na tela Hotel")
-    public void selecionoADataNoCampoFimNaTelaHotel(String string) {
-
-    }
-    @Given("clico no botão Buscar na tela Hotel")
-    public void clicarNoBotaoBuscarNaTelaHotel() {
-
-    }
-    @Given("clico no botão Ver detalhes na tela Hotel")
-    public void clicarNoBotaoVerDetalhesNaTelaHotel() {
-
-    }
-    @Given("valido a exibição da label Ver quartos disponiveis na tela Hotel")
-    public void validoAExibicaoDaLabelVerQuartosDisponiveisNaTelaHotel() {
-
-    }
-    @Given("clico no botão ver quartos disponiveis na tela Hotel")
-    public void clicarNoBotaoVerQuartosDisponiveisNaTelaHotel() {
-
-    }
-    @Given("clico no botão reservar na tela Hotel")
-    public void clicarNoBotaoReservarNaTelaHotel() {
-
+        HotelActions.validarLblEscolhaAEstadia();
     }
 
     @Given("valido a exibição da mensagem Sobre a hospedagem na tela Hoteis")
@@ -78,17 +45,47 @@ public class HotelSteps {
         HotelActions.selecionarDataFim(dia);
     }
 
-    @Given("valido os Hoteis {string} para selecionar na tela Hoteis")
-    public void validoOsHoteisParaSelecionarNaTelaHoteis(String string) {
-    }
-
-    @Given("valido a exibição da label Ver quartos disponiveis na tela Hoteis")
-    public void validoAExibicaoDaLabelVerQuartosDisponiveisNaTelaHoteis() {
-    }
-
     @And("clico no botão Marcador do mapa na tela Hoteis")
     public void clicoNoBotaoMarcadorDoMapaNaTelaHoteis() {
         HotelActions.clicarBtnMarcadorDoMapa();
 
     }
+
+    @Given("valido os Hotel {string} para selecionar na tela Hoteis")
+    public void validoOsHotelParaSelecionarNaTelaHoteis(String string) {
+        HotelActions.validarHotelArcelon();
+    }
+
+    @Given("valido a exibição da frase Ler mais na tela Hoteis")
+    public void validoAExibicaoDaFraseSobreAHospedagemNaTelaHoteis() {
+        HotelActions.validarLblLerMais();
+    }
+    @Given("valido a exibição da frase Ver mais na tela Hoteis")
+    public void validoAExibicaoDaFraseComodidadesNaTelaHoteisNaTelaHoteis() {
+        HotelActions.validarLblVerMais();
+    }
+    @Given("valido a exibição da frase Quartos disponíveis na tela Hoteis")
+    public void validoAExibicaoDaFraseQuartosDisponiveisNaTelaHoteis() {
+        HotelActions.validarLblQuartosEscolhido();
+    }
+    @Given("clico no botão {string} na tela {string}")
+    public void clicoNoBotaoNaTela(String string, String string2) {
+        HotelActions.clicarBtnVoltarAoTopo();
+    }
+    @Given("clico no botão Reservar na tela Hoteis")
+    public void clicoNoBotaoReservarNaTelaHoteis() {
+        HotelActions.clicarBtnReservar();
+    }
+    @Given("clico no botão Ver resumo na tela {string}")
+    public void clicoNoBotaoVerResumoNaTela(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+    @Given("valido o Resumo do pedido na tela {string}")
+    public void validoOResumoDoPedidoNaTela(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        throw new io.cucumber.java.PendingException();
+    }
+
+
 }

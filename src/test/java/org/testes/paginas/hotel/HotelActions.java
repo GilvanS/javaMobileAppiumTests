@@ -1,5 +1,6 @@
 package org.testes.paginas.hotel;
 
+import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebElement;
@@ -37,6 +38,68 @@ public class HotelActions {
     public static void clicarBtnContinuar() {
         log.info("clico no botão Continuar na tela Defina os detalhes");
         acoes.click(hotelPage().getBtnContinuar());
+    }
+
+    public static void validarLblEscolhaAEstadia() {
+        log.info("valido a exibição da frase Escolhar um parque na tela Ingressos");
+        acoes.waitForVisibility(hotelPage().getLblEscolha());
+        acoes.click(hotelPage().getLblEscolha());
+    }
+
+    public static void clicarBtnMarcadorDoMapa() {
+        log.info("clico no botão Marcador do mapa na tela Hoteis");
+        acoes.waitForElementToBeClickable(hotelPage().getBtnMarcadorDoMapa(), 5);
+        acoes.click(hotelPage().getBtnMarcadorDoMapa());
+    }
+
+    public static void validarHotelArcelon() {
+        log.info("Validando exibicao do hotel Arcelon");
+        acoes.waitForVisibility(hotelPage().getBtnHotelArcelon());
+        acoes.click(hotelPage().getBtnHotelArcelon(), 10);
+    }
+
+    public static void validarHotelByName(String nomeHotel) {
+        log.info("Validando exibicao do hotel {}", nomeHotel);
+        acoes.waitForVisibility(hotelPage().getHotelByName(nomeHotel));
+        acoes.click(hotelPage().getHotelByName(nomeHotel));
+    }
+
+    public static void swipeLeftParaProximoHotel() {
+        log.info("Deslizando para o próximo hotel");
+        acoes.swipeHorizontal(false); // false = para a esquerda
+        acoes.delay(1000);
+    }
+
+    @SneakyThrows
+    public static void validarLblLerMais() {
+        log.info("valido a exibição da frase Ler mais na tela Hoteis");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getLblLerMais(), 5);
+    }
+
+    @SneakyThrows
+    public static void validarLblVerMais() {
+        log.info("valido a exibição da frase Ver mais na tela Hoteis");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getLblVerMais(), 5);
+    }
+
+    @SneakyThrows
+    public static void validarLblQuartosEscolhido() {
+        log.info("valido a exibição da frase Quartos Escolhido na tela Hoteis");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getLblQuartoEscolhido(), 5);
+    }
+
+    @SneakyThrows
+    public static void clicarBtnVoltarAoTopo() {
+        log.info("clico no botão Voltar ao topo na tela Hoteis");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnVoltarAoTopo(), 5);
+        acoes.click(hotelPage().getBtnVoltarAoTopo());
+    }
+
+    @SneakyThrows
+    public static void clicarBtnReservar() {
+        log.info("clico no botão Reservar na tela Hoteis");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnReservar(), 5);
+        acoes.click(hotelPage().getBtnReservar());
     }
 
     // Swipe vertical até o elemento ficar visível ou atingir o máximo de tentativas
@@ -109,27 +172,4 @@ public class HotelActions {
         acoes.delay(500);
     }
 
-    public static void clicarBtnMarcadorDoMapa() {
-        log.info("clico no botão Marcador do mapa na tela Hoteis");
-        acoes.waitForElementToBeClickable(hotelPage().getBtnMarcadorDoMapa(), 5);
-        acoes.click(hotelPage().getBtnMarcadorDoMapa());
-    }
-
-    public static void validarHotelArcelon() {
-        log.info("Validando exibicao do hotel Arcelon");
-        acoes.waitForVisibility(hotelPage().getBtnHotelArcelon());
-        acoes.click(hotelPage().getBtnHotelArcelon());
-    }
-
-    public static void validarHotelByName(String nomeHotel) {
-        log.info("Validando exibicao do hotel {}", nomeHotel);
-        acoes.waitForVisibility(hotelPage().getHotelByName(nomeHotel));
-        acoes.click(hotelPage().getHotelByName(nomeHotel));
-    }
-
-    public static void swipeLeftParaProximoHotel() {
-        log.info("Deslizando para o próximo hotel");
-        acoes.swipeHorizontal(false); // false = para a esquerda
-        acoes.delay(1000);
-    }
 }
