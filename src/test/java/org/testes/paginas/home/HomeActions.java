@@ -41,7 +41,7 @@ public class HomeActions {
     public static void vldTxtOla4Win() throws IOException {
         log.info("Valido o perfil 4Win logado");
         acoes.waitForVisibility(homePage().getVldTxtOla4Win());
-        print.screenshot("tela home");
+        PrintScreen.screenshot("tela home");
     }
 
     public static void clicarBtnExplorar() {

@@ -21,33 +21,36 @@ public class CarrinhoDeComprasActions {
     @SneakyThrows
     public static void validarLblResumoDaViagem() {
         log.info("valido a exibição da mensagem 'Resumo da viagem' na tela 'Carrinho de compras'");
+        acoes.verticalSwipeDownAndSearch(carrinhoDeComprasPage().getLblResumoDaViagem(), 3);
         acoes.waitForVisibility(carrinhoDeComprasPage().getLblResumoDaViagem());
-        acoes.swipeVertical();
     }
 
+    @SneakyThrows
     public static void validarLblHospedagem() {
         log.info("valido a exibição da mensagem 'Hospedagem' na tela 'Carrinho de compras'");
+        acoes.verticalSwipeDownAndSearch(carrinhoDeComprasPage().getLblHospedagem(),3);
         acoes.waitForVisibility(carrinhoDeComprasPage().getLblHospedagem());
     }
 
+    @SneakyThrows
     public static void validarLblRegrasECondicoes() {
         log.info("valido a exibição da mensagem 'Regras e condições' na tela 'Carrinho de compras'");
+        acoes.verticalSwipeDownAndSearch(carrinhoDeComprasPage().getLblRegrasECondicoes(),3);
         acoes.waitForVisibility(carrinhoDeComprasPage().getLblRegrasECondicoes());
-        acoes.swipeHorizontal(carrinhoDeComprasPage().getLblRegrasECondicoes().isDisplayed());
     }
 
+    @SneakyThrows
     public static void clicarBtnVerResumo() throws InterruptedException {
         log.info("clico no botão Ver resumo na tela Carrinho de compras");
-        Thread.sleep(5000);
-        acoes.waitForVisibility(carrinhoDeComprasPage().getBtnlVerResumo());
+        acoes.verticalSwipeDownAndSearch(carrinhoDeComprasPage().getBtnlVerResumo(), 3);
         acoes.click(carrinhoDeComprasPage().getBtnlVerResumo());
         Thread.sleep(500);
     }
 
     public static void clicarBtnIrParaOPagamento() throws InterruptedException {
         log.info("clicar no botão Ir para o pagamento na tela Carrinho de compras");
-        Thread.sleep(2000);
         acoes.click(carrinhoDeComprasPage().getBtnIrParaOPagamento());
+        Thread.sleep(2000);
     }
 
 }

@@ -31,7 +31,7 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView")
     private WebElement scrollView;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Pacotes']")
+    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView[.//android.view.View[@content-desc='Pacotes']]/android.view.View[1]")
     private WebElement btnPacotes;
 
     @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[6]")
@@ -43,7 +43,7 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[@content-desc= 'Promoções']")
     private WebElement btnPromocoes;
 
-    @AndroidFindBy(xpath = "(//*[@content-desc= 'Hotéis'])[2]")
+    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView[.//android.view.View[@content-desc='Hotéis']]/android.view.View[4]")
     private WebElement btnHoteis;
 
     @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.View[5]/android.view.View")

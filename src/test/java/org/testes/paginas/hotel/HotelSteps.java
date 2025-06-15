@@ -46,7 +46,7 @@ public class HotelSteps {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Given("valido a exibição da mensagem Sobre a hosedagem na tela Hoteis")
+    @Given("valido a exibição da mensagem Sobre a hospedagem na tela Hoteis")
     public void validoAExibicaoDaMensagemSobreAHospedagemNaTelaHoteis() {
         HotelActions.validarLblSobreAHosedagem();
     }

@@ -29,7 +29,7 @@ public class HomeSteps {
     }
 
     @Given("clico no botão 'Pacotes' na tela 'Home'")
-    public void clicar_no_botão_pacotes_na_tela_home() {
+    public void clicar_no_botao_pacotes_na_tela_home() {
         HomeActions.clicarBtnPacotes();
     }
 

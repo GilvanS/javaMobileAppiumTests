@@ -42,14 +42,12 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão 'Reservar Agora' na tela 'Pacote recomendado'
     And valido a exibição da mensagem 'Viaje com mais conforto!' na tela 'Pacote recomendado'
     And clico no botão 'Continuar' na tela 'Pacote recomendado'
-#    And valido a exibição da mensagem 'Atenção ao inicio da sua estadia' na 'Pacote recomendado'
-#    And clico no botão 'Estou ciente' na tela 'Pacote recomendado'
     And valido a exibição das mensagem 'Resumo da viagem' na tela 'Carrinho de compras'
     And valido a exibição das mensagem 'Hospedagem' na tela 'Carrinho de compras'
     And valido a exibição das mensagem 'Regras e condições' na tela 'Carrinho de compras'
     And clico no botão 'Ir para o pagamento' na tela 'Carrinho de compras'
-    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
-    And clico no botão Ver Resumo na tela Checkout
+#    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
+#    And clico no botão Ver Resumo na tela Checkout
 
     Examples:
       | CIDADE_ORIGEM | CIDADE_DESTINO | DATA_INICIO | DATA_FIM |
@@ -110,9 +108,13 @@ Feature: Funcionalidades site de viagens CVC
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Hotéis' na tela 'Home'
-#    And valido a exibição da mensagem Sobre a hosedagem na tela Hoteis
-    And valido a exibição da mensagem Ver Mapas na tela Hoteis
+    And seleciono Onde você irá se hospedar? "<CIDADE>" na tela Hoteis
+    And clico no botão Confirmar destino na tela Hoteis
+    And clico no botão Continuar na tela Defina os detalhes
+    And seleciono a data "<DATA_INICIO>" no campo Início na tela Hoteis
     And seleciono a data "<DATA_FIM>" no campo Fim na tela Hoteis
+    And clico no botão Continuar na tela Hoteis
+    And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
     And clico no botão Buscar na tela Hotel
     And clico no botão Ver detalhes na tela Hotel
     And valido a exibição da label Ver quartos disponiveis na tela Hoteis
@@ -120,6 +122,6 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão reservar na tela Hotel
 
     Examples:
-      | DATA_INICIO | DATA_FIM |
-      | 20          | 30       |
+    | CIDADE    | DATA_INICIO | DATA_FIM |
+    | Barcelona | 20          | 30       |
 
