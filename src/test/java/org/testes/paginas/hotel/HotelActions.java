@@ -8,6 +8,7 @@ import org.testes.utils.Hooks;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 
+
 public class HotelActions {
 
     private static final Logger log = LoggerFactory.getLogger(HotelActions.class);
@@ -46,16 +47,24 @@ public class HotelActions {
         acoes.click(hotelPage().getLblEscolha());
     }
 
+    @SneakyThrows
     public static void clicarBtnMarcadorDoMapa() {
         log.info("clico no botão Marcador do mapa na tela Hoteis");
-        acoes.waitForElementToBeClickable(hotelPage().getBtnMarcadorDoMapa(), 5);
+        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnMarcadorDoMapa(), 5);
         acoes.click(hotelPage().getBtnMarcadorDoMapa());
+        clicarBtnFechar();
     }
 
+    @SneakyThrows
     public static void validarHotelArcelon() {
         log.info("Validando exibicao do hotel Arcelon");
-        acoes.waitForVisibility(hotelPage().getBtnHotelArcelon());
-        acoes.click(hotelPage().getBtnHotelArcelon(), 10);
+        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnHotelArcelon(), 10);
+        acoes.click(hotelPage().getBtnHotelArcelon());
+    }
+
+    public static void clicarBtnFechar() {
+        log.info("clico no botão Fechar na tela Hotel");
+        acoes.click(hotelPage().getBtnFechar());
     }
 
     public static void validarHotelByName(String nomeHotel) {
@@ -100,8 +109,17 @@ public class HotelActions {
         log.info("clico no botão Reservar na tela Hoteis");
         acoes.verticalSwipeDownAndSearch(hotelPage().getBtnReservar(), 5);
         acoes.click(hotelPage().getBtnReservar());
+        Thread.sleep(5000);
     }
 
+    public static void clicarBtnVerResumo() {
+        log.info("clico no botão Ver resumo na tela Checkout");
+        acoes.click(hotelPage().getBtnVerResumo());
+    }
+
+    public static void clicarBtnCheckout() {
+        acoes.click(hotelPage().getBtnCheckout(), 10);
+    }
     // Swipe vertical até o elemento ficar visível ou atingir o máximo de tentativas
     public static void validarLblSobreAHosedagem() {
         log.info("valido a exibicao da mensagem Sobre a hospedagem na tela Hoteis");

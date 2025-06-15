@@ -53,6 +53,41 @@ Feature: Funcionalidades site de viagens CVC
       | CIDADE_ORIGEM | CIDADE_DESTINO | DATA_INICIO | DATA_FIM |
       | Sao Paulo     | Foz do Iguaçu  | 30          | 28       |
 
+  @CT-1005 @CVC @ATJ-132
+  Scenario Outline: Validar Hospedagens
+    Given clico no botão 'Pular introdução'
+    And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
+    And clico no botão 'Hotéis' na tela 'Home'
+    And seleciono Onde você irá se hospedar? "<CIDADE>" na tela Hoteis
+    And clico no botão Confirmar destino na tela Hoteis
+    And clico no botão Continuar na tela Defina os detalhes
+    And seleciono a data "<DATA_INICIO>" no campo Início na tela Hoteis
+    And seleciono a data "<DATA_FIM>" no campo Fim na tela Hoteis
+    And clico no botão Continuar na tela Hoteis
+    And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
+    And clico no botão Marcador do mapa na tela Hoteis
+    And valido os Hotel "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
+    And valido a exibição da frase Ler mais na tela Hoteis
+    And valido a exibição da frase Ver mais na tela Hoteis
+    And valido a exibição da frase Quartos disponíveis na tela Hoteis
+    And clico no botão 'Voltar ao topo' na tela de Hoteis
+    And clico no botão 'Reservar' na tela de Hoteis
+    And clico no botão Ver resumo na tela 'Checkout'
+    And valido o Resumo do pedido na tela 'Checkout'
+
+#    And clico no botão Ver detalhes na tela Hotel
+#    And valido a exibição da label Ver quartos disponiveis na tela Hoteis
+#    And clico no botão ver quartos disponiveis na tela Hotel
+#    And clico no botão reservar na tela Hotel
+
+    Examples:
+      | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
+      | Barcelona    | 20          | 30       | Arcelona Hotel                       |
+#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
+#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
+
+
+
   @CT-1007 @CVC
   Scenario Outline: Validar 'Aluguel de carros'
     Given clico no botão 'Pular introdução'
@@ -102,37 +137,4 @@ Feature: Funcionalidades site de viagens CVC
     Examples:
       | DESTINO         | DATA_INICIO | DATA_FIM |
       | Beto            | 23          | 27       |
-
-  @CT-1005 @CVC @ATJ-132
-  Scenario Outline: Validar Hospedagens
-    Given clico no botão 'Pular introdução'
-    And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
-    And clico no botão 'Hotéis' na tela 'Home'
-    And seleciono Onde você irá se hospedar? "<CIDADE>" na tela Hoteis
-    And clico no botão Confirmar destino na tela Hoteis
-    And clico no botão Continuar na tela Defina os detalhes
-    And seleciono a data "<DATA_INICIO>" no campo Início na tela Hoteis
-    And seleciono a data "<DATA_FIM>" no campo Fim na tela Hoteis
-    And clico no botão Continuar na tela Hoteis
-    And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
-    And clico no botão Marcador do mapa na tela Hoteis
-    And valido os Hotel "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
-    And valido a exibição da frase Ler mais na tela Hoteis
-    And valido a exibição da frase Ver mais na tela Hoteis
-    And valido a exibição da frase Quartos disponíveis na tela Hoteis
-    And clico no botão 'Voltar ao topo' na tela 'Hoteis'
-    And clico no botão Reservar na tela Hoteis
-    And clico no botão Ver resumo na tela 'Checkout'
-    And valido o Resumo do pedido na tela 'Checkout'
-
-#    And clico no botão Ver detalhes na tela Hotel
-#    And valido a exibição da label Ver quartos disponiveis na tela Hoteis
-#    And clico no botão ver quartos disponiveis na tela Hotel
-#    And clico no botão reservar na tela Hotel
-
-    Examples:
-    | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
-    | Barcelona    | 20          | 30       | Arcelona Hotel                       |
-#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
-#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
 

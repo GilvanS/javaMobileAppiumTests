@@ -2,6 +2,7 @@ package org.testes.paginas.hotel;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 
 public class HotelSteps {
 
@@ -68,23 +69,29 @@ public class HotelSteps {
     public void validoAExibicaoDaFraseQuartosDisponiveisNaTelaHoteis() {
         HotelActions.validarLblQuartosEscolhido();
     }
-    @Given("clico no botão {string} na tela {string}")
-    public void clicoNoBotaoNaTela(String string, String string2) {
-        HotelActions.clicarBtnVoltarAoTopo();
+    @When("clico no botão 'Continuar' na tela de Hoteis")
+    public void clicoNoBotaoContinuarNaTelaDeHoteis() {
+        HotelActions.clicarBtnContinuar();
     }
-    @Given("clico no botão Reservar na tela Hoteis")
-    public void clicoNoBotaoReservarNaTelaHoteis() {
+
+    @When("clico no botão 'Reservar' na tela de Hoteis")
+    public void clicoNoBotaoReservarNaTelaDeHoteis() {
         HotelActions.clicarBtnReservar();
     }
+
+    @When("clico no botão 'Voltar ao topo' na tela de Hoteis")
+    public void clicoNoBotaoVoltarAoTopoNaTelaDeHoteis() {
+        HotelActions.clicarBtnVoltarAoTopo();
+    }
+
     @Given("clico no botão Ver resumo na tela {string}")
     public void clicoNoBotaoVerResumoNaTela(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        HotelActions.clicarBtnCheckout();
     }
+
     @Given("valido o Resumo do pedido na tela {string}")
     public void validoOResumoDoPedidoNaTela(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        HotelActions.clicarBtnVerResumo();
     }
 
 
