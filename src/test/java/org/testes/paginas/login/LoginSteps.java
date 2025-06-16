@@ -7,6 +7,65 @@ import java.io.IOException;
 
 public class LoginSteps {
 
+    @Given("que estou na tela Home")
+    public void queEstouNaTelaHome() throws IOException {
+        LoginActions.validarTxtEbacStore();
+    }
+
+    @And("valido a exibição da frase EBAC Store tela Home")
+    public void validoAExibicaoDaFraseEBACStoreTelaHome() throws IOException {
+        LoginActions.validarTxtEbacStore();
+    }
+
+    @And("clico no botão Profile na tela Home")
+    public void clicoNoBotaoProfileNaTelaHome() {
+        LoginActions.clicarBtnProfile();
+    }
+
+    @And("valido a exibição da frase Welcome to EBAC Shop na tela Login")
+    public void validoAExibicaoDaFraseWelcomeToEBACShopNaTelaLogin() throws IOException {
+        LoginActions.validarTxtWelcomeEbacShop();
+    }
+
+    @And("clico no botão Sign up na tela Login")
+    public void clicoNoBotaoSignUpNaTelaLogin() {
+        LoginActions.clicarBtnSignUp();
+    }
+
+    @And("preencho o campo First Name na tela Login")
+    public void preenchoOCampoFirstNameNaTelaLogin() {
+        LoginActions.preencherCampoFirstName("Teste");
+    }
+
+    @And("preencho o campo Last Name na tela Login")
+    public void preenchoOCampoLastNameNaTelaLogin() {
+        LoginActions.preencherCampoLastName("Automacao");
+    }
+
+    @And("preencho o campo Phone Number na tela Login")
+    public void preenchoOCampoPhoneNumberNaTelaLogin() {
+        LoginActions.preencherCampoPhoneNumber("11999999999");
+    }
+
+    @And("preencho o campo Email Address na tela Login")
+    public void preenchoOCampoEmailAddressNaTelaLogin() {
+        LoginActions.preencherCampoEmailAddress("teste@teste.com");
+    }
+
+    @And("preencho o campo Password na tela Login")
+    public void preenchoOCampoPasswordNaTelaLogin() {
+        LoginActions.preencherCampoPassword("Teste@123");
+    }
+
+    @And("preencho o campo ReEnter Password na tela Login")
+    public void preenchoOCampoReEnterPasswordNaTelaLogin() {
+        LoginActions.preencherCampoReEnterPassword("Teste@123");
+    }
+
+    @And("clico no botão Create na tela Login")
+    public void clicoNoBotaoCreateNaTelaLogin() {
+        LoginActions.clicarBtnCreate();
+    }
 
     @Given("valido a exibição da frase Entre para aproveitar a melhor experiência na tela login")
     public void valido_a_exibição_da_frase_entre_para_aproveitar_a_melhor_experiência_na_tela_login() throws IOException, InterruptedException {

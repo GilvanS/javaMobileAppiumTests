@@ -13,8 +13,8 @@ public class AppiumDriverHelper {
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("appium:appPackage", "com.cvc.minhacvc");
-        capabilities.setCapability("appium:appActivity", "com.cvc.minha_app.MainActivity");
+        capabilities.setCapability("appium:appPackage", "br.com.lojaebac");
+        capabilities.setCapability("appium:appActivity", "br.com.lojaebac.MainActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
         capabilities.setCapability("appium:deviceName", "0078720227"); // S24+ RXCXB02B93D   motoG 0078720227
         capabilities.setCapability("appium:automationName", "uiautomator2");

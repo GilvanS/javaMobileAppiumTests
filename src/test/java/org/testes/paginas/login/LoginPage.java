@@ -32,6 +32,37 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Entrar')]")
     private WebElement btnEntrar;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='EBAC Store']")
+    private WebElement txtEbacStore;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Profile']")
+    private WebElement btnProfile;
+
+    @AndroidFindBy(xpath = "//*[@content-desc='Welcome to EBAC Shop']")
+    private WebElement txtWelcomeEbacShop;
+
+    @AndroidFindBy(xpath = "//*[@content-desc='Sign up']")
+    private WebElement btnSignUp;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='First Name']")
+    private WebElement campoFirstName;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Last Name']")
+    private WebElement campoLastName;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Phone Number']")
+    private WebElement campoPhoneNumber;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Email Address']")
+    private WebElement campoEmailAddress;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Password']")
+    private WebElement campoPassword;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='ReEnter Password']")
+    private WebElement campoReEnterPassword;
+
+    @AndroidFindBy(xpath = "//*[@content-desc='Create']")
+    private WebElement btnCreate;
 
 }
