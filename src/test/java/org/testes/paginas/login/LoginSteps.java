@@ -2,10 +2,15 @@ package org.testes.paginas.login;
 
 import io.cucumber.java.en.*;
 import org.testes.paginas.home.HomeActions;
+import org.testes.utils.FakerApi;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 
+@Slf4j
 public class LoginSteps {
+
+    private static final FakerApi faker = new FakerApi();
 
     @Given("que estou na tela Home")
     public void queEstouNaTelaHome() throws IOException {
@@ -33,33 +38,33 @@ public class LoginSteps {
     }
 
     @And("preencho o campo First Name na tela Login")
-    public void preenchoOCampoFirstNameNaTelaLogin() {
-        LoginActions.preencherCampoFirstName("Teste");
+    public void preenchoCampoFirstName() {
+        LoginActions.preencherCampoFirstNameComFaker();
     }
 
     @And("preencho o campo Last Name na tela Login")
-    public void preenchoOCampoLastNameNaTelaLogin() {
-        LoginActions.preencherCampoLastName("Automacao");
+    public void preenchoCampoLastName() {
+        LoginActions.preencherCampoLastNameComFaker();
     }
 
     @And("preencho o campo Phone Number na tela Login")
-    public void preenchoOCampoPhoneNumberNaTelaLogin() {
-        LoginActions.preencherCampoPhoneNumber("11999999999");
+    public void preenchoCampoPhoneNumber() {
+        LoginActions.preencherCampoPhoneNumberComFaker();
     }
 
     @And("preencho o campo Email Address na tela Login")
-    public void preenchoOCampoEmailAddressNaTelaLogin() {
-        LoginActions.preencherCampoEmailAddress("teste@teste.com");
+    public void preenchoCampoEmailAddress() {
+        LoginActions.preencherCampoEmailAddressComFaker();
     }
 
     @And("preencho o campo Password na tela Login")
-    public void preenchoOCampoPasswordNaTelaLogin() {
-        LoginActions.preencherCampoPassword("Teste@123");
+    public void preenchoCampoPassword() {
+        LoginActions.preencherCampoPasswordComFaker();
     }
 
     @And("preencho o campo ReEnter Password na tela Login")
-    public void preenchoOCampoReEnterPasswordNaTelaLogin() {
-        LoginActions.preencherCampoReEnterPassword("Teste@123");
+    public void preenchoCampoReEnterPassword() {
+        // Não precisa implementar pois já é preenchido no método preencherCampoPasswordComFaker
     }
 
     @And("clico no botão Create na tela Login")
