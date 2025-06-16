@@ -35,34 +35,34 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='EBAC Store']")
     private WebElement txtEbacStore;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Profile']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc=', Profile']")
     private WebElement btnProfile;
 
-    @AndroidFindBy(xpath = "//*[@content-desc='Welcome to EBAC Shop']")
+    @AndroidFindBy(xpath = "//*[@text='Welcome to EBAC Shop']")
     private WebElement txtWelcomeEbacShop;
 
     @AndroidFindBy(xpath = "//*[@content-desc='Sign up']")
     private WebElement btnSignUp;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='First Name']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='First Name']")
     private WebElement campoFirstName;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Last Name']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Last Name']")
     private WebElement campoLastName;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Phone Number']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Phone Number']")
     private WebElement campoPhoneNumber;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Email Address']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Email Address']")
     private WebElement campoEmailAddress;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='Password']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password']")
     private WebElement campoPassword;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc='ReEnter Password']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='repassword']")
     private WebElement campoReEnterPassword;
 
-    @AndroidFindBy(xpath = "//*[@content-desc='Create']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Create']")
     private WebElement btnCreate;
 
 }

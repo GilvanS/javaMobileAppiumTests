@@ -20,7 +20,7 @@ public class LoginActions {
     }
 
     public static void vldTxtEntreParaAproveitar() throws IOException, InterruptedException {
-        log.info("Validat texto 'Entre para aproveitar'");
+        log.info("Validar texto 'Entre para aproveitar'");
         Thread.sleep(3000);
         acoes.waitForVisibility(loginPage().getVldTxtEntreParaAproveitar());
         PrintScreen.screenshot("teste");
