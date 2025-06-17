@@ -117,6 +117,7 @@ public class LoginActions {
     public static void preencherCampoFirstNameComFaker() {
         log.info("Preenchendo First Name");
         preencherCampoFirstName(faker.getFirstName());
+        faker.salvarDadosEmJson();
     }
 
     public static void preencherCampoLastNameComFaker() {
