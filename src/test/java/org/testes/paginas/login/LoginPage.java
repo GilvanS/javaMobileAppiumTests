@@ -84,11 +84,8 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Lynch Hazel']")
     private WebElement txtUserName;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Phone']/following-sibling::android.widget.TextView")
-    private WebElement txtUserPhone;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Email']/following-sibling::android.widget.TextView")
-    private WebElement txtUserEmail;
+//    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Email']/following-sibling::android.widget.TextView")
+//    private WebElement txtUserEmail;
 
     // Elementos para validação do Edit Profile
     @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Firstname']")
@@ -109,8 +106,21 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Add Photo']")
     private WebElement btnAddPhoto;
 
+//    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, '+14049678963')]")
+//    private WebElement txtUserPhone;
+
     public WebElement getTxtUserName(String nomeCompleto) {
         String xpathNome = String.format("//android.widget.TextView[@text='%s']", nomeCompleto);
         return driver.findElement(By.xpath(xpathNome));
+    }
+
+    public WebElement getTxtUserPhone(String userPhone) {
+        String xpathPhone = String.format("//android.widget.TextView[@text='%s']", userPhone);
+        return driver.findElement(By.xpath(xpathPhone));
+    }
+
+    public WebElement getTxtUserEmail(String userEmail) {
+        String xpathEmail = String.format("//android.widget.TextView[@text='%s']", userEmail);
+        return driver.findElement(By.xpath(xpathEmail));
     }
 }

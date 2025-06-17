@@ -148,21 +148,23 @@ public class LoginActions extends PageBaseActions {
     }
 
     public static void validarNomeUsuario() throws IOException {
-        log.info("Validando nome do usuario");
-        String nomeCompleto = UsuarioManager.getFirstName() + " " + UsuarioManager.getLastName();
+        String nomeCompleto = UsuarioManager.getLastName() + " " + UsuarioManager.getFirstName();
+        log.info("Validando nome do usuario" + nomeCompleto);
         acoes.waitForVisibility(loginPage().getTxtUserName(nomeCompleto));
         PrintScreen.screenshot("validar_nome_usuario");
     }
 
     public static void validarPhoneNumberUsuario() throws IOException {
-        log.info("Validando phone number do usuario");
-        acoes.waitForVisibility(loginPage().getTxtUserPhone());
+        String userPhone = UsuarioManager.getPhoneNumber();
+        log.info("Validando phone number do usuario: {}", userPhone);
+        acoes.waitForVisibility(loginPage().getTxtUserPhone(userPhone));
         PrintScreen.screenshot("validacao_phone_usuario");
     }
 
     public static void validarEmailUsuario() throws IOException {
-        log.info("Validando email do usuario");
-        acoes.waitForVisibility(loginPage().getTxtUserEmail());
+        String email = UsuarioManager.getEmail();
+        log.info("Validando email do usuario: {}", email);
+        acoes.waitForVisibility(loginPage().getTxtUserEmail(email));
         PrintScreen.screenshot("validacao_email_usuario");
     }
 
@@ -200,13 +202,13 @@ public class LoginActions extends PageBaseActions {
         acoes.click(loginPage().getBtnLogout());
     }
 
-    public void validarTelaProfile() throws IOException {
-        log.info("Validando tela de Profile");
-        waitForVisibility(loginPage.getTxtUserName());
-        waitForVisibility(loginPage.getTxtUserPhone());
-        waitForVisibility(loginPage.getTxtUserEmail());
-        PrintScreen.screenshot("validar_tela_profile");
-    }
+//    public void validarTelaProfile() throws IOException {
+//        log.info("Validando tela de Profile");
+//        waitForVisibility(loginPage.getTxtUserName());
+//        waitForVisibility(loginPage.getTxtUserPhone());
+//        waitForVisibility(loginPage.getTxtUserEmail());
+//        PrintScreen.screenshot("validar_tela_profile");
+//    }
 
     public static void validarNomeUsuarioProfile() throws IOException {
         log.info("Validando nome do usuario na tela Profile");
@@ -242,5 +244,33 @@ public class LoginActions extends PageBaseActions {
 
     public void clicarBotaoEditProfile() {
         // ... existing code ...
+    }
+
+    public static void validarDadosUsuario() throws IOException {
+        log.info("Validando dados do usuario");
+        String nomeCompleto = UsuarioManager.getLastName() + " " + UsuarioManager.getFirstName();
+        String userPhone = UsuarioManager.getPhoneNumber();
+        String email = UsuarioManager.getEmail();
+        
+        acoes.waitForVisibility(loginPage().getTxtUserName(nomeCompleto));
+        acoes.waitForVisibility(loginPage().getTxtUserPhone(userPhone));
+        acoes.waitForVisibility(loginPage().getTxtUserEmail(email));
+        PrintScreen.screenshot("validacao_dados_usuario");
+    }
+
+    public static void validarDadosEditados() throws IOException {
+        log.info("Validando dados editados do usuario");
+        String nomeCompleto = UsuarioManager.getLastName() + " " + UsuarioManager.getFirstName();
+        String userPhone = UsuarioManager.getPhoneNumber();
+        String email = UsuarioManager.getEmail();
+        
+        String nomeTela = loginPage().getTxtUserName(nomeCompleto).getText();
+        String telefoneTela = loginPage().getTxtUserPhone(userPhone).getText();
+        String emailTela = loginPage().getTxtUserEmail(email).getText();
+        
+        assertTrue(nomeTela.equals(nomeCompleto), "Nome não confere");
+        assertTrue(telefoneTela.equals(userPhone), "Telefone não confere");
+        assertTrue(emailTela.equals(email), "Email não confere");
+        PrintScreen.screenshot("validacao_dados_editados");
     }
 }

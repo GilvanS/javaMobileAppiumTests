@@ -102,4 +102,28 @@
   "phoneNumber" : "+13602909551",
   "emailAddress" : "roxane.dietrich@yahoo.com",
   "password" : "H'2AzFz"
+}, {
+  "id" : "404fff9f-b80e-409d-92ac-e708c0f1216a",
+  "createdAt" : "2025-06-17 00:09:49",
+  "firstName" : "Coy",
+  "lastName" : "Borer",
+  "phoneNumber" : "+16092614359",
+  "emailAddress" : "foster34@dach.com",
+  "password" : "7~K%zw?P^9NE49}6F1$j"
+}, {
+  "id" : "8d968b7b-61c3-4dff-b0ff-8b61a2361fbc",
+  "createdAt" : "2025-06-17 00:12:29",
+  "firstName" : "Karley",
+  "lastName" : "Will",
+  "phoneNumber" : "+12394384591",
+  "emailAddress" : "zula.cummings@runolfsson.com",
+  "password" : ".;yyO\"%A0&]"
+}, {
+  "id" : "d733196b-1af7-4d2b-b292-aba2dbe73a17",
+  "createdAt" : "2025-06-17 00:15:59",
+  "firstName" : "Gudrun",
+  "lastName" : "Aufderhar",
+  "phoneNumber" : "+14049678963",
+  "emailAddress" : "kling.isom@beier.org",
+  "password" : "3\"8qTV9iPhK=IJcE:jq"
 } ]
