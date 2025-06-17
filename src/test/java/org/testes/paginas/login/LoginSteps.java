@@ -39,32 +39,32 @@ public class LoginSteps {
 
     @And("preencho o campo First Name na tela Login")
     public void preenchoCampoFirstName() {
-        LoginActions.preencherCampoFirstNameComFaker();
+        LoginActions.preencherCampoFirstName();
     }
 
     @And("preencho o campo Last Name na tela Login")
     public void preenchoCampoLastName() {
-        LoginActions.preencherCampoLastNameComFaker();
+        LoginActions.preencherCampoLastName();
     }
 
     @And("preencho o campo Phone Number na tela Login")
     public void preenchoCampoPhoneNumber() {
-        LoginActions.preencherCampoPhoneNumberComFaker();
+        LoginActions.preencherCampoPhoneNumber();
     }
 
     @And("preencho o campo Email Address na tela Login")
     public void preenchoCampoEmailAddress() {
-        LoginActions.preencherCampoEmailAddressComFaker();
+        LoginActions.preencherCampoEmailAddress();
     }
 
     @And("preencho o campo Password na tela Login")
     public void preenchoCampoPassword() {
-        LoginActions.preencherCampoPasswordComFaker();
+        LoginActions.preencherCampoPassword();
     }
 
     @And("preencho o campo ReEnter Password na tela Login")
     public void preenchoCampoReEnterPassword() {
-        // Não precisa implementar pois já é preenchido no método preencherCampoPasswordComFaker
+        // Não precisa implementar pois já é preenchido no método preencherCampoPassword
     }
 
     @And("clico no botão Create na tela Login")
@@ -72,14 +72,74 @@ public class LoginSteps {
         LoginActions.clicarBtnCreate();
     }
 
+    @And("clico no botão Wishlist na tela Home")
+    public void clicoNoBotaoFavoritesNaTelaHome() {
+        LoginActions.clicarBtnWishlist();
+    }
+
+    @And("clico no botão voltar na tela Wishlist")
+    public void clicoNoBotaoVoltarNaTelaFavorites() {
+        LoginActions.clicarBtnVoltar();
+    }
+
+    @And("valido o nome do usuário na tela Profile")
+    public void validoONomeDoUsuarioNaTelaProfile() throws IOException {
+        LoginActions.validarNomeUsuario();
+    }
+
+    @And("valido o Phone Number do usuário na tela Profile")
+    public void validoOPhoneNumberDoUsuarioNaTelaProfile() throws IOException {
+        LoginActions.validarPhoneNumberUsuario();
+    }
+
+    @And("valido o Email Address do usuário na tela Profile")
+    public void validoOEmailAddressDoUsuarioNaTelaProfile() throws IOException {
+        LoginActions.validarEmailUsuario();
+    }
+
+    @And("clico no botão Edit Profile na tela Profile")
+    public void clicoNoBotaoEditProfileNaTelaProfile() {
+        LoginActions.clicarBtnEditProfile();
+    }
+
+    @And("valido o First Name do usuário na tela Edit Profile")
+    public void validoOFirstNameDoUsuarioNaTelaEditProfile() throws IOException {
+        LoginActions.validarFirstNameEditProfile();
+    }
+
+    @And("valido o Last Name do usuário na tela Edit Profile")
+    public void validoOLastNameDoUsuarioNaTelaEditProfile() throws IOException {
+        LoginActions.validarLastNameEditProfile();
+    }
+
+    @And("valido o Phone Number do usuário na tela Edit Profile")
+    public void validoOPhoneNumberDoUsuarioNaTelaEditProfile() throws IOException {
+        LoginActions.validarPhoneNumberEditProfile();
+    }
+
+    @And("valido o Email Address do usuário na tela Edit Profile")
+    public void validoOEmailAddressDoUsuarioNaTelaEditProfile() throws IOException {
+        LoginActions.validarEmailEditProfile();
+    }
+
+    @And("clico no botão voltar na tela Edit Profile")
+    public void clicoNoBotaoVoltarNaTelaEditProfile() {
+        LoginActions.clicarBtnVoltar();
+    }
+
+    @And("clico no botão Logout na tela Profile")
+    public void clicoNoBotaoLogoutNaTelaProfile() {
+        LoginActions.clicarBtnLogout();
+    }
+
     @Given("valido a exibição da frase Entre para aproveitar a melhor experiência na tela login")
     public void valido_a_exibição_da_frase_entre_para_aproveitar_a_melhor_experiência_na_tela_login() throws IOException, InterruptedException {
-        LoginActions.vldTxtEntreParaAproveitar();
+        LoginActions.validarTelaLogin();
     }
 
     @Given("clico no botão Entre na tela Login")
     public void clicar_no_botão_entre_na_tela_login() {
-        LoginActions.clickBtnEntreParaAproveitar();
+        LoginActions.clicarBtnProximo();
     }
 
     @Given("preencho o campo email {string} na tela Login")

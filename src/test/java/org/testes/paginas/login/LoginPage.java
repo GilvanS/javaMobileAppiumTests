@@ -3,8 +3,10 @@ package org.testes.paginas.login;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
+import org.testes.manager.UsuarioManager;
 
 
 @Getter
@@ -35,7 +37,7 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='EBAC Store']")
     private WebElement txtEbacStore;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc=', Profile']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Profile']")
     private WebElement btnProfile;
 
     @AndroidFindBy(xpath = "//*[@text='Welcome to EBAC Shop']")
@@ -65,4 +67,50 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Create']")
     private WebElement btnCreate;
 
+    // Novos elementos para os steps adicionais
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='wishlist']")
+    private WebElement btnWishlist;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='back']")
+    private WebElement btnVoltar;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Edit Profile']")
+    private WebElement btnEditProfile;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Logout']")
+    private WebElement btnLogout;
+
+    // Elementos para validação do Profile
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Lynch Hazel']")
+    private WebElement txtUserName;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Phone']/following-sibling::android.widget.TextView")
+    private WebElement txtUserPhone;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Email']/following-sibling::android.widget.TextView")
+    private WebElement txtUserEmail;
+
+    // Elementos para validação do Edit Profile
+    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Firstname']")
+    private WebElement txtEditFirstName;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Lastname']")
+    private WebElement txtEditLastName;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Enter your phone number']")
+    private WebElement txtEditPhone;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Enter you Email address']")
+    private WebElement txtEditEmail;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Edit']")
+    private WebElement btnSaveEdit;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Add Photo']")
+    private WebElement btnAddPhoto;
+
+    public WebElement getTxtUserName(String nomeCompleto) {
+        String xpathNome = String.format("//android.widget.TextView[@text='%s']", nomeCompleto);
+        return driver.findElement(By.xpath(xpathNome));
+    }
 }
