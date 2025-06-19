@@ -225,7 +225,7 @@ public class LoginActions extends PageBaseActions {
     public static void validarTelefoneUsuarioProfile() throws IOException {
         log.info("Validando telefone do usuario na tela Profile");
         String telefone = UsuarioManager.getPhoneNumber();
-        String telefoneTela = loginPage().getTxtUserPhone().getText();
+        String telefoneTela = loginPage().getTxtUserPhone(telefone).getText();
         log.info("Telefone esperado: {}", telefone);
         log.info("Telefone encontrado: {}", telefoneTela);
         PrintScreen.screenshot("validar_telefone_usuario_profile");
@@ -235,7 +235,7 @@ public class LoginActions extends PageBaseActions {
     public static void validarEmailUsuarioProfile() throws IOException {
         log.info("Validando email do usuario na tela Profile");
         String email = UsuarioManager.getEmail();
-        String emailTela = loginPage().getTxtUserEmail().getText();
+        String emailTela = loginPage().getTxtUserEmail(email).getText();
         log.info("Email esperado: {}", email);
         log.info("Email encontrado: {}", emailTela);
         PrintScreen.screenshot("validar_email_usuario_profile");
