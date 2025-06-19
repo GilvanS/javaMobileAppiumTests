@@ -1,0 +1,99 @@
+package org.br.com.api.utils;
+
+import lombok.extern.log4j.Log4j2;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+@Log4j2
+public class LogFormatter {
+    
+    private static final String BRANCH = "|  ";
+    private static final String LAST_BRANCH = "'--";
+    private static final String FIRST_BRANCH = "+--";
+    private static final String PASSED = " [PASSED] ";
+    private static final String FAILED = " [FAILED] ";
+    private static final String SKIPPED = " [SKIPPED] ";
+    private static final String INFO = " [INFO] ";
+    private static int totalScenarios = 0;
+    
+    public static void logFeature(String featureName) {
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append("\n==================  Execução: ").append(getCurrentDateTime()).append(" ==================\n\n\n");
+        formattedLog.append("Feature: ").append(featureName).append("\n\n");
+        formattedLog.append("Total de cenários executados: ").append(totalScenarios).append("\n\n");
+        log.info(formattedLog.toString());
+    }
+    
+    public static void logScenario(String scenarioName) {
+        totalScenarios++;
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append("\n+-- ").append(scenarioName).append("\n");
+        log.info(formattedLog.toString());
+    }
+    
+    public static void logStep(String stepDescription) {
+        logStep(stepDescription, "INFO", 0);
+    }
+    
+    public static void logStep(String stepDescription, String status) {
+        logStep(stepDescription, status, 0);
+    }
+    
+    public static void logStep(String stepDescription, String status, long duration) {
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append(BRANCH).append(LAST_BRANCH).append(getStatusSymbol(status))
+            .append(stepDescription).append("  - ").append(formatDuration(duration)).append("\n");
+        log.info(formattedLog.toString());
+    }
+    
+    public static void logStepError(String errorMessage, String stackTrace) {
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append(BRANCH).append("|\n");
+        formattedLog.append(BRANCH).append(LAST_BRANCH).append("------").append(errorMessage).append("\n");
+        
+        // Adiciona o stack trace formatado
+        String[] stackLines = stackTrace.split("\n");
+        for (String line : stackLines) {
+            formattedLog.append(BRANCH).append("           ").append(line).append("\n");
+        }
+        
+        log.info(formattedLog.toString());
+    }
+    
+    public static void logScenarioResult(String status, long duration) {
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append("\n\n");
+        formattedLog.append("|**").append(status).append("**\n");
+        formattedLog.append("|Duration: ").append(formatDuration(duration)).append("\n");
+        formattedLog.append("|_________\n\n\n");
+        log.info(formattedLog.toString());
+    }
+    
+    public static void logTotalDuration(long totalDuration) {
+        StringBuilder formattedLog = new StringBuilder();
+        formattedLog.append("\nTOTAL DURATION: ").append(formatDuration(totalDuration)).append("\n\n");
+        formattedLog.append("===================================== Fim ======================================\n\n");
+        log.info(formattedLog.toString());
+    }
+    
+    private static String getStatusSymbol(String status) {
+        return switch (status.toUpperCase()) {
+            case "PASSED", "PASS" -> PASSED;
+            case "FAILED", "FAIL" -> FAILED;
+            case "SKIPPED", "SKIP" -> SKIPPED;
+            case "INFO" -> INFO;
+            default -> " [UNKNOWN] ";
+        };
+    }
+    
+    private static String formatDuration(long duration) {
+        if (duration < 1000) {
+            return "0,0s";
+        }
+        return String.format("%.1fs", duration / 1000.0).replace(".", ",");
+    }
+    
+    private static String getCurrentDateTime() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+    }
+} 
