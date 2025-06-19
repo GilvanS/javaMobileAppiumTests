@@ -3,3 +3,154 @@
 [INFO] 14:50:22 | '-- Driver inicializado com sucesso
 [INFO] 14:51:30 | '-- FAILED
 
+[INFO] 15:03:03 +-- Realizar login com CPF invalido
+[INFO] 15:03:03 | '-- Inicializando o driver
+[INFO] 15:03:13 | '-- Driver inicializado com sucesso
+[INFO] 15:04:23 +-- Realizar login com CPF invalido
+[INFO] 15:04:23 | '-- Inicializando o driver
+[INFO] 15:04:32 | '-- Driver inicializado com sucesso
+[INFO] 15:05:18 | '-- FAILED
+
+[INFO] 15:12:00 +-- Realizar login com sucesso
+[INFO] 15:12:00 | '-- Inicializando o driver
+[INFO] 15:12:10 | '-- Driver inicializado com sucesso
+[INFO] 15:12:12 | '-- UNDEFINED
+
+[INFO] 16:29:55 +-- Criar um novo usuario CMS com sucesso
+[INFO] 16:29:55 | '-- Enviando requisicao de registro de usuario CMS
+[INFO] 16:30:06 | '-- FAILED
+
+[INFO] 16:30:06 +-- Realizar login com usuario CMS
+[INFO] 16:30:06 | '-- Enviando requisicao de login com as credenciais do usuario
+[INFO] 16:30:06 | '-- FAILED
+
+[INFO] 16:30:11 +-- Realizar login com sucesso
+[INFO] 16:30:11 | '-- Inicializando o driver
+[INFO] 16:30:38 | '-- Driver inicializado com sucesso
+[INFO] 16:30:51 | '-- UNDEFINED
+
+[INFO] 16:30:52 +-- Validar acesso do usuario na pagina inicial
+[INFO] 16:31:34 | '-- Validando que estou na pagina inicial
+[INFO] 16:31:34 | '-- Verificando e lidando com popup de cookies
+[INFO] 16:31:43 | '-- Clicando no botao de acesso do usuario
+[INFO] 16:32:36 | '-- Validando mensagem de bem-vindo
+[INFO] 16:32:42 | '-- PASSED
+
+[INFO] 16:32:42 +-- Validar botao contato na pagina inicial
+[INFO] 16:32:58 | '-- Validando que estou na pagina inicial
+[INFO] 16:32:58 | '-- Verificando e lidando com popup de cookies
+[INFO] 16:33:05 | '-- Clicando no botao Contato
+[INFO] 16:33:11 | '-- Validando exibicao da mensagem sobre solucoes
+[INFO] 16:33:16 | '-- PASSED
+
+[INFO] 16:34:13 +-- Realizar login com sucesso
+[INFO] 16:34:13 | '-- Inicializando o driver
+[INFO] 16:34:23 | '-- Driver inicializado com sucesso
+[INFO] 16:34:25 | '-- UNDEFINED
+
+[INFO] 17:25:58 +-- Realizar login com sucesso
+[INFO] 17:25:58 | '-- Inicializando o driver
+[INFO] 17:26:10 | '-- Driver inicializado com sucesso
+[INFO] 17:27:21 | '-- FAILED
+
+[INFO] 17:28:29 +-- Realizar login com sucesso
+[INFO] 17:28:29 | '-- Inicializando o driver
+[INFO] 17:28:38 | '-- Driver inicializado com sucesso
+[INFO] 17:29:47 | '-- FAILED
+
+[INFO] 17:34:46 +-- Realizar login com sucesso
+[INFO] 17:34:46 | '-- Inicializando o driver
+[INFO] 17:34:56 | '-- Driver inicializado com sucesso
+[INFO] 17:35:13 | '-- FAILED
+
+[INFO] 17:36:54 +-- Realizar login com sucesso
+[INFO] 17:36:54 | '-- Inicializando o driver
+[INFO] 17:37:04 | '-- Driver inicializado com sucesso
+[INFO] 17:37:28 | '-- FAILED
+
+[INFO] 17:46:00 +-- Realizar login com sucesso
+[INFO] 17:46:00 | '-- Inicializando o driver
+[INFO] 17:46:10 | '-- Driver inicializado com sucesso
+[INFO] 17:47:37 | '-- FAILED
+
+[INFO] 17:52:01 +-- Realizar login com sucesso
+[INFO] 17:52:02 | '-- Inicializando o driver
+[INFO] 17:52:12 | '-- Driver inicializado com sucesso
+[INFO] 17:52:30 | '-- FAILED
+
+[INFO] 17:54:46 +-- Realizar login com sucesso
+[INFO] 17:54:46 | '-- Inicializando o driver
+[INFO] 17:54:56 | '-- Driver inicializado com sucesso
+[INFO] 17:57:10 +-- Realizar login com sucesso
+[INFO] 17:57:10 | '-- Inicializando o driver
+[INFO] 17:57:20 | '-- Driver inicializado com sucesso
+[INFO] 17:58:44 | '-- FAILED
+
+[INFO] 17:59:07 +-- Realizar login com sucesso
+[INFO] 17:59:07 | '-- Inicializando o driver
+[INFO] 17:59:16 | '-- Driver inicializado com sucesso
+[INFO] 18:01:50 +-- Realizar login com sucesso
+[INFO] 18:01:50 | '-- Inicializando o driver
+[INFO] 18:02:03 | '-- Driver inicializado com sucesso
+[INFO] 18:03:27 | '-- UNDEFINED
+
+[INFO] 18:04:42 +-- Realizar login com sucesso
+[INFO] 18:04:42 | '-- Inicializando o driver
+[INFO] 18:04:56 | '-- Driver inicializado com sucesso
+[INFO] 18:06:38 +-- Realizar login com sucesso
+[INFO] 18:06:38 | '-- Inicializando o driver
+[INFO] 18:06:49 | '-- Driver inicializado com sucesso
+[INFO] 18:07:25 | '-- FAILED
+
+[INFO] 18:15:24 +-- Realizar login com sucesso
+[INFO] 18:15:24 | '-- Inicializando o driver
+[INFO] 18:15:35 | '-- Driver inicializado com sucesso
+[INFO] 18:15:55 | '-- FAILED
+
+[INFO] 18:19:27 +-- Realizar login com sucesso
+[INFO] 18:19:27 | '-- Inicializando o driver
+[INFO] 18:19:46 | '-- Driver inicializado com sucesso
+[INFO] 18:21:15 | '-- FAILED
+
+[INFO] 18:22:30 +-- Realizar login com sucesso
+[INFO] 18:22:30 | '-- Inicializando o driver
+[INFO] 18:22:42 | '-- Driver inicializado com sucesso
+[INFO] 18:24:06 | '-- FAILED
+
+[INFO] 18:25:29 +-- Realizar login com sucesso
+[INFO] 18:25:29 | '-- Inicializando o driver
+[INFO] 18:25:38 | '-- Driver inicializado com sucesso
+[INFO] 18:26:03 | '-- UNDEFINED
+
+[INFO] 18:26:47 +-- Realizar login com sucesso
+[INFO] 18:26:47 | '-- Inicializando o driver
+[INFO] 18:26:56 | '-- Driver inicializado com sucesso
+[INFO] 18:27:33 | '-- UNDEFINED
+
+[INFO] 18:28:27 +-- Realizar login com sucesso
+[INFO] 18:28:27 | '-- Inicializando o driver
+[INFO] 18:28:38 | '-- Driver inicializado com sucesso
+[INFO] 18:29:02 | '-- UNDEFINED
+
+[INFO] 18:30:45 +-- Realizar login com sucesso
+[INFO] 18:30:45 | '-- Inicializando o driver
+[INFO] 18:30:56 | '-- Driver inicializado com sucesso
+[INFO] 18:32:06 | '-- PASSED
+
+[INFO] 18:33:21 +-- Realizar login com sucesso
+[INFO] 18:33:21 | '-- Inicializando o driver
+[INFO] 18:33:31 | '-- Driver inicializado com sucesso
+[INFO] 18:34:29 | '-- PASSED
+
+[INFO] 18:37:57 +-- Realizar login com sucesso
+[INFO] 18:37:57 | '-- Inicializando o driver
+[INFO] 18:38:06 | '-- Driver inicializado com sucesso
+[INFO] 18:38:17 | '-- clico no botão 'Vamos lá' em login
+[INFO] 18:38:19 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
+[INFO] 18:38:53 | '-- PASSED
+
+[INFO] 18:39:37 +-- Realizar login com sucesso
+[INFO] 18:39:37 | '-- Inicializando o driver
+[INFO] 18:39:48 | '-- Driver inicializado com sucesso
+[INFO] 18:39:59 | '-- clico no botão 'Vamos lá' em login
+[INFO] 18:40:01 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910

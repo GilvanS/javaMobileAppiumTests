@@ -90,4 +90,9 @@ public class PageBaseActions {
     public void click(WebElement element) {
         waitElement(element).click();
     }
+
+    public void clear(WebElement element) {
+        element.clear();
+    }
+
 }

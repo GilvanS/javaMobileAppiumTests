@@ -18,6 +18,9 @@ public class HooksUsers {
         tagCenario = extrairTagDoCenario(cenario.getSourceTagNames());
     }
 
+    public static String getTagCenario() {
+        return tagCenario;
+    }
 
     /**
      * Metodo privado para extrair a TAG do cenario atual a partir da lista de nomes de tags.

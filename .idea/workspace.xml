@@ -5,38 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/2025-06-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2025-06-19.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/adb/AdbActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/actions/PageBaseActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/page/MasterPageFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/manager/UsuarioManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/FakerApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksDados.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksEvidencia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/PrintScreen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Evidencia Modelo.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/dados/login_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/ebacHome.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/ebacLogin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/ebacSignIn.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/editeProfile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/profile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/xml/wishList.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/HooksUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/HooksUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/MassaDados.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +107,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "developer/web-api-mobile",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/myGithub/javaMobileAppiumTests",
+    "last_opened_file_path": "F:/myGithub/javaMobileAppiumTests/src/test/resources",
     "onboarding.tips.debug.path": "C:/CURSO_MOBILE/MobileAppiumTests/src/main/java/org/mobile/appiumtests/Main.java",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
@@ -136,11 +120,14 @@
       <recent name="tests.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\myGithub\javaMobileAppiumTests\src\test\resources" />
+      <recent name="F:\myGithub\javaMobileAppiumTests\src\test\java\org\br\com\mobile\pages\login" />
+      <recent name="F:\myGithub\javaMobileAppiumTests\src\test\java\org\br\com\mobile\pages" />
       <recent name="F:\myGithub\javaMobileAppiumTests" />
       <recent name="F:\myGithub\javaMobileAppiumTests\src" />
-      <recent name="C:\CURSO_MOBILE\MobileAppiumTests\src\test\java\tests\utils" />
-      <recent name="C:\CURSO_MOBILE\MobileAppiumTests\src\test\java\tests\pages" />
-      <recent name="C:\CURSO_MOBILE\MobileAppiumTests\src\test\resources\bdd" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\myGithub\javaMobileAppiumTests\src\test\resources\data" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.testes.driver.actions" />

@@ -44,15 +44,15 @@ public class RunnerTestMobile {
 
     @AfterClass
     public static void after() {
-        long totalDuration = Duration.between(startTime, Instant.now()).toMillis();
-        context.finishedContext(totalDuration);
-        try {
-            renameFile("reports/reports.json", "reports/" + data + ".json");
-            XrayController xrayController = new XrayController();
-            xrayController.uploadReportToXray("reports/" + data + ".json");
-        } catch (Exception e) {
-            throw new RuntimeException("Erro ao processar relatorios: " + e.getMessage(), e);
-        }
+//        long totalDuration = Duration.between(startTime, Instant.now()).toMillis();
+//        context.finishedContext(totalDuration);
+//        try {
+//            renameFile("reports/reports.json", "reports/" + data + ".json");
+//            XrayController xrayController = new XrayController();
+//            xrayController.uploadReportToXray("reports/" + data + ".json");
+//        } catch (Exception e) {
+//            throw new RuntimeException("Erro ao processar relatorios: " + e.getMessage(), e);
+//        }
     }
 
     private static void renameFile(String oldPath, String newPath) throws Exception {

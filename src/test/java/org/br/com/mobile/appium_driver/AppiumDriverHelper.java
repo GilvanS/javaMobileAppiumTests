@@ -17,13 +17,12 @@ public class AppiumDriverHelper {
 
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", "android");
-        capabilities.setCapability("appium:appPackage", "com.google.android.calculator");
-        capabilities.setCapability("appium:appActivity", "com.android.calculator2.Calculator");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
+        capabilities.setCapability("appium:appPackage", "br.com.digio.homol");
+        capabilities.setCapability("appium:appActivity", "br.com.digio.newarchitecture.ui.splash.activity.SplashActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
         capabilities.setCapability("appium:udid", "0078720227");
-        capabilities.setCapability("appium:automationName", "uiautomator2");
-
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
         return capabilities;
     }

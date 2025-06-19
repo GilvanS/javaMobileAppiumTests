@@ -6,6 +6,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.br.com.api.utils.LogFormatter;
 import org.br.com.mobile.appium_driver.AppiumDriverHelper;
@@ -18,6 +19,7 @@ import org.br.com.core.Context;
 public class Hooks {
 
     private static AppiumDriverLocalService server;
+    @Getter
     private static AppiumDriver driver;
     private Context context = new Context();
     private static Instant startTime = Instant.now();
@@ -60,7 +62,4 @@ public class Hooks {
         Context.scenarioResult(status);
     }
 
-    public static AppiumDriver getDriver() {
-        return driver;
-    }
 }
