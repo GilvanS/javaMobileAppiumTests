@@ -1,6 +1,5 @@
 package org.br.com.mobile.pages.login;
 
-import lombok.extern.slf4j.Slf4j;
 import org.br.com.mobile.pages.MasterPageFactory;
 import org.br.com.mobile.pages.PageBaseActions;
 import org.br.com.mobile.utils.dataUsers.Users;
@@ -9,7 +8,6 @@ import org.br.com.api.utils.LogFormatter;
 
 import java.io.IOException;
 
-@Slf4j
 public class LoginActions {
 
     static PageBaseActions acoes = new PageBaseActions();
@@ -29,17 +27,17 @@ public class LoginActions {
     }
 
     public static void clickBtnEntrarNaConta() {
-        log.info("clico no botao 'Entrar na conta' na tela 'Login'");
+        LogFormatter.logStep("clico no botao 'Entrar na conta' na tela 'Login'");
         acoes.click(loginPage().getBtnAcessarMinhaConta());
     }
 
     public static void clicarBtnContinuar() {
-        log.info("clico no botao 'Continuar' na tela 'Login'");
+        LogFormatter.logStep("clico no botao 'Continuar' na tela 'Login'");
         acoes.click(loginPage().getBtnContinuar());
     }
 
     public static void clickBtnProximo(){
-        log.info("clico no botao 'Próximo' na tela 'Login'");
+        LogFormatter.logStep("clico no botao 'Próximo' na tela 'Login'");
         acoes.click(loginPage().getBtnProximo());
     }
 
@@ -51,19 +49,18 @@ public class LoginActions {
     }
 
     public static void vldTextoCpfInvalido() throws IOException, InterruptedException {
-        log.info("valido a exibicao da mensagem 'CPF invalido' na tela 'Login'");
+        LogFormatter.logStep("valido a exibicao da mensagem 'CPF invalido' na tela 'Login'");
         PageBaseActions.waitElement(loginPage().getTxtCpfInvalido());
         PrintScreen.screenshot("mensagem cpf invalido");
     }
 
     public static void inserirSenha(){
-        log.info("preencho o campo 'Senha' na tela 'Login': {}", Users.getSenha());
+        LogFormatter.logStep("preencho o campo 'Senha' na tela 'Login': " + Users.getSenha());
         loginPage().getCampoSenha().sendKeys(Users.getSenha());
-
     }
 
     public static void clickBtnEntrar(){
-        log.info("clico no botao 'Entrar' na tela 'Login'");
+        LogFormatter.logStep("clico no botao 'Entrar' na tela 'Login'");
         acoes.click(loginPage().getBtnEntrar());
     }
 }

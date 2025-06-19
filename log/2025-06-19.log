@@ -168,3 +168,13 @@
 [INFO] 18:55:49 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
 [INFO] 18:56:22 | '-- PASSED
 
+[INFO] 18:59:57 +-- Realizar login com sucesso
+[INFO] 18:59:57 | '-- Inicializando o driver
+[INFO] 19:00:07 | '-- Driver inicializado com sucesso
+[INFO] 19:00:19 | '-- clico no botão 'Vamos lá' em login
+[INFO] 19:00:21 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
+[INFO] 19:00:24 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 19:00:25 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 19:00:27 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 19:00:53 | '-- PASSED
+

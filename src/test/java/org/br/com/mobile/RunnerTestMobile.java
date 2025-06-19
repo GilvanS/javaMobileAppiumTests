@@ -22,7 +22,7 @@ import java.time.Instant;
 @CucumberOptions(
         features = "src/test/resources/features/mobile",
         glue = {"org.br.com.mobile"},
-        tags = "@mobile",
+        tags = "@CT-2001",
         plugin = {
                 "json:reports/reports.json",
         },
