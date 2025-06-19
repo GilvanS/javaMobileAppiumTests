@@ -30,4 +30,9 @@ public class HomeSteps {
     public void validoAExibicaoDoBotaoNaoMostrarNovamenteEmAtiveSuaBiometriaNaTelaHome() {
         HomeActions.validarExibicaoBtnNaoMostrarNovamenteAtiveSuaBiometria();
     }
+
+    @When("clico no botão 'Não mostrar novamente' em 'Ative sua biometria' na tela 'Home'")
+    public void clicoNoBotaoNaoMostrarNovamenteEmAtiveSuaBiometriaNaTelaHome() {
+        HomeActions.clicarBtnNaoMostrarNovamenteAtiveSuaBiometria();
+    }
 }

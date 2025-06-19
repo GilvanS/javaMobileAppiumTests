@@ -29,6 +29,9 @@ public class HomeActions {
         PageBaseActions.waitElement(homePage().getBtnNaoMostrarNovamente());
         assertTrue("Nao foi possivel validar o botão 'nao mostrar novamente' em 'ative sua biometria'",
                 homePage().getBtnNaoMostrarNovamente().isDisplayed());
+    }
+    public static void clicarBtnNaoMostrarNovamenteAtiveSuaBiometria() {
+        log.info("clico no botao 'nao mostrar novamente' em 'ative sua biometria'");
         acoes.click(homePage().getBtnNaoMostrarNovamente());
     }
 }

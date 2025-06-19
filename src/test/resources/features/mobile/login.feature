@@ -13,4 +13,6 @@ Feature: Login
     And clico no botão 'Continuar' na tela 'Login'
     And preencho o campo 'Senha' na tela 'Login'
     And clico no botão 'Entrar' na tela 'Login'
+    And valido a exibição do botão 'Não mostrar novamente' em 'Ative sua biometria' na tela 'Home'
+    And clico no botão 'Não mostrar novamente' em 'Ative sua biometria' na tela 'Home'
     Then valido a exibição da tela 'Home'

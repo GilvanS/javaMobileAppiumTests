@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/2025-06-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2025-06-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/HooksUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/HooksUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/login/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/MassaDados.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/reports.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

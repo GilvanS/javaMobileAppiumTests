@@ -154,3 +154,17 @@
 [INFO] 18:39:48 | '-- Driver inicializado com sucesso
 [INFO] 18:39:59 | '-- clico no botão 'Vamos lá' em login
 [INFO] 18:40:01 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
+[INFO] 18:49:51 +-- Realizar login com sucesso
+[INFO] 18:49:51 | '-- Inicializando o driver
+[INFO] 18:50:06 | '-- Driver inicializado com sucesso
+[INFO] 18:50:19 | '-- clico no botão 'Vamos lá' em login
+[INFO] 18:50:21 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
+[INFO] 18:51:38 | '-- FAILED
+
+[INFO] 18:55:24 +-- Realizar login com sucesso
+[INFO] 18:55:24 | '-- Inicializando o driver
+[INFO] 18:55:35 | '-- Driver inicializado com sucesso
+[INFO] 18:55:47 | '-- clico no botão 'Vamos lá' em login
+[INFO] 18:55:49 | '-- preencho o campo 'CPF' na tela 'Login': 96539101910
+[INFO] 18:56:22 | '-- PASSED
+
