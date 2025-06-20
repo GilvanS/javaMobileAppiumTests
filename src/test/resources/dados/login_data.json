@@ -134,4 +134,84 @@
   "phoneNumber" : "+14782129855",
   "emailAddress" : "shanon.fadel@hotmail.com",
   "password" : "s^l[-.`-Q$<"
+}, {
+  "id" : "1db76079-cc76-48ac-9698-fe40d305736f",
+  "createdAt" : "2025-06-20 11:56:33",
+  "firstName" : "America",
+  "lastName" : "Quitzon",
+  "phoneNumber" : "+14243790007",
+  "emailAddress" : "lavonne20@hotmail.com",
+  "password" : "nzk'C%LJu"
+}, {
+  "id" : "e8ea9346-3db6-4311-acad-5598c6202dd5",
+  "createdAt" : "2025-06-20 11:58:48",
+  "firstName" : "Makayla",
+  "lastName" : "Bahringer",
+  "phoneNumber" : "+17328764669",
+  "emailAddress" : "angelina.luettgen@rosenbaum.net",
+  "password" : "_B%qq;>-"
+}, {
+  "id" : "0e2e6204-3742-474e-b0e7-5f8103068693",
+  "createdAt" : "2025-06-20 12:07:24",
+  "firstName" : "Lavern",
+  "lastName" : "Bogan",
+  "phoneNumber" : "+12603953703",
+  "emailAddress" : "shea24@lesch.net",
+  "password" : "85&/n(GqW2WHc,mJx"
+}, {
+  "id" : "229baa97-1c83-4e0c-b9af-3056b532d43b",
+  "createdAt" : "2025-06-20 12:11:34",
+  "firstName" : "Hillard",
+  "lastName" : "Mohr",
+  "phoneNumber" : "+17792240000",
+  "emailAddress" : "aufderhar.herminia@gmail.com",
+  "password" : "#QM(O37<6>3x<;K)N6>"
+}, {
+  "id" : "9d5d84cd-c350-4c49-92eb-3673b6da1cff",
+  "createdAt" : "2025-06-20 12:27:59",
+  "firstName" : "Noemy",
+  "lastName" : "Zieme",
+  "phoneNumber" : "+19108713147",
+  "emailAddress" : "turcotte.elroy@lockman.com",
+  "password" : "&=c\\(\\o!lMp"
+}, {
+  "id" : "9b5fe7e7-2534-4a65-bf91-a73cb8d322a1",
+  "createdAt" : "2025-06-20 12:31:36",
+  "firstName" : "Camryn",
+  "lastName" : "Carter",
+  "phoneNumber" : "+19295914450",
+  "emailAddress" : "ieichmann@daniel.info",
+  "password" : "Nm>J%xGsAr"
+}, {
+  "id" : "aa39a79f-e46b-49c8-9d3f-1a2aa44f807d",
+  "createdAt" : "2025-06-20 12:49:57",
+  "firstName" : "Adolphus",
+  "lastName" : "Beier",
+  "phoneNumber" : "+18135609177",
+  "emailAddress" : "yost.olen@yahoo.com",
+  "password" : "}KR>QIwZ,!WJRM+\\c5"
+}, {
+  "id" : "bffe402c-1c79-4ebb-97c7-b556cfc76edb",
+  "createdAt" : "2025-06-20 12:53:11",
+  "firstName" : "Hayley",
+  "lastName" : "Price",
+  "phoneNumber" : "+13862098083",
+  "emailAddress" : "mkuhlman@hotmail.com",
+  "password" : "_G|F\"2B7"
+}, {
+  "id" : "3d3cffe1-d097-4c7a-aefb-670c86393986",
+  "createdAt" : "2025-06-20 13:20:02",
+  "firstName" : "Letitia",
+  "lastName" : "Pollich",
+  "phoneNumber" : "+15125963516",
+  "emailAddress" : "bartoletti.tavares@hotmail.com",
+  "password" : "S72G-3w+,"
+}, {
+  "id" : "efcda19a-b135-4e36-944d-85b2a57137b0",
+  "createdAt" : "2025-06-20 13:23:17",
+  "firstName" : "Jalon",
+  "lastName" : "Lindgren",
+  "phoneNumber" : "+18067986387",
+  "emailAddress" : "isabelle.jaskolski@hotmail.com",
+  "password" : "_XM[7Eexl_]:>IRA!"
 } ]

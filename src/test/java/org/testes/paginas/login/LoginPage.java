@@ -46,6 +46,9 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[@content-desc='Sign up']")
     private WebElement btnSignUp;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Login']")
+    private WebElement btnLogin;
+
     @AndroidFindBy(xpath = "//android.widget.EditText[@text='First Name']")
     private WebElement campoFirstName;
 
@@ -55,10 +58,10 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.EditText[@text='Phone Number']")
     private WebElement campoPhoneNumber;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Email Address']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Email Address' or @resource-id='email']")
     private WebElement campoEmailAddress;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password' or @resource-id='password']")
     private WebElement campoPassword;
 
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='repassword']")
@@ -79,6 +82,9 @@ public class LoginPage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Logout']")
     private WebElement btnLogout;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Yes']")
+    private WebElement btnYes;
 
     // Elementos para validação do Profile
     @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Lynch Hazel']")
@@ -115,7 +121,7 @@ public class LoginPage extends PageBaseActions {
     }
 
     public WebElement getTxtUserPhone(String userPhone) {
-        String xpathPhone = String.format("//android.widget.TextView[@text='%s']", userPhone);
+        String xpathPhone = String.format("//android.widget.TextView[contains(@text, '+91 %s')]", userPhone);
         return driver.findElement(By.xpath(xpathPhone));
     }
 

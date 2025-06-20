@@ -30,8 +30,9 @@ public class GeradorDocx {
      * @param scenarioName o nome do cenario para o qual as evidencias estao sendo geradas
      */
     public static void EvidenciasDocx(String scenarioName) {
-        String dirImagens = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot";
-        String dirDocx = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
+        String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
+        String dirImagens = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot";
+        String dirDocx = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
         List<String> arquivoImagens = pegarImagensDiretorio(dirImagens);
 
         try {
@@ -115,8 +116,8 @@ public class GeradorDocx {
             trocarTexto(templateDoc, "data", textoDataAtual);
             trocarTexto(templateDoc, "feature", HooksEvidencia.getNomeDaFeature());
             trocarTexto(templateDoc, "inicio", HooksEvidencia.getDataHoraInicio());
-            trocarTexto(templateDoc, "massa", Usuario.getCpf());
-            trocarTexto(templateDoc, "senha", Usuario.getSenha());
+            trocarTexto(templateDoc, "massa", Usuario.getEmail());
+            trocarTexto(templateDoc, "senha", Usuario.getPassword());
             trocarTexto(templateDoc, "fim", HooksEvidencia.getDataHoraTermino());
             trocarTexto(templateDoc, "idExec", HooksEvidencia.getIdExecucao());
             trocarTextoStatus(templateDoc, String.valueOf(HooksEvidencia.getStatusCenario()));

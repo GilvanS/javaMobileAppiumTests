@@ -1,14 +1,5 @@
 package org.testes.utils;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
-import io.cucumber.java.Status;
-import lombok.Getter;
-import lombok.extern.slf4j.Slf4j;
-import org.utilidades.evidencia.GeradorDocx;
-import org.utilidades.evidencia.PrintScreen;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,6 +8,16 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.utilidades.evidencia.GeradorDocx;
+import org.utilidades.evidencia.PrintScreen;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.Status;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class HooksEvidencia {
@@ -50,7 +51,8 @@ public class HooksEvidencia {
     @After
     public void anexarEvidencias(Scenario scenario) {
         statusCenario = scenario.getStatus();
-        String diretorioDocx = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
+        String deviceUDID = Hooks.driver.getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
+        String diretorioDocx = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
 
         try {
             if (scenario.isFailed()) {

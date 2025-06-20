@@ -25,7 +25,8 @@ public class PrintScreen {
      */
     public static void screenshot(String nomeArquivo) throws IOException {
 
-        String filePath = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + nomeArquivo +  ".png";
+        String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
+        String filePath = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + nomeArquivo +  ".png";
         File print = ((TakesScreenshot) Hooks.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(print, new File(filePath));
         File directory = new File(filePath);

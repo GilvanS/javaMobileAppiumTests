@@ -14,26 +14,24 @@ public class Usuario {
         return HooksDados.getTagCenario();
     }
 
-    public static String getCpf() {
+    public static String getFirstName() {
         return obterInformacao(getTag(), 3);
     }
 
-
-    public static String getSenha() {
+    public static String getLastName() {
         return obterInformacao(getTag(), 4);
     }
 
-    public static String getPid() {
+    public static String getPhone() {
         return obterInformacao(getTag(), 5);
     }
 
-    public static String getCpfSecundario() {
-        return obterInformacao(getTag(), 7);
+    public static String getEmail() {
+        return obterInformacao(getTag(), 6);
     }
 
-    public static String getValor() {
-
-        return obterInformacao(getTag(), 6);
+    public static String getPassword() {
+        return obterInformacao(getTag(), 7);
     }
 
     private static String obterInformacao(String tag, int coluna) {

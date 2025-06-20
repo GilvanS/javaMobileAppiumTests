@@ -6,6 +6,7 @@ public class UsuarioManager {
     public static final ThreadLocal<String> lastName = new ThreadLocal<>();
     public static final ThreadLocal<String> phoneNumber = new ThreadLocal<>();
     public static final ThreadLocal<String> email = new ThreadLocal<>();
+    public static final ThreadLocal<String> password = new ThreadLocal<>();
 
     public static String getFirstName() {
         return firstName.get();
@@ -23,6 +24,9 @@ public class UsuarioManager {
         return email.get();
     }
 
+    public static String getPassword() {
+        return password.get();
+    }
 
     public static void setFirstName(String value) {
         firstName.set(value);
@@ -40,13 +44,15 @@ public class UsuarioManager {
         email.set(value);
     }
 
+    public static void setPassword(String value) {
+        password.set(value);
+    }
 
     public static void remove() {
         firstName.remove();
         lastName.remove();
         phoneNumber.remove();
         email.remove();
+        password.remove();
     }
-
-
 }

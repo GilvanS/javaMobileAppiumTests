@@ -1,11 +1,14 @@
 package org.testes.paginas.login;
 
-import io.cucumber.java.en.*;
+import java.io.IOException;
+
 import org.testes.paginas.home.HomeActions;
 import org.testes.utils.FakerApi;
-import lombok.extern.slf4j.Slf4j;
 
-import java.io.IOException;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LoginSteps {
@@ -37,37 +40,51 @@ public class LoginSteps {
         LoginActions.clicarBtnSignUp();
     }
 
-    @And("preencho o campo First Name na tela Login")
+    @And("preencho o campo First Name na tela cadastro")
     public void preenchoCampoFirstName() {
         LoginActions.preencherCampoFirstName();
     }
 
-    @And("preencho o campo Last Name na tela Login")
+    @And("preencho o campo Last Name na tela cadastro")
     public void preenchoCampoLastName() {
         LoginActions.preencherCampoLastName();
     }
 
-    @And("preencho o campo Phone Number na tela Login")
+    @And("preencho o campo Phone Number na tela cadastro")
     public void preenchoCampoPhoneNumber() {
         LoginActions.preencherCampoPhoneNumber();
     }
 
-    @And("preencho o campo Email Address na tela Login")
+    @And("preencho o campo Email Address na tela cadastro")
     public void preenchoCampoEmailAddress() {
         LoginActions.preencherCampoEmailAddress();
     }
 
     @And("preencho o campo Password na tela Login")
     public void preenchoCampoPassword() {
+        LoginActions.preencherCampoPasswordLogin();
+    }
+
+    @And("preencho o campo Password na tela cadastro")
+    public void preenchoCampoPasswordNaTelaCadastro() {
         LoginActions.preencherCampoPassword();
     }
 
-    @And("preencho o campo ReEnter Password na tela Login")
-    public void preenchoCampoReEnterPassword() {
-        // Não precisa implementar pois já é preenchido no método preencherCampoPassword
+    @Given("preencho o campo Email na tela Login")
+    public void preenchoOCampoEmailNaTelaLogin() {
+        LoginActions.preencherCampoEmailLogin();
+    }
+    @Given("clico no botão Login na tela Login")
+    public void clicoNoBotãoLoginNaTelaLogin() {
+        LoginActions.clicarBtnLogin();
     }
 
-    @And("clico no botão Create na tela Login")
+    @And("preencho o campo ReEnter Password na tela cadastro")
+    public void preenchoCampoReEnterPassword() {
+        LoginActions.reEnterPassword();
+    }
+
+    @And("clico no botão Create na tela cadastro")
     public void clicoNoBotaoCreateNaTelaLogin() {
         LoginActions.clicarBtnCreate();
     }
@@ -165,5 +182,10 @@ public class LoginSteps {
     @Then("clico no botão Explorar na tela Home")
     public void clicar_no_botão_explorar_na_tela_home() {
         HomeActions.clicarBtnExplorar();
+    }
+
+    @And("clico no botão Yes na tela Logout")
+    public void clicoNoBotãoYesNaTelaLogout() {
+        LoginActions.clicarBtnYes();
     }
 }
