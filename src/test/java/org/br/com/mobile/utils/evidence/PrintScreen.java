@@ -23,7 +23,8 @@ public class PrintScreen {
      */
     public static void screenshot(String fileName) throws IOException, InterruptedException {
         Thread.sleep(1000);
-        String filePath = "evidences/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + HooksEvidence.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + fileName +  ".png";
+        String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
+        String filePath = "evidences/" + deviceUDID + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + HooksEvidence.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + fileName +  ".png";
         File print = ((TakesScreenshot) Hooks.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(print, new File(filePath));
         File directory = new File(FileUtils.getTempDirectoryPath());

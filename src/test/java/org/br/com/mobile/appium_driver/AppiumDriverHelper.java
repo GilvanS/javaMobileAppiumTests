@@ -17,14 +17,17 @@ public class AppiumDriverHelper {
 
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
+        capabilities.setCapability("appium:platformName", "android");
         capabilities.setCapability("appium:appPackage", "br.com.digio.homol");
         capabilities.setCapability("appium:appActivity", "br.com.digio.newarchitecture.ui.splash.activity.SplashActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:udid", "0078720227");
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+        capabilities.setCapability("appium:udid", "192.168.0.106:5555");
+        capabilities.setCapability("appium:automationName", "uiautomator2");
 
         return capabilities;
+
+        // MotoG85 Wifi = 192.168.0.106:5555
+        // MotoG85local = 0078720227
     }
 
     public static URL getURL() throws MalformedURLException {

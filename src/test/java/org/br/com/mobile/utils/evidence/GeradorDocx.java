@@ -31,8 +31,9 @@ public class GeradorDocx {
      * @param scenarioName o nome do cenario para o qual as evidencias estao sendo geradas
      */
     public static void EvidenciasDocx(String scenarioName) {
-        String dirImagens = "evidences/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + HooksEvidence.getNomeCenario() +"/" + "screenshot";
-        String dirDocx = "evidences/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + "/" + HooksEvidence.getNomeCenario() + "/"+ HooksEvidence.getNomeCenario() + ".docx";
+        String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
+        String dirImagens = "evidences/" + deviceUDID + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + HooksEvidence.getNomeCenario() +"/" + "screenshot";
+        String dirDocx = "evidences/" + deviceUDID + "/" + HooksEvidence.getNomeDaFeature() + "/" + HooksEvidence.getIdExecucao() + "/" + "/" + HooksEvidence.getNomeCenario() + "/"+ HooksEvidence.getNomeCenario() + ".docx";
         List<String> arquivoImagens = pegarImagensDiretorio(dirImagens);
 
         try {

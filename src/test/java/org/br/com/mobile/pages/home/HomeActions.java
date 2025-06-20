@@ -647,11 +647,19 @@ public class HomeActions {
         LogFormatter.logStep("clico no botão 'Sacar'");
         actions().sleep(2);
         if (actions().isIOS()) {
-            actions().horizontalSwipeLeft(homePage().getBtnPagar(), homePage().getBtnSacar(), 5);
-            actions().click(homePage().getBtnSacar());
+            if (actions().horizontalSwipeLeftAndSearch(homePage().getBtnPagar(), homePage().getBtnSacar(), 3)) {
+                actions().click(homePage().getBtnSacar());
+            } else {
+                actions().horizontalSwipeLeft(homePage().getBtnPagar(), homePage().getBtnSacar(), 5);
+                actions().click(homePage().getBtnSacar());
+            }
         } else {
-            actions().horizontalSwipeLeft(homePage().getCarrosselConta(), homePage().getBtnSacar(), 5);
-            actions().click(homePage().getBtnSacar());
+            if (actions().horizontalSwipeLeftAndSearch(homePage().getCarrosselConta(), homePage().getBtnSacar(), 3)) {
+                actions().click(homePage().getBtnSacar());
+            } else {
+                actions().horizontalSwipeLeft(homePage().getCarrosselConta(), homePage().getBtnSacar(), 5);
+                actions().click(homePage().getBtnSacar());
+            }
         }
     }
 

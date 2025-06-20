@@ -5,148 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0386a77a-636c-48e4-a25d-7952707c658e/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile/home/sacar.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0386a77a-636c-48e4-a25d-7952707c658e/Visualizar os dados da minha conta no menu/screenshot/1750378134544 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0386a77a-636c-48e4-a25d-7952707c658e/Visualizar os dados da minha conta no menu/screenshot/1750378138427 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0839eb84-3c7f-4f04-ad31-d937ed09aa10/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0839eb84-3c7f-4f04-ad31-d937ed09aa10/Visualizar os dados da minha conta no menu/screenshot/1750381079163 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/0839eb84-3c7f-4f04-ad31-d937ed09aa10/Visualizar os dados da minha conta no menu/screenshot/1750381086096 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/202b8bff-6706-4928-b522-1a67850a97f6/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/202b8bff-6706-4928-b522-1a67850a97f6/Visualizar os dados da minha conta no menu/screenshot/1750379522558 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/202b8bff-6706-4928-b522-1a67850a97f6/Visualizar os dados da minha conta no menu/screenshot/1750379529875 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/202b8bff-6706-4928-b522-1a67850a97f6/Visualizar os dados da minha conta no menu/screenshot/1750379584351 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/213d58fb-51a4-4e84-ae38-f3a49f0ae5a1/Visualizar os dados da minha conta no menu/screenshot/1750378369789 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/249083ac-8974-4bfd-b4f9-20b81401a55e/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/249083ac-8974-4bfd-b4f9-20b81401a55e/Visualizar os dados da minha conta no menu/screenshot/1750380956729 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/249083ac-8974-4bfd-b4f9-20b81401a55e/Visualizar os dados da minha conta no menu/screenshot/1750380966102 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/249083ac-8974-4bfd-b4f9-20b81401a55e/Visualizar os dados da minha conta no menu/screenshot/1750381004379 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2573f222-f6a1-4740-a02d-8cf95a4c38d9/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2573f222-f6a1-4740-a02d-8cf95a4c38d9/Visualizar os dados da minha conta no menu/screenshot/1750377941241 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2573f222-f6a1-4740-a02d-8cf95a4c38d9/Visualizar os dados da minha conta no menu/screenshot/1750377944976 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/28ff3a73-4f63-4aa0-8372-4b5c1bd3f544/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/28ff3a73-4f63-4aa0-8372-4b5c1bd3f544/Visualizar os dados da minha conta no menu/screenshot/1750378483836 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/28ff3a73-4f63-4aa0-8372-4b5c1bd3f544/Visualizar os dados da minha conta no menu/screenshot/1750378490052 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/28ff3a73-4f63-4aa0-8372-4b5c1bd3f544/Visualizar os dados da minha conta no menu/screenshot/1750378516296 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2f25776f-5b8a-488a-8f13-90081cd44871/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2f25776f-5b8a-488a-8f13-90081cd44871/Visualizar os dados da minha conta no menu/screenshot/1750377886164 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/2f25776f-5b8a-488a-8f13-90081cd44871/Visualizar os dados da minha conta no menu/screenshot/1750377889911 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/50d01802-7bce-4d7e-b8ac-dc52eae4a1ef/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/50d01802-7bce-4d7e-b8ac-dc52eae4a1ef/Visualizar os dados da minha conta no menu/screenshot/1750377472281 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/50d01802-7bce-4d7e-b8ac-dc52eae4a1ef/Visualizar os dados da minha conta no menu/screenshot/1750377476277 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/576eabba-7e68-4a8a-91f6-60bf9ac275c8/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/576eabba-7e68-4a8a-91f6-60bf9ac275c8/Visualizar os dados da minha conta no menu/screenshot/1750380112429 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/576eabba-7e68-4a8a-91f6-60bf9ac275c8/Visualizar os dados da minha conta no menu/screenshot/1750380119164 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/576eabba-7e68-4a8a-91f6-60bf9ac275c8/Visualizar os dados da minha conta no menu/screenshot/1750380175482 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/61a9f809-9ccc-4f7d-b5d4-b5fc1c7140a4/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/61a9f809-9ccc-4f7d-b5d4-b5fc1c7140a4/Visualizar os dados da minha conta no menu/screenshot/1750377799425 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/61a9f809-9ccc-4f7d-b5d4-b5fc1c7140a4/Visualizar os dados da minha conta no menu/screenshot/1750377805290 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/61a9f809-9ccc-4f7d-b5d4-b5fc1c7140a4/Visualizar os dados da minha conta no menu/screenshot/1750377840421 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/9562a0ec-f533-4b0a-b4fd-8f23eb2fccb9/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/9562a0ec-f533-4b0a-b4fd-8f23eb2fccb9/Visualizar os dados da minha conta no menu/screenshot/1750377366936 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/9562a0ec-f533-4b0a-b4fd-8f23eb2fccb9/Visualizar os dados da minha conta no menu/screenshot/1750377371203 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/99069f57-4a02-4546-b87a-7936c2733b9a/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/99069f57-4a02-4546-b87a-7936c2733b9a/Visualizar os dados da minha conta no menu/screenshot/1750377558801 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/99069f57-4a02-4546-b87a-7936c2733b9a/Visualizar os dados da minha conta no menu/screenshot/1750377562559 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/a53592eb-905c-4708-9c42-bc4de3f7b109/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/a53592eb-905c-4708-9c42-bc4de3f7b109/Visualizar os dados da minha conta no menu/screenshot/1750378033562 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/a53592eb-905c-4708-9c42-bc4de3f7b109/Visualizar os dados da minha conta no menu/screenshot/1750378038205 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/aca62754-4763-447f-9d2c-d4fe0b7c6cc2/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/aca62754-4763-447f-9d2c-d4fe0b7c6cc2/Visualizar os dados da minha conta no menu/screenshot/1750378185452 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/aca62754-4763-447f-9d2c-d4fe0b7c6cc2/Visualizar os dados da minha conta no menu/screenshot/1750378189524 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/ce4c1c35-ec98-43b5-a898-411304d28ea0/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/ce4c1c35-ec98-43b5-a898-411304d28ea0/Visualizar os dados da minha conta no menu/screenshot/1750377761555 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/ce4c1c35-ec98-43b5-a898-411304d28ea0/Visualizar os dados da minha conta no menu/screenshot/1750377765338 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/dbe5ae9a-2d79-4bf7-a2f1-72430b137041/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/dbe5ae9a-2d79-4bf7-a2f1-72430b137041/Visualizar os dados da minha conta no menu/screenshot/1750378228267 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/dbe5ae9a-2d79-4bf7-a2f1-72430b137041/Visualizar os dados da minha conta no menu/screenshot/1750378234553 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/dbe5ae9a-2d79-4bf7-a2f1-72430b137041/Visualizar os dados da minha conta no menu/screenshot/1750378269132 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/e4df8419-bf19-42eb-9f89-17dc28791866/Visualizar os dados da minha conta no menu/Visualizar os dados da minha conta no menu.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/e4df8419-bf19-42eb-9f89-17dc28791866/Visualizar os dados da minha conta no menu/screenshot/1750378772380 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/home/e4df8419-bf19-42eb-9f89-17dc28791866/Visualizar os dados da minha conta no menu/screenshot/1750378779298 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/21622220-3f2b-476a-9467-b58c91d7964a/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/21622220-3f2b-476a-9467-b58c91d7964a/Realizar login com sucesso/screenshot/1750370145631 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/21622220-3f2b-476a-9467-b58c91d7964a/Realizar login com sucesso/screenshot/1750370152862 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2caf59c1-121a-4b81-b6e5-bfca12d1d1ee/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2caf59c1-121a-4b81-b6e5-bfca12d1d1ee/Realizar login com sucesso/screenshot/1750366766049 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2caf59c1-121a-4b81-b6e5-bfca12d1d1ee/Realizar login com sucesso/screenshot/1750366771940 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2caf59c1-121a-4b81-b6e5-bfca12d1d1ee/Realizar login com sucesso/screenshot/1750366839741 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2d5b0bb0-eb24-4271-a25c-d1916f717734/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2d5b0bb0-eb24-4271-a25c-d1916f717734/Realizar login com sucesso/screenshot/1750367995960 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2d5b0bb0-eb24-4271-a25c-d1916f717734/Realizar login com sucesso/screenshot/1750368004143 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/2d5b0bb0-eb24-4271-a25c-d1916f717734/Realizar login com sucesso/screenshot/1750368071372 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/33da199c-466f-44a8-a3be-443dd3f84e52/Realizar login com sucesso/screenshot/1750369198672 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/33da199c-466f-44a8-a3be-443dd3f84e52/Realizar login com sucesso/screenshot/1750369203994 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/33e09f96-e0fa-4c2b-be5b-6069d26cb1b0/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/33e09f96-e0fa-4c2b-be5b-6069d26cb1b0/Realizar login com sucesso/screenshot/1750365306311 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/33e09f96-e0fa-4c2b-be5b-6069d26cb1b0/Realizar login com sucesso/screenshot/1750365311009 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/3f75202a-7633-4d8f-ab97-556e794a1ea5/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/3f75202a-7633-4d8f-ab97-556e794a1ea5/Realizar login com sucesso/screenshot/1750370417967 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/3f75202a-7633-4d8f-ab97-556e794a1ea5/Realizar login com sucesso/screenshot/1750370424361 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/47852f5e-e00c-455e-8654-5f86a806b801/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/47852f5e-e00c-455e-8654-5f86a806b801/Realizar login com sucesso/screenshot/1750365981640 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/47852f5e-e00c-455e-8654-5f86a806b801/Realizar login com sucesso/screenshot/1750365987012 - teste.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/47852f5e-e00c-455e-8654-5f86a806b801/Realizar login com sucesso/screenshot/1750366052293 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/52265dcd-b76a-4252-adfc-7caa3bc2acf3/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/52265dcd-b76a-4252-adfc-7caa3bc2acf3/Realizar login com sucesso/screenshot/1750366343480 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/52265dcd-b76a-4252-adfc-7caa3bc2acf3/Realizar login com sucesso/screenshot/1750366348117 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/54503fba-c9b0-4789-9db6-0d7946ccfd43/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/54503fba-c9b0-4789-9db6-0d7946ccfd43/Realizar login com sucesso/screenshot/1750364983558 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5a3c185c-592a-4ecb-90a2-42776585a2df/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5a3c185c-592a-4ecb-90a2-42776585a2df/Realizar login com sucesso/screenshot/1750368425842 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5a3c185c-592a-4ecb-90a2-42776585a2df/Realizar login com sucesso/screenshot/1750368441448 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5b79f83b-ddc1-4429-89f7-6bf521eda5f2/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5b79f83b-ddc1-4429-89f7-6bf521eda5f2/Realizar login com sucesso/screenshot/1750368820898 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5b79f83b-ddc1-4429-89f7-6bf521eda5f2/Realizar login com sucesso/screenshot/1750368826330 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5f8d7403-17d5-4493-b4a0-5ff3b863a351/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5f8d7403-17d5-4493-b4a0-5ff3b863a351/Realizar login com sucesso/screenshot/1750369096022 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/5f8d7403-17d5-4493-b4a0-5ff3b863a351/Realizar login com sucesso/screenshot/1750369102729 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/605723aa-ae4a-43ba-8ccd-35eb84534397/Realizar login com sucesso/screenshot/1750367106915 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/605723aa-ae4a-43ba-8ccd-35eb84534397/Realizar login com sucesso/screenshot/1750367112650 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/77776e11-b571-422c-9f4c-bb802bec3873/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/77776e11-b571-422c-9f4c-bb802bec3873/Realizar login com sucesso/screenshot/1750368171819 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/77776e11-b571-422c-9f4c-bb802bec3873/Realizar login com sucesso/screenshot/1750368177727 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/77776e11-b571-422c-9f4c-bb802bec3873/Realizar login com sucesso/screenshot/1750368243769 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/78f45618-b08d-4ced-bcaf-d533e80729d9/Realizar login com sucesso/screenshot/1750367218745 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/78f45618-b08d-4ced-bcaf-d533e80729d9/Realizar login com sucesso/screenshot/1750367224146 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/8688719d-c174-48d1-8cfc-7f2fd11183cd/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/8688719d-c174-48d1-8cfc-7f2fd11183cd/Realizar login com sucesso/screenshot/1750368348345 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/8688719d-c174-48d1-8cfc-7f2fd11183cd/Realizar login com sucesso/screenshot/1750368354310 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/bc8e114d-1d26-4b9b-896d-fcc37426c6a2/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/bc8e114d-1d26-4b9b-896d-fcc37426c6a2/Realizar login com sucesso/screenshot/1750364836764 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d068d893-c969-4f0d-80a8-7b1c5d8a2333/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d068d893-c969-4f0d-80a8-7b1c5d8a2333/Realizar login com sucesso/screenshot/1750365433208 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d068d893-c969-4f0d-80a8-7b1c5d8a2333/Realizar login com sucesso/screenshot/1750365444791 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d3298a6c-4f8a-4dfd-86f0-701b8b5aa4f0/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d3298a6c-4f8a-4dfd-86f0-701b8b5aa4f0/Realizar login com sucesso/screenshot/1750369817339 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d3298a6c-4f8a-4dfd-86f0-701b8b5aa4f0/Realizar login com sucesso/screenshot/1750369824413 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/d3298a6c-4f8a-4dfd-86f0-701b8b5aa4f0/Realizar login com sucesso/screenshot/1750369894505 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/da6fd0ec-df4a-4fcf-9837-393a612cc2a8/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/da6fd0ec-df4a-4fcf-9837-393a612cc2a8/Realizar login com sucesso/screenshot/1750368527734 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/da6fd0ec-df4a-4fcf-9837-393a612cc2a8/Realizar login com sucesso/screenshot/1750368535259 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/dd9e77fe-7bd5-4d0d-87dc-4ba3a37c987f/Realizar login com CPF invalido/Realizar login com CPF invalido.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/dd9e77fe-7bd5-4d0d-87dc-4ba3a37c987f/Realizar login com CPF invalido/screenshot/1750355487584 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/df576149-b279-427e-9b46-e400ce1c18a9/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/df576149-b279-427e-9b46-e400ce1c18a9/Realizar login com sucesso/screenshot/1750367746524 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/df576149-b279-427e-9b46-e400ce1c18a9/Realizar login com sucesso/screenshot/1750367752654 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e009be31-ff20-4cd2-8d39-40036cb1e0a8/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e009be31-ff20-4cd2-8d39-40036cb1e0a8/Realizar login com sucesso/screenshot/1750368665523 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e009be31-ff20-4cd2-8d39-40036cb1e0a8/Realizar login com sucesso/screenshot/1750368672569 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e7544afc-7649-4af6-a774-f0314454b43e/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e7544afc-7649-4af6-a774-f0314454b43e/Realizar login com sucesso/screenshot/1750366650850 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e7544afc-7649-4af6-a774-f0314454b43e/Realizar login com sucesso/screenshot/1750366655585 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/e7544afc-7649-4af6-a774-f0314454b43e/Realizar login com sucesso/screenshot/1750366721435 - falhou.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/ed45305a-55d3-4ec4-addd-ef483272c37c/Realizar login com sucesso/Realizar login com sucesso.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/ed45305a-55d3-4ec4-addd-ef483272c37c/Realizar login com sucesso/screenshot/1750366934022 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/ed45305a-55d3-4ec4-addd-ef483272c37c/Realizar login com sucesso/screenshot/1750366940569 - CPF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/fc29d813-70f1-405f-94d6-115a451a1a8f/Realizar login com sucesso/screenshot/1750366506994 - tela inicial.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evidences/0078720227/login/fc29d813-70f1-405f-94d6-115a451a1a8f/Realizar login com sucesso/screenshot/1750366512287 - teste.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/2025-06-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/2025-06-19.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evidences/0078720227/sacar/225998db-b440-4f5c-ab48-0ed688108f97/Tela da home validar botão SACAR/screenshot/1750382195148 - tela inicial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evidences/0078720227/sacar/225998db-b440-4f5c-ab48-0ed688108f97/Tela da home validar botão SACAR/screenshot/1750382201160 - CPF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evidences/0078720227/sacar/7cb831bb-79c4-4920-9a18-dc976d6b6af9/Tela da home validar botão SACAR/screenshot/1750382288960 - tela inicial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/evidences/0078720227/sacar/7cb831bb-79c4-4920-9a18-dc976d6b6af9/Tela da home validar botão SACAR/screenshot/1750382295221 - CPF.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/reports.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/reports.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/RunnerTestMobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/MassaDados.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile/home/home.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile/login/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/appium_driver/AppiumDriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/PageBaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/pages/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/evidence/GeradorDocx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/evidence/GeradorDocx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/evidence/PrintScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/br/com/mobile/utils/evidence/PrintScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

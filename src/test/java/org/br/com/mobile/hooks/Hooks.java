@@ -62,4 +62,8 @@ public class Hooks {
         Context.scenarioResult(status);
     }
 
+    public static AppiumDriver getDriver() {
+        return driver;
+    }
+
 }
