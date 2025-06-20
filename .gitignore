@@ -23,4 +23,6 @@ test-classes/
 /reports
 /log
 /evidences
+/workspace.xml
+*.log
 
