@@ -17,6 +17,10 @@ target/
 test-classes/
 
 # IDE
-.idea/
+.idea
 *.iml
 *.iws
+/reports
+/log
+/evidences
+
