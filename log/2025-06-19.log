@@ -336,3 +336,73 @@
 [INFO] 21:59:05 | '-- valido a exibição do texto 'Conta' na tela 'Menu'
 [INFO] 21:59:11 | '-- PASSED
 
+[INFO] 22:07:52 +-- Tela da home validar botão "SACAR"
+[INFO] 22:07:52 | '-- Inicializando o driver
+[INFO] 22:08:04 | '-- Driver inicializado com sucesso
+[INFO] 22:08:20 | '-- FAILED
+
+[INFO] 22:08:46 +-- Tela da home validar botão "SACAR"
+[INFO] 22:08:46 | '-- Inicializando o driver
+[INFO] 22:08:57 | '-- Driver inicializado com sucesso
+[INFO] 22:09:11 | '-- FAILED
+
+[INFO] 22:09:34 +-- Tela da home validar botão "SACAR"
+[INFO] 22:09:34 | '-- Inicializando o driver
+[INFO] 22:09:44 | '-- Driver inicializado com sucesso
+[INFO] 22:09:58 | '-- FAILED
+
+[INFO] 22:10:17 +-- Tela da home validar botão "SACAR"
+[INFO] 22:10:17 | '-- Inicializando o driver
+[INFO] 22:10:26 | '-- Driver inicializado com sucesso
+[INFO] 22:10:41 | '-- FAILED
+
+[INFO] 22:11:54 +-- Tela da home validar botão "SACAR"
+[INFO] 22:11:54 | '-- Inicializando o driver
+[INFO] 22:12:04 | '-- Driver inicializado com sucesso
+[INFO] 22:12:19 | '-- FAILED
+
+[INFO] 22:13:02 +-- Tela da home validar botão "SACAR"
+[INFO] 22:13:02 | '-- Inicializando o driver
+[INFO] 22:13:11 | '-- Driver inicializado com sucesso
+[INFO] 22:13:25 | '-- FAILED
+
+[INFO] 22:13:53 +-- Tela da home validar botão "SACAR"
+[INFO] 22:13:53 | '-- Inicializando o driver
+[INFO] 22:14:01 | '-- Driver inicializado com sucesso
+[INFO] 22:14:32 +-- Tela da home validar botão "SACAR"
+[INFO] 22:14:32 | '-- Inicializando o driver
+[INFO] 22:14:34 | '-- Erro ao inicializar o driver
+[INFO] 22:14:34 | '-- FAILED
+
+[INFO] 22:15:18 +-- Tela da home validar botão "SACAR"
+[INFO] 22:15:18 | '-- Inicializando o driver
+[INFO] 22:15:26 | '-- Driver inicializado com sucesso
+[INFO] 22:15:41 | '-- FAILED
+
+[INFO] 22:16:15 +-- Tela da home validar botão SACAR
+[INFO] 22:16:15 | '-- Inicializando o driver
+[INFO] 22:16:25 | '-- Driver inicializado com sucesso
+[INFO] 22:16:36 | '-- clico no botão 'Vamos lá' em login
+[INFO] 22:16:38 | '-- preencho o campo 'CPF' na tela 'Login': 05214098707
+[INFO] 22:16:41 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 22:16:42 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 22:16:44 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 22:16:49 | '-- valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 22:17:12 | '-- clico no botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 22:17:16 | '-- valido a exibição da home
+[INFO] 22:17:21 | '-- clico no botao 'Conta'
+[INFO] 22:17:49 +-- Tela da home validar botão SACAR
+[INFO] 22:17:49 | '-- Inicializando o driver
+[INFO] 22:17:59 | '-- Driver inicializado com sucesso
+[INFO] 22:18:10 | '-- clico no botão 'Vamos lá' em login
+[INFO] 22:18:12 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 22:18:15 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 22:18:16 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 22:18:17 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 22:18:21 | '-- valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 22:18:39 | '-- clico no botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 22:18:42 | '-- valido a exibição da home
+[INFO] 22:18:52 | '-- FAILED
+
+[INFO] 22:19:13 +-- Tela da home validar botão SACAR
+[INFO] 22:19:13 | '-- Inicializando o driver
