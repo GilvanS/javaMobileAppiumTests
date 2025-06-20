@@ -1,59 +1,48 @@
-@EBAC-Store
-Feature: Funcionalidades app EBAC Store
+@MyDemoApp
+Feature: Funcionalidades app MyDemoApp
   como
   quero
   para
 
-  @CT-1001 @CadastroDeUsuario
+  @CT-1001 @Login
   Scenario: Validar Cadastro de usuário com sucesso
-    Given que estou na tela Home
-    And valido a exibição da frase EBAC Store tela Home
-    And clico no botão Profile na tela Home
-    And valido a exibição da frase Welcome to EBAC Shop na tela Login
-    And clico no botão Sign up na tela Login
-    And preencho o campo First Name na tela cadastro
-    And preencho o campo Last Name na tela cadastro
-    And preencho o campo Phone Number na tela cadastro
-    And preencho o campo Email Address na tela cadastro
-    And preencho o campo Password na tela cadastro
-    And preencho o campo ReEnter Password na tela cadastro
-    And clico no botão Create na tela cadastro
-    And clico no botão Wishlist na tela Home
-    And clico no botão voltar na tela Wishlist
-    And clico no botão Profile na tela Home
-    And valido o nome do usuário na tela Profile
-    And valido o Phone Number do usuário na tela Profile
-    And valido o Email Address do usuário na tela Profile
-    And clico no botão Edit Profile na tela Profile
-    And valido o First Name do usuário na tela Edit Profile
-    And valido o Last Name do usuário na tela Edit Profile
-    And valido o Phone Number do usuário na tela Edit Profile
-    And valido o Email Address do usuário na tela Edit Profile
-    And clico no botão voltar na tela Edit Profile
-    And clico no botão Logout na tela Profile
-    And clico no botão Yes na tela Logout
+    Given que estou na tela Products
+    And valido a exibição da frase MYDEMOAPP na tela Products
+    And clico no botão menu Hamburguer na tela Products
+    And clico no botão Log In na tela Menu
+    And preencho o campo Username na tela Login
+    And preencho o campo Password na tela Login
+    And clico no botão Login na tela Login
+    Then valido a exibição da frase Products na tela Products
 
-  @CT-1002 @LoginDeUsuario
-  Scenario: Validar Login de usuário com sucesso
-      Given que estou na tela Home
-      And valido a exibição da frase EBAC Store tela Home
-      And clico no botão Profile na tela Home
-      And valido a exibição da frase Welcome to EBAC Shop na tela Login
-      And preencho o campo Email na tela Login
-      And preencho o campo Password na tela Login
-      And clico no botão Login na tela Login
-      And valido a exibição da frase EBAC Store tela Home
-#      And clico no botão Wishlist na tela Home
-#      And clico no botão voltar na tela Wishlist
-#      And clico no botão Profile na tela Home
-#      And valido o nome do usuário na tela Profile
-#      And valido o Phone Number do usuário na tela Profile
-#      And valido o Email Address do usuário na tela Profile
-#      And clico no botão Edit Profile na tela Profile
-#      And valido o First Name do usuário na tela Edit Profile
-#      And valido o Last Name do usuário na tela Edit Profile
-#      And valido o Phone Number do usuário na tela Edit Profile
-#      And valido o Email Address do usuário na tela Edit Profile
+  @CT-1002 @Compras
+  Scenario: Validar Compra de produto com sucesso
+    Given que estou na tela Products
+    And valido a exibição da frase MYDEMOAPP na tela Products
+    And clico no botão menu Hamburguer na tela Products
+    And clico no botão Log In na tela Menu
+    And preencho o campo Username na tela Login
+    And preencho o campo Password na tela Login
+    And clico no botão Login na tela Login
+    And valido a exibição da frase Products na tela Products
+    When clico no produto 'Sauce Labs Backpack' na tela Products
+    And clico no botão Add to cart na tela Product Detail
+    Then valido a exibição do produto 'Sauce Labs Backpack' no carrinho de compras na tela Cart
+    And clico no botão Cart na tela Products
+    And clico no botão Proceed to checkout na tela Cart
+    And preencho o campo Full Name na tela Checkout
+    And preencho o campo Address Line 1 na tela Checkout
+    And preencho o campo Address Line 2 na tela Checkout
+    And preencho o campo City na tela Checkout
+    And preencho o campo State Region na tela Checkout
+    And preencho o campo Zip Code na tela Checkout
+    And preencho o campo Country na tela Checkout
+    And clico no botão To Payment na tela Checkout
+    And preencho o campo Full Name na tela Payment
+    And preencho o campo Card Number na tela Payment
+    And preencho o campo Expiration Date na tela Payment
+    And preencho o campo CVV na tela Payment
+    And clico no botão Review Order na tela Payment
 
 
 

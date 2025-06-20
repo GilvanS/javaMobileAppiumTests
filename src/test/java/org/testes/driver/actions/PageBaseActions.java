@@ -13,6 +13,7 @@ import java.util.Collections;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.support.ui.FluentWait;
 
 import static org.testes.adb.AdbActions.swipe;
 
@@ -26,6 +27,11 @@ public class PageBaseActions {
     private static final Logger log = LoggerFactory.getLogger(PageBaseActions.class);
     protected final AppiumDriver driver;
     protected final int DEFAULT_TIMEOUT_SECONDS = 10;
+    
+    // Constantes para os novos métodos
+    private static final int THIRTY_SECONDS = 30;
+    private static final int DEFAULT_SECONDS = 10;
+    private static final Duration D_500MILLIS = Duration.ofMillis(500);
 
     /**
      * Realiza um swipe horizontal usando coordenadas específicas até encontrar o elemento.
@@ -164,11 +170,14 @@ public class PageBaseActions {
                 ((io.appium.java_client.android.AndroidDriver) driver).hideKeyboard();
             } else if (driver instanceof io.appium.java_client.ios.IOSDriver) {
                 ((io.appium.java_client.ios.IOSDriver) driver).hideKeyboard();
+            } else if (driver instanceof io.appium.java_client.AppiumDriver) {
+                // Usa executeScript para esconder o teclado (funciona com AppiumDriver genérico)
+                driver.executeScript("mobile: hideKeyboard");
             } else {
                 log.warn("hideKeyboard não suportado para o tipo de driver: " + driver.getClass().getSimpleName());
             }
         } catch (Exception e) {
-            log.warn("Teclado não estava visível ou não pôde ser escondido.");
+            log.warn("Teclado não estava visível ou não pôde ser escondido: " + e.getMessage());
         }
     }
 
@@ -272,6 +281,18 @@ public class PageBaseActions {
      */
     public void click(By by, int seconds) {
         waitVisibilityOf(by, seconds).click();
+    }
+
+    /**
+     * Sleep for current thread
+     *
+     */
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(1_000L * seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -573,6 +594,41 @@ public class PageBaseActions {
 
     public boolean verticalSwipeDownAndSearch(By by) throws IOException {
         return verticalSwipeDownAndSearch(by, 5);
+    }
+
+    /**
+     * Aguarda o elemento ser exibido usando FluentWait com configurações avançadas.
+     * @param element WebElement a ser aguardado
+     * @return Boolean indicando se o elemento foi encontrado
+     */
+    public Boolean waitForElementToBeDisplayed(WebElement element) {
+        return new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(THIRTY_SECONDS))
+                .pollingEvery(D_500MILLIS)
+                .ignoring(Exception.class)
+                .until(ExpectedConditions.visibilityOf(element)) != null;
+    }
+
+    /**
+     * Aguarda o elemento ser clicável usando timeout padrão.
+     * @param element WebElement a ser aguardado
+     * @return WebElement clicável
+     */
+    public WebElement waitForElementToBeClickable(WebElement element) {
+        return waitForElementToBeClickable(element, DEFAULT_SECONDS);
+    }
+
+    /**
+     * Aguarda o elemento localizado por By ser exibido usando FluentWait.
+     * @param element By localizador do elemento
+     * @return Boolean indicando se o elemento foi encontrado
+     */
+    public Boolean waitForElementToBeDisplayed(By element) {
+        return new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(THIRTY_SECONDS))
+                .pollingEvery(D_500MILLIS)
+                .ignoring(Exception.class)
+                .until(ExpectedConditions.visibilityOfElementLocated(element)) != null;
     }
 
 }

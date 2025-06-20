@@ -1,25 +1,37 @@
 package org.utilidades.evidencia;
 
-import io.cucumber.core.backend.TestCaseState;
-import io.cucumber.java.Scenario;
-import io.cucumber.plugin.event.PickleStepTestStep;
-import io.cucumber.plugin.event.TestCase;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.util.Units;
-import org.apache.poi.xwpf.usermodel.*;
-import org.testes.utils.Hooks;
-import org.testes.utils.HooksEvidencia;
-import org.utilidades.dados.Usuario;
-
-
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.util.Units;
+import org.apache.poi.xwpf.usermodel.BreakType;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.poi.xwpf.usermodel.XWPFTable;
+import org.apache.poi.xwpf.usermodel.XWPFTableCell;
+import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.testes.utils.Hooks;
+import org.testes.utils.HooksEvidencia;
+import org.utilidades.dados.Usuario;
+
+import io.cucumber.core.backend.TestCaseState;
+import io.cucumber.java.Scenario;
+import io.cucumber.plugin.event.PickleStepTestStep;
+import io.cucumber.plugin.event.TestCase;
 
 public class GeradorDocx {
 
@@ -32,10 +44,17 @@ public class GeradorDocx {
     public static void EvidenciasDocx(String scenarioName) {
         String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
         String dirImagens = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot";
-        String dirDocx = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
+        String dirDocx = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
         List<String> arquivoImagens = pegarImagensDiretorio(dirImagens);
 
         try {
+            // Criar diretórios pai se não existirem
+            File docxFile = new File(dirDocx);
+            File parentDir = docxFile.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs();
+            }
+            
             criarDocx(dirDocx, arquivoImagens);
             System.out.println("Documento Word criado com sucesso em: " + dirDocx);
         } catch (IOException | InvalidFormatException e) {

@@ -49,7 +49,6 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.View[5]/android.view.View")
     private WebElement carrosselHoteis;
 
-
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Natal')]")
     private WebElement btnHotelNatal;
 

@@ -14,7 +14,7 @@ import static io.cucumber.junit.platform.engine.Constants.SNIPPET_TYPE_PROPERTY_
 @IncludeEngines("cucumber")
 @SelectClasspathResource("funcionalidades")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "org.testes")
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@LoginDeUsuario")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@CT-1002")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "html:target/reports/reports/.html,json:target/reports/reports.json")
 @ConfigurationParameter(key = SNIPPET_TYPE_PROPERTY_NAME, value = "camelcase")
 

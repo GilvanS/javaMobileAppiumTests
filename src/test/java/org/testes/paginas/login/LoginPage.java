@@ -1,12 +1,13 @@
 package org.testes.paginas.login;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
-import org.testes.manager.UsuarioManager;
+
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
+import lombok.Getter;
+
 
 
 @Getter
@@ -16,104 +17,95 @@ public class LoginPage extends PageBaseActions {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Entre para aproveitar a melhor experiência']")
-    private WebElement vldTxtEntreParaAproveitar;
+    @AndroidFindBy(accessibility = "longpress reset app")
+    private WebElement lblMyDemoApp;
 
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Entre')]")
-    private WebElement btnEntreParaAproveitar;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Products']")
+    private WebElement lblProducts;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText")
-    private WebElement CampoSeuEmail;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='open menu']/android.widget.ImageView")
+    private WebElement btnMenu;
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Próximo']")
-    private WebElement btnProximo;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Log In']")
+    private WebElement btnLogInMenu;
 
-    @AndroidFindBy(xpath = "//android.view.View/android.widget.EditText")
-    private WebElement campoSenha;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Log Out']")
+    private WebElement btnLogOut;
 
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Entrar')]")
-    private WebElement btnEntrar;
+    @AndroidFindBy(accessibility = "Username input field")
+    private WebElement campoUsername;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='EBAC Store']")
-    private WebElement txtEbacStore;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Profile']")
-    private WebElement btnProfile;
-
-    @AndroidFindBy(xpath = "//*[@text='Welcome to EBAC Shop']")
-    private WebElement txtWelcomeEbacShop;
-
-    @AndroidFindBy(xpath = "//*[@content-desc='Sign up']")
-    private WebElement btnSignUp;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Login']")
+    @AndroidFindBy(accessibility = "Login button")
     private WebElement btnLogin;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='First Name']")
-    private WebElement campoFirstName;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Last Name']")
-    private WebElement campoLastName;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Phone Number']")
-    private WebElement campoPhoneNumber;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Email Address' or @resource-id='email']")
-    private WebElement campoEmailAddress;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@text='Password' or @resource-id='password']")
+    @AndroidFindBy(accessibility = "Password input field")
     private WebElement campoPassword;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='repassword']")
-    private WebElement campoReEnterPassword;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='store item text' and @text='Sauce Labs Backpack']")
+    private WebElement btnSauceLabsBackpack;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Create']")
-    private WebElement btnCreate;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Add To Cart']")
+    private WebElement btnaddToCart;
 
-    // Novos elementos para os steps adicionais
-    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='wishlist']")
-    private WebElement btnWishlist;
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='cart badge']/android.widget.ImageView")
+    private WebElement btnCart;
 
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='back']")
-    private WebElement btnVoltar;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Proceed To Checkout']")
+    private WebElement btnProceedToCheckout;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Edit Profile']")
-    private WebElement btnEditProfile;
+    @AndroidFindBy(accessibility = "Full Name* input field")
+    private WebElement campoFullName;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Logout']")
-    private WebElement btnLogout;
+    @AndroidFindBy(accessibility = "Address Line 1* input field")
+    private WebElement campoAddressLine1;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Yes']")
-    private WebElement btnYes;
+    @AndroidFindBy(accessibility = "Address Line 2 input field")
+    private WebElement campoAddressLine2;
 
-    // Elementos para validação do Profile
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Lynch Hazel']")
-    private WebElement txtUserName;
+    @AndroidFindBy(accessibility = "City* input field")
+    private WebElement campoCity;
 
-//    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Email']/following-sibling::android.widget.TextView")
-//    private WebElement txtUserEmail;
+    @AndroidFindBy(accessibility = "State/Region input field")
+    private WebElement campoStateRegion;
 
-    // Elementos para validação do Edit Profile
-    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Firstname']")
-    private WebElement txtEditFirstName;
+    @AndroidFindBy(accessibility = "Zip Code* input field")
+    private WebElement campoZipCode;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Lastname']")
-    private WebElement txtEditLastName;
+    @AndroidFindBy(accessibility = "Country* input field")
+    private WebElement campoCountry;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Enter your phone number']")
-    private WebElement txtEditPhone;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='To Payment']")
+    private WebElement btnToPayment;
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Enter you Email address']")
-    private WebElement txtEditEmail;
+    @AndroidFindBy(accessibility = "Full Name* input field")
+    private WebElement campoCardFullName;
 
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Edit']")
-    private WebElement btnSaveEdit;
+    @AndroidFindBy(accessibility = "Card Number* input field")
+    private WebElement campoCardNumber;
 
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Add Photo']")
-    private WebElement btnAddPhoto;
+    @AndroidFindBy(accessibility = "Expiration Date* input field")
+    private WebElement campoExpiryDate;
 
-//    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, '+14049678963')]")
-//    private WebElement txtUserPhone;
+    @AndroidFindBy(accessibility = "Security Code* input field")
+    private WebElement campoCVV;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='checkbox for My billing address is the same as my shipping address.']/android.view.ViewGroup/android.widget.ImageView")
+    private WebElement btnCheckbox;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Review Order']")
+    private WebElement btnReviewOrder;
+
+    @AndroidFindBy(accessibility = "product price")
+    private WebElement lblPreco;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Place Order']")
+    private WebElement btnPlaceOrder;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Checkout Complete']")
+    private WebElement lblCheckoutComplete;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Continue Shopping']")
+    private WebElement btnContinueShopping;
 
     public WebElement getTxtUserName(String nomeCompleto) {
         String xpathNome = String.format("//android.widget.TextView[@text='%s']", nomeCompleto);
@@ -129,4 +121,5 @@ public class LoginPage extends PageBaseActions {
         String xpathEmail = String.format("//android.widget.TextView[@text='%s']", userEmail);
         return driver.findElement(By.xpath(xpathEmail));
     }
+
 }

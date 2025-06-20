@@ -2,6 +2,7 @@ package org.testes.paginas.login;
 
 import java.io.IOException;
 
+import io.cucumber.java.en.When;
 import org.testes.paginas.home.HomeActions;
 import org.testes.utils.FakerApi;
 
@@ -15,177 +16,129 @@ public class LoginSteps {
 
     private static final FakerApi faker = new FakerApi();
 
-    @Given("que estou na tela Home")
-    public void queEstouNaTelaHome() throws IOException {
-        LoginActions.validarTxtEbacStore();
+    @Given("valido a exibição da frase MYDEMOAPP na tela Products")
+    public void validoAExibiçãoDaFraseMYDEMOAPPNaTelaProducts() {
+        LoginActions.validarLblMyDemoApp();
     }
 
-    @And("valido a exibição da frase EBAC Store tela Home")
-    public void validoAExibicaoDaFraseEBACStoreTelaHome() throws IOException {
-        LoginActions.validarTxtEbacStore();
+    @Given("que estou na tela Products")
+    public void queEstouNaTelaProducts() {
+        LoginActions.validarLblProducts();
     }
 
-    @And("clico no botão Profile na tela Home")
-    public void clicoNoBotaoProfileNaTelaHome() {
-        LoginActions.clicarBtnProfile();
+    @Given("clico no botão menu Hamburguer na tela Products")
+    public void clicoNoBotãoMenuHamburguerNaTelaProducts() {
+        LoginActions.clicarBtnMenu();
+    }
+    @Given("clico no botão Log In na tela Menu")
+    public void clicoNoBotãoLogInNaTelaMenu() {
+        LoginActions.clicarBtnLogIn();
+    }
+    @Given("preencho o campo Username na tela Login")
+    public void preenchoOCampoUsernameComNaTelaLogin() {
+        LoginActions.campoUsername();
+    }
+    @Given("preencho o campo Password na tela Login")
+    public void preenchoOCampoPasswordComNaTelaLogin() {
+        LoginActions.campoPassword();
     }
 
-    @And("valido a exibição da frase Welcome to EBAC Shop na tela Login")
-    public void validoAExibicaoDaFraseWelcomeToEBACShopNaTelaLogin() throws IOException {
-        LoginActions.validarTxtWelcomeEbacShop();
-    }
-
-    @And("clico no botão Sign up na tela Login")
-    public void clicoNoBotaoSignUpNaTelaLogin() {
-        LoginActions.clicarBtnSignUp();
-    }
-
-    @And("preencho o campo First Name na tela cadastro")
-    public void preenchoCampoFirstName() {
-        LoginActions.preencherCampoFirstName();
-    }
-
-    @And("preencho o campo Last Name na tela cadastro")
-    public void preenchoCampoLastName() {
-        LoginActions.preencherCampoLastName();
-    }
-
-    @And("preencho o campo Phone Number na tela cadastro")
-    public void preenchoCampoPhoneNumber() {
-        LoginActions.preencherCampoPhoneNumber();
-    }
-
-    @And("preencho o campo Email Address na tela cadastro")
-    public void preenchoCampoEmailAddress() {
-        LoginActions.preencherCampoEmailAddress();
-    }
-
-    @And("preencho o campo Password na tela Login")
-    public void preenchoCampoPassword() {
-        LoginActions.preencherCampoPasswordLogin();
-    }
-
-    @And("preencho o campo Password na tela cadastro")
-    public void preenchoCampoPasswordNaTelaCadastro() {
-        LoginActions.preencherCampoPassword();
-    }
-
-    @Given("preencho o campo Email na tela Login")
-    public void preenchoOCampoEmailNaTelaLogin() {
-        LoginActions.preencherCampoEmailLogin();
-    }
     @Given("clico no botão Login na tela Login")
     public void clicoNoBotãoLoginNaTelaLogin() {
         LoginActions.clicarBtnLogin();
     }
 
-    @And("preencho o campo ReEnter Password na tela cadastro")
-    public void preenchoCampoReEnterPassword() {
-        LoginActions.reEnterPassword();
+    @Then("valido a exibição da frase Products na tela Products")
+    public void validoAExibiçãoDaFraseProductsNaTelaProducts() {
+        LoginActions.validarLblProducts();
     }
 
-    @And("clico no botão Create na tela cadastro")
-    public void clicoNoBotaoCreateNaTelaLogin() {
-        LoginActions.clicarBtnCreate();
+    @When("clico no produto 'Sauce Labs Backpack' na tela Products")
+    public void clicoNoProdutoNaTelaProducts() {
+        LoginActions.clicarBtnSauceLabsBackpack();
+    }
+    @When("clico no botão Add to cart na tela Product Detail")
+    public void clicoNoBotãoAddToCartNaTelaProductDetail() {
+        LoginActions.clicarBtnAddToCart();
+
+    }
+    @Then("valido a exibição do produto 'Sauce Labs Backpack' no carrinho de compras na tela Cart")
+    public void validoAExibiçãoDoProdutoNoCarrinhoDeComprasNaTelaCart() {
     }
 
-    @And("clico no botão Wishlist na tela Home")
-    public void clicoNoBotaoFavoritesNaTelaHome() {
-        LoginActions.clicarBtnWishlist();
+    @Then("clico no botão Cart na tela Products")
+    public void clicoNoBotãoCartNaTelaProducts() {
+        LoginActions.clicarBtnCart();
+    }
+    
+    @Then("clico no botão Proceed to checkout na tela Cart")
+    public void clicoNoBotãoProceedToCheckoutNaTelaCart() {
+        LoginActions.clicarBtnProceedToCheckout();
+    }
+    
+    @Then("preencho o campo Full Name na tela Checkout")
+    public void preenchoOCampoFullNameNaTelaCheckout() {
+        LoginActions.campoFullName();
+    }
+    
+    @Then("preencho o campo Address Line 1 na tela Checkout")
+    public void preenchoOCampoAddressLine1NaTelaCheckout() {
+        LoginActions.campoAddressLine1();
     }
 
-    @And("clico no botão voltar na tela Wishlist")
-    public void clicoNoBotaoVoltarNaTelaFavorites() {
-        LoginActions.clicarBtnVoltar();
+    @Then("preencho o campo Address Line 2 na tela Checkout")
+    public void preenchoOCampoAddressLine2NaTelaCheckout() {
+        LoginActions.campoAddressLine2();
+    }
+    
+    @Then("preencho o campo City na tela Checkout")
+    public void preenchoOCampoCityNaTelaCheckout() {
+        LoginActions.campoCity();
+    }
+    
+    @Then("preencho o campo State Region na tela Checkout")
+    public void preenchoOCampoStateRegionNaTelaCheckout() {
+        LoginActions.campoStateRegion();
+    }
+    
+    @Then("preencho o campo Zip Code na tela Checkout")
+    public void preenchoOCampoZipCodeNaTelaCheckout() {
+        LoginActions.campoZipCode();
+    }
+    
+    @Then("preencho o campo Country na tela Checkout")
+    public void preenchoOCampoCountryNaTelaCheckout() {
+        LoginActions.campoCountry();
+    }
+    
+    @Then("clico no botão To Payment na tela Checkout")
+    public void clicoNoBotãoToPaymentNaTelaCheckout() {
+        LoginActions.clicarBtnToPayment();
+    }
+    
+    @Then("preencho o campo Full Name na tela Payment")
+    public void preenchoOCampoFullNameNaTelaPayment() {
+        LoginActions.campoCardFullName();
+    }
+    
+    @Then("preencho o campo Card Number na tela Payment")
+    public void preenchoOCampoCardNumberNaTelaPayment() {
+        LoginActions.campoCardNumber();
+    }
+    
+    @Then("preencho o campo Expiration Date na tela Payment")
+    public void preenchoOCampoExpirationDateNaTelaPayment() {
+        LoginActions.campoExpiryDate();
+    }
+    
+    @Then("preencho o campo CVV na tela Payment")
+    public void preenchoOCampoCVVNaTelaPayment() {
+        LoginActions.campoCVV();
+    }
+    
+    @Then("clico no botão Review Order na tela Payment")
+    public void clicoNoBotãoReviewOrderNaTelaPayment() {
+        LoginActions.clicarBtnReviewOrder();
     }
 
-    @And("valido o nome do usuário na tela Profile")
-    public void validoONomeDoUsuarioNaTelaProfile() throws IOException {
-        LoginActions.validarNomeUsuario();
-    }
-
-    @And("valido o Phone Number do usuário na tela Profile")
-    public void validoOPhoneNumberDoUsuarioNaTelaProfile() throws IOException {
-        LoginActions.validarPhoneNumberUsuario();
-    }
-
-    @And("valido o Email Address do usuário na tela Profile")
-    public void validoOEmailAddressDoUsuarioNaTelaProfile() throws IOException {
-        LoginActions.validarEmailUsuario();
-    }
-
-    @And("clico no botão Edit Profile na tela Profile")
-    public void clicoNoBotaoEditProfileNaTelaProfile() {
-        LoginActions.clicarBtnEditProfile();
-    }
-
-    @And("valido o First Name do usuário na tela Edit Profile")
-    public void validoOFirstNameDoUsuarioNaTelaEditProfile() throws IOException {
-        LoginActions.validarFirstNameEditProfile();
-    }
-
-    @And("valido o Last Name do usuário na tela Edit Profile")
-    public void validoOLastNameDoUsuarioNaTelaEditProfile() throws IOException {
-        LoginActions.validarLastNameEditProfile();
-    }
-
-    @And("valido o Phone Number do usuário na tela Edit Profile")
-    public void validoOPhoneNumberDoUsuarioNaTelaEditProfile() throws IOException {
-        LoginActions.validarPhoneNumberEditProfile();
-    }
-
-    @And("valido o Email Address do usuário na tela Edit Profile")
-    public void validoOEmailAddressDoUsuarioNaTelaEditProfile() throws IOException {
-        LoginActions.validarEmailEditProfile();
-    }
-
-    @And("clico no botão voltar na tela Edit Profile")
-    public void clicoNoBotaoVoltarNaTelaEditProfile() {
-        LoginActions.clicarBtnVoltar();
-    }
-
-    @And("clico no botão Logout na tela Profile")
-    public void clicoNoBotaoLogoutNaTelaProfile() {
-        LoginActions.clicarBtnLogout();
-    }
-
-    @Given("valido a exibição da frase Entre para aproveitar a melhor experiência na tela login")
-    public void valido_a_exibição_da_frase_entre_para_aproveitar_a_melhor_experiência_na_tela_login() throws IOException, InterruptedException {
-        LoginActions.validarTelaLogin();
-    }
-
-    @Given("clico no botão Entre na tela Login")
-    public void clicar_no_botão_entre_na_tela_login() {
-        LoginActions.clicarBtnProximo();
-    }
-
-    @Given("preencho o campo email {string} na tela Login")
-    public void preencho_o_campo_email_na_tela_login(String email) {
-        LoginActions.preencherCampoEmail(email);
-    }
-
-    @Given("clico no botão Próximo na tela Login")
-    public void clicar_no_botão_próximo_na_tela_login() {
-        LoginActions.clicarBtnProximo();
-    }
-
-    @Given("preencho o campo Senha {string} na tela Login")
-    public void preencho_o_campo_senha_na_tela_login(String senha) {
-        LoginActions.preencherCampoSenha(senha);
-    }
-
-    @Given("clico no botão Entrar na tela Login")
-    public void clico_no_botão_entrar_na_tela_login() {
-        LoginActions.clicarBtnEntrar();
-    }
-
-    @Then("clico no botão Explorar na tela Home")
-    public void clicar_no_botão_explorar_na_tela_home() {
-        HomeActions.clicarBtnExplorar();
-    }
-
-    @And("clico no botão Yes na tela Logout")
-    public void clicoNoBotãoYesNaTelaLogout() {
-        LoginActions.clicarBtnYes();
-    }
 }

@@ -19,7 +19,7 @@ import java.util.UUID;
 
 @Getter
 public class FakerApi {
-    private static final String FAKER_API_URL = "https://fakerapi.it/api/v1/custom?_quantity=1&first_name=firstName&last_name=lastName&phone_number=phone&email_address=email&password=password";
+    private static final String FAKER_API_URL = "https://fakerapi.it/api/v1/custom?_quantity=1&firstName=firstName&lastName=lastName&phoneNumber=phone&emailAddress=email&password=password&fullName=name&addressLine1=streetAddress&addressLine2=streetAddress&city=city&stateRegion=state&zipCode=number&country=country&cardNumber=card_number&expirationDate=card_expiration";
     private static final String JSON_FILE_PATH = "src/test/resources/dados/login_data.json";
     
     private String id;
@@ -29,6 +29,18 @@ public class FakerApi {
     private String phoneNumber;
     private String emailAddress;
     private String password;
+    private String fullName;
+    private String addressLine;
+    private String addressLine2;
+    private String city;
+    private String stateRegion;
+    private String zipCode;
+    private String country;
+    private String cardNumber;
+    private String cardFullName;
+    private String expiryDate;
+    private String cvv;
+
 
     public FakerApi() {
         generateFakeData();
@@ -46,11 +58,22 @@ public class FakerApi {
 
             this.id = UUID.randomUUID().toString();
             this.createdAt = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            this.firstName = dataNode.get("first_name").asText();
-            this.lastName = dataNode.get("last_name").asText();
-            this.phoneNumber = dataNode.get("phone_number").asText();
-            this.emailAddress = dataNode.get("email_address").asText();
+            this.firstName = dataNode.get("firstName").asText();
+            this.lastName = dataNode.get("lastName").asText();
+            this.phoneNumber = dataNode.get("phoneNumber").asText();
+            this.emailAddress = dataNode.get("emailAddress").asText();
             this.password = dataNode.get("password").asText();
+            this.fullName = dataNode.get("fullName").asText();
+            this.addressLine = dataNode.get("addressLine1").asText();
+            this.addressLine2 = dataNode.get("addressLine2").asText();
+            this.city = dataNode.get("city").asText();
+            this.stateRegion = dataNode.get("stateRegion").asText();
+            this.zipCode = dataNode.get("zipCode").asText();
+            this.country = dataNode.get("country").asText();
+            this.cardNumber = dataNode.get("cardNumber").asText();
+            this.cardFullName = this.fullName;
+            this.expiryDate = dataNode.get("expirationDate").asText();
+            this.cvv = "123";
 
         } catch (IOException e) {
             throw new RuntimeException("Erro ao gerar dados fake: " + e.getMessage());

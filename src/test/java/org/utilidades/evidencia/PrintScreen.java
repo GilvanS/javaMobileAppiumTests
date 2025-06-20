@@ -1,15 +1,14 @@
 package org.utilidades.evidencia;
 
 
-import lombok.SneakyThrows;
+import java.io.File;
+import java.io.IOException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testes.utils.Hooks;
 import org.testes.utils.HooksEvidencia;
-
-import java.io.File;
-import java.io.IOException;
 
 
 /**
@@ -27,11 +26,15 @@ public class PrintScreen {
 
         String deviceUDID = Hooks.getDriver().getCapabilities().getCapability("deviceUDID").toString().replace(":", "_").replace(".", "");
         String filePath = "target/evidencias/" + deviceUDID + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + nomeArquivo +  ".png";
-        File print = ((TakesScreenshot) Hooks.getDriver()).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(print, new File(filePath));
-        File directory = new File(filePath);
-        if (!directory.exists()) {
-            directory.mkdirs();
+        
+        // Criar diretórios pai se não existirem
+        File screenshotFile = new File(filePath);
+        File parentDir = screenshotFile.getParentFile();
+        if (parentDir != null && !parentDir.exists()) {
+            parentDir.mkdirs();
         }
+        
+        File print = ((TakesScreenshot) Hooks.getDriver()).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(print, screenshotFile);
     }
 }
