@@ -29,7 +29,7 @@ public class HomeSteps {
     }
 
     @Then("valido a exibição da tela 'Home'")
-    public void validoAExibiçãoDaTela(String string) {
+    public void validoAExibiçãoDaTela() {
         HomeActions.validarExibicaoTelaHome();
     }
 
@@ -38,9 +38,30 @@ public class HomeSteps {
         homeActions.validarExibicaoLblDigioOne();
     }
 
+
     @When("clico no botão 'Menu' na tela 'Home'")
     public void clicoNoBotaoMenuNaTelaHome() {
         homeActions.clicarBtnMenu();
+    }
+
+    @Then("valido a exibição do texto 'Nome' na tela 'Menu'")
+    public void validoAExibiçãoDoTextoNaTela() {
+        homeActions.validarExibicaoTextoNomeMenu();
+    }
+
+    @Then("valido a exibição do texto 'Instituição' na tela 'Menu'")
+    public void validoAExibiçãoDoTextoInstituicaoNaTela() {
+        homeActions.validarExibicaoTextoInstituicaoMenu();
+    }
+
+    @Then("valido a exibição do texto 'Agência' na tela 'Menu'")
+    public void validoAExibiçãoDoTextoAgenciaNaTela() {
+        homeActions.validarExibicaoTextoAgenciaMenu();
+    }
+
+    @Then("valido a exibição do texto 'Conta' na tela 'Menu'")
+    public void validoAExibiçãoDoTextoContaNaTela() {
+        homeActions.validarExibicaoTextoContaMenu();
     }
 
     @When("clico no botão 'Widget' na tela 'Home'")

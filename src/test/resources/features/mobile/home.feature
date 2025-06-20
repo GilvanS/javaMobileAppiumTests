@@ -1,5 +1,4 @@
-@SUBSTITUIR_PELO_EXECUTION_KEY_DA_SPRINT_E_CICLO @digio @dadosDaConta
-
+@mobile @digio @home
 Feature: Dados da Conta
   Como cliente Digio
   Gostaria de acessar os dados da conta

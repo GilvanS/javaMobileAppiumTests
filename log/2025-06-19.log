@@ -178,3 +178,161 @@
 [INFO] 19:00:27 | '-- clico no botao 'Entrar' na tela 'Login'
 [INFO] 19:00:53 | '-- PASSED
 
+[INFO] 20:55:42 +-- Visualizar os dados da minha conta no menu
+[INFO] 20:55:42 | '-- Inicializando o driver
+[INFO] 20:55:55 | '-- Driver inicializado com sucesso
+[INFO] 20:56:08 | '-- clico no botão 'Vamos lá' em login
+[INFO] 20:56:12 | '-- FAILED
+
+[INFO] 20:57:32 +-- Visualizar os dados da minha conta no menu
+[INFO] 20:57:32 | '-- Inicializando o driver
+[INFO] 20:57:41 | '-- Driver inicializado com sucesso
+[INFO] 20:57:53 | '-- clico no botão 'Vamos lá' em login
+[INFO] 20:57:57 | '-- FAILED
+
+[INFO] 20:58:59 +-- Visualizar os dados da minha conta no menu
+[INFO] 20:58:59 | '-- Inicializando o driver
+[INFO] 20:59:08 | '-- Driver inicializado com sucesso
+[INFO] 20:59:20 | '-- clico no botão 'Vamos lá' em login
+[INFO] 20:59:24 | '-- FAILED
+
+[INFO] 21:02:23 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:02:23 | '-- Inicializando o driver
+[INFO] 21:02:31 | '-- Driver inicializado com sucesso
+[INFO] 21:02:42 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:02:47 | '-- FAILED
+
+[INFO] 21:03:01 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:03:01 | '-- Inicializando o driver
+[INFO] 21:03:10 | '-- Driver inicializado com sucesso
+[INFO] 21:03:20 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:03:22 | '-- preencho o campo 'CPF' na tela 'Login': 95211155807
+[INFO] 21:03:25 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:03:27 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:03:29 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:04:03 | '-- FAILED
+
+[INFO] 21:04:26 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:04:26 | '-- Inicializando o driver
+[INFO] 21:04:36 | '-- Driver inicializado com sucesso
+[INFO] 21:04:47 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:04:51 | '-- FAILED
+
+[INFO] 21:05:23 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:05:23 | '-- Inicializando o driver
+[INFO] 21:05:32 | '-- Driver inicializado com sucesso
+[INFO] 21:05:42 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:05:46 | '-- FAILED
+
+[INFO] 21:06:53 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:06:53 | '-- Inicializando o driver
+[INFO] 21:07:03 | '-- Driver inicializado com sucesso
+[INFO] 21:07:15 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:07:20 | '-- FAILED
+
+[INFO] 21:08:34 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:08:34 | '-- Inicializando o driver
+[INFO] 21:08:44 | '-- Driver inicializado com sucesso
+[INFO] 21:08:56 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:08:59 | '-- FAILED
+
+[INFO] 21:09:26 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:09:26 | '-- Inicializando o driver
+[INFO] 21:09:35 | '-- Driver inicializado com sucesso
+[INFO] 21:09:46 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:09:51 | '-- FAILED
+
+[INFO] 21:10:09 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:10:09 | '-- Inicializando o driver
+[INFO] 21:10:18 | '-- Driver inicializado com sucesso
+[INFO] 21:10:29 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:10:31 | '-- preencho o campo 'CPF' na tela 'Login': 95211155807
+[INFO] 21:10:34 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:10:35 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:10:38 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:11:11 | '-- FAILED
+
+[INFO] 21:11:54 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:11:54 | '-- Inicializando o driver
+[INFO] 21:12:04 | '-- Driver inicializado com sucesso
+[INFO] 21:12:32 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:12:32 | '-- Inicializando o driver
+[INFO] 21:12:40 | '-- Driver inicializado com sucesso
+[INFO] 21:12:51 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:14:21 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:14:21 | '-- Inicializando o driver
+[INFO] 21:14:34 | '-- Driver inicializado com sucesso
+[INFO] 21:14:45 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:14:46 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:14:50 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:14:51 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:14:53 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:15:20 | '-- FAILED
+
+[INFO] 21:19:12 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:19:12 | '-- Inicializando o driver
+[INFO] 21:19:22 | '-- Driver inicializado com sucesso
+[INFO] 21:19:33 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:19:35 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:19:39 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:19:40 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:19:42 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:20:25 | '-- UNDEFINED
+
+[INFO] 21:31:40 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:31:40 | '-- Inicializando o driver
+[INFO] 21:31:51 | '-- Driver inicializado com sucesso
+[INFO] 21:32:04 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:32:06 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:32:10 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:32:10 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:32:13 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:33:06 | '-- FAILED
+
+[INFO] 21:41:30 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:41:30 | '-- Inicializando o driver
+[INFO] 21:41:41 | '-- Driver inicializado com sucesso
+[INFO] 21:41:53 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:41:55 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:41:59 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:42:00 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:42:03 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:42:07 | '-- valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:42:26 | '-- clico no botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:42:28 | '-- valido a exibição da home
+[INFO] 21:42:34 | '-- clico no menu
+[INFO] 21:42:43 | '-- valido a exibição do texto 'Nome' na tela 'Menu'
+[INFO] 21:42:57 | '-- FAILED
+
+[INFO] 21:55:33 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:55:33 | '-- Inicializando o driver
+[INFO] 21:55:45 | '-- Driver inicializado com sucesso
+[INFO] 21:55:58 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:56:02 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:56:06 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:56:07 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:56:10 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:56:15 | '-- valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:56:32 | '-- clico no botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:56:34 | '-- valido a exibição da home
+[INFO] 21:56:39 | '-- clico no menu
+[INFO] 21:56:48 | '-- FAILED
+
+[INFO] 21:57:39 +-- Visualizar os dados da minha conta no menu
+[INFO] 21:57:39 | '-- Inicializando o driver
+[INFO] 21:57:49 | '-- Driver inicializado com sucesso
+[INFO] 21:58:00 | '-- clico no botão 'Vamos lá' em login
+[INFO] 21:58:03 | '-- preencho o campo 'CPF' na tela 'Login': 17257347530
+[INFO] 21:58:06 | '-- clico no botao 'Continuar' na tela 'Login'
+[INFO] 21:58:09 | '-- preencho o campo 'Senha' na tela 'Login': Conductor1
+[INFO] 21:58:11 | '-- clico no botao 'Entrar' na tela 'Login'
+[INFO] 21:58:16 | '-- valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:58:32 | '-- clico no botao 'nao mostrar novamente' em 'ative sua biometria'
+[INFO] 21:58:35 | '-- valido a exibição da home
+[INFO] 21:58:50 | '-- clico no menu
+[INFO] 21:58:57 | '-- valido a exibição do texto 'Nome' na tela 'Menu'
+[INFO] 21:59:00 | '-- valido a exibição do texto 'Instituição' na tela 'Menu'
+[INFO] 21:59:02 | '-- valido a exibição do texto 'Agência' na tela 'Menu'
+[INFO] 21:59:05 | '-- valido a exibição do texto 'Conta' na tela 'Menu'
+[INFO] 21:59:11 | '-- PASSED
+

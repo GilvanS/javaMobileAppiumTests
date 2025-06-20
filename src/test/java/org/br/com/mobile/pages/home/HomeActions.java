@@ -5,6 +5,7 @@ import org.br.com.mobile.pages.MasterPageFactory;
 import org.br.com.mobile.pages.PageBaseActions;
 import org.br.com.mobile.utils.SaldoUtils;
 import org.br.com.mobile.utils.ValorManager;
+import org.br.com.api.utils.LogFormatter;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Rectangle;
 import org.junit.Assert;
@@ -27,7 +28,7 @@ public class HomeActions {
     }
 
     public static void validarExibicaoTelaHome() {
-        log.info("valido a exibição da home");
+        LogFormatter.logStep("valido a exibição da home");
 //        popupLogic.verificarPopUpsAteEncontrarElementoEsperado(getPopupModelHome());
         PageBaseActions.waitElement(homePage().getLblOla());
         assertTrue("Tela home do Digio não foi apresentada",
@@ -35,20 +36,20 @@ public class HomeActions {
     }
 
     public void clicarBtnMenu() {
-        log.info("clico no menu");
+        LogFormatter.logStep("clico no menu");
         acoes.click(homePage().getBtnMenu());
         acoes.sleep(3);
     }
 
     public void validarExibicaoLblOla() {
-        log.info("valido a exibição da mensagem 'Olá' em home");
+        LogFormatter.logStep("valido a exibição da mensagem 'Olá' em home");
         PageBaseActions.waitElement(homePage().getLblOla());
         assertTrue("Não exibiu o texto Ola na tela home",
                 homePage().getLblOla().isDisplayed());
     }
 
     public void validarExibicaoLblDigioOne() {
-        log.info("valido a exibição do texto 'One' em home");
+        LogFormatter.logStep("valido a exibição do texto 'One' em home");
         PageBaseActions.waitElement(homePage().getLblDigioOne());
         assertTrue("Nao foi possivel validar se o cliente é Digio One",
                 homePage().getLblDigioOne().isDisplayed());
@@ -56,7 +57,7 @@ public class HomeActions {
     }
 
     public void validarExibicaoLblDigioOneAposMigracao() {
-        log.info("valido a exibição do texto 'One' em home");
+        LogFormatter.logStep("valido a exibição do texto 'One' em home");
         boolean exibiuDigioOne = false;
         double startPercentage = 0.50;
         double endPercentage = 0.85;
@@ -66,7 +67,7 @@ public class HomeActions {
 
         int tentativas = 18;
         for (int i = 1; i <= tentativas; i++) {
-            log.info("tentativa: " + i + " de " + tentativas);
+            LogFormatter.logStep("tentativa: " + i + " de " + tentativas);
             if (actions().isDisplayed(homePage().getLblDigioOne(), 10)) {
                 exibiuDigioOne = true;
                 break;
@@ -77,39 +78,39 @@ public class HomeActions {
     }
 
     public void clicarBtnWidget() {
-        log.info("clico no botão 'Widget' em home");
+        LogFormatter.logStep("clico no botão 'Widget' em home");
         actions().click(homePage().getBtnWidget());
     }
 
     public static void validarExibicaoBtnNaoMostrarNovamenteAtiveSuaBiometria() {
-        log.info("valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'");
+        LogFormatter.logStep("valido a exibição do botao 'nao mostrar novamente' em 'ative sua biometria'");
         PageBaseActions.waitElement(homePage().getBtnNaoMostrarNovamente());
         assertTrue("Nao foi possivel validar o botão 'nao mostrar novamente' em 'ative sua biometria'",
                 homePage().getBtnNaoMostrarNovamente().isDisplayed());
     }
+
     public static void clicarBtnNaoMostrarNovamenteAtiveSuaBiometria() {
-        log.info("clico no botao 'nao mostrar novamente' em 'ative sua biometria'");
+        LogFormatter.logStep("clico no botao 'nao mostrar novamente' em 'ative sua biometria'");
         acoes.click(homePage().getBtnNaoMostrarNovamente());
     }
 
-
     public void clicarBtnConta() {
-        log.info("clico no botao 'Conta'");
+        LogFormatter.logStep("clico no botao 'Conta'");
         actions().click(homePage().getBtnConta());
     }
 
     public void clicarBtnOpenFinance() {
-        log.info("clico no botão 'Open finance'");
+        LogFormatter.logStep("clico no botão 'Open finance'");
         actions().verticalSwipeDownAndSearch(homePage().getBtnOpenFinance());
         actions().click(homePage().getBtnOpenFinance());
     }
     public void clicarBtnExtrato() {
-        log.info("clico no botao 'Extrato'");
+        LogFormatter.logStep("clico no botao 'Extrato'");
         actions().click(homePage().getBtnExtrato());
     }
 
     public void clicarBtnFuturo() {
-        log.info("clico no botão 'Futuros' na tela 'Home'");
+        LogFormatter.logStep("clico no botão 'Futuros' na tela 'Home'");
         actions().click(homePage().getBtnFuturos());
     }
 
@@ -122,7 +123,7 @@ public class HomeActions {
 
             actions().click(homePage().getBtnVisao());
         } else {
-            log.info("não houve necessidade de clicar no botão de visão do saldo");
+            LogFormatter.logStep("não houve necessidade de clicar no botão de visão do saldo");
         }
     }
 
@@ -166,7 +167,7 @@ public class HomeActions {
     // TODO: Lógica temporária - Ajustar quando o mapeamento estiver disponível no
     // iOS
     public void clicarBtnVisaoParaExibirSaldo() {
-        log.info("clico no botão de visão para exibir o saldo");
+        LogFormatter.logStep("clico no botão de visão para exibir o saldo");
         if (actions().isAndroid())
             clicarBtnVisaoSaldo(true);
         else
@@ -174,34 +175,34 @@ public class HomeActions {
     }
 
     public void validarExibicaoSaldo() {
-        log.info("valido a exibição do saldo");
+        LogFormatter.logStep("valido a exibição do saldo");
         actions().waitForElementToBeDisplayed(homePage().getLblSaldoExibido());
         assertTrue("Não foi exibido o saldo após clicar no botão de visão para exibi-lo",
                 homePage().getLblSaldoExibido().isDisplayed());
     }
 
     public void validarExibicaoSaldoMaiorQueDezReais() {
-        log.info("valido a exibição do saldo maior que dez reais");
+        LogFormatter.logStep("valido a exibição do saldo maior que dez reais");
 
         String saldo = actions().getText(homePage().getLblSaldoExibido());
-        log.info("saldo: " + saldo);
+        LogFormatter.logStep("saldo: " + saldo);
         Assert.assertTrue("Massa está com saldo menor que 10 reais, favor adicionar mais. ",
                 SaldoUtils.saldoMaiorQueDez(saldo));
         ValorManager.setValor(saldo);
     }
 
     public void validarExibicaoSaldoZerado() {
-        log.info("valido a exibição do saldo zerado");
+        LogFormatter.logStep("valido a exibição do saldo zerado");
 
         String saldo = actions().getText(homePage().getLblSaldoExibido());
-        log.info("saldo: " + saldo);
+        LogFormatter.logStep("saldo: " + saldo);
         Assert.assertTrue("Massa não esta com saldo zerado", SaldoUtils.saldoZerado(saldo));
     }
 
     // TODO: Lógica temporária - Ajustar quando o mapeamento estiver disponível no
     // iOS
     public void clicarBtnVisaoParaOcultarSaldo() {
-        log.info("clico no botão de visão para ocultar o saldo");
+        LogFormatter.logStep("clico no botão de visão para ocultar o saldo");
         if (actions().isAndroid())
             clicarBtnVisaoSaldo(false);
         else
@@ -211,7 +212,7 @@ public class HomeActions {
     // TODO: Lógica temporária - Ajustar quando o mapeamento estiver disponível no
     // iOS
     public void validarExibicaoSaldoComMascara() {
-        log.info("valido a exibição do saldo com máscara");
+        LogFormatter.logStep("valido a exibição do saldo com máscara");
 
         if (actions().isAndroid()) {
             actions().waitForElementToBeDisplayed(homePage().getLblSaldoOculto());
@@ -224,12 +225,12 @@ public class HomeActions {
     }
 
     public void clicarBtnPagar() {
-        log.info("clico no botão 'Pagar'");
+        LogFormatter.logStep("clico no botão 'Pagar'");
         actions().click(homePage().getBtnPagar());
     }
 
     public void clicarBtnTrazerMeuSalario() {
-        log.info("clico no botão 'Trazer meu salário'");
+        LogFormatter.logStep("clico no botão 'Trazer meu salário'");
         if (actions().isIOS()) {
             actions().horizontalSwipeLeft(homePage().getBtnPagar(), homePage().getBtnTrazerMeuSalario(), 5);
             actions().click(homePage().getBtnTrazerMeuSalario());
@@ -240,7 +241,7 @@ public class HomeActions {
     }
 
     public void clicarBtnReceber() {
-        log.info("clico no botão 'Receber'");
+        LogFormatter.logStep("clico no botão 'Receber'");
         actions().sleep(2);
         if (actions().isIOS()) {
             actions().horizontalSwipeLeft(homePage().getBtnPagar(), homePage().getBtnReceber(), 5);
@@ -252,7 +253,7 @@ public class HomeActions {
     }
 
     public void clicarBtnTransferir() {
-        log.info("clico no botão 'Transferir'");
+        LogFormatter.logStep("clico no botão 'Transferir'");
 
         if (actions().isAndroid()) {
             actions().horizontalSwipeLeft(homePage().getCarrosselConta(), homePage().getBtnTransferir(), 5);
@@ -264,7 +265,7 @@ public class HomeActions {
             if (actions().isDisplayed(homePage().getBtnTransferir())) {
                 actions().click(homePage().getBtnTransferir());
             } else {
-                log.info("botão transferir nao encontrado no XML , tentando clique por posição");
+                LogFormatter.logStep("botão transferir nao encontrado no XML , tentando clique por posição");
                 Rectangle rectReceber = homePage().getBtnReceber().getRect();
                 int x = (int) (rectReceber.getX() - rectReceber.getWidth() * 1.50);
                 int y = (int) (rectReceber.getY() + (rectReceber.height * 0.50));
@@ -274,19 +275,19 @@ public class HomeActions {
     }
 
     public void clicarBtnCardAnteciparFgts() {
-        log.info("clico no card 'Antecipar FGTS' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'Antecipar FGTS' na tela 'Home'");
         actions().verticalSwipeDown();
         actions().click(homePage().getBtnCardAnteciparFgts());
     }
 
     public void clicarBtnCardGranaExtra() {
-        log.info("clico no card 'Grana Extra' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'Grana Extra' na tela 'Home'");
         actions().verticalSwipeDown();
         actions().click(homePage().getBtnCardGranaExtra());
     }
 
     public void clicarBtnCardLoja() {
-        log.info("clico no card 'Loja' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'Loja' na tela 'Home'");
         actions().waitForElementToBeDisplayed(homePage().getCarrosselProdutosDigio());
         actions().verticalSwipeDown();
         actions().horizontalSwipeLeft(homePage().getCarrosselProdutosDigio(), homePage().getBtnCardLoja(), 5);
@@ -294,41 +295,41 @@ public class HomeActions {
     }
 
     public void clicarBtnCdbMaisLimite() {
-        log.info("clico no card 'CDB + Limite' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'CDB + Limite' na tela 'Home'");
         actions().horizontalSwipeLeft(homePage().getCarrosselProdutosDigio(), homePage().getBtnCdbMaisLimite(), 5);
         actions().click(homePage().getBtnCdbMaisLimite());
     }
 
     public void clicarBtnInvestimentos() {
-        log.info("clico no card 'Investimentos' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'Investimentos' na tela 'Home'");
         actions().verticalSwipeUpAndSearch(homePage().getBtnInvestimentos(), 5);
         actions().horizontalSwipeLeft(homePage().getCarrosselProdutosDigio(), homePage().getBtnInvestimentos(), 5);
         actions().click(homePage().getBtnInvestimentos());
     }
 
     public void clicarBtnVerMinhasCompras() {
-        log.info("clico no botão para ver 'minhas compras'");
+        LogFormatter.logStep("clico no botão para ver 'minhas compras'");
         actions().verticalSwipeDownAndSearch(homePage().getBtnVerMinhasCompras(), 5);
         actions().click(homePage().getBtnVerMinhasCompras());
     }
 
     public void validarHorarioCelularAposDezoito() {
-        log.info("valido que o horário do celular seja após as 18h");
+        LogFormatter.logStep("valido que o horário do celular seja após as 18h");
         int horaAtual = Integer.parseInt(actions().getDeviceTime("HH"));
-        log.info("hora atual: " + horaAtual);
+        LogFormatter.logStep("hora atual: " + horaAtual);
         boolean validacaoHorario = horaAtual >= 18;
         assertTrue("horário do celular não está apos as 18h, hora atual: " + horaAtual, validacaoHorario);
     }
 
     public void clicarBtnCardDigioOneToqueAquiPecaOSeu() {
-        log.info("clico no card 'Digio One toque aqui e peça o seu'");
+        LogFormatter.logStep("clico no card 'Digio One toque aqui e peça o seu'");
         actions().verticalSwipeDown();
         actions().verticalSwipeDownAndSearch(homePage().getBtnCardDigioOneToqueAquiPecaOSeu());
         actions().click(homePage().getBtnCardDigioOneToqueAquiPecaOSeu());
     }
 
     public void clicarBtnDebitoAutomatico() {
-        log.info("clico no botão 'Débito automático'");
+        LogFormatter.logStep("clico no botão 'Débito automático'");
         actions().waitForElementToBeDisplayed(homePage().getBtnPagarFatura());
         if (actions().isAndroid()) {
             actions().horizontalSwipeLeft(homePage().getCarrosselCartoes(), homePage().getBtnDebitoAutomatico(), 5);
@@ -341,22 +342,22 @@ public class HomeActions {
     }
 
     public void clicarBtnMeusCartoes() {
-        log.info("clico no botão 'Meus cartões'");
+        LogFormatter.logStep("clico no botão 'Meus cartões'");
         actions().click(homePage().getBtnMeusCartoes());
     }
 
     public void clicarBtnRastrear() {
-        log.info("clico no botão 'Rastrear'");
+        LogFormatter.logStep("clico no botão 'Rastrear'");
         actions().click(homePage().getBtnRastrear());
     }
 
     public void clicarBtnRecebiMeuDigio() {
-        log.info("clico no botão 'Recebi meu digio'");
+        LogFormatter.logStep("clico no botão 'Recebi meu digio'");
         actions().click(homePage().getBtnRecebiMeuDigio());
     }
 
     public void clicarBtnPagarFatura() {
-        log.info("clico no botão 'Pagar fatura'");
+        LogFormatter.logStep("clico no botão 'Pagar fatura'");
         actions().sleep(3);
         actions().verticalSwipe(0.50, 0.65, 1.05);
         actions().sleep(7);
@@ -364,12 +365,12 @@ public class HomeActions {
     }
 
     public void clicarBtnCartoes() {
-        log.info("clico no botao 'Cartões'");
+        LogFormatter.logStep("clico no botao 'Cartões'");
         actions().click(homePage().getBtnCartoes());
     }
 
     public void realizarDeslizeParaForcarAtualizacaoDoSaldo() {
-        log.info("realizo um deslize para forçar a atualização do saldo");
+        LogFormatter.logStep("realizo um deslize para forçar a atualização do saldo");
         actions().sleep(1);
         actions().verticalSwipe(0.50, 0.50, 0.85);
 
@@ -381,7 +382,7 @@ public class HomeActions {
     }
 
     public void realizarDeslizeParaForcarAtualizacaoDoSaldoComSaldoOcultado() {
-        log.info("realizo um deslize para forçar a atualização do saldo com saldo ocultado");
+        LogFormatter.logStep("realizo um deslize para forçar a atualização do saldo com saldo ocultado");
         actions().sleep(1);
         actions().verticalSwipe(0.50, 0.50, 0.85);
 
@@ -398,7 +399,7 @@ public class HomeActions {
      * @param valor Valor da transferência
      */
     public void validarDescontoLblSaldoDisponivel(String valor) {
-        log.info(String.format("valido o desconto do valor '%s' da transferência em 'Saldo disponível' na tela 'Home'",
+        LogFormatter.logStep(String.format("valido o desconto do valor '%s' da transferência em 'Saldo disponível' na tela 'Home'",
                 valor));
 
         int saldoAnterior = converterSaldoEmInteiro(ValorManager.getSaldo());
@@ -408,10 +409,10 @@ public class HomeActions {
 
         actions().sleep(5);
         while (tentativas > 0) {
-            log.info(contador + "º tentativa para atualização do saldo");
+            LogFormatter.logStep(contador + "º tentativa para atualização do saldo");
 
             String saldoExibido = actions().getText(homePage().getLblSaldoExibido());
-            log.info("saldo exibido: " + saldoExibido);
+            LogFormatter.logStep("saldo exibido: " + saldoExibido);
 
             int saldoAtual = converterSaldoEmInteiro(saldoExibido);
             desconto = (saldoAtual + converterSaldoEmInteiro(valor)) == saldoAnterior;
@@ -428,7 +429,7 @@ public class HomeActions {
     }
 
     public void validarResgateLblSaldoDisponivel(String valor) {
-        log.info(String.format("valido o desconto do valor '%s' da transferência em 'Saldo disponível' na tela 'Home'",
+        LogFormatter.logStep(String.format("valido o desconto do valor '%s' da transferência em 'Saldo disponível' na tela 'Home'",
                 valor));
 
         int saldoAnterior = converterSaldoEmInteiro(ValorManager.getSaldo());
@@ -438,10 +439,10 @@ public class HomeActions {
 
         actions().sleep(5);
         while (tentativas > 0) {
-            log.info(contador + "º tentativa para atualização do saldo");
+            LogFormatter.logStep(contador + "º tentativa para atualização do saldo");
 
             String saldoExibido = actions().getText(homePage().getLblSaldoExibido());
-            log.info("saldo exibido: " + saldoExibido);
+            LogFormatter.logStep("saldo exibido: " + saldoExibido);
 
             int saldoAtual = converterSaldoEmInteiro(saldoExibido);
             resgate = (saldoAtual - converterSaldoEmInteiro(valor)) == saldoAnterior;
@@ -459,9 +460,9 @@ public class HomeActions {
 
     public void clicarBtnVisaoExibirValorFaturaHome(boolean exibir) {
         if (exibir) {
-            log.info("clico no botão visao para exibir o valor da fatura");
+            LogFormatter.logStep("clico no botão visao para exibir o valor da fatura");
         } else {
-            log.info("clico no botão visao para ocultar o valor da fatura");
+            LogFormatter.logStep("clico no botão visao para ocultar o valor da fatura");
         }
 
         actions().waitForElementToBeDisplayed(homePage().getLblFatura());
@@ -474,14 +475,14 @@ public class HomeActions {
 
                 actions().click(homePage().getBtnVisaoFaturaAndroid());
             } else {
-                log.info("não houve necessidade de clicar no botão de visão da fatura");
+                LogFormatter.logStep("não houve necessidade de clicar no botão de visão da fatura");
             }
         } else {
             if ((exibir && actions().waitUntilElementIsDisplayed(homePage().getBtnVisaoFaturaDesligadoIos(), 1))
                     || (!exibir && actions().waitUntilElementIsDisplayed(homePage().getBtnVisaoFaturaLigadoIos(), 1))) {
                 actions().click(homePage().getBtnVisaoFaturaIos());
             } else {
-                log.info("não houve necessidade de clicar no botão de visão da fatura");
+                LogFormatter.logStep("não houve necessidade de clicar no botão de visão da fatura");
             }
         }
     }
@@ -495,7 +496,7 @@ public class HomeActions {
     }
 
     public void validarNaoDescontoLblSaldoDisponivel() {
-        log.info("valido que não houve desconto do valor da transferência em 'Saldo disponível'");
+        LogFormatter.logStep("valido que não houve desconto do valor da transferência em 'Saldo disponível'");
         int saldoAnterior = converterSaldoEmInteiro(ValorManager.getSaldo());
         int saldoAtual = converterSaldoEmInteiro(actions().getText(homePage().getLblSaldoExibido()));
 
@@ -508,7 +509,7 @@ public class HomeActions {
     }
 
     public void clicarBtnVerFatura() {
-        log.info("clico no botão para 'Ver fatura'");
+        LogFormatter.logStep("clico no botão para 'Ver fatura'");
         actions().sleep(1);
         actions().verticalSwipe(0.50, 0.65, 1.05);
         actions().sleep(6);
@@ -516,29 +517,29 @@ public class HomeActions {
     }
 
     public void validarHorarioCelularAteriorDezesseis() {
-        log.info("valido que o horário do celular seja anterior as 16h");
+        LogFormatter.logStep("valido que o horário do celular seja anterior as 16h");
         int horaAtual = Integer.parseInt(actions().getDeviceTime("HH"));
-        log.info("hora atual: " + horaAtual);
+        LogFormatter.logStep("hora atual: " + horaAtual);
         boolean validacaoHorario = horaAtual <= 16;
         assertTrue("horário do celular não está anterior as 16h, hora atual: " + horaAtual, validacaoHorario);
     }
 
     public void clicarBtnPix() {
-        log.info("clico no botão 'Pix'");
+        LogFormatter.logStep("clico no botão 'Pix'");
         actions().sleep(2);
         actions().click(homePage().getBtnPix());
         actions().sleep(2);
     }
 
     public void validarTxtAtiveSuaContaDigio() {
-        log.info("validar texto 'Ative sua conta Digio'");
+        LogFormatter.logStep("validar texto 'Ative sua conta Digio'");
         actions().waitForElementToBeDisplayed(homePage().getTxtAtiveSuaContaDigio());
         assertTrue("Erro na validação do texto 'Ative sua conta Digio'",
                 homePage().getTxtAtiveSuaContaDigio().isDisplayed());
     }
 
     public void clicarBtnDeeplink() {
-        log.info("clico no botão 'DeepLink'");
+        LogFormatter.logStep("clico no botão 'DeepLink'");
         actions().verticalSwipeDown();
         actions().sleep(2);
         actions().horizontalSwipeLeft(homePage().getCarrosselBanners(), homePage().getBtnDeepLink(), 5);
@@ -546,35 +547,35 @@ public class HomeActions {
     }
 
     public void validarExibicaoLblRendendoCemPorCentoDoCdi() {
-        log.info("validar texto 'Rendendo 100% do CDI'");
+        LogFormatter.logStep("validar texto 'Rendendo 100% do CDI'");
         actions().waitForElementToBeDisplayed(homePage().getLblRendendoCemPorCentoDoCdi());
         assertTrue("Erro na validação do texto 'Rendendo 100% do CDI'",
                 homePage().getLblRendendoCemPorCentoDoCdi().isDisplayed());
     }
 
     public void validarStatusDaFaturaAberta() {
-        log.info("valido o status da fatura 'Aberta'");
+        LogFormatter.logStep("valido o status da fatura 'Aberta'");
         actions().waitForElementToBeDisplayed(homePage().getTxtFaturaAberta());
         assertTrue("Não foi possivel validar o status da fatura",
                 homePage().getTxtFaturaAberta().isDisplayed());
     }
 
     public void validarStatusDaFaturaFechada() {
-        log.info("valido o status da fatura 'Fechada'");
+        LogFormatter.logStep("valido o status da fatura 'Fechada'");
         actions().waitForElementToBeDisplayed(homePage().getTxtFaturaFechada());
         assertTrue("Não foi possivel validar o status da fatura",
                 homePage().getTxtFaturaFechada().isDisplayed());
     }
 
     public void validarStatusDaFaturaVencida() {
-        log.info("valido o status da fatura 'Vencida'");
+        LogFormatter.logStep("valido o status da fatura 'Vencida'");
         actions().waitForElementToBeDisplayed(homePage().getTxtFaturaVencida());
         assertTrue("Não foi possivel validar o status da fatura",
                 homePage().getTxtFaturaVencida().isDisplayed());
     }
 
     public void validarStatusDaFaturaBloqueada() {
-        log.info("valido o status da fatura 'Bloqueada'");
+        LogFormatter.logStep("valido o status da fatura 'Bloqueada'");
         actions().waitForElementToBeDisplayed(homePage().getTxtFaturaBloqueada());
         assertTrue("Não foi possivel validar o status da fatura",
                 homePage().getTxtFaturaBloqueada().isDisplayed());
@@ -582,7 +583,7 @@ public class HomeActions {
 
     public void validarValorFatura() {
         String valorFaturaStr = actions().getText(homePage().getTxtValorFatura());
-        log.info("valido que o valor da fatura seja maior que dez reais: " + valorFaturaStr);
+        LogFormatter.logStep("valido que o valor da fatura seja maior que dez reais: " + valorFaturaStr);
         Assert.assertTrue("Massa está com saldo menor que 10 reais, favor adicionar mais.",
                 SaldoUtils.saldoMaiorQueDez(valorFaturaStr));
         ValorManager.setValor(valorFaturaStr);
@@ -593,7 +594,7 @@ public class HomeActions {
         String valorLimiteUtilizadoStr = actions().getText(homePage().getTxtValorLimiteUtilizado());
         int valorFaturaInt = converterSaldoEmInteiro(ValorManager.getValor());
         int valorLimiteUtilizadoInt = converterSaldoEmInteiro(valorLimiteUtilizadoStr);
-        log.info("Valido que o valor do limite utilizado seja maior ou igual o valor da fatura: "
+        LogFormatter.logStep("Valido que o valor do limite utilizado seja maior ou igual o valor da fatura: "
                 + valorLimiteUtilizadoStr);
         assertTrue("Não foi possivel validar que o limite utilizado é maior ou igual o valor da fatura",
                 valorLimiteUtilizadoInt >= valorFaturaInt);
@@ -607,7 +608,7 @@ public class HomeActions {
         String saldo = actions().getText(homePage().getLblSaldoExibido());
         int saldoInt = Integer.parseInt(saldo.replaceAll("\\D", ""));
         ValorManager.setSaldo(saldo);
-        log.info("Valido que o saldo seja maior ou igual o da fatura: " + saldo);
+        LogFormatter.logStep("Valido que o saldo seja maior ou igual o da fatura: " + saldo);
         assertTrue("Não foi possivel validar que o saldo é maior ou igual o valor da fatura",
                 saldoInt >= valorFaturaInt);
     }
@@ -620,22 +621,22 @@ public class HomeActions {
         int valorFaturaInt = converterSaldoEmInteiro(valorFaturaStr);
         int valorLimiteInt = converterSaldoEmInteiro(valorLimiteStr);
         int valorLimiteAtualInt = converterSaldoEmInteiro(valorLimiteAtualStr);
-        log.info("valido que houve o desconto do valor da fatura no limite do cartao:");
-        log.info("valor da fatura:" + valorFaturaStr);
-        log.info("valor do limite utilizado anterior: " + valorLimiteStr);
-        log.info("valor do limite utilizado atual: " + valorLimiteAtualStr);
+        LogFormatter.logStep("valido que houve o desconto do valor da fatura no limite do cartao:");
+        LogFormatter.logStep("valor da fatura:" + valorFaturaStr);
+        LogFormatter.logStep("valor do limite utilizado anterior: " + valorLimiteStr);
+        LogFormatter.logStep("valor do limite utilizado atual: " + valorLimiteAtualStr);
         assertTrue("não foi possivel validar o desconto do valor da fatura no limite utilizado do cartão",
                 (valorFaturaInt + valorLimiteAtualInt) == valorLimiteInt);
     }
 
     public void clicarBtnMeuLimite() {
-        log.info("clico no botão 'Meu limite' na tela 'Home' do 'Cartões'");
+        LogFormatter.logStep("clico no botão 'Meu limite' na tela 'Home' do 'Cartões'");
         actions().verticalSwipeDownAndSearch(homePage().getBtnVerMinhasCompras(), 5);
         actions().click(homePage().getBtnMeuLimite());
     }
 
     public void clicarBtnCardOpenFinance() {
-        log.info("clico no card 'Open Finance' na tela 'Home'");
+        LogFormatter.logStep("clico no card 'Open Finance' na tela 'Home'");
         actions().verticalSwipeDownAndSearch(homePage().getCarrosselProdutosDigio());
         actions().horizontalSwipeLeft(homePage().getCarrosselProdutosDigio(), homePage().getBtnOpenFinance(), 5);
         actions().click(homePage().getBtnOpenFinance());
@@ -643,7 +644,7 @@ public class HomeActions {
 
 
     public void clicarBtnSacar() {
-        log.info("clico no botão 'Sacar'");
+        LogFormatter.logStep("clico no botão 'Sacar'");
         actions().sleep(2);
         if (actions().isIOS()) {
             actions().horizontalSwipeLeft(homePage().getBtnPagar(), homePage().getBtnSacar(), 5);
@@ -652,5 +653,34 @@ public class HomeActions {
             actions().horizontalSwipeLeft(homePage().getCarrosselConta(), homePage().getBtnSacar(), 5);
             actions().click(homePage().getBtnSacar());
         }
+    }
+
+    // MÉTODOS PARA VALIDAR TEXTO DO MENU
+    public void validarExibicaoTextoNomeMenu() {
+        LogFormatter.logStep("valido a exibição do texto 'Nome' na tela 'Menu'");
+        actions().waitForElementToBeDisplayed(homePage().getTxtNomeMenu());
+        assertTrue("Não foi possível validar a exibição do texto 'Nome' no menu",
+                homePage().getTxtNomeMenu().isDisplayed());
+    }
+
+    public void validarExibicaoTextoInstituicaoMenu() {
+        LogFormatter.logStep("valido a exibição do texto 'Instituição' na tela 'Menu'");
+        actions().waitForElementToBeDisplayed(homePage().getTxtInstituicaoMenu());
+        assertTrue("Não foi possível validar a exibição do texto 'Instituição' no menu",
+                homePage().getTxtInstituicaoMenu().isDisplayed());
+    }
+
+    public void validarExibicaoTextoAgenciaMenu() {
+        LogFormatter.logStep("valido a exibição do texto 'Agência' na tela 'Menu'");
+        actions().waitForElementToBeDisplayed(homePage().getTxtAgenciaMenu());
+        assertTrue("Não foi possível validar a exibição do texto 'Agência' no menu",
+                homePage().getTxtAgenciaMenu().isDisplayed());
+    }
+
+    public void validarExibicaoTextoContaMenu() {
+        LogFormatter.logStep("valido a exibição do texto 'Conta' na tela 'Menu'");
+        actions().waitForElementToBeDisplayed(homePage().getTxtContaMenu());
+        assertTrue("Não foi possível validar a exibição do texto 'Conta' no menu",
+                homePage().getTxtContaMenu().isDisplayed());
     }
 }

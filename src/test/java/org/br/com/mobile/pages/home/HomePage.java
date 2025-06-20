@@ -165,7 +165,7 @@ public class HomePage extends MasterPageFactory {
     @iOSXCUITFindBy(accessibility = "Minhas compras")
     private WebElement btnVerMinhasCompras;
 
-    @AndroidFindBy(xpath = "((//androidx.recyclerview.widget.RecyclerView)[2]//android.widget.ImageView)[1]")
+    @AndroidFindBy(xpath = "(//androidx.recyclerview.widget.RecyclerView)[2]//android.widget.ImageView)[1]")
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeCollectionView//XCUIElementTypeImage)[1]")
     private WebElement btnCardDigioOneToqueAquiPecaOSeu;
 
@@ -259,5 +259,22 @@ public class HomePage extends MasterPageFactory {
     @AndroidFindBy(xpath = "//*[@text='Open Finance']")
     @iOSXCUITFindBy(xpath = "//*[@value='Open Finance']")
     private WebElement btnOpenFinance;
+
+    // ELEMENTOS DO MENU
+    @AndroidFindBy(xpath = "//*[contains(@text, 'Olá, ')]")
+    @iOSXCUITFindBy(xpath = "//*[@name='Nome']")
+    private WebElement txtNomeMenu;
+
+    @AndroidFindBy(xpath = "//*[@text='Instituição: ']")
+    @iOSXCUITFindBy(xpath = "//*[@name='Instituição']")
+    private WebElement txtInstituicaoMenu;
+
+    @AndroidFindBy(xpath = "//*[@text='Agência: ']")
+    @iOSXCUITFindBy(xpath = "//*[@name='Agência']")
+    private WebElement txtAgenciaMenu;
+
+    @AndroidFindBy(xpath = "//*[@text='Conta: ']")
+    @iOSXCUITFindBy(xpath = "//*[@name='Conta']")
+    private WebElement txtContaMenu;
 
 }
