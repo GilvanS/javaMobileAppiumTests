@@ -20,3 +20,4 @@ test-classes/
 .idea/
 *.iml
 *.iws
+workspace.xml
