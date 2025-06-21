@@ -102,7 +102,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Full Name {}", fullName);
         acoes.click(loginPage().getCampoFullName());
         acoes.sendKeys(loginPage().getCampoFullName(), fullName);
-        acoes.hideKeyboard();
+//        acoes.hideKeyboard();
     }
 
     public static void campoAddressLine1() {
@@ -110,7 +110,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Address Line 1: {}", addressLine);
         acoes.click(loginPage().getCampoAddressLine1());
         acoes.sendKeys(loginPage().getCampoAddressLine1(), addressLine);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoAddressLine2() {
@@ -118,7 +118,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Address Line 2: {}", addressLine2);
         acoes.click(loginPage().getCampoAddressLine2());
         acoes.sendKeys(loginPage().getCampoAddressLine2(), addressLine2);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoCity() {
@@ -126,7 +126,7 @@ public class LoginActions extends PageBaseActions {
         log.info("City: {}", city);
         acoes.click(loginPage().getCampoCity());
         acoes.sendKeys(loginPage().getCampoCity(), city);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoStateRegion() {
@@ -134,7 +134,7 @@ public class LoginActions extends PageBaseActions {
         log.info("State/Region: {}", stateRegion);
         acoes.click(loginPage().getCampoStateRegion());
         acoes.sendKeys(loginPage().getCampoStateRegion(), stateRegion);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoZipCode() {
@@ -142,7 +142,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Zip Code: {}", zipCode);
         acoes.click(loginPage().getCampoZipCode());
         acoes.sendKeys(loginPage().getCampoZipCode(), zipCode);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoCountry() {
@@ -162,7 +162,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Card Full Name: {}", cardFullName);
         acoes.click(loginPage().getCampoCardFullName());
         acoes.sendKeys(loginPage().getCampoCardFullName(), cardFullName);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoCardNumber() {
@@ -170,7 +170,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Card Number: {}", cardNumber);
         acoes.click(loginPage().getCampoCardNumber());
         acoes.sendKeys(loginPage().getCampoCardNumber(), cardNumber);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoExpiryDate() {
@@ -178,7 +178,7 @@ public class LoginActions extends PageBaseActions {
         log.info("Expiry Date: {}", expiryDate);
         acoes.click(loginPage().getCampoExpiryDate());
         acoes.sendKeys(loginPage().getCampoExpiryDate(), expiryDate);
-        acoes.hideKeyboard();
+
     }
 
     public static void campoCVV() {
@@ -186,7 +186,7 @@ public class LoginActions extends PageBaseActions {
         log.info("CVV: {}", cvv);
         acoes.click(loginPage().getCampoCVV());
         acoes.sendKeys(loginPage().getCampoCVV(), cvv);
-        acoes.hideKeyboard();
+
     }
 
     public static void clicarBtnReviewOrder() {
