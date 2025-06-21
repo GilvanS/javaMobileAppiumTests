@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
-import org.testes.utils.FakerApi;
+import org.testes.utils.JavaFakerGenerator;
 import org.testes.utils.Hooks;
 import org.utilidades.dados.Usuario;
 
@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @Slf4j
 public class LoginActions extends PageBaseActions {
-    private static final FakerApi faker = new FakerApi();
+    private static final JavaFakerGenerator faker = new JavaFakerGenerator();
 
     static LoginActions acoes = new LoginActions(Hooks.driver);
 

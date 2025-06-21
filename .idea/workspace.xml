@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

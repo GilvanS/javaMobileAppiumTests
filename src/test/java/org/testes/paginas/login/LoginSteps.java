@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import io.cucumber.java.en.When;
 import org.testes.paginas.home.HomeActions;
-import org.testes.utils.FakerApi;
+import org.testes.utils.JavaFakerGenerator;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class LoginSteps {
 
-    private static final FakerApi faker = new FakerApi();
+    private static final JavaFakerGenerator faker = new JavaFakerGenerator();
 
     @Given("valido a exibição da frase MYDEMOAPP na tela Products")
     public void validoAExibiçãoDaFraseMYDEMOAPPNaTelaProducts() {
