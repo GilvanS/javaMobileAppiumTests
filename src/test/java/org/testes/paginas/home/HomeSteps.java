@@ -11,6 +11,11 @@ public class HomeSteps {
         HomeActions.clicarBtnHome();
     }
 
+    @Given("clico no botão Swipe na tela Home")
+    public void clicoNoBotaoSwipeNaTelaHome() {
+        HomeActions.clicarBtnSwipe();
+    }
+
     @Then("valido a exibição da frase WEBDRIVERIO na tela Home")
     public void validoAExibicaoDaFraseWEBDRIVERIONaTelaHome() {
         HomeActions.validarLblWebDriveIo();

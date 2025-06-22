@@ -17,6 +17,11 @@ public class HomeActions {
         acoes().click(HomePage().getBtnHome());
     }
 
+    public static void clicarBtnSwipe() {
+        log.info("Clicando no botao 'Swipe'");
+        acoes().click(HomePage().getBtnSwipe());
+    }
+
     public static void validarLblWebDriveIo() {
         log.info("Valido a exibição da frase WEBDRIVERIO na tela Home");
         acoes().waitForElementToBeVisible(HomePage().getLblWebDriverIo(), 10);

@@ -14,13 +14,13 @@ public class HomePage {
     @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Home']")
     private WebElement btnHome;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Swipe']")
+    private WebElement btnSwipe;
+
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Webview']")
     private WebElement btnWebview;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Next-gen browser and mobile automation test framework for Node.js']")
     private WebElement lblNextGenBrowser;
-
-    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Swipe']")
-    private WebElement btnSwipe;
 
 }

@@ -20,6 +20,7 @@ import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import static org.testes.adb.AdbActions.swipe;
+import static org.testes.paginas.swipe.SwipeActions.swipePage;
 
 /**
  * Classe base para ações comuns de páginas mobile.
@@ -580,7 +581,7 @@ public class PageBaseActions {
         return displayed;
     }
 
-    public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) throws IOException {
+    public boolean verticalSwipeDownAndSearch(WebElement lblScrollView, WebElement element, int attempts) throws IOException {
         return verticalSwipeDownAndSearch(0.50, 0.55, 0.15, element, attempts);
     }
 
@@ -595,7 +596,7 @@ public class PageBaseActions {
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement element) throws IOException {
-        return verticalSwipeDownAndSearch(element, 5);
+        return verticalSwipeDownAndSearch(swipePage().getLblScrollView(), element, 5);
     }
 
     public boolean verticalSwipeUpAndSearch(WebElement element) {

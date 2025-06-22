@@ -39,9 +39,9 @@ Feature: Funcionalidades app MyDemoApp
   @CT-1006
   Scenario: Validar Swipe Horizontal
     Given que estou na tela home
-    And clico no botão Swipe Horizontal na tela Home
+    And clico no botão Swipe na tela Home
     When deslizo para a direita na tela Swipe Horizontal
-    Then valido a exibição da frase Great Community na tela Swipe Horizontal
+    When valido a exibição da frase Support Videos na tela Swipe Horizontal
     When deslizo para a esquerda na tela Swipe Horizontal
     Then valido a exibição da frase Fully Open Source na tela Swipe Horizontal
 
