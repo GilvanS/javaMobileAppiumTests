@@ -70,7 +70,9 @@ public class JavaFakerGenerator {
         this.country = faker.address().country();
         this.cardNumber = faker.finance().creditCard();
         this.cardFullName = this.fullName;
-        this.expiryDate = faker.business().creditCardExpiry();
+        this.expiryDate = String.format("%02d/%d", 
+            faker.number().numberBetween(1, 12), 
+            faker.number().numberBetween(2025, 2030));
         this.cvv = faker.number().digits(3);
     }
 

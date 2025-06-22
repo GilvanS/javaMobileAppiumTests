@@ -1,4 +1,4 @@
-@WebDriverIO
+#@WebDriverIO
 Feature: Funcionalidades app MyDemoApp
   como
   quero
@@ -11,7 +11,8 @@ Feature: Funcionalidades app MyDemoApp
 
   @CT-1002
   Scenario: Validar tela Webview
-    Given que estou na tela Webview
+    Given que estou na tela home
+    Given clico no botão Webview na tela Home
     Then valido a exibição da frase Next-gen browser na tela Webview
 
   @CT-1003
