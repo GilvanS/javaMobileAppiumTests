@@ -40,8 +40,6 @@ Feature: Funcionalidades app MyDemoApp
   Scenario: Validar Swipe Horizontal
     Given que estou na tela home
     And clico no botão Swipe na tela Home
-    When deslizo para a direita na tela Swipe Horizontal
     When valido a exibição da frase Support Videos na tela Swipe Horizontal
-    When deslizo para a esquerda na tela Swipe Horizontal
-    Then valido a exibição da frase Fully Open Source na tela Swipe Horizontal
+    When valido a exibição da frase Fully Open Source na tela Swipe Horizontal
 

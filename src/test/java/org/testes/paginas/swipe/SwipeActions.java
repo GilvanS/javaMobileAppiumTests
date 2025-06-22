@@ -38,4 +38,9 @@ public class SwipeActions {
                 "Nao foi posivel validar o texto 'Fully Open Source'");
         acoes().sleep(2);
     }
+
+    public static void validarLblYouFoundMe() throws IOException {
+        log.info("Validando a exibicao da frase 'You found me!!!' na tela Swipe Horizontal");
+        acoes().verticalSwipeDownAndSearch(swipePage().getLblYouFoundMe());
+    }
 }

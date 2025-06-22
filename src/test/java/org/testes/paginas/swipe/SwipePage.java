@@ -28,6 +28,9 @@ public class SwipePage {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='COMPATIBLE']")
     private WebElement lblCompatible;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='You found me!!!']")
+    private WebElement lblYouFoundMe;
+
 
 
 }
