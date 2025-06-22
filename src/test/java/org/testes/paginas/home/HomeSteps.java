@@ -11,7 +11,7 @@ public class HomeSteps {
         HomeActions.clicarBtnHome();
     }
     @Then("valido a exibição da frase WEBDRIVERIO na tela Home")
-    public void validoAExibiçãoDaFraseWEBDRIVERIONaTelaHome() {
+    public void validoAExibicaoDaFraseWEBDRIVERIONaTelaHome() {
         HomeActions.validarLblWebDriveIo();
     }
 

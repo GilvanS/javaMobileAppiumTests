@@ -12,7 +12,13 @@ public class MasterPageFactory {
     public static <T> T getPage(Class<T> cls){
         T page;
         try {
-            page = cls.getDeclaredConstructor(AppiumDriver.class).newInstance(Hooks.getDriver());
+            // Tenta primeiro sem construtor, depois com construtor vazio
+            try {
+                page = cls.getDeclaredConstructor().newInstance();
+            } catch (NoSuchMethodException e) {
+                // Se não tiver construtor vazio, tenta com AppiumDriver
+                page = cls.getDeclaredConstructor(AppiumDriver.class).newInstance(Hooks.getDriver());
+            }
             PageFactory.initElements(new AppiumFieldDecorator(Hooks.getDriver()), page);
         }catch (Exception e){
             log.error("Error on page instantiation", e);
