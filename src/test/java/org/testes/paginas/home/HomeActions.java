@@ -13,10 +13,4 @@ import java.io.IOException;
 
 public class HomeActions {
 
-    private static final Logger log = LoggerFactory.getLogger(HomeActions.class);
-
-    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
-
-
-
 }

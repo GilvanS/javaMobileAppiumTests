@@ -13,8 +13,8 @@ public class AppiumDriverHelper {
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("appium:appPackage", "com.saucelabs.mydemoapp.rn");
-        capabilities.setCapability("appium:appActivity", "com.saucelabs.mydemoapp.rn.MainActivity");
+        capabilities.setCapability("appium:appPackage", "com.wdiodemoapp");
+        capabilities.setCapability("appium:appActivity", "com.wdiodemoapp.SplashActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
         capabilities.setCapability("appium:deviceName", "192.168.0.106:5555"); // S24+ RXCXB02B93D   motoG 0078720227
         capabilities.setCapability("appium:automationName", "uiautomator2");
