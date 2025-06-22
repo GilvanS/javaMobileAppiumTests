@@ -3,6 +3,7 @@ package org.testes.driver.page;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.support.PageFactory;
+import org.testes.utils.Context;
 import org.testes.utils.Hooks;
 import io.appium.java_client.AppiumDriver;
 
@@ -17,9 +18,9 @@ public class MasterPageFactory {
                 page = cls.getDeclaredConstructor().newInstance();
             } catch (NoSuchMethodException e) {
                 // Se não tiver construtor vazio, tenta com AppiumDriver
-                page = cls.getDeclaredConstructor(AppiumDriver.class).newInstance(Hooks.getDriver());
+                page = cls.getDeclaredConstructor(AppiumDriver.class).newInstance(Context.getDriver());
             }
-            PageFactory.initElements(new AppiumFieldDecorator(Hooks.getDriver()), page);
+            PageFactory.initElements(new AppiumFieldDecorator(Context.getDriver()), page);
         }catch (Exception e){
             log.error("Error on page instantiation", e);
             throw new RuntimeException(e);

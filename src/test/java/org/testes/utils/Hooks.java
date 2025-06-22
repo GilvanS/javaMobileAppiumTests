@@ -37,10 +37,12 @@ public class Hooks {
         log.info(scenario.getId());
         log.info("Inicializando o driver");
         driver = AppiumDriverHelper.getDriver();
+        Context.inicializar(driver);
     }
 
     @After
     public void tearDownDriver(Scenario scenario) {
+        Context.tearDown();
         if (driver != null) driver.quit();
         driver = null;
     }
