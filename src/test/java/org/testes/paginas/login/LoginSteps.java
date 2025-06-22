@@ -15,6 +15,11 @@ public class LoginSteps {
         // Implementar navegação para a tela de login se necessário
     }
 
+    @Given("clico no botão Login na tela login")
+    public void clicoNoBotãoLoginNaTelaLogin() {
+        LoginActions.clicarBtnLogin();
+    }
+
     @When("preencho o campo email na tela Login")
     public void preenchoOCampoEmailNaTelaLogin() {
         LoginActions.campoEmail();
@@ -24,6 +29,12 @@ public class LoginSteps {
     public void preenchoOCampoPasswordNaTelaLogin() {
         LoginActions.campoPassword();
     }
+
+    @When("clico no botão Login na tela Login Sign up Form")
+    public void clicoNoBotãoLoginNaTelaLoginSignUpForm() {
+        LoginActions.clicarBtnLoginSign();
+    }
+
 
     @And("preencho o campo confirm password na tela Login")
     public void preenchoOCampoConfirmPasswordNaTelaLogin() {
@@ -49,4 +60,15 @@ public class LoginSteps {
     public void validoAExibicaoDaFraseSuccessNaTelaLogin() {
         LoginActions.validarLblSuccess();
     }
+
+    @Then("clico no botão OK no popup Login")
+    public void clicoNoBotãoOKNoPopupLogin() {
+        LoginActions.clicarBtnOK();
+    }
+
+    @Then("clico no botão Sign Up Login")
+    public void clicoNoBotãoSignUpLogin() {
+        LoginActions.clicarBtnSignLogin();
+    }
+
 }

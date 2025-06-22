@@ -1,6 +1,7 @@
 package org.testes.paginas.home;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.cucumber.java.hu.Adott;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
 
@@ -18,5 +19,8 @@ public class HomePage {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Next-gen browser and mobile automation test framework for Node.js']")
     private WebElement lblNextGenBrowser;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Swipe']")
+    private WebElement btnSwipe;
 
 }

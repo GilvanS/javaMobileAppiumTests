@@ -24,7 +24,6 @@ public class LoginActions {
         log.info("Preenchendo campo Email: {}", email);
         acoes().click(getLoginPage().getCampoEmail());
         acoes().sendKeys(getLoginPage().getCampoEmail(), email);
-        acoes().hideKeyboard();
     }
 
     public static void campoPassword() {
@@ -32,15 +31,18 @@ public class LoginActions {
         log.info("Preenchendo campo Password: {}", password);
         acoes().click(getLoginPage().getCampoPassword());
         acoes().sendKeys(getLoginPage().getCampoPassword(), password);
-        acoes().hideKeyboard();
     }
 
+    public static void clicarBtnLoginSign() {
+        log.info("Clicando no botao 'Login / Sign Up Form'");
+        acoes().click(getLoginPage().getBtnLoginSign());
+    }
     public static void campoConfirmPassword() {
         String confirmPassword = faker.getPassword();
         log.info("Preenchendo campo Confirm Password: {}", confirmPassword);
         acoes().click(getLoginPage().getCampoConfirmPassword());
         acoes().sendKeys(getLoginPage().getCampoConfirmPassword(), confirmPassword);
-        acoes().hideKeyboard();
+
     }
 
     public static void clicarBtnSignUp() {
@@ -59,6 +61,8 @@ public class LoginActions {
         assertTrue(getLoginPage().getLblSignedUp().isDisplayed(),
                 "Nao foi posivel validar o texto 'Signed Up'");
         acoes().sleep(2);
+        clicarBtnOK();
+        acoes().hideKeyboard();
     }
 
     public static void validarLblSuccess() {
@@ -67,5 +71,16 @@ public class LoginActions {
         assertTrue(getLoginPage().getLblSuccess().isDisplayed(),
                 "Nao foi posivel validar o texto 'Success'");
         acoes().sleep(2);
+    }
+
+    public static void clicarBtnOK() {
+        log.info("Clicando no botao 'OK'");
+        acoes().click(getLoginPage().getBtnOk());
+        acoes().hideKeyboard();
+    }
+
+    public static void clicarBtnSignLogin() {
+        log.info("Clicando no botao 'Sign Up Login'");
+        acoes().click(getLoginPage().getBtnSignLogin());
     }
 } 
