@@ -41,7 +41,7 @@ public class PacotesPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[@content-desc= 'Confirmar detalhes']")
     private WebElement btnConfirmarDetalhes;
 
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Junho')]/..//android.view.View[@content-desc= '20']")
+    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Junho')]/..//android.view.View[@content-desc= '30']")
     private WebElement btnDataSaida;
 
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Julho')]")

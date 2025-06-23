@@ -16,7 +16,7 @@ public class AppiumDriverHelper {
         capabilities.setCapability("appium:appPackage", "com.cvc.minhacvc");
         capabilities.setCapability("appium:appActivity", "com.cvc.minha_app.MainActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:deviceName", "0078720227"); // S24+ RXCXB02B93D   motoG 0078720227
+        capabilities.setCapability("appium:deviceName", "192.168.16.89:5555"); // S24+ RXCXB02B93D   motoG 0078720227
         capabilities.setCapability("appium:automationName", "uiautomator2");
         capabilities.setCapability("appium:noReset", false);
         return capabilities;

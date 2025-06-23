@@ -2,6 +2,7 @@ package org.testes.utils;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Collection;
 
@@ -12,6 +13,10 @@ public class HooksDados {
 
     @Getter
     private static String tagCenario;
+
+    @Getter
+    @Setter
+    private static String deviceName;
 
     @Before
     public void pegarTagCenario(Scenario cenario) {

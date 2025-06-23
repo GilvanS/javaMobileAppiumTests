@@ -82,14 +82,14 @@ Feature: Funcionalidades site de viagens CVC
 
     Examples:
       | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
-      | Barcelona    | 20          | 30       | Arcelona Hotel                       |
+      | Barcelona    | 29          | 15       | Arcelona Hotel                       |
 #    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
 #    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
 
 
 
   @CT-1007 @CVC
-  Scenario Outline: Validar 'Aluguel de carros'
+  Scenario Outline: Validar Aluguel de carros
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     When clico no botão 'Carros' tela 'Home'
@@ -115,7 +115,7 @@ Feature: Funcionalidades site de viagens CVC
 
     Examples:
       | LOCAL_DE_RETIRADA | DATA_RETIRADA | DATA_DEVOLUCAO |
-      | Sao Paulo         | 20            | 15             |
+      | Sao Paulo         | 29            | 15             |
 
 
   @CT-1008 @CVC @ATJ-136
@@ -136,5 +136,5 @@ Feature: Funcionalidades site de viagens CVC
 
     Examples:
       | DESTINO         | DATA_INICIO | DATA_FIM |
-      | Beto            | 23          | 27       |
+      | Beto            | 29          | 15       |
 

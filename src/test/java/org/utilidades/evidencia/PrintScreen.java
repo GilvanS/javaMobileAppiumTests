@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testes.utils.Hooks;
+import org.testes.utils.HooksDados;
 import org.testes.utils.HooksEvidencia;
 
 import java.io.File;
@@ -25,7 +26,7 @@ public class PrintScreen {
      */
     public static void screenshot(String nomeArquivo) throws IOException {
 
-        String filePath = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + nomeArquivo +  ".png";
+        String filePath = "target/evidencias/" + HooksDados.getDeviceName() + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot" + "/" + System.currentTimeMillis() + " - " + nomeArquivo +  ".png";
         File print = ((TakesScreenshot) Hooks.getDriver()).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(print, new File(filePath));
         File directory = new File(filePath);

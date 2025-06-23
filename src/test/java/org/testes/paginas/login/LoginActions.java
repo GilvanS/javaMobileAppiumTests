@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Slf4j
 public class LoginActions {
 
-    static PrintScreen print = new PrintScreen();
     static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
 
     public static LoginPage loginPage(){
