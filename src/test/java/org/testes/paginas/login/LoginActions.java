@@ -1,6 +1,7 @@
 package org.testes.paginas.login;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testes.utils.Context.acoes;
 
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
@@ -32,7 +33,7 @@ public class LoginActions extends PageBaseActions {
 
     public static void validarLblMyDemoApp() {
         log.info("Validando texto 'MYDEMOAPP'");
-        acoes.waitForElementToBeVisible(loginPage().getLblMyDemoApp(), 10);
+        acoes().waitForElementToBeVisible(loginPage().getLblMyDemoApp(), 10);
         assertTrue(loginPage().getLblMyDemoApp().isDisplayed(),
                 "Não foi posivel validar o texto 'MYDEMOAPP'");
         acoes.sleep(2);
