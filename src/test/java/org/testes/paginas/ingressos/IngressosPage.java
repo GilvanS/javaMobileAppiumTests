@@ -6,6 +6,7 @@ import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
+import org.utilidades.dados.Usuario;
 
 @Getter
 public class IngressosPage extends PageBaseActions {
@@ -47,7 +48,8 @@ public class IngressosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
     private WebElement btnCheckout;
 
-    public WebElement getBtnDataInicio(String dia) {
+    public WebElement getBtnDataInicio() {
+        String dia = Usuario.getDataInicio();
         return driver.findElement(By.xpath("(//android.view.View[@content-desc='" + dia + "'])[1]"));
     }
 

@@ -18,13 +18,13 @@ public class IngressosSteps {
         IngressosActions.clicarEPreencherCamoDestino();
     }
     @Given("clicar no botão Escolha a data na tela 'Ingressos'")
-    public void clicarNoBotaoEscolhaADataNaTelaIngressos(String dia) {
-        IngressosActions.clicarNoDiaDoCalendario(dia);
+    public void clicarNoBotaoEscolhaADataNaTelaIngressos() {
+        IngressosActions.clicarNoDiaDoCalendario();
     }
 
-    @Given("seleciono a data {string} na tela 'Ingressos'")
-    public void selecionoADataFimNaTelaIngressos(String dia) {
-        IngressosActions.clicarNoDiaDoCalendario(dia);
+    @Given("seleciono a data na tela 'Ingressos'")
+    public void selecionoADataFimNaTelaIngressos() {
+        IngressosActions.clicarNoDiaDoCalendario();
     }
 
     @Given("clico no botão Continuar na tela Ingressos")

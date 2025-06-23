@@ -75,14 +75,11 @@ public class IngressosActions {
         acoes.waitForElementToBeClickable(ingressosPage().getViewResumoPedido(), 10);
     }
 
-    /**
-     * Clica no dia informado no calendário de datas.
-     *
-     * @param dia String representando o dia (ex: "20")
-     */
-    public static void clicarNoDiaDoCalendario(String dia) {
+
+    public static void clicarNoDiaDoCalendario() {
+        String dia = Usuario.getDataInicio();
         log.info("Clicando no dia '{}' no calendário de datas", dia);
-        acoes.click(ingressosPage().getBtnDataInicio(dia));
+        acoes.click(ingressosPage().getBtnDataInicio());
     }
 
     public static void clicarNoBotaoContinuar() {
