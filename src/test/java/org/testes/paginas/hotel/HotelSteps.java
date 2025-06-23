@@ -54,7 +54,7 @@ public class HotelSteps {
 
     @Given("valido os Hotel para selecionar na tela Hoteis")
     public void validoOsHotelParaSelecionarNaTelaHoteis() {
-        HotelActions.validarHotelArcelon();
+        HotelActions.validarHotel();
     }
 
     @Given("valido a exibição da frase Ler mais na tela Hoteis")

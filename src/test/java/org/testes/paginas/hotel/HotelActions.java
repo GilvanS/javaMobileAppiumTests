@@ -59,10 +59,10 @@ public class HotelActions {
     }
 
     @SneakyThrows
-    public static void validarHotelArcelon() {
-        log.info("Validando exibicao do hotel Arcelon");
-        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnHotelArcelon(), 10);
-        acoes.click(hotelPage().getBtnHotelArcelon());
+    public static void validarHotel() {
+        log.info("Validando exibicao do hotel");
+        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnHotel2(), 5);
+        acoes.click(hotelPage().getBtnHotel2());
     }
 
     public static void clicarBtnFechar() {
@@ -86,24 +86,28 @@ public class HotelActions {
     @SneakyThrows
     public static void validarLblLerMais() {
         log.info("valido a exibição da frase Ler mais na tela Hoteis");
+        acoes.sleep(5);
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblLerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblVerMais() {
         log.info("valido a exibição da frase Ver mais na tela Hoteis");
+        acoes.sleep(5);
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblVerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblQuartosEscolhido() {
         log.info("valido a exibição da frase Quartos Escolhido na tela Hoteis");
+        acoes.sleep(5);
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblQuartoEscolhido(), 5);
     }
 
     @SneakyThrows
     public static void clicarBtnVoltarAoTopo() {
         log.info("clico no botão Voltar ao topo na tela Hoteis");
+        acoes.sleep(5);
         acoes.verticalSwipeDownAndSearch(hotelPage().getBtnVoltarAoTopo(), 5);
         acoes.click(hotelPage().getBtnVoltarAoTopo());
     }

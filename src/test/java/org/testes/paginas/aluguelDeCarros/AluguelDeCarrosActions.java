@@ -3,6 +3,7 @@ package org.testes.paginas.aluguelDeCarros;
 import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
+import org.utilidades.dados.Usuario;
 import org.utilidades.evidencia.PrintScreen;
 import org.testes.utils.Hooks;
 import org.slf4j.Logger;
@@ -22,10 +23,11 @@ public class AluguelDeCarrosActions {
         return MasterPageFactory.getPage(AluguelDeCarrosPage.class);
     }
 
-    public static void clicarEPreencherCampoOndeVoceQuerRetirarSeuCarro(String retirar) throws InterruptedException {
-        log.info("Retirar Seu Carro: " + retirar);
+    public static void clicarEPreencherCampoOndeVoceQuerRetirarSeuCarro(){
+        String localRetirada = Usuario.getCidadeOrigem();
+        log.info("Retirar Seu Carro: " + localRetirada);
         acoes.click(aluguelDeCarrosPage().getBtnOndeVoceQuerRetirarSeuCarro());
-        acoes.sendKeys(aluguelDeCarrosPage().getBtnOndeVoceQuerRetirarSeuCarro(), retirar);
+        acoes.sendKeys(aluguelDeCarrosPage().getBtnOndeVoceQuerRetirarSeuCarro(), localRetirada);
         acoes.click (aluguelDeCarrosPage().getRetirarSaoPauloSP());
     }
 
@@ -133,7 +135,7 @@ public class AluguelDeCarrosActions {
     }
 
     public static void clicarBtnVoltarAoTopo() {
-        log.info("btnVoltarAoTopo");
+        log.info("clico no botão 'Voltar ao topo' na tela 'Aluguel de carros'");
         acoes.click(aluguelDeCarrosPage().getBtnVoltarAoTopo());
     }
 

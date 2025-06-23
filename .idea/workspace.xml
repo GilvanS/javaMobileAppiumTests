@@ -7,27 +7,16 @@
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/actions/PageBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/driver/actions/PageBaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/ingressos/IngressosSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/DataUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksEvidencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/HooksEvidencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/evidencia/GeradorDocx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

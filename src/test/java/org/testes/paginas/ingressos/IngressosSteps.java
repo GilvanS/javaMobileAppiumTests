@@ -13,11 +13,11 @@ public class IngressosSteps {
         IngressosActions.validarEscolharUmParque();
     }
 
-    @Given("seleciono o {string} na tela 'Ingressos'")
-    public void selecionoONaTelaIngressos(String destino) {
-        IngressosActions.clicarEPreencherCamoDestino(destino);
+    @Given("seleciono o Destino na tela 'Ingressos'")
+    public void selecionoONaTelaIngressos() {
+        IngressosActions.clicarEPreencherCamoDestino();
     }
-    @Given("clicar no botão Escolha a data {string} na tela 'Ingressos'")
+    @Given("clicar no botão Escolha a data na tela 'Ingressos'")
     public void clicarNoBotaoEscolhaADataNaTelaIngressos(String dia) {
         IngressosActions.clicarNoDiaDoCalendario(dia);
     }

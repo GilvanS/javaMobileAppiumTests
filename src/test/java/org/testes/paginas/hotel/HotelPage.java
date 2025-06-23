@@ -59,8 +59,14 @@ public class HotelPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
     private WebElement btnCheckout;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Sem Café da Manhã\nArcelon Hotel\nCarrer de Mallorca\nTaxas inclusas']")
-    private WebElement btnHotelArcelon;
+    @AndroidFindBy(xpath = "//android.widget.ScrollView")
+    private WebElement scrollView;
+
+    @AndroidFindBy(xpath = "(//android.view.View[contains(@content-desc, 'Sem Café')])[1]")
+    private WebElement btnHotel1;
+
+    @AndroidFindBy(xpath = "(//android.view.View[contains(@content-desc, 'Sem Café')])[2]")
+    private WebElement btnHotel2;
 
     @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]")
     private WebElement btnFechar;

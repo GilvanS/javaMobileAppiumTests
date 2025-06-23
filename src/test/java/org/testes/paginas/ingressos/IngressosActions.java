@@ -10,6 +10,7 @@ import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.utils.Hooks;
 import org.openqa.selenium.WebElement;
+import org.utilidades.dados.Usuario;
 
 
 import static org.testes.utils.Hooks.driver;
@@ -30,7 +31,8 @@ public class IngressosActions {
 
 
     @SneakyThrows
-    public static void clicarEPreencherCamoDestino(String destino) {
+    public static void clicarEPreencherCamoDestino() {
+        String destino = Usuario.getCidadeOrigem();
         log.info("Clicando no botão comprar ingresso");
         acoes.click(ingressosPage().getCampoParaQualDestino());
         acoes.sendKeys(ingressosPage().getCampoParaQualDestino(), destino);

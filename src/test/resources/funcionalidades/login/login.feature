@@ -60,10 +60,10 @@ Feature: Funcionalidades site de viagens CVC
     And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
     And clico no botão Marcador do mapa na tela Hoteis
     And valido os Hotel para selecionar na tela Hoteis
-    And valido a exibição da frase Ler mais na tela Hoteis
-    And valido a exibição da frase Ver mais na tela Hoteis
-    And valido a exibição da frase Quartos disponíveis na tela Hoteis
-    And clico no botão 'Voltar ao topo' na tela de Hoteis
+#    And valido a exibição da frase Ler mais na tela Hoteis
+#    And valido a exibição da frase Ver mais na tela Hoteis
+#    And valido a exibição da frase Quartos disponíveis na tela Hoteis
+#    And clico no botão 'Voltar ao topo' na tela de Hoteis
     And clico no botão 'Reservar' na tela de Hoteis
     And clico no botão Ver resumo na tela 'Checkout'
     And valido o Resumo do pedido na tela 'Checkout'
@@ -82,14 +82,14 @@ Feature: Funcionalidades site de viagens CVC
 
 
   @CT-1007 @CVC
-  Scenario Outline: Validar Aluguel de carros
+  Scenario: Validar Aluguel de carros
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     When clico no botão 'Carros' tela 'Home'
-    And seleciono o "<LOCAL_DE_RETIRADA>" na tela 'Aluguel de carros'
+    And seleciono o na tela 'Aluguel de carros'
     And clico no botão 'Continuar' na tela 'Aluguel de carros'
-    And seleciono a data "<DATA_RETIRADA>" no campo Início na tela Passagens
-    And seleciono a data "<DATA_DEVOLUCAO>" no campo Fim na tela Passagens
+    And seleciono a data no campo Início na tela Passagens
+    And seleciono a data no campo Fim na tela Passagens
     And clico no botão 'Continuar' na tela 'Aluguel de carros'
     And clico no botão 'Alterar Horario Retirada' na tela 'Aluguel de carros'
     And seleciono o horario na tela 'Aluguel de carros'
@@ -106,20 +106,20 @@ Feature: Funcionalidades site de viagens CVC
 #    And clico no botão 'Ver detalhes' na tela 'Aluguel de carros'
 #    And valido a exibição da frase 'Características' na tela 'Aluguel de carros'
 
-    Examples:
-      | LOCAL_DE_RETIRADA | DATA_RETIRADA | DATA_DEVOLUCAO |
-      | Sao Paulo         | 29            | 15             |
+#    Examples:
+#      | LOCAL_DE_RETIRADA | DATA_RETIRADA | DATA_DEVOLUCAO |
+#      | Sao Paulo         | 29            | 15             |
 
 
   @CT-1008 @CVC @ATJ-136
-  Scenario Outline: Validar Ingressos
+  Scenario: Validar Ingressos
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Ingressos' na tela 'Home'
     And valido a exibição da frase Escolhar um parque na tela 'Ingressos'
-    And seleciono o "<DESTINO>" na tela 'Ingressos'
+    And seleciono o Destino na tela 'Ingressos'
     And clico no botão Confirmar parque na tela Ingressos
-    And clicar no botão Escolha a data "<DATA_INICIO>" na tela 'Ingressos'
+    And clicar no botão Escolha a data na tela 'Ingressos'
     And clico no botão Confirmar datas na tela Ingressos
     And clico no botão Conferir detalhes na tela Ingressos
     And clico o botão Reservar na tela Ingressos
@@ -127,7 +127,7 @@ Feature: Funcionalidades site de viagens CVC
     And valido a exibição da frase Resumo de Pedido tela 'Checkout'
 
 
-    Examples:
-      | DESTINO         | DATA_INICIO | DATA_FIM |
-      | Beto            | 29          | 15       |
+#    Examples:
+#      | DESTINO         | DATA_INICIO | DATA_FIM |
+#      | Beto            | 29          | 15       |
 

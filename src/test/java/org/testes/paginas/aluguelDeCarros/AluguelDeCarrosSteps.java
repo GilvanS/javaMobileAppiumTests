@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public class AluguelDeCarrosSteps {
 
-    @When("seleciono o {string} na tela 'Aluguel de carros'")
-    public void selecionoONaTelaAluguelDeCarros(String retirar) throws InterruptedException {
-        AluguelDeCarrosActions.clicarEPreencherCampoOndeVoceQuerRetirarSeuCarro(retirar);
+    @When("seleciono o na tela 'Aluguel de carros'")
+    public void selecionoONaTelaAluguelDeCarros() throws InterruptedException {
+        AluguelDeCarrosActions.clicarEPreencherCampoOndeVoceQuerRetirarSeuCarro();
     }
 
     @When("clico no botão 'Continuar' na tela 'Aluguel de carros'")
