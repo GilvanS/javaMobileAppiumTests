@@ -74,8 +74,12 @@ public class HotelPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Quarto escolhido']")
     private WebElement lblQuartoEscolhido;
 
-    public WebElement getBtnDia(String dia) {
-        return driver.findElement(By.xpath("//android.view.View[@content-desc='" + dia + "']"));
+    public WebElement getBtnDataInicio(String dia) {
+        return driver.findElement(By.xpath("(//android.view.View[@content-desc='" + dia + "'])[1]"));
+    }
+
+    public WebElement getBtnDataFim(String dia) {
+        return driver.findElement(By.xpath("(//android.view.View[@content-desc='" + dia + "'])[last()]"));
     }
 
     public WebElement getHotelByName(String nomeHotel) {

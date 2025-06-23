@@ -73,10 +73,6 @@ public class IngressosActions {
         acoes.waitForElementToBeClickable(ingressosPage().getViewResumoPedido(), 10);
     }
 
-    public WebElement getBtnDia(String dia) {
-        return driver.findElement(By.xpath("//android.view.View[@content-desc='" + dia + "']"));
-    }
-
     /**
      * Clica no dia informado no calendário de datas.
      *
@@ -84,31 +80,12 @@ public class IngressosActions {
      */
     public static void clicarNoDiaDoCalendario(String dia) {
         log.info("Clicando no dia '{}' no calendário de datas", dia);
-        acoes.click(ingressosPage().getBtnDia(dia));
+        acoes.click(ingressosPage().getBtnDataInicio(dia));
     }
 
     public static void clicarNoBotaoContinuar() {
         log.info("Clicando no botão Continuar");
         acoes.click(ingressosPage().getBtnContinuar());
-    }
-
-    /**
-     * Seleciona as datas de início e fim no calendário de ingressos.
-     * Aguarda visibilidade e clica em cada data, com delay para robustez.
-     *
-     * @param dataInicio String da data de início (ex: "23")
-     * @param dataFim
-     */
-    public static void selecionarDatasCalendario(String dataInicio, String dataFim) {
-        log.info("Selecionando data de início: " + dataInicio);
-        acoes.waitForVisibility(ingressosPage().getBtnDia(dataInicio));
-        acoes.click(ingressosPage().getBtnDia(dataInicio));
-        acoes.delay(500);
-
-        log.info("Selecionando data de fim: " + dataFim);
-        acoes.waitForVisibility(ingressosPage().getBtnDia(dataFim));
-        acoes.click(ingressosPage().getBtnDia(dataFim));
-        acoes.delay(500);
     }
 
 }

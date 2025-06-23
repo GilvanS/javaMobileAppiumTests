@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testes.utils.Hooks;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
+import org.utilidades.dados.Usuario;
 
 
 public class HotelActions {
@@ -19,14 +20,16 @@ public class HotelActions {
         return MasterPageFactory.getPage(HotelPage.class);
     }
 
-    public static void campoOndeVoceIraSeHospedar(String destino) {
+    public static void campoOndeVoceIraSeHospedar() {
+        String hospedar = Usuario.getCidadeOrigem();
         log.info("Preencho o campo Onde você irá se hospedar?");
         acoes.click(hotelPage().getCampoOndeVoceIraSeHospedar());
-        acoes.sendKeys(hotelPage().getCampoOndeVoceIraSeHospedar(), destino);
+        acoes.sendKeys(hotelPage().getCampoOndeVoceIraSeHospedar(), hospedar);
     }
 
-    public static void selecionarDestino(String destino) {
-        log.info("Seleciono o destino: " + destino);
+    public static void selecionarDestino() {
+        String destino = Usuario.getCidadeOrigem();
+        log.info("Seleciono o destino: {}", destino);
         acoes.waitForElementToBeClickable(hotelPage().getDestinoBarcelona(), 5);
         acoes.click(hotelPage().getDestinoBarcelona(), 5);
     }
@@ -67,10 +70,11 @@ public class HotelActions {
         acoes.click(hotelPage().getBtnFechar());
     }
 
-    public static void validarHotelByName(String nomeHotel) {
-        log.info("Validando exibicao do hotel {}", nomeHotel);
-        acoes.waitForVisibility(hotelPage().getHotelByName(nomeHotel));
-        acoes.click(hotelPage().getHotelByName(nomeHotel));
+    public static void validarHotelByName() {
+        String hotel = Usuario.getHotelSelecionado();
+        log.info("Validando exibicao do hotel {}", hotel);
+        acoes.waitForVisibility(hotelPage().getHotelByName(hotel));
+        acoes.click(hotelPage().getHotelByName(hotel));
     }
 
     public static void swipeLeftParaProximoHotel() {
@@ -161,32 +165,34 @@ public class HotelActions {
 
     public static void selecionarDatasCalendario(String dataInicio, String dataFim) {
         log.info("Selecionando data de início: " + dataInicio);
-        acoes.waitForVisibility(hotelPage().getBtnDia(dataInicio));
-        acoes.click(hotelPage().getBtnDia(dataInicio));
+        acoes.waitForVisibility(hotelPage().getBtnDataInicio(dataInicio));
+        acoes.click(hotelPage().getBtnDataInicio(dataInicio));
         acoes.delay(500);
 
         log.info("Selecionando data de fim: " + dataFim);
-        acoes.waitForVisibility(hotelPage().getBtnDia(dataFim));
-        acoes.click(hotelPage().getBtnDia(dataFim));
+        acoes.waitForVisibility(hotelPage().getBtnDataFim(dataFim));
+        acoes.click(hotelPage().getBtnDataFim(dataFim));
         acoes.delay(500);
     }
 
     public static void clicarNoDiaDoCalendario(String dia) {
         log.info("Clicando no dia '{}' no calendário de datas", dia);
-        acoes.click(hotelPage().getBtnDia(dia));
+        acoes.click(hotelPage().getBtnDataInicio(dia));
     }
 
-    public static void selecionarDataInicio(String data) {
+    public static void selecionarDataInicio() {
+        String data = Usuario.getDataInicio();
         log.info("Selecionando data de início {}", data);
-        acoes.waitForVisibility(hotelPage().getBtnDia(data));
-        acoes.click(hotelPage().getBtnDia(data));
+        acoes.waitForVisibility(hotelPage().getBtnDataInicio(data));
+        acoes.click(hotelPage().getBtnDataInicio(data));
         acoes.delay(500);
     }
 
-    public static void selecionarDataFim(String data) {
-        log.info("Selecionando data de fim: {}", data);
-        acoes.waitForVisibility(hotelPage().getBtnDia(data));
-        acoes.click(hotelPage().getBtnDia(data));
+    public static void selecionarDataFim() {
+        String dataFim = Usuario.getDataFim();
+        log.info("Selecionando data de fim: {}", dataFim);
+        acoes.waitForVisibility(hotelPage().getBtnDataFim(dataFim));
+        acoes.click(hotelPage().getBtnDataFim(dataFim));
         acoes.delay(500);
     }
 

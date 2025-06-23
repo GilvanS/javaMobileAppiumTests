@@ -18,9 +18,9 @@ public class LoginSteps {
         LoginActions.clickBtnEntreParaAproveitar();
     }
 
-    @Given("preencho o campo email {string} na tela Login")
-    public void preencho_o_campo_email_na_tela_login(String email) {
-        LoginActions.preencherCampoEmail(email);
+    @Given("preencho o campo email na tela Login")
+    public void preencho_o_campo_email_na_tela_login() {
+        LoginActions.preencherCampoEmail();
     }
 
     @Given("clico no botão Próximo na tela Login")
@@ -28,9 +28,9 @@ public class LoginSteps {
         LoginActions.clicarBtnProximo();
     }
 
-    @Given("preencho o campo Senha {string} na tela Login")
-    public void preencho_o_campo_senha_na_tela_login(String senha) {
-        LoginActions.preencherCampoSenha(senha);
+    @Given("preencho o campo Senha na tela Login")
+    public void preencho_o_campo_senha_na_tela_login() {
+        LoginActions.preencherCampoSenha();
     }
 
     @Given("clico no botão Entrar na tela Login")

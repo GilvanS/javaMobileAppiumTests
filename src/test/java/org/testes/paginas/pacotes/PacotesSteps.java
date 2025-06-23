@@ -6,14 +6,14 @@ import io.cucumber.java.en.When;
 public class PacotesSteps {
 
 
-    @When("seleciono a cidade {string} no campo Origem na tela Passagens")
-    public void seleciono_a_cidade_no_campo_origem_na_tela_passagens(String origem) {
-        PacotesActions.clicarEPreencherCampoOrigem(origem);
+    @When("seleciono a cidade no campo Origem na tela Passagens")
+    public void seleciono_a_cidade_no_campo_origem_na_tela_passagens() {
+        PacotesActions.clicarEPreencherCampoOrigem();
     }
 
-    @When("seleciono a cidade {string} no campo Destino na tela Passagens")
-    public void seleciono_a_cidade_no_campo_destino_na_tela_passagens(String destino) {
-        PacotesActions.clicarEPreencherCampoDestino(destino);
+    @When("seleciono a cidade no campo Destino na tela Passagens")
+    public void seleciono_a_cidade_no_campo_destino_na_tela_passagens() {
+        PacotesActions.clicarEPreencherCampoDestino();
     }
 
     @When("clico no botão Continuar na tela Passagens")
@@ -26,12 +26,12 @@ public class PacotesSteps {
         PacotesActions.clicarBtnConfirmarDetalhes();
     }
 
-    @When("seleciono a data {string} no campo Início na tela Passagens")
-    public void seleciono_a_data_no_campo_início_na_tela_passagens(String string) {
+    @When("seleciono a data no campo Início na tela Passagens")
+    public void seleciono_a_data_no_campo_início_na_tela_passagens() {
         PacotesActions.selecionarDataIda();
     }
-    @When("seleciono a data {string} no campo Fim na tela Passagens")
-    public void seleciono_a_data_no_campo_fim_na_tela_passagens(String string) {
+    @When("seleciono a data no campo Fim na tela Passagens")
+    public void seleciono_a_data_no_campo_fim_na_tela_passagens() {
         PacotesActions.selecionarDataRetorno();
     }
 

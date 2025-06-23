@@ -47,11 +47,8 @@ public class IngressosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Checkout']")
     private WebElement btnCheckout;
 
-    @AndroidFindBy(xpath = "//android.view.View[@content-desc='20']")
-    private WebElement btnDia20;
-
-    public WebElement getBtnDia(String dia) {
-        return driver.findElement(By.xpath("//android.view.View[@content-desc='" + dia + "']"));
+    public WebElement getBtnDataInicio(String dia) {
+        return driver.findElement(By.xpath("(//android.view.View[@content-desc='" + dia + "'])[1]"));
     }
 
 }

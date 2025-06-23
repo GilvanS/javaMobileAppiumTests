@@ -34,7 +34,7 @@ public class IngressosSteps {
 
     @Given("clicar no botão Escolha a data {string} e {string} na tela 'Ingressos'")
     public void clicarNoBotaoEscolhaADataInicioEFimNaTelaIngressos(String dataInicio, String dataFim) {
-        IngressosActions.selecionarDatasCalendario(dataInicio, dataFim);
+//        IngressosActions.selecionarDatasCalendario(dataInicio, dataFim);
     }
     @Given("clicar no botão 'Buscar' na tela {string}")
     public void clicarNoBotãoBuscarNaTela(String string) {

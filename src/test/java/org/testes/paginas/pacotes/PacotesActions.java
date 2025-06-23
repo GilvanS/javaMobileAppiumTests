@@ -3,6 +3,7 @@ package org.testes.paginas.pacotes;
 import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
+import org.utilidades.dados.Usuario;
 import org.utilidades.evidencia.PrintScreen;
 import org.testes.utils.Hooks;
 
@@ -15,21 +16,24 @@ public class PacotesActions {
         return MasterPageFactory.getPage(PacotesPage.class);
     }
 
-    public static void clicarEPreencherCampoOrigem(String origem) {
-        log.info("Origem " + origem);
+    public static void clicarEPreencherCampoOrigem() {
+        String cidadeOrigem = Usuario.getCidadeOrigem();
+        log.info("Origem " + cidadeOrigem);
         acoes.click(pacotesPage().getCampoDeOndeVocePegaraSeuVoo());
-        acoes.sendKeys(pacotesPage().getCampoDeOndeVocePegaraSeuVoo(), origem);
+        acoes.sendKeys(pacotesPage().getCampoDeOndeVocePegaraSeuVoo(), cidadeOrigem);
         acoes.click(pacotesPage().getDestinoSaoPauloSP());
     }
 
-    public static void clicarEPreencherCampoDestino(String destino) {
-        log.info("Destino " + destino);
+    public static void clicarEPreencherCampoDestino() {
+        String cidadeDestino = Usuario.getCidadeDestino();
+        log.info("Destino " + cidadeDestino);
         acoes.click(pacotesPage().getCampoParaQualDestinoViajara());
-        acoes.sendKeys(pacotesPage().getCampoParaQualDestinoViajara(), destino);
+        acoes.sendKeys(pacotesPage().getCampoParaQualDestinoViajara(), cidadeDestino);
         acoes.click(pacotesPage().getDestinoFozDoIguacu());
     }
 
     public static void clicarBtnContinuar() {
+        log.info("clico no botão Continuar na tela Passagens");
         acoes.click(pacotesPage().getBtnContinuar());
     }
 
@@ -38,11 +42,13 @@ public class PacotesActions {
     }
 
     public static void selecionarDataIda() {
-        acoes.click(pacotesPage().getBtnDataSaida());
+        String dataInicio = Usuario.getDataInicio();
+        acoes.click(pacotesPage().getBtnDataIda(dataInicio));
     }
 
     public static void selecionarDataRetorno() {
-        acoes.click(pacotesPage().getBtnDataRetorno());
+        String dataFim = Usuario.getDataFim();
+        acoes.click(pacotesPage().getBtnDataRetorno(dataFim));
     }
 
     public static void clicarBtnConfirmarDatas() {

@@ -50,7 +50,7 @@ public class HooksEvidencia {
     @After
     public void anexarEvidencias(Scenario scenario) {
         statusCenario = scenario.getStatus();
-        String diretorioDocx = "target/evidencias/" + Hooks.getDriver().getCapabilities().getCapability("deviceUDID") + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
+        String diretorioDocx = "target/evidencias/" + HooksDados.getDeviceName() + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
 
         try {
             if (scenario.isFailed()) {

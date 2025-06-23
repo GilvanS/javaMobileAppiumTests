@@ -6,10 +6,10 @@ import io.cucumber.java.en.When;
 
 public class HotelSteps {
 
-    @Given("seleciono Onde você irá se hospedar? {string} na tela Hoteis")
-    public void selecionoOndeVoceIraSeHospedarNaTelaHoteis(String destino) {
-        HotelActions.campoOndeVoceIraSeHospedar(destino);
-        HotelActions.selecionarDestino(destino);
+    @Given("seleciono Onde você irá se hospedar? na tela Hoteis")
+    public void selecionoOndeVoceIraSeHospedarNaTelaHoteis() {
+        HotelActions.campoOndeVoceIraSeHospedar();
+        HotelActions.selecionarDestino();
     }
     @Given("clico no botão Confirmar destino na tela Hoteis")
     public void clicoNoBotaoConfirmarDestinoNaTelaHoteis() {
@@ -36,24 +36,24 @@ public class HotelSteps {
     public void validoAExibicaoDaMensagemVerMapasNaTelaHoteis() {
         HotelActions.validarLblVerMapas();
     }
-    @And("seleciono a data {string} no campo Início na tela Hoteis")
-    public void selecionoADataNoCampoInicioNaTelaHoteis(String dia) {
-        HotelActions.selecionarDataInicio(dia);
+
+    @And("seleciono a data no campo Início na tela Hoteis")
+    public void selecionoADataNoCampoInicioNaTelaHoteis() {
+        HotelActions.selecionarDataInicio();
     }
 
-    @And("seleciono a data {string} no campo Fim na tela Hoteis")
-    public void selecionoADataNoCampoFimNaTelaHoteis(String dia) {
-        HotelActions.selecionarDataFim(dia);
+    @And("seleciono a data no campo Fim na tela Hoteis")
+    public void selecionoADataNoCampoFimNaTelaHoteis() {
+        HotelActions.selecionarDataFim();
     }
 
     @And("clico no botão Marcador do mapa na tela Hoteis")
     public void clicoNoBotaoMarcadorDoMapaNaTelaHoteis() {
         HotelActions.clicarBtnMarcadorDoMapa();
-
     }
 
-    @Given("valido os Hotel {string} para selecionar na tela Hoteis")
-    public void validoOsHotelParaSelecionarNaTelaHoteis(String string) {
+    @Given("valido os Hotel para selecionar na tela Hoteis")
+    public void validoOsHotelParaSelecionarNaTelaHoteis() {
         HotelActions.validarHotelArcelon();
     }
 
@@ -93,6 +93,5 @@ public class HotelSteps {
     public void validoOResumoDoPedidoNaTela(String string) {
         HotelActions.clicarBtnVerResumo();
     }
-
 
 }

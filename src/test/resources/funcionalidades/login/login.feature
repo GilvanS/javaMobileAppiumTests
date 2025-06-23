@@ -5,34 +5,30 @@ Feature: Funcionalidades site de viagens CVC
   para
 
   @CT-1001 @CVC @ATJ-138
-  Scenario Outline: Validar Login
+  Scenario: Validar Login
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Entrar' na tela 'Home'
     And valido a exibição da frase Entre para aproveitar a melhor experiência na tela login
     And clico no botão Entre na tela Login
-    And preencho o campo email "<EMAIL>" na tela Login
+    And preencho o campo email na tela Login
     And clico no botão Próximo na tela Login
-    And preencho o campo Senha "<SENHA>" na tela Login
+    And preencho o campo Senha na tela Login
     And clico no botão Entrar na tela Login
     Then valido a exibição da frase 'Olá, 4Win' na tela 'Home'
     And clico no botão Explorar na tela Home
 
-    Examples:
-      | EMAIL                  | SENHA     |
-      | teste15.4win@gmail.com | Teste15@4win |
-
   @CT-1002 @CVC @ATJ-131
-  Scenario Outline: Validar pesquisar viagem
+  Scenario: Validar pesquisar viagem
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Pacotes' na tela 'Home'
-    When seleciono a cidade "<CIDADE_ORIGEM>" no campo Origem na tela Passagens
-    And seleciono a cidade "<CIDADE_DESTINO>" no campo Destino na tela Passagens
+    When seleciono a cidade no campo Origem na tela Passagens
+    And seleciono a cidade no campo Destino na tela Passagens
     And clico no botão Continuar na tela Passagens
     And clico no botão Confirmar Detalhes na tela Passagens
-    And seleciono a data "<DATA_INICIO>" no campo Início na tela Passagens
-    And seleciono a data "<DATA_FIM>" no campo Fim na tela Passagens
+    And seleciono a data no campo Início na tela Passagens
+    And seleciono a data no campo Fim na tela Passagens
     And clico no botão Confirmar datas na tela Passagens
     And clico no botão 'Detalhes do Hotel' na tela 'Pacote recomendado'
     And valido a exibição da mensagem 'Detalhes do Hotel' na tela 'Pacote recomendado'
@@ -49,24 +45,21 @@ Feature: Funcionalidades site de viagens CVC
 #    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
 #    And clico no botão Ver Resumo na tela Checkout
 
-    Examples:
-      | CIDADE_ORIGEM | CIDADE_DESTINO | DATA_INICIO | DATA_FIM |
-      | Sao Paulo     | Foz do Iguaçu  | 30          | 28       |
 
   @CT-1005 @CVC @ATJ-132
-  Scenario Outline: Validar Hospedagens
+  Scenario: Validar Hospedagens
     Given clico no botão 'Pular introdução'
     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
     And clico no botão 'Hotéis' na tela 'Home'
-    And seleciono Onde você irá se hospedar? "<CIDADE>" na tela Hoteis
+    And seleciono Onde você irá se hospedar? na tela Hoteis
     And clico no botão Confirmar destino na tela Hoteis
     And clico no botão Continuar na tela Defina os detalhes
-    And seleciono a data "<DATA_INICIO>" no campo Início na tela Hoteis
-    And seleciono a data "<DATA_FIM>" no campo Fim na tela Hoteis
+    And seleciono a data no campo Início na tela Hoteis
+    And seleciono a data no campo Fim na tela Hoteis
     And clico no botão Continuar na tela Hoteis
     And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
     And clico no botão Marcador do mapa na tela Hoteis
-    And valido os Hotel "<HOTEL_SELECIONAVEL>" para selecionar na tela Hoteis
+    And valido os Hotel para selecionar na tela Hoteis
     And valido a exibição da frase Ler mais na tela Hoteis
     And valido a exibição da frase Ver mais na tela Hoteis
     And valido a exibição da frase Quartos disponíveis na tela Hoteis
@@ -80,11 +73,11 @@ Feature: Funcionalidades site de viagens CVC
 #    And clico no botão ver quartos disponiveis na tela Hotel
 #    And clico no botão reservar na tela Hotel
 
-    Examples:
-      | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
-      | Barcelona    | 29          | 15       | Arcelona Hotel                       |
-#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
-#    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
+#    Examples:
+#      | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
+#      | Barcelona    | 29          | 15       | Arcelona Hotel                       |
+##    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
+##    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
 
 
 

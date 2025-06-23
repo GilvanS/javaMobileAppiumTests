@@ -14,7 +14,7 @@ public class PacoteRecomendadoPage extends PageBaseActions {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//*[@text= 'Detalhes do hotel']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Detalhes do hotel']")
     private WebElement btnDetalhesDoHotel;
 
     @AndroidFindBy(xpath = "//*[contains(@text, 'Detalhes')]")

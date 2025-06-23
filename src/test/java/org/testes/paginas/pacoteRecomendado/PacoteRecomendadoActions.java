@@ -19,12 +19,13 @@ public class PacoteRecomendadoActions {
 
     public static void clicarBtnDetalhesDoHotel() {
         log.info("clico no botão 'Detalhes do Hotel' na tela 'Pacote recomendado'");
-        acoes.click(pacoteRecomendadoPage().getBtnDetalhesDoHotel());
+        acoes.sleep(3);
+        acoes.click(pacoteRecomendadoPage().getBtnDetalhesDoHotel(),5);
     }
 
-    public static void validarLblTxtDetalhesDoHotel() throws InterruptedException {
+    public static void validarLblTxtDetalhesDoHotel() {
         log.info("valido o texto 'Detalhes do Hotel' na tela 'Detalhes do Hotel'");
-        Thread.sleep(1500);
+        acoes.sleep(3);
         acoes.waitForVisibility(pacoteRecomendadoPage().getLblTxtDetalhesDoHotel());
     }
 

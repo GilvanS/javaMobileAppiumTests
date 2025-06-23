@@ -3,6 +3,7 @@ package org.testes.paginas.login;
 import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
+import org.utilidades.dados.Usuario;
 import org.utilidades.evidencia.PrintScreen;
 import org.testes.utils.Hooks;
 
@@ -31,8 +32,9 @@ public class LoginActions {
         acoes.click(loginPage().getBtnEntreParaAproveitar());
     }
 
-    public static void preencherCampoEmail(String email) {
-        log.info("Preencher o campo Email: " + email);
+    public static void preencherCampoEmail() {
+        String email = Usuario.getEmail();
+        log.info("Preencher o campo Email: {}", email);
         acoes.click(loginPage().getCampoSeuEmail());
         acoes.sendKeys(loginPage().getCampoSeuEmail(), email);
     }
@@ -41,7 +43,8 @@ public class LoginActions {
         acoes.click(loginPage().getBtnProximo());
     }
 
-    public static void preencherCampoSenha(String senha) {
+    public static void preencherCampoSenha() {
+        String senha = Usuario.getSenha();
         log.info("Preencher o campo Senha: " + senha);
         acoes.click(loginPage().getCampoSenha());
         acoes.sendKeys(loginPage().getCampoSenha(), senha);

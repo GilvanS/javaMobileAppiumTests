@@ -95,6 +95,15 @@ public class PageBaseActions {
         waitForElementToBeClickable(element, seconds).click();
     }
 
+    public void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            log.error("Erro ao pausar a execução: ", e);
+        }
+    }
+
     /**
      * Preenche um campo de texto.
      * @param element Campo de texto
