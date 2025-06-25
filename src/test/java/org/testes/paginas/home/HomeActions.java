@@ -64,6 +64,11 @@ public class HomeActions {
         acoes.click(homePage().getBtnIngressos(), 5);
     }
 
+    public static void clicarBtnPassagens() {
+        log.info("clicar no botão 'Passagens' na tela 'Home'");
+        acoes.click(homePage().getBtnPassagens());
+    }
+
     public static void clicarBtnHoteis() {
         log.info("clicar no botão 'Hotéis' na tela 'Home'");
         acoes.click(homePage().getBtnHoteis());

@@ -17,7 +17,7 @@ public class PacotesSteps {
     }
 
     @When("clico no botão Continuar na tela Passagens")
-    public void clicar_no_botão_continuar_na_tela_passagens() {
+    public void clicar_no_botao_continuar_na_tela_passagens() {
         PacotesActions.clicarBtnContinuar();
     }
 

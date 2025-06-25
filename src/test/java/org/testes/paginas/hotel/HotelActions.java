@@ -1,18 +1,15 @@
 package org.testes.paginas.hotel;
 
 import lombok.SneakyThrows;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.testes.utils.Hooks;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.dados.Usuario;
 
-
+@Slf4j
 public class HotelActions {
-
-    private static final Logger log = LoggerFactory.getLogger(HotelActions.class);
 
     static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
 
@@ -40,7 +37,7 @@ public class HotelActions {
     }
 
     public static void clicarBtnContinuar() {
-        log.info("clico no botão Continuar na tela Defina os detalhes");
+        log.info("clico no botão 'Continuar' na tela 'Defina os detalhes'");
         acoes.click(hotelPage().getBtnContinuar());
     }
 

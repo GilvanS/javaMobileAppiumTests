@@ -33,6 +33,11 @@ public class HomeSteps {
         HomeActions.clicarBtnPacotes();
     }
 
+    @Given("clico no botão 'Passagens' na tela 'Home'")
+    public void clicoNoBotãoNaTela() {
+        HomeActions.clicarBtnPassagens();
+    }
+
     @When("clico no botão 'Carros' tela 'Home'")
     public void clicarNoBotaoCarrosTelaHome() {
         HomeActions.clicarBtnCarros();

@@ -26,7 +26,7 @@ public class PacotesActions {
 
     public static void clicarEPreencherCampoDestino() {
         String cidadeDestino = Usuario.getCidadeDestino();
-        log.info("Destino " + cidadeDestino);
+        log.info("Destino {}", cidadeDestino);
         acoes.click(pacotesPage().getCampoParaQualDestinoViajara());
         acoes.sendKeys(pacotesPage().getCampoParaQualDestinoViajara(), cidadeDestino);
         acoes.click(pacotesPage().getDestinoFozDoIguacu());

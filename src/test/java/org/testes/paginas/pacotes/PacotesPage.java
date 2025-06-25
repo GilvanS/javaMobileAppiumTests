@@ -27,6 +27,9 @@ public class PacotesPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[@content-desc= 'Porto Seguro - BA, Brasil']")
     private WebElement destinoPortoSeguroBA;
 
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Roma - Lácio , Itália']")
+    private WebElement selecionarRomaLacioItalia;
+
     @AndroidFindBy(xpath = "//*[@content-desc= 'Porto - Porto , Portugal']")
     private WebElement destinoPorto;
 

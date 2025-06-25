@@ -45,6 +45,33 @@ Feature: Funcionalidades site de viagens CVC
     Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
     And clico no botão Ver Resumo na tela Checkout
 
+   @CT-1003 @CVC @ATJ-137
+  Scenario: Validar fluxo Selecionar voo Só Ida para 1 viajante
+     Given clico no botão 'Pular introdução'
+     And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
+     When clico no botão 'Passagens' na tela 'Home'
+     And clicar no botão Só ida na tela Passagens
+     And seleciono a cidade no campo Origem na tela Passagens
+     And seleciono a cidade no campo Destino na tela Passagens
+     And clico no botão Continuar na tela Passagens
+     And clico no botão Continuar na tela Defina os detalhes
+     And seleciono a data no campo Escolha a data na tela Passagens
+     And clico no botão Continuar na tela Passagens
+     And clicar no botão Aplicar na tela Passagens
+     And clicar no botão Buscar na tela Passagens
+     And valido a exibição das buscas disponiveis na tela Passagens
+     Then clicar no primeiro botão Selecionar voo na tela Buscar passagens
+
+#  @CT-1004 @CVC @ATJ-139
+#  Scenario Outline: Validar Circuitos
+#    Given esteja na tela inicial do site CVC
+#    And clicar no botão Circuitos na tela 'Passagens'
+#    And seleciono o Destino "<DESTINO_UM>" na tela 'Tours'
+#    And seleciono a data "<DATA_INICIO>" no campo 'Início' na tela 'Tours'
+#    And clicar no botão 'Buscar' na tela 'Tours'
+#    And clicar no botão 'Ver itinerario' na tela 'Tours'
+#    And clicar no botão 'Ver hotéis' previstos na tela 'Tours'
+#    When clicar no botão 'Conferir' Detalhes na tela 'Tours'
 
   @CT-1005 @CVC @ATJ-132
   Scenario: Validar Hospedagens
@@ -68,6 +95,21 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão Ver resumo na tela 'Checkout'
     And valido o Resumo do pedido na tela 'Checkout'
 
+#  @CT-1006 @CVC @ATJ-140
+#  Scenario Outline: Validar Pacotes
+#    Given esteja na tela inicial do site CVC
+#    And clicar no botão 'Pacotes' na tela 'Passagens'
+#    When seleciono a cidade "<CIDADE_ORIGEM>" no campo 'Origem' na tela 'Pacotes turisticos'
+#    And seleciono a cidade "<CIDADE_DESTINO>" no campo 'Destino' na tela 'Pacotes turisticos'
+#    And seleciono a data "<DATA_INICIO>" no campo 'Início' na tela 'Pacotes turisticos'
+#    And seleciono a data "<DATA_FIM>" no campo 'Fim' na tela 'Pacotes turisticos'
+#    When clicar no botão Buscar na tela 'Pacotes turisticos'
+#    And valido a exibição do pacote "<PACOTES>" selecionado na tela 'Pacotes turisticos'
+#    And clicar no botão 'Reservar Agora' na tela 'Pacotes turisticos'
+#    And clicar no botão 'Estou ciente' na tela 'Pacotes turisticos'
+#    And valido a exibição da Hospedagem na tela Carrinho
+#    When clicar no botão Ir para o pagamento na tela 'Carrinho'
+#    Then valido a exibição da mensagem 'Resumo do seu pacote'
 
   @CT-1007 @CVC
   Scenario: Validar Aluguel de carros
@@ -109,4 +151,38 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão Ver Resumo na tela 'Checkout'
     And valido a exibição da frase Resumo de Pedido tela 'Checkout'
 
+#  @CT-1009 @CVC @ATJ-133
+#  Scenario Outline: Validar Onibus - Pacote Rodoviario
+#    Given esteja na tela inicial do site CVC
+#    And clicar no botão Onibus na tela 'Passagens'
+#    When seleciono a cidade "<CIDADE_ORIGEM>" no campo 'Origem' na tela 'Rodoviario'
+#    And seleciono a cidade "<CIDADE_DESTINO>" no campo 'Destino' na tela 'Rodoviario'
+#    And seleciono a data "<DATA_INICIO>" no campo 'Ida' na tela 'Rodoviario'
+#    And seleciono a data "<DATA_FIM>" no campo 'Volta' na tela 'Rodoviario'
+#    And clicar no botão Selecionar no campo 'Volta' na tela 'Rodoviario'
+#    And clicar no botão Buscar passagem na tela 'Rodoviario'
+#    And clicar no botão conferir detalhes na tela 'Rodoviario'
+#
+#    Examples:
+#      | CIDADE_ORIGEM | CIDADE_DESTINO | DATA_INICIO | DATA_FIM |
+#      | Tiete         | Santos         | 20          | 30       |
+
+  @CT-1010 @CVC @ATJ-135
+    Scenario: Validar Cruzeiros
+        Given clico no botão 'Pular introdução'
+        And valido a exibição da frase 'Olá' Pesquise na tela 'Home'
+        And clico no botão 'Cruzeiros' na tela 'Home'
+        And clico no campo destinos na tela 'Cruzeiros'
+        And clico no campo Datas na tela 'Cruzeiros'
+        And clico no campo Embarque na tela 'Cruzeiros'
+        And clico no campo Desembarque na tela 'Cruzeiros'
+        And clico no botão Buscar Cruzeiros na tela 'Cruzeiros'
+        And clico no botão Selecionar na tela 'Cruzeiros'
+        And clico no botão Confirmar na tela 'Cruzeiros'
+        And valido a exibição da frase 'Escolha o tipo da cabine' na tela 'Checkout'
+        And valido a exibição da frase 'Preferência da cabine' na tela 'Checkout'
+        And clico no botão 'Continuar' na tela 'Checkout'
+        And seleciono o Deck na tela 'Checkout'
+        And clico no botão 'Continuar' na tela 'Checkout'
+        And valido a exibição da frase 'Cabine' na tela 'Checkout'
 
