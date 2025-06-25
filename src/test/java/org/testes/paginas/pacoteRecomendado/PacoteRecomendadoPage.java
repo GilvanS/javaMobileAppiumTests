@@ -1,6 +1,5 @@
 package org.testes.paginas.pacoteRecomendado;
 
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
@@ -13,6 +12,12 @@ public class PacoteRecomendadoPage extends PageBaseActions {
     public PacoteRecomendadoPage(AppiumDriver driver) {
         super(driver);
     }
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Editar']")
+    private WebElement btnEditar;
+
+    @AndroidFindBy(xpath = "(//android.widget.Button)[2]")
+    private WebElement btnFechar;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Detalhes do hotel']")
     private WebElement btnDetalhesDoHotel;
@@ -38,6 +43,13 @@ public class PacoteRecomendadoPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[@text= 'Reservar Agora']")
     private WebElement btnReservarAgora;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Atenção ao inicio da sua estadia']")
+    private WebElement lblTxtAtencaoInicioDaSuaEstadia;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Estou ciente']")
+    private WebElement btnEstouCiente;
+
+
     @AndroidFindBy(xpath = "//*[contains(@text, '*Em todo voo você tem')]")
     private WebElement lblTxtEmTodoVooVoceTem;
 
@@ -50,7 +62,6 @@ public class PacoteRecomendadoPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[contains(@text, 'Atenção ao inicio da sua estadia')]")
     private WebElement lblTxtAtencaoAoInicioDaSuaEstadia;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Estou ciente']")
-    private WebElement btnEstouCiente;
+
 
 }

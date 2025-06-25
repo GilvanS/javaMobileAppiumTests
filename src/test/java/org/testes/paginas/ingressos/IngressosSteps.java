@@ -17,6 +17,7 @@ public class IngressosSteps {
     public void selecionoONaTelaIngressos() {
         IngressosActions.clicarEPreencherCamoDestino();
     }
+
     @Given("clicar no botão Escolha a data na tela 'Ingressos'")
     public void clicarNoBotaoEscolhaADataNaTelaIngressos() {
         IngressosActions.clicarNoDiaDoCalendario();

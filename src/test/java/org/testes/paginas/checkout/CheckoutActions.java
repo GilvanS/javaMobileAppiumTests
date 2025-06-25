@@ -14,6 +14,7 @@ public class CheckoutActions {
     }
 
     public static void clicarBtnVerResumo() {
+        acoes.pullToRefresh(5);
         log.info("clico no botão Ver Resumo na tela Checkout");
         acoes.click(checkoutPage().getBtnVerResumo());
     }

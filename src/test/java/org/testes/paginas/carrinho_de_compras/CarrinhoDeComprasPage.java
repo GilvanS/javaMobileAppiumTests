@@ -13,6 +13,15 @@ public class CarrinhoDeComprasPage extends PageBaseActions {
         super(driver);
     }
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Atenção ao inicio da sua estadia']")
+    private WebElement lbltxtAtencaoAoInicioDaSuaEstadia;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Estou ciente']")
+    private WebElement btnEstouCiente;
+
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Carrinho de compras']")
+    private WebElement lblCarrinhoDeCompras;
+
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Resumo da viagem']")
     private WebElement lblResumoDaViagem;
 

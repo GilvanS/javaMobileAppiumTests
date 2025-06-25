@@ -584,4 +584,102 @@ public class PageBaseActions {
         return verticalSwipeDownAndSearch(by, 5);
     }
 
+    /**
+     * Realiza o gesto "pull-to-refresh" (puxar para baixo para recarregar a página).
+     * Este gesto é comumente usado em aplicações mobile para atualizar o conteúdo.
+     */
+    public void pullToRefresh() {
+        Dimension size = driver.manage().window().getSize();
+        int x = size.width / 2;
+        int startY = (int) (size.height * 0.2); // 20% da altura da tela
+        int endY = (int) (size.height * 0.8);   // 80% da altura da tela
+
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+        Sequence swipe = new Sequence(finger, 1)
+                .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, startY))
+                .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(new Pause(finger, Duration.ofMillis(200)))
+                .addAction(finger.createPointerMove(Duration.ofMillis(1500), PointerInput.Origin.viewport(), x, endY))
+                .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        driver.perform(Collections.singletonList(swipe));
+        log.info("Executado pull-to-refresh na tela");
+    }
+
+    /**
+     * Realiza o gesto "pull-to-refresh" com tempo de espera após o gesto.
+     * @param waitSeconds Tempo de espera em segundos após executar o pull-to-refresh
+     */
+    public void pullToRefresh(int waitSeconds) {
+        pullToRefresh();
+        sleep(waitSeconds);
+    }
+
+    /**
+     * Realiza o gesto "pull-to-refresh" e aguarda até que um elemento específico apareça.
+     * @param element Elemento a ser aguardado após o pull-to-refresh
+     * @param maxAttempts Número máximo de tentativas de pull-to-refresh
+     * @return true se o elemento foi encontrado, false caso contrário
+     */
+    public boolean pullToRefreshAndWaitForElement(WebElement element, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        while (attempts < maxAttempts && !elementFound) {
+            try {
+                if (element.isDisplayed()) {
+                    elementFound = true;
+                    log.info("Elemento encontrado apos pull-to-refresh na tentativa {}", attempts + 1);
+                    return true;
+                }
+            } catch (Exception e) {
+                // Elemento não encontrado, continua o loop
+            }
+
+            pullToRefresh();
+            sleep(2); // Aguarda o carregamento
+            attempts++;
+        }
+
+        if (!elementFound) {
+            log.warn("Elemento nao encontrado apos {} tentativas de pull-to-refresh", maxAttempts);
+        }
+
+        return elementFound;
+    }
+
+    /**
+     * Realiza o gesto "pull-to-refresh" e aguarda até que um elemento específico apareça (usando By).
+     * @param by Localizador do elemento a ser aguardado
+     * @param maxAttempts Número máximo de tentativas de pull-to-refresh
+     * @return true se o elemento foi encontrado, false caso contrário
+     */
+    public boolean pullToRefreshAndWaitForElement(By by, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        while (attempts < maxAttempts && !elementFound) {
+            try {
+                WebElement element = driver.findElement(by);
+                if (element.isDisplayed()) {
+                    elementFound = true;
+                    log.info("Elemento encontrado apos pull-to-refresh na tentativa {}", attempts + 1);
+                    return true;
+                }
+            } catch (Exception e) {
+                // Elemento não encontrado, continua o loop
+            }
+
+            pullToRefresh();
+            sleep(2); // Aguarda o carregamento
+            attempts++;
+        }
+
+        if (!elementFound) {
+            log.warn("Elemento nao encontrado apos {} tentativas de pull-to-refresh", maxAttempts);
+        }
+
+        return elementFound;
+    }
+
 }

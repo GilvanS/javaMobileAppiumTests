@@ -1,19 +1,19 @@
 package org.testes.paginas.checkout;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.testes.driver.page.MasterPageFactory;
-import org.testes.utils.Hooks;
+
+import org.testes.driver.actions.PageBaseActions;
 
 @Getter
-public class CheckoutPage extends MasterPageFactory {
-    
-    @FindBy(xpath = "//*[text()='Ver Resumo']")
-    private WebElement btnVerResumo;
+public class CheckoutPage extends PageBaseActions {
 
-    public CheckoutPage() {
-        PageFactory.initElements(Hooks.getDriver(), this);
+    public CheckoutPage(AppiumDriver driver) {
+        super(driver);
     }
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Resumo do Pedido (1)']")
+    private WebElement btnVerResumo;
 } 

@@ -42,8 +42,8 @@ Feature: Funcionalidades site de viagens CVC
     And valido a exibição das mensagem 'Hospedagem' na tela 'Carrinho de compras'
     And valido a exibição das mensagem 'Regras e condições' na tela 'Carrinho de compras'
     And clico no botão 'Ir para o pagamento' na tela 'Carrinho de compras'
-#    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
-#    And clico no botão Ver Resumo na tela Checkout
+    Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
+    And clico no botão Ver Resumo na tela Checkout
 
 
   @CT-1005 @CVC @ATJ-132
