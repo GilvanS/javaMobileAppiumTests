@@ -57,8 +57,8 @@ Feature: Funcionalidades site de viagens CVC
      And clico no botão Continuar na tela Defina os detalhes
      And seleciono a data no campo Escolha a data na tela Passagens
      And clico no botão Continuar na tela Passagens
-     And clicar no botão Aplicar na tela Passagens
-     And clicar no botão Buscar na tela Passagens
+     And Seleciono o voo de ida na tela Passagens
+     And Seleciono o voo de volta na tela Passagens
      And valido a exibição das buscas disponiveis na tela Passagens
      Then clicar no primeiro botão Selecionar voo na tela Buscar passagens
 
