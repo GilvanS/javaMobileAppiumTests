@@ -68,7 +68,7 @@ public class CarrinhoDeComprasActions {
 
     @SneakyThrows
     public static void clicarBtnVerResumo() throws InterruptedException {
-        acoes.pullToRefresh();
+        acoes.pullToRefresh(5);
         log.info("clico no botao Ver resumo na tela Carrinho de compras");
         acoes.verticalSwipeDownAndSearch(carrinhoDeComprasPage().getBtnlVerResumo(), 3);
         acoes.click(carrinhoDeComprasPage().getBtnlVerResumo());

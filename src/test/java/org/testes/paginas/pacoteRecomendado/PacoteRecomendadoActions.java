@@ -16,6 +16,7 @@ public class PacoteRecomendadoActions {
     }
 
     public static void clicarBtnEditar() {
+        acoes.pullToRefresh();
         if (pacoteRecomendadoPage().getBtnEditar().isDisplayed()) {
             log.info("clico no botao 'Editar' na tela 'Pacote recomendado'");
             acoes.click(pacoteRecomendadoPage().getBtnEditar());
