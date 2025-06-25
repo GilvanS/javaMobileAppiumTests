@@ -43,11 +43,13 @@ public class PacotesActions {
 
     public static void selecionarDataIda() {
         String dataInicio = Usuario.getDataInicio();
+        log.info("Data de ida {}", dataInicio);
         acoes.click(pacotesPage().getBtnDataIda(dataInicio));
     }
 
     public static void selecionarDataRetorno() {
         String dataFim = Usuario.getDataFim();
+        log.info("Data de retorno {}", dataFim);
         acoes.click(pacotesPage().getBtnDataRetorno(dataFim));
     }
 

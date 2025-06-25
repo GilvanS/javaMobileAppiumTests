@@ -11,6 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
+
 import static org.testes.utils.Hooks.driver;
 
 @Slf4j
@@ -19,6 +21,7 @@ public class AluguelDeCarrosActions {
     private static final Logger log = LoggerFactory.getLogger(AluguelDeCarrosActions.class);
     static PrintScreen printScreen = new PrintScreen();
     static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
+    
     public static AluguelDeCarrosPage aluguelDeCarrosPage() {
         return MasterPageFactory.getPage(AluguelDeCarrosPage.class);
     }
@@ -84,7 +87,7 @@ public class AluguelDeCarrosActions {
     }
 
     public static void SelecionaroCarroToyota() throws InterruptedException {
-        log.info("clicar no botão 'Conferir' detalhes na tela 'Aluguel de carros''");
+        log.info("Seleciono o carro na tela 'Aluguel de carros'");
         boolean found = swipeUntilElementVisible(
             org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Volkswagen Polo')]")
             , 7);
@@ -145,13 +148,14 @@ public class AluguelDeCarrosActions {
     }
 
     public static void clicarBtnVerDetalhes() {
-        log.info("btnVerDetalhes");
+        log.info("clico no botão 'Ver detalhes' na tela 'Aluguel de carros'");
         acoes.click(aluguelDeCarrosPage().getLblVerDetalhes());
     }
 
-    public static void btnCaracteristicas() throws InterruptedException {
-        log.info("btnContinuar");
-        Thread.sleep(500);
+    public static void btnCaracteristicas() throws IOException {
+        log.info("valido a exibição da frase 'Características' na tela 'Aluguel de carros'");
+        acoes.pullToRefresh();
+        acoes.verticalSwipeDownAndSearch(aluguelDeCarrosPage().getBtnCaracteristicas(), 3);
         acoes.click(aluguelDeCarrosPage().getBtnCaracteristicas());
     }
 
@@ -176,19 +180,26 @@ public class AluguelDeCarrosActions {
     }
 
     // Método utilitário local para swipeUntilElementVisible
-    public static boolean swipeUntilElementVisible(By by, int maxSwipes) {
-        int swipes = 0;
-        while (swipes < maxSwipes) {
+    public static boolean swipeUntilElementVisible(By by, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        while (attempts < maxAttempts && !elementFound) {
             try {
                 WebElement element = Hooks.getDriver().findElement(by);
                 if (element.isDisplayed()) {
+                    elementFound = true;
                     return true;
                 }
-            } catch (Exception e) {}
+            } catch (Exception e) {
+                // Elemento não encontrado, continua o loop
+            }
+
             acoes.swipeVertical();
-            swipes++;
+            attempts++;
         }
-        return false;
+
+        return elementFound;
     }
 
 }

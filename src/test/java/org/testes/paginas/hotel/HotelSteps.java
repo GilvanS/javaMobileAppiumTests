@@ -15,14 +15,17 @@ public class HotelSteps {
     public void clicoNoBotaoConfirmarDestinoNaTelaHoteis() {
         HotelActions.clicarBtnConfirmarDestino();
     }
+
     @Given("clico no botão Continuar na tela Defina os detalhes")
     public void clicoNoBotaoContinuarNaTelaDefinaOsDetalhes() {
         HotelActions.clicarBtnContinuar();
     }
+
     @Given("clico no botão Continuar na tela Hoteis")
     public void clicoNoBotaoContinuarNaTelaHoteis() {
         HotelActions.clicarBtnContinuar();
     }
+
     @Given("valido a exibição da frase {string} na tela Hoteis")
     public void validoAExibicaoDaFraseNaTelaHoteis(String string) {
         HotelActions.validarLblEscolhaAEstadia();
@@ -32,6 +35,7 @@ public class HotelSteps {
     public void validoAExibicaoDaMensagemSobreAHospedagemNaTelaHoteis() {
         HotelActions.validarLblSobreAHosedagem();
     }
+
     @Given("valido a exibição da mensagem Ver Mapas na tela Hoteis")
     public void validoAExibicaoDaMensagemVerMapasNaTelaHoteis() {
         HotelActions.validarLblVerMapas();
@@ -61,14 +65,17 @@ public class HotelSteps {
     public void validoAExibicaoDaFraseSobreAHospedagemNaTelaHoteis() {
         HotelActions.validarLblLerMais();
     }
+
     @Given("valido a exibição da frase Ver mais na tela Hoteis")
     public void validoAExibicaoDaFraseComodidadesNaTelaHoteisNaTelaHoteis() {
         HotelActions.validarLblVerMais();
     }
+
     @Given("valido a exibição da frase Quartos disponíveis na tela Hoteis")
     public void validoAExibicaoDaFraseQuartosDisponiveisNaTelaHoteis() {
         HotelActions.validarLblQuartosEscolhido();
     }
+
     @When("clico no botão 'Continuar' na tela de Hoteis")
     public void clicoNoBotaoContinuarNaTelaDeHoteis() {
         HotelActions.clicarBtnContinuar();

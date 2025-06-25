@@ -39,6 +39,9 @@ public class IngressosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Conferir detalhes']")
     private WebElement btnConferirDetalhes;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Disponibilidade']")
+    private WebElement lblDisponibilidade;
+
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Reservar']")
     private WebElement btnReservar;
 

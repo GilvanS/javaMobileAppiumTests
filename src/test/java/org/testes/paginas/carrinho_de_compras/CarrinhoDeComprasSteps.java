@@ -14,7 +14,7 @@ public class CarrinhoDeComprasSteps {
         CarrinhoDeComprasActions.validarLblHospedagem();
     }
     @Then("valido a exibição das mensagem 'Regras e condições' na tela 'Carrinho de compras'")
-    public void valido_a_exibicao_das_mensagem_regras_e_condições_na_tela_carrinho_de_compras() {
+    public void valido_a_exibicao_das_mensagem_regras_e_condicoes_na_tela_carrinho_de_compras() {
         CarrinhoDeComprasActions.validarLblRegrasECondicoes();
     }
     @Then("clico no botão 'Ver resumo' na tela 'Carrinho de compras'")

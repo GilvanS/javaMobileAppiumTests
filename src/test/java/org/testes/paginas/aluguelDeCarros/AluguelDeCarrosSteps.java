@@ -37,6 +37,7 @@ public class AluguelDeCarrosSteps {
     public void clicarNoBotaoBuscarNaTelaAluguelDeCarros() {
         AluguelDeCarrosActions.clicarBtnBuscarCarros();
     }
+
     @Then("clico no botão 'Conferir' detalhes na tela 'Aluguel de carros'")
     public void clicarNoBotaoConferirDetalhesNaTelaAluguelDeCarros() throws InterruptedException {
         AluguelDeCarrosActions.SelecionaroCarroToyota();
@@ -45,7 +46,6 @@ public class AluguelDeCarrosSteps {
     @Then("valido a exibição da frase 'Ver Rotas' na tela 'Aluguel de carros'")
     public void validoAExibicaoDaFraseVerRotasNaTelaAluguelDeCarros() throws InterruptedException, IOException {
         AluguelDeCarrosActions.validarLblVerRotas();
-//        AluguelDeCarrosActions.validarLblVerMais();
     }
 
     @Then("valido a exibição da frase 'Carro escolhido' na tela 'Aluguel de carros'")
@@ -67,12 +67,14 @@ public class AluguelDeCarrosSteps {
     public void clicoNoBotaoReservarNaTelaAluguelDeCarros() {
         AluguelDeCarrosActions.clicarBtnReservar();
     }
+
     @Then("clico no botão 'Ver detalhes' na tela 'Aluguel de carros'")
     public void clicoNoBotaoVerDetalhesNaTelaAluguelDeCarros() {
         AluguelDeCarrosActions.clicarBtnVerDetalhes();
     }
+
     @Then("valido a exibição da frase 'Características' na tela 'Aluguel de carros'")
-    public void validoAExibicaoDaFraseCaracteristicasNaTelaLogin() throws InterruptedException {
+    public void validoAExibicaoDaFraseCaracteristicasNaTelaLogin() throws InterruptedException, IOException {
         AluguelDeCarrosActions.btnCaracteristicas();
     }
 

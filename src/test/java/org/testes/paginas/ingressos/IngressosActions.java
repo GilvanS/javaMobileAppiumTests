@@ -25,10 +25,9 @@ public class IngressosActions {
     }
 
     public static void validarEscolharUmParque() {
-        log.info("Validando exibição da frase Escolhar um parque");
+        log.info("valido a exibição da frase Escolhar um parque na tela 'Ingressos'");
         acoes.waitForVisibility(ingressosPage().getVldLblEscolhaUmParque());
     }
-
 
     @SneakyThrows
     public static void clicarEPreencherCamoDestino() {
@@ -36,7 +35,7 @@ public class IngressosActions {
         log.info("Clicando no botão comprar ingresso");
         acoes.click(ingressosPage().getCampoParaQualDestino());
         acoes.sendKeys(ingressosPage().getCampoParaQualDestino(), destino);
-        Thread.sleep(2000);
+        acoes.sleep(3);
 ////        AdbActions.tap(200,500);
 //        acoes.verticalSwipeDownAndSearch(ingressosPage().getDestinoBetoCarreiro(),5);
         acoes.click(ingressosPage().getDestinoBetoCarreiro());
@@ -54,27 +53,28 @@ public class IngressosActions {
     }
 
     public static void clicarNoBotaoConferirDetalhes() {
-        log.info("Clicando no botão Conferir detalhes");
-        acoes.waitForElementToBeClickable(ingressosPage().getBtnConferirDetalhes(), 10);
-        acoes.click(ingressosPage().getBtnConferirDetalhes(), 10);
+        log.info("clico no botão 'Conferir' detalhes na tela 'Ingressos'");
+        acoes.sleep(5);
+        acoes.waitForElementToBeClickable(ingressosPage().getBtnConferirDetalhes(), 3);
+        acoes.click(ingressosPage().getBtnConferirDetalhes(), 3);
     }
 
     @SneakyThrows
     public static void clicarNoBotaoReservar() {
-        log.info("Clicando no botão Reservar");
+        log.info("clico o botão Reservar na tela Ingressos");
+        acoes.sleep(10);
+        acoes.swipeVertical();
         acoes.verticalSwipeDownAndSearch(ingressosPage().getBtnReservar(), 5);
         acoes.click(ingressosPage().getBtnReservar());
-        Thread.sleep(2000);
     }
 
     @SneakyThrows
     public static void validarResumoDePedido(String texto) {
         log.info("Validando exibição do resumo de pedido");
-        Thread.sleep(2000);
+        acoes.sleep(5);
         acoes.click(ingressosPage().getBtnCheckout());
         acoes.waitForElementToBeClickable(ingressosPage().getViewResumoPedido(), 10);
     }
-
 
     public static void clicarNoDiaDoCalendario() {
         String dia = Usuario.getDataInicio();

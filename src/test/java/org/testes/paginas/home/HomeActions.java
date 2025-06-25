@@ -22,7 +22,7 @@ public class HomeActions {
     }
 
     public static void clicarBtnPularIntroducao() {
-        log.info("clicar no botão pular introdução");
+        log.info("clico no botão 'Pular introdução'");
         acoes.click(homePage().getBtnPularIntroducao());
     }
 

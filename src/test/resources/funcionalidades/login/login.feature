@@ -60,25 +60,13 @@ Feature: Funcionalidades site de viagens CVC
     And valido a exibição da frase 'Escolha uma estadia' na tela Hoteis
     And clico no botão Marcador do mapa na tela Hoteis
     And valido os Hotel para selecionar na tela Hoteis
-#    And valido a exibição da frase Ler mais na tela Hoteis
-#    And valido a exibição da frase Ver mais na tela Hoteis
-#    And valido a exibição da frase Quartos disponíveis na tela Hoteis
-#    And clico no botão 'Voltar ao topo' na tela de Hoteis
+    And valido a exibição da frase Ler mais na tela Hoteis
+    And valido a exibição da frase Ver mais na tela Hoteis
+    And valido a exibição da frase Quartos disponíveis na tela Hoteis
+    And clico no botão 'Voltar ao topo' na tela de Hoteis
     And clico no botão 'Reservar' na tela de Hoteis
     And clico no botão Ver resumo na tela 'Checkout'
     And valido o Resumo do pedido na tela 'Checkout'
-
-#    And clico no botão Ver detalhes na tela Hotel
-#    And valido a exibição da label Ver quartos disponiveis na tela Hoteis
-#    And clico no botão ver quartos disponiveis na tela Hotel
-#    And clico no botão reservar na tela Hotel
-
-#    Examples:
-#      | CIDADE       | DATA_INICIO | DATA_FIM | HOTEL_SELECIONAVEL                   |
-#      | Barcelona    | 29          | 15       | Arcelona Hotel                       |
-##    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
-##    |               |             |         | Villa Olímpic @ Suites Hotel & Spa   |
-
 
 
   @CT-1007 @CVC
@@ -103,12 +91,7 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão 'Voltar ao topo' na tela 'Aluguel de carros'
     And clico no botão 'Reservar' na tela 'Aluguel de carros'
     Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
-#    And clico no botão 'Ver detalhes' na tela 'Aluguel de carros'
-#    And valido a exibição da frase 'Características' na tela 'Aluguel de carros'
-
-#    Examples:
-#      | LOCAL_DE_RETIRADA | DATA_RETIRADA | DATA_DEVOLUCAO |
-#      | Sao Paulo         | 29            | 15             |
+    And clico no botão 'Ver detalhes' na tela 'Aluguel de carros'
 
 
   @CT-1008 @CVC @ATJ-136
@@ -126,8 +109,4 @@ Feature: Funcionalidades site de viagens CVC
     And clico no botão Ver Resumo na tela 'Checkout'
     And valido a exibição da frase Resumo de Pedido tela 'Checkout'
 
-
-#    Examples:
-#      | DESTINO         | DATA_INICIO | DATA_FIM |
-#      | Beto            | 29          | 15       |
 

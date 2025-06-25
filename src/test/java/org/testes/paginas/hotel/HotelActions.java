@@ -86,28 +86,28 @@ public class HotelActions {
     @SneakyThrows
     public static void validarLblLerMais() {
         log.info("valido a exibição da frase Ler mais na tela Hoteis");
-        acoes.sleep(5);
+        acoes.swipeVertical();
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblLerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblVerMais() {
         log.info("valido a exibição da frase Ver mais na tela Hoteis");
-        acoes.sleep(5);
+        acoes.swipeVertical();
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblVerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblQuartosEscolhido() {
         log.info("valido a exibição da frase Quartos Escolhido na tela Hoteis");
-        acoes.sleep(5);
+        acoes.swipeVertical();
         acoes.verticalSwipeDownAndSearch(hotelPage().getLblQuartoEscolhido(), 5);
     }
 
     @SneakyThrows
     public static void clicarBtnVoltarAoTopo() {
         log.info("clico no botão Voltar ao topo na tela Hoteis");
-        acoes.sleep(5);
+        acoes.swipeVertical();
         acoes.verticalSwipeDownAndSearch(hotelPage().getBtnVoltarAoTopo(), 5);
         acoes.click(hotelPage().getBtnVoltarAoTopo());
     }
