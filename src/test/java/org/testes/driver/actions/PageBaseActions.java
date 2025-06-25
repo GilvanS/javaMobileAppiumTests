@@ -585,6 +585,79 @@ public class PageBaseActions {
     }
 
     /**
+     * Realiza swipe vertical até encontrar um elemento visível.
+     * Método utilitário para buscar elementos que podem estar fora da tela visível.
+     * 
+     * @param by Localizador do elemento a ser encontrado
+     * @param maxAttempts Número máximo de tentativas de swipe
+     * @return true se o elemento foi encontrado e está visível, false caso contrário
+     */
+    public boolean swipeUntilElementVisible(By by, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        log.info("Inicio de busca - elemento com swipe vertical. Maximo de tentativas: {}", maxAttempts);
+
+        while (attempts < maxAttempts && !elementFound) {
+            try {
+                WebElement element = driver.findElement(by);
+                if (element.isDisplayed()) {
+                    elementFound = true;
+                    log.info("Elemento encontrado em {} tentativas de swipe", attempts + 1);
+                    return true;
+                }
+            } catch (Exception e) {
+                // Elemento não encontrado ou não visível, continua o loop
+            }
+
+            swipeVertical();
+            delay(1000); // Aguarda a animação do swipe
+            attempts++;
+        }
+
+        if (!elementFound) {
+            log.warn("Elemento nao encontrado apos {} tentativas - swipe vertical", maxAttempts);
+        }
+
+        return elementFound;
+    }
+
+    /**
+     * Realiza swipe vertical até encontrar um elemento visível (WebElement).
+     * Versão sobrecarregada que aceita WebElement ao invés de By.
+     *
+     * @param element     Elemento a ser encontrado
+     * @param maxAttempts Número máximo de tentativas de swipe
+     */
+    public void swipeUntilElementVisible(WebElement element, int maxAttempts) {
+        int attempts = 0;
+        boolean elementFound = false;
+
+        log.info("Iniciando busca do elemento com swipe vertical. Maximo de tentativas: {}", maxAttempts);
+
+        while (attempts < maxAttempts && !elementFound) {
+            try {
+                if (element.isDisplayed()) {
+                    elementFound = true;
+                    log.info("Elemento encontrado apos {} tentativas de swipe", attempts + 1);
+                    return;
+                }
+            } catch (Exception e) {
+                // Elemento não encontrado ou não visível, continua o loop
+            }
+
+            swipeVertical();
+            delay(1000); // Aguarda a animação do swipe
+            attempts++;
+        }
+
+        if (!elementFound) {
+            log.warn("Elemento nao encontrado apos {} tentativas de swipe vertical", maxAttempts);
+        }
+
+    }
+
+    /**
      * Realiza o gesto "pull-to-refresh" (puxar para baixo para recarregar a página).
      * Este gesto é comumente usado em aplicações mobile para atualizar o conteúdo.
      */

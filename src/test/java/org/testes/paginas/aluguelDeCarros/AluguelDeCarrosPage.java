@@ -3,6 +3,7 @@ package org.testes.paginas.aluguelDeCarros;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
 
@@ -70,6 +71,7 @@ public class AluguelDeCarrosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Volkswagen T-Cross')]")
     private WebElement selecionarOcarroVolkswagenTCross;
 
+
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Marcador do mapa')]")
     private WebElement lblMarcadorDoMapa;
 
@@ -97,8 +99,8 @@ public class AluguelDeCarrosPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Características')]")
     private WebElement btnCaracteristicas;
 
-    public org.openqa.selenium.By getBySelecionarOcarroVolkswagenPolo() {
-        return org.openqa.selenium.By.xpath("//*[contains(@content-desc, 'Volkswagen Polo')]");
+    public WebElement selecionarOcarroVolkswagenPolo() {
+        return driver.findElement(By.xpath("//*[contains(@content-desc, 'Volkswagen Polo')]"));
     }
 
 }
