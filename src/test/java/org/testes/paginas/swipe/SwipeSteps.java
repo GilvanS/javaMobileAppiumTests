@@ -1,8 +1,6 @@
 package org.testes.paginas.swipe;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.testes.paginas.home.HomeActions;
 
 import java.io.IOException;
 
