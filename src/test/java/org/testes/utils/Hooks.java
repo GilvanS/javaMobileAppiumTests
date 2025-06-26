@@ -36,6 +36,7 @@ public class Hooks {
         log.info(scenario.getName());
         log.info(scenario.getId());
         log.info("Inicializando o driver");
+        Context.inicializar(driver);
         driver = AppiumDriverHelper.getDriver();
     }
 

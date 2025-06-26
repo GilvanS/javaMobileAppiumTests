@@ -126,7 +126,7 @@ public class LoginPage extends PageBaseActions {
     }
 
     public WebElement getTxtUserEmail(String userEmail) {
-        String xpathEmail = String.format("//android.widget.TextView[@text='%s']", userEmail);
+        String xpathEmail = String.format("//android.widget.TextView[contains(@text, '%s')]", userEmail);
         return driver.findElement(By.xpath(xpathEmail));
     }
 }

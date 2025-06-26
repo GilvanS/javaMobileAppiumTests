@@ -1,0 +1,33 @@
+[ {
+  "id" : "3da7fb8d-21e6-4502-a6d5-86ba5a1db9ee",
+  "createdAt" : "2025-06-26 11:36:04",
+  "firstName" : "Vicente",
+  "lastName" : "Rocha",
+  "phoneNumber" : "(41) 0229-0186",
+  "emailAddress" : "caua.antunes@gmail.com",
+  "password" : "m1a5hp1aqfnx8"
+}, {
+  "id" : "d3613fcf-48d6-45ef-a5c1-bc2cd870fb7e",
+  "createdAt" : "2025-06-26 11:39:23",
+  "firstName" : "Laís",
+  "lastName" : "Bernardes",
+  "phoneNumber" : "(37) 1785-8955",
+  "emailAddress" : "Lais.Bernardes@live.com",
+  "password" : "fv3lpiugsun1"
+}, {
+  "id" : "863b7c80-02ab-4487-9648-cd867e0f69f1",
+  "createdAt" : "2025-06-26 11:44:46",
+  "firstName" : "Oliver",
+  "lastName" : "Sá",
+  "phoneNumber" : "(46) 5026-6301",
+  "emailAddress" : "Oliver.Sa@yahoo.com",
+  "password" : "uberrxo04or35"
+}, {
+  "id" : "d7ea9670-69de-4b9f-b742-9829b174e087",
+  "createdAt" : "2025-06-26 11:48:54",
+  "firstName" : "Lucca",
+  "lastName" : "Carvalho",
+  "phoneNumber" : "(54) 1465-4318",
+  "emailAddress" : "lucca.carvalho@live.com",
+  "password" : "gvtf5krok2bvf4v"
+} ]
