@@ -28,6 +28,10 @@ public class FakerJavaGenerator {
 	private String phoneNumber;
 	private String emailAddress;
 	private String password;
+	private String address;
+	private String city;
+	private String state;
+	private String zipCode;
 
 	@JsonIgnore
 	private final Faker faker;
