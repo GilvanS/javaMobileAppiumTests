@@ -145,8 +145,8 @@ public class PageBaseActions {
         Sequence swipe = new Sequence(finger, 1)
                 .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, startY))
                 .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-                .addAction(new Pause(finger, Duration.ofMillis(200)))
-                .addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), x, endY))
+                .addAction(new Pause(finger, Duration.ofMillis(100)))
+                .addAction(finger.createPointerMove(Duration.ofMillis(500), PointerInput.Origin.viewport(), x, endY))
                 .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         driver.perform(Collections.singletonList(swipe));
@@ -557,7 +557,7 @@ public class PageBaseActions {
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) throws IOException {
-        return verticalSwipeDownAndSearch(0.50, 0.55, 0.15, element, attempts);
+        return verticalSwipeDownAndSearch(0.50, 0.55, 0.10, element, attempts);
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, double startPercentage, double endPercentage, int attempts) throws IOException {

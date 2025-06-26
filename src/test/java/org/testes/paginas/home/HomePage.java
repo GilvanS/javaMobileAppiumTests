@@ -3,6 +3,7 @@ package org.testes.paginas.home;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.AppiumDriver;
 import lombok.Getter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testes.driver.actions.PageBaseActions;
 
@@ -13,58 +14,40 @@ public class HomePage extends PageBaseActions {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Pular introdução']")
-    private WebElement btnPularIntroducao;
+    // Elementos para validação de saldo
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[contains(@text, 'R$')]")
+    private WebElement txtValorSaldo;
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Olá']")
-    private WebElement vldTxtOla;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= 'R$ %s']")
+    private WebElement txtTendenciaSaldo;
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Olá, 4Win']")
-    private WebElement vldTxtOla4Win;
+    public WebElement valorTendenciaDoSaldo(String valor) {
+        return driver.findElement(By.xpath("//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= '" + valor + "']"));
+    }
 
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Notificações')]/ancestor::*/android.widget.Button[contains(@content-desc, 'Entrar')]")
-    private WebElement btnEntrar;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Início']")
+    private WebElement vldTxtInicio;
 
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Minhas')]/..//android.widget.Button[contains(@content-desc, 'Explorar')]")
-    private WebElement btnExplorar;
+    @AndroidFindBy(xpath = "//android.widget.Button[@text= 'DETALHE DA CONTA']")
+    private WebElement btnDetalheDaConta;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView")
-    private WebElement scrollView;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Pagamentos planejados futuros']")
+    private WebElement vldPagamentosPlanejadosFuturos;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView[.//android.view.View[@content-desc='Pacotes']]/android.view.View[1]")
-    private WebElement btnPacotes;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[@text= 'R$ 5.000,00']")
+    private WebElement vldSaldo;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[3]")
-    private WebElement btnPassagens;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Estrutura de despesas']")
+    private WebElement vldEstruturaDeDespesas;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView/android.view.View[6]")
-    private WebElement btnCarros;
+    @AndroidFindBy(xpath = "//*[@text='ÚLTIMOS 30 DIAS']/..//android.widget.TextView[contains(@text, 'R$')]")
+    private WebElement valorUltimos30Dias;
 
-    @AndroidFindBy(xpath = "(//*[@clickable='true'])[count(//android.view.View[@content-desc='Ingressos']/preceding-sibling::android.view.View[@content-desc]) + 1]")
-    private WebElement btnIngressos;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Tendência do saldo']")
+    private WebElement vldTendenciaDoSaldoTitulo;
 
-    @AndroidFindBy(xpath = "//*[@content-desc= 'Promoções']")
-    private WebElement btnPromocoes;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= 'R$ 5.000,00']")
+    private WebElement vldSaldoHoje;
 
-    @AndroidFindBy(xpath = "//android.widget.HorizontalScrollView[.//android.view.View[@content-desc='Hotéis']]/android.view.View[4]")
-    private WebElement btnHoteis;
-
-    @AndroidFindBy(xpath = "//android.widget.ScrollView/android.view.View[5]/android.view.View")
-    private WebElement carrosselHoteis;
-
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Natal')]")
-    private WebElement btnHotelNatal;
-
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Maceio')]")
-    private WebElement btnHotelMaceio;
-
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Porto de Galinhas')]")
-    private WebElement btnHotelPortoDeGalinhas;
-
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Buenos Aires')]")
-    private WebElement btnHotelBuenosAires;
-
-    @AndroidFindBy(xpath = "//*[contains(@content-desc, 'Orlando')]")
-    private WebElement btnHotelOrlando;
 
 }

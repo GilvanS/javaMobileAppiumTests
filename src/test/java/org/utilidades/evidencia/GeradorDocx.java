@@ -32,10 +32,17 @@ public class GeradorDocx {
      */
     public static void EvidenciasDocx(String scenarioName) {
         String dirImagens = "target/evidencias/" + HooksDados.getDeviceName() + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() +"/" + "screenshot";
-        String dirDocx = "target/evidencias/" + HooksDados.getDeviceName() + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
+        String dirDocx = "target/evidencias/" + HooksDados.getDeviceName() + "/" + HooksEvidencia.getNomeDaFeature() + "/" + HooksEvidencia.getIdExecucao() + "/" + HooksEvidencia.getNomeCenario() + "/"+ HooksEvidencia.getNomeCenario() + ".docx";
         List<String> arquivoImagens = pegarImagensDiretorio(dirImagens);
 
         try {
+            // Criar diretório se não existir
+            File docxFile = new File(dirDocx);
+            File parentDir = docxFile.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs();
+            }
+            
             criarDocx(dirDocx, arquivoImagens);
             System.out.println("Documento Word criado com sucesso em: " + dirDocx);
         } catch (IOException | InvalidFormatException e) {

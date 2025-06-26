@@ -7,39 +7,21 @@ import java.io.IOException;
 
 public class LoginSteps {
 
-
-    @Given("valido a exibição da frase Entre para aproveitar a melhor experiência na tela login")
-    public void valido_a_exibição_da_frase_entre_para_aproveitar_a_melhor_experiência_na_tela_login() throws IOException, InterruptedException {
-        LoginActions.vldTxtEntreParaAproveitar();
+    @Given("clico no botão 'COMECE AGORA' na tela 'Home'")
+    public void clicoNoBotaoCOMECEAGORANaTelaHome() {
+        LoginActions.clicarBtnComeceAgora();
+    }
+    @Given("clico no botão 'Conectar' com o Google na tela 'Login'")
+    public void clicoNoBotaoConectarComOGoogleNaTelaLogin() {
+        LoginActions.clicarBtnConectarComOGoogle();
+    }
+    @Given("seleciono o 'Email' na tela 'Login'")
+    public void selecionoOEmailNaTelaLogin() {
+        LoginActions.selecionarEmail();
+    }
+    @Given("clico no botão 'Concluir' na tela 'Login'")
+    public void clicoNoBotaoConcluirNaTelaLogin() {
+        LoginActions.clicarBtnConcluir();
     }
 
-    @Given("clico no botão Entre na tela Login")
-    public void clicar_no_botão_entre_na_tela_login() {
-        LoginActions.clickBtnEntreParaAproveitar();
-    }
-
-    @Given("preencho o campo email na tela Login")
-    public void preencho_o_campo_email_na_tela_login() {
-        LoginActions.preencherCampoEmail();
-    }
-
-    @Given("clico no botão Próximo na tela Login")
-    public void clicar_no_botão_próximo_na_tela_login() {
-        LoginActions.clicarBtnProximo();
-    }
-
-    @Given("preencho o campo Senha na tela Login")
-    public void preencho_o_campo_senha_na_tela_login() {
-        LoginActions.preencherCampoSenha();
-    }
-
-    @Given("clico no botão Entrar na tela Login")
-    public void clico_no_botão_entrar_na_tela_login() {
-        LoginActions.clicarBtnEntrar();
-    }
-
-    @Then("clico no botão Explorar na tela Home")
-    public void clicar_no_botão_explorar_na_tela_home() {
-        HomeActions.clicarBtnExplorar();
-    }
 }

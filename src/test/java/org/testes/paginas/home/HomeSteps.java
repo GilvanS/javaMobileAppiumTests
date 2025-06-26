@@ -3,54 +3,31 @@ package org.testes.paginas.home;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testes.paginas.detalheDaConta.DetalheDaContaActions;
 
 import java.io.IOException;
 
 public class HomeSteps {
 
-    @Given("clico no botão 'Pular introdução'")
-    public void clicar_no_botao_pular_introducao() {
-        HomeActions.clicarBtnPularIntroducao();
+    @Given("visualizo o valor do saldo na tela Home")
+    public void visualizoOValorDoSaldoNaTelaHome() throws IOException {
+        HomeActions.visualizarValorSaldo();
+    }
+    
+    @Then("valido o valor do saldo no campo Tendencia do saldo na tela Home")
+    public void validoOValorDoSaldoNoCampoTendenciaDoSaldoNaTelaHome() throws IOException {
+        HomeActions.validarTendenciaSaldo();
     }
 
-    @Given("valido a exibição da frase 'Olá' Pesquise na tela 'Home'")
-    public void valido_a_exibicao_da_frase_ola_pesquise_na_tela_home() throws IOException {
-        HomeActions.vldTxtOla();
+    @Given("valido a exibição da frase Inicio na tela Home")
+    public void validoAExibicaoDaFraseInicioNaTelaHome() throws IOException {
+        HomeActions.validarLblInicio();
     }
 
-    @Given("clico no botão 'Entrar' na tela 'Home'")
-    public void clicar_no_botao_entrar_na_tela_home() {
-        HomeActions.clicarBtnEntrar();
+    @When("clico no botão Detalhe da conta na tela Home")
+    public void clicoNoBotaoDetalheDaContaNaTelaHome() {
+        HomeActions.clicarBtnDetalheDaConta();
     }
 
-    @Then("valido a exibição da frase 'Olá, 4Win' na tela 'Home'")
-    public void valido_a_exibicao_da_frase_ola_4win_na_tela_home() throws IOException {
-        HomeActions.vldTxtOla4Win();
-    }
-
-    @Given("clico no botão 'Pacotes' na tela 'Home'")
-    public void clicar_no_botao_pacotes_na_tela_home() {
-        HomeActions.clicarBtnPacotes();
-    }
-
-    @Given("clico no botão 'Passagens' na tela 'Home'")
-    public void clicoNoBotaoNaTela() {
-        HomeActions.clicarBtnPassagens();
-    }
-
-    @When("clico no botão 'Carros' tela 'Home'")
-    public void clicarNoBotaoCarrosTelaHome() {
-        HomeActions.clicarBtnCarros();
-    }
-
-    @Given("clico no botão 'Ingressos' na tela 'Home'")
-    public void clicarNoBotaoIngressosNaTelaHome() {
-        HomeActions.clicarBtnIngressos();
-    }
-
-    @Given("clico no botão 'Hotéis' na tela 'Home'")
-    public void clicarNoBotaoHoteisNaTelaHome() {
-        HomeActions.clicarBtnHoteis();
-    }
 
 }

@@ -8,6 +8,8 @@ import org.utilidades.evidencia.PrintScreen;
 import org.testes.utils.Hooks;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testes.driver.manager.SaldoManager;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 
@@ -20,57 +22,47 @@ public class HomeActions {
         return MasterPageFactory.getPage(HomePage.class);
     }
 
-    public static void clicarBtnPularIntroducao() {
-        log.info("clico no botão 'Pular introdução'");
-        acoes().click(homePage().getBtnPularIntroducao());
+    public static void validarLblInicio() throws IOException {
+        log.info("valido a exibição da frase 'Inicio' na tela 'Home'");
+        acoes().waitForVisibility(homePage().getVldTxtInicio());
+        PrintScreen.screenshot("validacao_frase_inicio");
     }
 
-    public static void vldTxtOla() throws IOException {
-        log.info("valido a exibicao da tela 'Home'");
-        acoes().waitForVisibility(homePage().getVldTxtOla());
-        PrintScreen.screenshot("tela home");
+    public static void clicarBtnDetalheDaConta() {
+        log.info("clico no botão 'Detalhe da conta' na tela 'Home'");
+        acoes().click(homePage().getBtnDetalheDaConta());
     }
 
-    public static void clicarBtnEntrar() {
-        log.info("Clicar no botão Entrar na tela 'Home'");
-        acoes().click(homePage().getBtnEntrar());
+    public static void visualizarValorSaldo() throws IOException {
+        log.info("Visualizando valor do saldo na tela Home");
+        acoes().waitForVisibility(homePage().getTxtValorSaldo());
+        String valorSaldo = homePage().getTxtValorSaldo().getText();
+        SaldoManager.setSaldo(valorSaldo);
+        log.info("Valor do saldo capturado: {}", valorSaldo);
+        PrintScreen.screenshot("valor_saldo_capturado");
     }
 
-    public static void vldTxtOla4Win() throws IOException {
-        log.info("Valido o perfil 4Win logado");
-        acoes().waitForVisibility(homePage().getVldTxtOla4Win());
-        PrintScreen.screenshot("tela home");
-    }
-
-    public static void clicarBtnExplorar() {
-        acoes().click(homePage().getBtnExplorar());
-    }
-
-    public static void clicarBtnPacotes() {
-        log.info("clicar no botão pacotes");
-        acoes().click(homePage().getBtnPacotes());
-    }
-
-    public static void clicarBtnCarros() {
-        log.info("clicar no botão 'Carros' tela 'Home'");
-        acoes().click(homePage().getBtnCarros());
-    }
-
-    @SneakyThrows
-    public static void clicarBtnIngressos() {
-        log.info("clicar no botão 'Ingressos' na tela 'Home'");
-        acoes().horizontalSwipeFingerAndSearch(900, 400, 300, 200, homePage().getBtnIngressos(), 3);
-        acoes().click(homePage().getBtnIngressos(), 5);
-    }
-
-    public static void clicarBtnPassagens() {
-        log.info("clicar no botão 'Passagens' na tela 'Home'");
-        acoes().click(homePage().getBtnPassagens());
-    }
-
-    public static void clicarBtnHoteis() {
-        log.info("clicar no botão 'Hotéis' na tela 'Home'");
-        acoes().click(homePage().getBtnHoteis());
+    public static void validarTendenciaSaldo() throws IOException {
+        log.info("Validando valor do saldo no campo Tendencia do saldo");
+        if (acoes().verticalSwipeDownAndSearch(homePage().getVldTendenciaDoSaldoTitulo(),3)) {
+            log.info("Rolando a tela para baixo para encontrar o campo 'Tendência do saldo'");
+        } else {
+            acoes().swipeVertical();
+        }
+        
+        String saldoAnterior = SaldoManager.getSaldo();
+        acoes().waitForVisibility(homePage().valorTendenciaDoSaldo(saldoAnterior));
+        String valorTendencia = homePage().valorTendenciaDoSaldo(saldoAnterior).getText();
+        SaldoManager.setSaldoHoje(valorTendencia);
+        
+        log.info("Saldo anterior: {}", saldoAnterior);
+        log.info("Saldo na tendencia: {}", valorTendencia);
+        
+        // Validar se os valores são iguais
+        assertEquals(saldoAnterior, valorTendencia, "O valor do saldo deve ser igual ao valor na tendência");
+        log.info("Validação do saldo: SUCESSO - Valores conferem");
+        
+        PrintScreen.screenshot("validacao_tendencia_saldo");
     }
 
 }
