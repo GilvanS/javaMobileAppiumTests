@@ -23,10 +23,6 @@ public class Context {
 		acoes.set(new PageBaseActions(appiumDriver));
 	}
 
-//	public static LoginPage loginPage() {
-//		return loginPage.get();
-//	}
-
 	public static void remove() {
 		driver.remove();
 		acoes.remove();
