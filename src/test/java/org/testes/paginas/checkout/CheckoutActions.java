@@ -5,17 +5,18 @@ import org.testes.driver.page.MasterPageFactory;
 import org.testes.driver.actions.PageBaseActions;
 import org.testes.utils.Hooks;
 
+import static org.testes.utils.Context.acoes;
+
 @Slf4j
 public class CheckoutActions {
-    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
-    
+
     public static CheckoutPage checkoutPage() {
         return MasterPageFactory.getPage(CheckoutPage.class);
     }
 
     public static void clicarBtnVerResumo() {
-        acoes.pullToRefresh(5);
+        acoes().pullToRefresh(5);
         log.info("clico no botão Ver Resumo na tela Checkout");
-        acoes.click(checkoutPage().getBtnVerResumo());
+        acoes().click(checkoutPage().getBtnVerResumo());
     }
 } 

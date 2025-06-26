@@ -58,9 +58,10 @@ Feature: Funcionalidades site de viagens CVC
      And seleciono a data no campo Escolha a data na tela Passagens
      And clico no botão Continuar na tela Passagens
      And Seleciono o voo de ida na tela Passagens
-     And Seleciono o voo de volta na tela Passagens
-     And valido a exibição das buscas disponiveis na tela Passagens
-     Then clicar no primeiro botão Selecionar voo na tela Buscar passagens
+     And clico no botão Continuar sem upgrade na tela Passagens
+     And clico no botão Confirmar na tela Passagens
+     Then clico no botão 'Ver resumo' na tela 'Carrinho de compras'
+     And clico no botão Ver Resumo na tela Checkout
 
 #  @CT-1004 @CVC @ATJ-139
 #  Scenario Outline: Validar Circuitos

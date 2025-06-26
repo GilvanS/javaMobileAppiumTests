@@ -35,7 +35,7 @@ public class PageBaseActions {
         int attempts = 0;
         boolean elementFound = false;
 
-        while (attempts < maxAttempts && !elementFound) {
+        while (attempts < maxAttempts) {
             // Primeiro faz o swipe
             PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
             Sequence swipe = new Sequence(finger, 1);
@@ -63,10 +63,8 @@ public class PageBaseActions {
             attempts++;
         }
 
-        if (!elementFound) {
-            log.warn("Elemento não encontrado após {} tentativas de swipe", maxAttempts);
-        }
-    }
+		log.warn("Elemento não encontrado após {} tentativas de swipe", maxAttempts);
+	}
 
     /**
      * Construtor recebe o driver já instanciado.
@@ -465,7 +463,7 @@ public class PageBaseActions {
         do {
             try {
                 displayed = expected.isDisplayed();
-            } catch (Exception e) {}
+            } catch (Exception ignored) {}
             if (!displayed) {
                 horizontalSwipe(ref, startPercentage, endPercentage);
                 swipe = true;
@@ -483,7 +481,7 @@ public class PageBaseActions {
         do {
             try {
                 displayed = expected.isDisplayed();
-            } catch (Exception e) {}
+            } catch (Exception ignored) {}
             if (!displayed) {
                 horizontalSwipe(anchor, startPercentage, endPercentage);
                 swipe = true;
@@ -505,7 +503,7 @@ public class PageBaseActions {
             try {
                 delay(1000);
                 displayed = driver.findElement(element).isDisplayed();
-            } catch (Exception e) {}
+            } catch (Exception ignored) {}
             if (!displayed) {
                 verticalSwipe(anchorPercentage, startPercentage, endPercentage);
                 swipe = true;
@@ -528,7 +526,7 @@ public class PageBaseActions {
             try {
                 delay(1000);
                 displayed = element.isDisplayed();
-            } catch (Exception e) {}
+            } catch (Exception ignored) {}
             if (!displayed) {
                 verticalSwipe(anchorPercentage, startPercentage, endPercentage);
                 swipe = true;
@@ -547,7 +545,7 @@ public class PageBaseActions {
             try {
                 delay(1000);
                 displayed = element.isDisplayed();
-            } catch (Exception e) {}
+            } catch (Exception ignored) {}
             if (!displayed) {
                 swipeVerticalUp();
                 swipe = true;
@@ -736,7 +734,7 @@ public class PageBaseActions {
                 WebElement element = driver.findElement(by);
                 if (element.isDisplayed()) {
                     elementFound = true;
-                    log.info("Elemento encontrado apos pull-to-refresh na tentativa {}", attempts + 1);
+                    log.info("Elemento encontrado após pull-to-refresh na tentativa {}", attempts + 1);
                     return true;
                 }
             } catch (Exception e) {
@@ -749,7 +747,7 @@ public class PageBaseActions {
         }
 
         if (!elementFound) {
-            log.warn("Elemento nao encontrado apos {} tentativas de pull-to-refresh", maxAttempts);
+            log.warn("Elemento não encontrado apos {} tentativas de pull-to-refresh", maxAttempts);
         }
 
         return elementFound;

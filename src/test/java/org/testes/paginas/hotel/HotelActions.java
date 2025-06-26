@@ -3,16 +3,15 @@ package org.testes.paginas.hotel;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
-import org.testes.utils.Hooks;
-import org.testes.driver.actions.PageBaseActions;
+
 import org.testes.driver.page.MasterPageFactory;
 import org.utilidades.dados.Usuario;
 
+import static org.testes.utils.Context.acoes;
+
 @Slf4j
 public class HotelActions {
-
-    static PageBaseActions acoes = new PageBaseActions(Hooks.getDriver());
-
+    
     public static HotelPage hotelPage() {
         return MasterPageFactory.getPage(HotelPage.class);
     }
@@ -20,110 +19,110 @@ public class HotelActions {
     public static void campoOndeVoceIraSeHospedar() {
         String hospedar = Usuario.getCidadeOrigem();
         log.info("Preencho o campo Onde você irá se hospedar?");
-        acoes.click(hotelPage().getCampoOndeVoceIraSeHospedar());
-        acoes.sendKeys(hotelPage().getCampoOndeVoceIraSeHospedar(), hospedar);
+        acoes().click(hotelPage().getCampoOndeVoceIraSeHospedar());
+        acoes().sendKeys(hotelPage().getCampoOndeVoceIraSeHospedar(), hospedar);
     }
 
     public static void selecionarDestino() {
         String destino = Usuario.getCidadeOrigem();
         log.info("Seleciono o destino: {}", destino);
-        acoes.waitForElementToBeClickable(hotelPage().getDestinoBarcelona(), 5);
-        acoes.click(hotelPage().getDestinoBarcelona(), 5);
+        acoes().waitForElementToBeClickable(hotelPage().getDestinoBarcelona(), 5);
+        acoes().click(hotelPage().getDestinoBarcelona(), 5);
     }
 
     public static void clicarBtnConfirmarDestino() {
         log.info("clico no botão Confirmar destino na tela Hoteis");
-        acoes.click(hotelPage().getBtnConfirmarDestino());
+        acoes().click(hotelPage().getBtnConfirmarDestino());
     }
 
     public static void clicarBtnContinuar() {
         log.info("clico no botão 'Continuar' na tela 'Defina os detalhes'");
-        acoes.click(hotelPage().getBtnContinuar());
+        acoes().click(hotelPage().getBtnContinuar());
     }
 
     public static void validarLblEscolhaAEstadia() {
         log.info("valido a exibição da frase Escolhar um parque na tela Ingressos");
-        acoes.waitForVisibility(hotelPage().getLblEscolha());
-        acoes.click(hotelPage().getLblEscolha());
+        acoes().waitForVisibility(hotelPage().getLblEscolha());
+        acoes().click(hotelPage().getLblEscolha());
     }
 
     @SneakyThrows
     public static void clicarBtnMarcadorDoMapa() {
         log.info("clico no botão Marcador do mapa na tela Hoteis");
-        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnMarcadorDoMapa(), 5);
-        acoes.click(hotelPage().getBtnMarcadorDoMapa());
+        acoes().verticalSwipeDownAndSearch(hotelPage().getBtnMarcadorDoMapa(), 5);
+        acoes().click(hotelPage().getBtnMarcadorDoMapa());
         clicarBtnFechar();
     }
 
     @SneakyThrows
     public static void validarHotel() {
         log.info("Validando exibicao do hotel");
-        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnHotel2(), 5);
-        acoes.click(hotelPage().getBtnHotel2());
+        acoes().verticalSwipeDownAndSearch(hotelPage().getBtnHotel2(), 5);
+        acoes().click(hotelPage().getBtnHotel2());
     }
 
     public static void clicarBtnFechar() {
         log.info("clico no botão Fechar na tela Hotel");
-        acoes.click(hotelPage().getBtnFechar());
+        acoes().click(hotelPage().getBtnFechar());
     }
 
     public static void validarHotelByName() {
         String hotel = Usuario.getHotelSelecionado();
         log.info("Validando exibicao do hotel {}", hotel);
-        acoes.waitForVisibility(hotelPage().getHotelByName(hotel));
-        acoes.click(hotelPage().getHotelByName(hotel));
+        acoes().waitForVisibility(hotelPage().getHotelByName(hotel));
+        acoes().click(hotelPage().getHotelByName(hotel));
     }
 
     public static void swipeLeftParaProximoHotel() {
         log.info("Deslizando para o próximo hotel");
-        acoes.swipeHorizontal(false); // false = para a esquerda
-        acoes.delay(1000);
+        acoes().swipeHorizontal(false); // false = para a esquerda
+        acoes().delay(1000);
     }
 
     @SneakyThrows
     public static void validarLblLerMais() {
         log.info("valido a exibição da frase Ler mais na tela Hoteis");
-        acoes.swipeVertical();
-        acoes.verticalSwipeDownAndSearch(hotelPage().getLblLerMais(), 5);
+        acoes().swipeVertical();
+        acoes().verticalSwipeDownAndSearch(hotelPage().getLblLerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblVerMais() {
         log.info("valido a exibição da frase Ver mais na tela Hoteis");
-        acoes.swipeVertical();
-        acoes.verticalSwipeDownAndSearch(hotelPage().getLblVerMais(), 5);
+        acoes().swipeVertical();
+        acoes().verticalSwipeDownAndSearch(hotelPage().getLblVerMais(), 5);
     }
 
     @SneakyThrows
     public static void validarLblQuartosEscolhido() {
         log.info("valido a exibição da frase Quartos Escolhido na tela Hoteis");
-        acoes.swipeVertical();
-        acoes.verticalSwipeDownAndSearch(hotelPage().getLblQuartoEscolhido(), 5);
+        acoes().swipeVertical();
+        acoes().verticalSwipeDownAndSearch(hotelPage().getLblQuartoEscolhido(), 5);
     }
 
     @SneakyThrows
     public static void clicarBtnVoltarAoTopo() {
         log.info("clico no botão Voltar ao topo na tela Hoteis");
-        acoes.swipeVertical();
-        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnVoltarAoTopo(), 5);
-        acoes.click(hotelPage().getBtnVoltarAoTopo());
+        acoes().swipeVertical();
+        acoes().verticalSwipeDownAndSearch(hotelPage().getBtnVoltarAoTopo(), 5);
+        acoes().click(hotelPage().getBtnVoltarAoTopo());
     }
 
     @SneakyThrows
     public static void clicarBtnReservar() {
         log.info("clico no botão Reservar na tela Hoteis");
-        acoes.verticalSwipeDownAndSearch(hotelPage().getBtnReservar(), 5);
-        acoes.click(hotelPage().getBtnReservar());
+        acoes().verticalSwipeDownAndSearch(hotelPage().getBtnReservar(), 5);
+        acoes().click(hotelPage().getBtnReservar());
         Thread.sleep(5000);
     }
 
     public static void clicarBtnVerResumo() {
         log.info("clico no botão Ver resumo na tela Checkout");
-        acoes.click(hotelPage().getBtnVerResumo());
+        acoes().click(hotelPage().getBtnVerResumo());
     }
 
     public static void clicarBtnCheckout() {
-        acoes.click(hotelPage().getBtnCheckout(), 10);
+        acoes().click(hotelPage().getBtnCheckout(), 10);
     }
     // Swipe vertical até o elemento ficar visível ou atingir o máximo de tentativas
     public static void validarLblSobreAHosedagem() {
@@ -139,7 +138,7 @@ public class HotelActions {
             } catch (Exception e) {
                 // Ignora se não está visível
             }
-            acoes.swipeVertical();
+            acoes().swipeVertical();
             attempts++;
         }
     }
@@ -159,42 +158,42 @@ public class HotelActions {
             } catch (Exception e) {
                 // Ignora se não está visível
             }
-            acoes.swipeHorizontal(true); // true = para a direita
+            acoes().swipeHorizontal(true); // true = para a direita
             attempts++;
         }
     }
 
     public static void selecionarDatasCalendario(String dataInicio, String dataFim) {
         log.info("Selecionando data de início: " + dataInicio);
-        acoes.waitForVisibility(hotelPage().getBtnDataInicio(dataInicio));
-        acoes.click(hotelPage().getBtnDataInicio(dataInicio));
-        acoes.delay(500);
+        acoes().waitForVisibility(hotelPage().getBtnDataInicio(dataInicio));
+        acoes().click(hotelPage().getBtnDataInicio(dataInicio));
+        acoes().delay(500);
 
         log.info("Selecionando data de fim: " + dataFim);
-        acoes.waitForVisibility(hotelPage().getBtnDataFim(dataFim));
-        acoes.click(hotelPage().getBtnDataFim(dataFim));
-        acoes.delay(500);
+        acoes().waitForVisibility(hotelPage().getBtnDataFim(dataFim));
+        acoes().click(hotelPage().getBtnDataFim(dataFim));
+        acoes().delay(500);
     }
 
     public static void clicarNoDiaDoCalendario(String dia) {
         log.info("Clicando no dia '{}' no calendário de datas", dia);
-        acoes.click(hotelPage().getBtnDataInicio(dia));
+        acoes().click(hotelPage().getBtnDataInicio(dia));
     }
 
     public static void selecionarDataInicio() {
         String data = Usuario.getDataInicio();
         log.info("Selecionando data de início {}", data);
-        acoes.waitForVisibility(hotelPage().getBtnDataInicio(data));
-        acoes.click(hotelPage().getBtnDataInicio(data));
-        acoes.delay(500);
+        acoes().waitForVisibility(hotelPage().getBtnDataInicio(data));
+        acoes().click(hotelPage().getBtnDataInicio(data));
+        acoes().delay(500);
     }
 
     public static void selecionarDataFim() {
         String dataFim = Usuario.getDataFim();
         log.info("Selecionando data de fim: {}", dataFim);
-        acoes.waitForVisibility(hotelPage().getBtnDataFim(dataFim));
-        acoes.click(hotelPage().getBtnDataFim(dataFim));
-        acoes.delay(500);
+        acoes().waitForVisibility(hotelPage().getBtnDataFim(dataFim));
+        acoes().click(hotelPage().getBtnDataFim(dataFim));
+        acoes().delay(500);
     }
 
 }

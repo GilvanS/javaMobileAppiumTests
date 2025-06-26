@@ -36,7 +36,7 @@ public class PassagensPage extends PassagensActions {
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Continuar']")
 	private WebElement btnContinuar;
 
-	@AndroidFindBy(xpath = "(//android.view.View[contains(@content-desc, 'Não reembolsável')])[1]")
+	@AndroidFindBy(xpath = "(//android.view.View[contains(@content-desc, 'eembolsável') or contains(@content-desc, 'voo direto') or contains(@content-desc, 'parada') and (@clickable='true')])[2]")
 	private WebElement lblEscolhaDeIda;
 
 	@AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Escolher ida']")

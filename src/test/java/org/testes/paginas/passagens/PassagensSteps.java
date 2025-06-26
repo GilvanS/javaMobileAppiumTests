@@ -29,8 +29,13 @@ public class PassagensSteps {
 		PassagensActions.clicarBtnEscolhaDeVolta();
 	}
 
-	@When("clicar no primeiro botão Selecionar voo na tela Buscar passagens")
-	public void clicarNoPrimeiroBotaoSelecionarVooNaTelaBuscarPassagens() {
+	@When("clico no botão Continuar sem upgrade na tela Passagens")
+	public void clicoNoBotãoContinuarSemUpgradeNaTelaPassagens() {
+		PassagensActions.clicarBtnContinuarSemUpgrade();
+	}
+	@When("clico no botão Confirmar na tela Passagens")
+	public void clicoNoBotãoConfirmarNaTelaPassagens() {
+		PassagensActions.clicarBtnConfirmar();
 	}
 
 }

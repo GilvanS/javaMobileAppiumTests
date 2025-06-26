@@ -37,6 +37,7 @@ public class Hooks {
         log.info(scenario.getId());
         log.info("Inicializando o driver");
         driver = AppiumDriverHelper.getDriver();
+        Context.inicializar(driver);
         String deviceName = driver.getCapabilities().getCapability("deviceName").toString();
         HooksDados.setDeviceName(deviceName.replace(".", "").replace(":", "_"));
     }

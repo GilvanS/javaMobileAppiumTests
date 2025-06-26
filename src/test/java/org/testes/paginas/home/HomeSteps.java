@@ -9,22 +9,22 @@ import java.io.IOException;
 public class HomeSteps {
 
     @Given("clico no botão 'Pular introdução'")
-    public void clicar_no_botão_pular_introdução() {
+    public void clicar_no_botao_pular_introducao() {
         HomeActions.clicarBtnPularIntroducao();
     }
 
     @Given("valido a exibição da frase 'Olá' Pesquise na tela 'Home'")
-    public void valido_a_exibição_da_frase_olá_pesquise_na_tela_home() throws IOException {
+    public void valido_a_exibicao_da_frase_ola_pesquise_na_tela_home() throws IOException {
         HomeActions.vldTxtOla();
     }
 
     @Given("clico no botão 'Entrar' na tela 'Home'")
-    public void clicar_no_botão_entrar_na_tela_home() {
+    public void clicar_no_botao_entrar_na_tela_home() {
         HomeActions.clicarBtnEntrar();
     }
 
     @Then("valido a exibição da frase 'Olá, 4Win' na tela 'Home'")
-    public void valido_a_exibição_da_frase_olá_4win_na_tela_home() throws IOException {
+    public void valido_a_exibicao_da_frase_ola_4win_na_tela_home() throws IOException {
         HomeActions.vldTxtOla4Win();
     }
 
@@ -34,7 +34,7 @@ public class HomeSteps {
     }
 
     @Given("clico no botão 'Passagens' na tela 'Home'")
-    public void clicoNoBotãoNaTela() {
+    public void clicoNoBotaoNaTela() {
         HomeActions.clicarBtnPassagens();
     }
 
