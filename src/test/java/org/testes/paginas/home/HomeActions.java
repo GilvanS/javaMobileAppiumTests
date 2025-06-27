@@ -12,6 +12,7 @@ import static org.testes.utils.Context.acoes;
 import org.utilidades.evidencia.PrintScreen;
 
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.WebElement;
 
 @Slf4j
 public class HomeActions {
@@ -56,31 +57,52 @@ public class HomeActions {
     }
 
     /**
+     * Fecha o popup de banco de forma direta sem usar PopupModel
+     */
+    public static void fecharPopupBanco() {
+        try {
+            if (homePage().getLblEncontreSeuBanco().isDisplayed()) {
+                log.info("Fechando popup de banco");
+                acoes().click(homePage().getBtnFechar());
+                acoes().sleep(2);
+            }
+        } catch (Exception e) {
+            // Popup de banco não está visível
+        }
+    }
+
+    /**
      * Fecha o popup de introdução que aparece 3 vezes
      */
     public static void fecharPopupIntroducao() {
         try {
-            log.info("Verificando se popup de introdução está visível...");
+            // Aguarda mais tempo para o popup aparecer após fechar o popup de banco
+            acoes().sleep(3);
             
-            // Aguarda um pouco para o popup aparecer
-            acoes().sleep(2);
+            log.info("Fechando popup de introdução");
             
-            if (homePage().getLblIntroducaoUm().isDisplayed()) {
-                log.info("Popup de introdução detectado, fechando...");
-                
-                // Clica 3 vezes no meio da tela
-                for (int i = 1; i <= 3; i++) {
-                    log.info("Clicando no meio da tela pela {}ª vez", i);
-                    acoes().clicarMeioTela();
-                    acoes().sleep(1); // Aguarda entre os cliques
-                }
-                
-                log.info("Popup de introdução fechado com sucesso");
-            } else {
-                log.info("Popup de introdução nao esta visivel");
+            // Faz 3 cliques diretos no meio da tela
+            for (int i = 1; i <= 3; i++) {
+                acoes().clicarMeioTela();
+                acoes().sleep(1);
             }
+            
+            // Verifica se ainda existe o elemento de introdução
+            try {
+                if (homePage().getLblIntroducaoUm().isDisplayed()) {
+                    log.info("Popup de introdução ainda visivel, fazendo cliques adicionais");
+                    // Faz mais 2 cliques se ainda estiver visível
+                    for (int i = 1; i <= 2; i++) {
+                        acoes().clicarMeioTela();
+                        acoes().sleep(1);
+                    }
+                }
+            } catch (Exception e) {
+                // Elemento não está mais visível, popup fechado com sucesso
+            }
+            
         } catch (Exception e) {
-            log.info("Popup de introdução nao encontrado: {}", e.getMessage());
+            log.info("Erro ao fechar popup de introdução: {}", e.getMessage());
         }
     }
 
@@ -102,7 +124,6 @@ public class HomeActions {
                 
                 // Fecha popup de introdução
                 fecharPopupIntroducao();
-                acoes().pullToRefresh();
             }
         } catch (Exception e) {
             log.info("Nenhum popup encontrado");
@@ -122,6 +143,22 @@ public class HomeActions {
         } catch (Exception e) {
             fecharPopups();
         }
+    }
+
+    /**
+     * Método principal para fechar todos os popups na tela Home
+     * Usa abordagem direta para evitar interferências
+     */
+    public static void fecharTodosPopups() {
+        log.info("Fechando popups na tela Home");
+        
+        // Primeiro fecha o popup de banco de forma direta
+        fecharPopupBanco();
+        
+        // Depois fecha o popup de introdução
+        fecharPopupIntroducao();
+        
+        log.info("Popups fechados");
     }
 
     /**
@@ -151,8 +188,8 @@ public class HomeActions {
     }
 
     public static void validarLblInicio() throws IOException {
-        // Fecha popup antes de validar usando PopupModel
-        fecharPopupBancoComPopupModel();
+        // Fecha popup antes de validar usando método direto
+        fecharTodosPopups();
         
         log.info("valido a exibição da frase 'Inicio' na tela 'Home'");
         acoes().waitForVisibility(homePage().getVldTxtInicio());
@@ -165,8 +202,8 @@ public class HomeActions {
     }
 
     public static void visualizarValorSaldo() throws IOException {
-        // Fecha popup antes de visualizar o saldo usando PopupModel
-        fecharPopupBancoComPopupModel();
+        // Fecha popup antes de visualizar o saldo usando método direto
+        fecharTodosPopups();
         
         log.info("Visualizando valor do saldo na tela Home");
         acoes().waitForVisibility(homePage().getTxtValorSaldo());
