@@ -1,10 +1,11 @@
 package org.testes.paginas.login;
 
+import org.openqa.selenium.WebElement;
+import org.testes.driver.actions.PageBaseActions;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
-import org.openqa.selenium.WebElement;
-import org.testes.driver.actions.PageBaseActions;
 
 
 @Getter

@@ -1,11 +1,11 @@
 @all
 Feature: Validar tela de home
 
-#  Background: Validar Login
-#    Given clico no botão 'COMECE AGORA' na tela 'Home'
-#    And clico no botão 'Conectar' com o Google na tela 'Login'
-#    And seleciono o 'Email' na tela 'Login'
-#    And clico no botão 'Concluir' na tela 'Login'
+  Background: Validar Login
+    Given clico no botão 'COMECE AGORA' na tela 'Home'
+    And clico no botão 'Conectar' com o Google na tela 'Login'
+    And seleciono o 'Email' na tela 'Login'
+    And clico no botão 'Concluir' na tela 'Login'
 
   @CT-1001 @wallet
   Scenario: Validar Saldo em conta

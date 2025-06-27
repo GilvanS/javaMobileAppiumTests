@@ -2,6 +2,7 @@ package org.testes.paginas.home;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.AppiumDriver;
+import io.cucumber.java.zh_cn.假如;
 import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,18 @@ public class HomePage extends PageBaseActions {
     public WebElement valorTendenciaDoSaldo(String valor) {
         return driver.findElement(By.xpath("//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= '" + valor + "']"));
     }
+
+    @AndroidFindBy(xpath = "//android.widget.ScrollView[@resource-id='com.droid4you.application.wallet:id/scroll_view']")
+    private WebElement lblEncontreSeuBanco;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Você já tentou encontrar e conectar seu banco?']")
+    private WebElement vldTxtVoceJaTentouEncontrarEConectarSeuBanco;
+
+    @AndroidFindBy(xpath = "//android.widget.ImageView[@resource-id='com.droid4you.application.wallet:id/image_view_close']")
+    private WebElement btnFechar;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='android:id/text1']")
+    private WebElement lblIntroducaoUm;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Início']")
     private WebElement vldTxtInicio;

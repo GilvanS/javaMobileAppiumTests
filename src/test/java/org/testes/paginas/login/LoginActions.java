@@ -1,15 +1,13 @@
 package org.testes.paginas.login;
 
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
+
 import org.testes.driver.page.MasterPageFactory;
-import org.testes.driver.actions.PageBaseActions;
+import static org.testes.utils.Context.acoes;
 import org.utilidades.dados.Usuario;
 import org.utilidades.evidencia.PrintScreen;
-import org.testes.utils.Hooks;
 
-import java.io.IOException;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.testes.utils.Context.acoes;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LoginActions {
@@ -55,9 +53,9 @@ public class LoginActions {
 
     public static void clicarBtnConcluir() {
         log.info("Clico no botão 'Continuar' na tela 'Login'");
+        acoes().sleep(5);
         acoes().click(loginPage().getBtnConcluir());
     }
-
 
     public static void vldTxtEntreParaAproveitar() throws IOException, InterruptedException {
         log.info("Validat texto 'Entre para aproveitar'");
@@ -85,14 +83,12 @@ public class LoginActions {
     public static void preencherCampoSenha() {
         String senha = Usuario.getSenha();
         log.info("Preencher o campo Senha: " + senha);
-        acoes().click(loginPage().getCampoSenha());
+        acoes().click(loginPage().getCampoSeuEmail());
         acoes().sendKeys(loginPage().getCampoSenha(), senha);
     }
 
     public static void clicarBtnEntrar() {
         acoes().click(loginPage().getBtnEntrar());
     }
-
-
 
 }

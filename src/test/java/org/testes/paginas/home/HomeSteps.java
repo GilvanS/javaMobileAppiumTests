@@ -1,11 +1,10 @@
 package org.testes.paginas.home;
 
+import java.io.IOException;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.testes.paginas.detalheDaConta.DetalheDaContaActions;
-
-import java.io.IOException;
 
 public class HomeSteps {
 

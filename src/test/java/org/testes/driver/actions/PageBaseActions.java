@@ -753,4 +753,26 @@ public class PageBaseActions {
         return elementFound;
     }
 
+    /**
+     * Clica no meio da tela usando coordenadas específicas.
+     * Útil para fechar popups de introdução que não são clicáveis diretamente.
+     */
+    public void clicarMeioTela() {
+        try {
+            final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+            var tapPoint = new Point(515, 372);
+            var tap = new Sequence(finger, 1);
+            tap.addAction(finger.createPointerMove(Duration.ofMillis(0),
+                PointerInput.Origin.viewport(), tapPoint.x, tapPoint.y));
+            tap.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+            tap.addAction(new Pause(finger, Duration.ofMillis(50)));
+            tap.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+            driver.perform(Collections.singletonList(tap));
+            
+            log.info("Clique no meio da tela executado com sucesso");
+        } catch (Exception e) {
+            log.error("Erro ao clicar no meio da tela: {}", e.getMessage());
+        }
+    }
+
 }

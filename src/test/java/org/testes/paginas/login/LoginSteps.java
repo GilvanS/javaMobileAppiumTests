@@ -15,10 +15,12 @@ public class LoginSteps {
     public void clicoNoBotaoConectarComOGoogleNaTelaLogin() {
         LoginActions.clicarBtnConectarComOGoogle();
     }
+
     @Given("seleciono o 'Email' na tela 'Login'")
     public void selecionoOEmailNaTelaLogin() {
         LoginActions.selecionarEmail();
     }
+
     @Given("clico no botão 'Concluir' na tela 'Login'")
     public void clicoNoBotaoConcluirNaTelaLogin() {
         LoginActions.clicarBtnConcluir();
