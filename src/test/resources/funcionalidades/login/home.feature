@@ -26,8 +26,8 @@ Feature: Validar tela de home
     Given valido a exibição da frase 'Inicio' na tela 'Home'
     When valido a exibição do banner 'Acompanhe seus gastos' na tela 'Home'
     And seleciono o banner 'Modo escuro' na tela Home
-#    And clico no botão Experimente o modo escuro na tela Home
-#    And clico no botão Hamburguer na tela Home
-#    Then Valido o botão Modo escuro ativo na tela Home
+    And clico no botão Experimente o modo escuro na tela Home
+    And clico no botão Hamburguer na tela Home
+    Then Valido o botão Modo escuro ativo na tela Home
 
 

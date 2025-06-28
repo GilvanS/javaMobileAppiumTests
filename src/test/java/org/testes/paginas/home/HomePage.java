@@ -62,6 +62,21 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= 'R$ 5.000,00']")
     private WebElement vldSaldoHoje;
 
+    @AndroidFindBy(id = "com.droid4you.application.wallet:id/view_pager_swipe")
+    private WebElement vldBannerswipe;
+
+    @AndroidFindBy(accessibility = "Abrir")
+    private WebElement btnMenuHamburguer;
+
+    @AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id='com.droid4you.application.wallet:id/material_drawer_recycler_view']")
+    private WebElement vldDrawerMenu;
+
+    @AndroidFindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,  'id/material_drawer_recycler_view') and @scrollable='true']/descendant::android.widget.TextView[@text='Modo escuro']")
+    private WebElement vldModoEscuroMenu;
+
+    @AndroidFindBy(xpath = "(//android.widget.Switch[@resource-id='com.droid4you.application.wallet:id/material_drawer_switch'])[1]")
+    private WebElement vldModoEscuroSwitch; //@cheked= 'false'
+
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Acompanhe seus gastos' and @displayed= 'true']")
     private WebElement vldAcompanheSeusGastos;
 

@@ -38,4 +38,17 @@ public class HomeSteps {
         HomeActions.selecionarModoEscuro();
     }
 
+    @When("clico no botão Experimente o modo escuro na tela Home")
+    public void clicoNoBotãoExperimenteOModoEscuroNaTelaHome() throws IOException {
+        HomeActions.clicarBtnExperimenteModoEscuro();
+    }
+    @When("clico no botão Hamburguer na tela Home")
+    public void clicoNoBotãoHamburguerNaTelaHome() {
+        HomeActions.clicarBtnMenuAmburger();
+    }
+    @Then("Valido o botão Modo escuro ativo na tela Home")
+    public void validoOBotãoModoEscuroAtivoNaTelaHome() throws IOException {
+        HomeActions.validarModoEscuroAtivo();
+    }
+
 }

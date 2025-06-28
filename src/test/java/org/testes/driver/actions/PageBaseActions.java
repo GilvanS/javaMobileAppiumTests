@@ -541,23 +541,12 @@ public class PageBaseActions {
         return displayed;
     }
 
-    public boolean verticalSwipeUpAndSearch(WebElement element, int attempts) {
-        boolean displayed = false;
-        boolean swipe = false;
-        int counter = 0;
-        do {
-            try {
-                delay(1000);
-                displayed = element.isDisplayed();
-            } catch (Exception ignored) {}
-            if (!displayed) {
-                swipeVerticalUp();
-                swipe = true;
-            }
-            counter++;
-        } while (!displayed && counter < attempts);
-        if (swipe) delay(3000);
-        return displayed;
+    public boolean verticalSwipeUpAndSearch(WebElement element) {
+        return verticalSwipeUpAndSearch(element, 5);
+    }
+
+    public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, int attempts) throws IOException {
+        return verticalSwipeDownAndSearch(ref, element, 0.55, 0.15, attempts);
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) throws IOException {
@@ -575,11 +564,26 @@ public class PageBaseActions {
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement element) throws IOException {
-        return verticalSwipeDownAndSearch(element, 5);
+        return verticalSwipeDownAndSearch(0.50, 0.55, 0.10, element, 5);
     }
 
-    public boolean verticalSwipeUpAndSearch(WebElement element) {
-        return verticalSwipeUpAndSearch(element, 5);
+    public boolean verticalSwipeUpAndSearch(WebElement element, int attempts) {
+        boolean displayed = false;
+        boolean swipe = false;
+        int counter = 0;
+        do {
+            try {
+                delay(1000);
+                displayed = element.isDisplayed();
+            } catch (Exception ignored) {}
+            if (!displayed) {
+                swipeVerticalUp();
+                swipe = true;
+            }
+            counter++;
+        } while (!displayed && counter < attempts);
+        if (swipe) delay(3000);
+        return displayed;
     }
 
     public boolean verticalSwipeDownAndSearch(By by) throws IOException {
@@ -779,5 +783,35 @@ public class PageBaseActions {
         }
     }
 
+    /**
+     * Realiza swipe vertical com coordenadas específicas até encontrar um elemento.
+     * Usado para fazer swipe dentro de elementos específicos como menus.
+     * 
+     * @param anchor Coordenada X do ponto de âncora (centro do swipe)
+     * @param startPoint Coordenada Y inicial do swipe
+     * @param endPoint Coordenada Y final do swipe
+     * @param element Elemento a ser encontrado
+     * @param attempts Número máximo de tentativas
+     * @return true se o elemento foi encontrado, false caso contrário
+     * @throws IOException se houver erro no swipe
+     */
+    public boolean verticalSwipeDownAndSearch(int anchor, int startPoint, int endPoint, WebElement element, int attempts) throws IOException {
+        boolean displayed = false;
+        boolean swipe = false;
+        int counter = 0;
+        do {
+            try {
+                delay(1000);
+                displayed = element.isDisplayed();
+            } catch (Exception ignored) {}
+            if (!displayed) {
+                swipe(anchor, startPoint, anchor, endPoint);
+                swipe = true;
+            }
+            counter++;
+        } while (!displayed && counter < attempts);
+        if (swipe) delay(3000);
+        return displayed;
+    }
 
 }

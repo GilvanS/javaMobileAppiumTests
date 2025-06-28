@@ -11,6 +11,7 @@ import static org.testes.utils.Context.acoes;
 import org.utilidades.evidencia.PrintScreen;
 
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.By;
 
 @Slf4j
 public class HomeActions {
@@ -80,8 +81,23 @@ public class HomeActions {
 
     public static void selecionarModoEscuro() throws IOException {
         log.info("Selecionando o banner 'Modo escuro'");
-        acoes().horizontalSwipeLeft(homePage().getVldAcompanheSeusGastos(), homePage().getVldModoEscuro(),3);
+        acoes().horizontalSwipeLeft(homePage().getVldBannerswipe(), homePage().getVldModoEscuro(),3);
+    }
+
+    public static void clicarBtnExperimenteModoEscuro() {
+        log.info("Clico no botão 'Experimente o modo escuro'");
         acoes().click(homePage().getBtnExperimenteOModoEscuro());
+    }
+
+    public static void clicarBtnMenuAmburger() {
+        log.info("Clico no botão 'Hamburguer'");
+        acoes().click(homePage().getBtnMenuHamburguer());
+    }
+
+    public static void validarModoEscuroAtivo() throws IOException {
+        log.info("Validando o botao 'Modo escuro' ativo");
+        acoes().verticalSwipeDownAndSearch(homePage().getVldDrawerMenu(), homePage().getVldModoEscuroMenu(),3);
+        acoes().waitForVisibility(homePage().getVldModoEscuroMenu());
     }
 
     // ============================================================================
