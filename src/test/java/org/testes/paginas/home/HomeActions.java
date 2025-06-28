@@ -7,12 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.testes.driver.manager.SaldoManager;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.paginas.popup.PopupActions;
-import org.testes.paginas.popup.PopupModel;
 import static org.testes.utils.Context.acoes;
 import org.utilidades.evidencia.PrintScreen;
 
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.WebElement;
 
 @Slf4j
 public class HomeActions {
@@ -24,100 +22,16 @@ public class HomeActions {
     }
 
     /**
-     * Configura o PopupModel para a tela Home
-     */
-    public static PopupModel getPopupModelHome() {
-        PopupModel popupModel = new PopupModel("Home");
-        popupModel.setElementosEsperados(homePage().getVldTxtInicio());
-        popupModel.setElementosIdentificadores(
-            homePage().getLblEncontreSeuBanco(),
-            homePage().getVldTxtVoceJaTentouEncontrarEConectarSeuBanco()
-        );
-        popupModel.setElementosDeAcao(homePage().getBtnFechar());
-        popupModel.setDelay(false);
-        return popupModel;
-    }
-
-    /**
-     * Fecha o popup de banco
-     */
-    private static boolean fecharPopupBanco() {
-        try {
-            if (homePage().getLblEncontreSeuBanco().isDisplayed()) {
-                log.info("Fechando popup de banco");
-                acoes().click(homePage().getBtnFechar());
-                acoes().sleep(2);
-                return true; // Popup de banco foi fechado
-            }
-        } catch (Exception e) {
-            // Popup de banco não está visível
-        }
-        return false; // Popup de banco não foi fechado
-    }
-
-    /**
-     * Fecha o popup de introdução
-     */
-    private static void fecharPopupIntroducao() {
-        try {
-            acoes().sleep(1);
-            log.info("Fechando popup de introdução");
-            
-            // Sempre força 3 cliques para avançar o popup de introdução
-            for (int i = 1; i <= 3; i++) {
-                acoes().clicarMeioTela();
-                acoes().sleep(1);
-            }
-            
-            log.info("Introdução finalizada, prosseguindo para proxima etapa");
-            
-            // Verifica se precisa de cliques adicionais
-            try {
-                if (homePage().getLblIntroducaoUm().isDisplayed()) {
-                    log.info("Popup de introdução ainda visivel, fazendo cliques adicionais");
-                    for (int i = 1; i <= 2; i++) {
-                        acoes().clicarMeioTela();
-                        acoes().sleep(1);
-                    }
-                }
-            } catch (Exception e) {
-                // Popup fechado com sucesso
-            }
-        } catch (Exception e) {
-            log.info("Erro ao fechar popup de introdução: {}", e.getMessage());
-        }
-    }
-
-    /**
      * Fecha todos os popups na tela Home
      */
     public static void fecharTodosPopups() {
-        log.info("Fechando popups na tela Home");
-        
-        // Fecha popup de banco e verifica se foi fechado
-        boolean popupBancoFechado = fecharPopupBanco();
-        
-        // Só fecha popup de introdução se o popup de banco foi fechado
-        if (popupBancoFechado) {
-            fecharPopupIntroducao();
-        }
-        
-        log.info("Popups fechados");
-    }
-
-    /**
-     * Valida a exibição da tela Home
-     */
-    public static void validarExibicaoTelaHome() {
-        log.info("Valido a exibição da tela Home");
-        popupActions.verificarPopUpsAteEncontrarElementoEsperado(getPopupModelHome());
-        assertTrue(acoes().waitForElementToBeVisible(homePage().getVldTxtInicio(), 10).isDisplayed(), 
-                  "Tela home não foi apresentada corretamente");
-        log.info("Tela Home apresentada com sucesso");
+        popupActions.fecharTodosPopups(
+            homePage().getLblEncontreSeuBanco(), 
+            homePage().getBtnFechar()
+        );
     }
 
     public static void validarLblInicio() throws IOException {
-        // Fecha popup antes de validar usando método direto
         fecharTodosPopups();
         
         log.info("valido a exibição da frase 'Inicio' na tela 'Home'");
@@ -131,7 +45,6 @@ public class HomeActions {
     }
 
     public static void visualizarValorSaldo() throws IOException {
-        // Fecha popup antes de visualizar o saldo usando método direto
         fecharTodosPopups();
         
         log.info("Visualizando valor do saldo na tela Home");
@@ -165,4 +78,41 @@ public class HomeActions {
         PrintScreen.screenshot("validacao_tendencia_saldo");
     }
 
+    // ============================================================================
+    // MÉTODOS REMOVIDOS - DOCUMENTAÇÃO PARA USO FUTURO
+    // ============================================================================
+    
+    /*
+     * MÉTODOS REMOVIDOS POR NÃO ESTAREM SENDO UTILIZADOS:
+     * 
+     * 1. getPopupModelHome() - Configuração do PopupModel para tela Home
+     * 2. validarExibicaoTelaHome() - Validação da exibição da tela Home
+     * 
+     * SE PRECISAR REUTILIZAR NO FUTURO:
+     * 
+     * // Para configurar PopupModel da tela Home:
+     * public static PopupModel getPopupModelHome() {
+     *     PopupModel popupModel = new PopupModel("Home");
+     *     popupModel.setElementosEsperados(homePage().getVldTxtInicio());
+     *     popupModel.setElementosIdentificadores(
+     *         homePage().getLblEncontreSeuBanco(),
+     *         homePage().getVldTxtVoceJaTentouEncontrarEConectarSeuBanco()
+     *     );
+     *     popupModel.setElementosDeAcao(homePage().getBtnFechar());
+     *     popupModel.setDelay(false);
+     *     return popupModel;
+     * }
+     * 
+     * // Para validar exibição da tela Home:
+     * public static void validarExibicaoTelaHome() {
+     *     log.info("Valido a exibição da tela Home");
+     *     popupActions.verificarPopUpsAteEncontrarElementoEsperado(getPopupModelHome());
+     *     assertTrue(acoes().waitForElementToBeVisible(homePage().getVldTxtInicio(), 10).isDisplayed(), 
+     *               "Tela home não foi apresentada corretamente");
+     *     log.info("Tela Home apresentada com sucesso");
+     * }
+     * 
+     * IMPORTS NECESSÁRIOS:
+     * import org.testes.paginas.popup.PopupModel;
+     */
 }
