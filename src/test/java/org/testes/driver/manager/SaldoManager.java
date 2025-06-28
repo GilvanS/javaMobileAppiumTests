@@ -41,13 +41,15 @@ public class SaldoManager {
 	 */
 	public static double converterParaDouble(String valorMonetario) {
 		try {
-			// Remove "R$ " e espaços
-			String valorLimpo = valorMonetario.replace("R$", "").trim();
+			// Remove "R$ " e todos os tipos de espaços
+			String valorLimpo = valorMonetario.replace("R$", "").replaceAll("\\s+", "");
 			
-			// Converte para double usando NumberFormat brasileiro
-			NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
-			return format.parse(valorLimpo).doubleValue();
-		} catch (ParseException e) {
+			// Remove pontos (separadores de milhares) e substitui vírgula por ponto
+			valorLimpo = valorLimpo.replace(".", "").replace(",", ".");
+			
+			// Converte para double
+			return Double.parseDouble(valorLimpo);
+		} catch (NumberFormatException e) {
 			throw new RuntimeException("Erro ao converter valor monetário: " + valorMonetario, e);
 		}
 	}

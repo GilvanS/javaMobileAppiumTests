@@ -7,11 +7,6 @@
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/manager/SaldoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/driver/manager/SaldoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
