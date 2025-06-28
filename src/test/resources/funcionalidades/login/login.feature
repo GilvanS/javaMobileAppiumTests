@@ -1,5 +1,5 @@
 @all
-Feature: Funcionalidades site de viagens CVC
+Feature: Funcionalidade Login
   como
   quero
   para

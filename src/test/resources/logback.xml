@@ -1,13 +1,18 @@
 <configuration>
+    <!-- Suprimir logs de outras bibliotecas -->
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.poi" level="WARN"/>
+    <logger name="org.apache.logging" level="WARN"/>
+    <logger name="io.appium" level="INFO"/>
+    
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-
         <encoder>
             <pattern>[%d{HH:mm:ss.SSS}] [%thread] %-5level %logger{0} - %msg%n</pattern>
 <!--            <pattern>%boldMagenta([%d{HH:mm:ss.SSS}]) %white([%thread]) %white(%-5level) %highlight(%logger{0}) - %boldGreen(%msg%n)</pattern>-->
         </encoder>
     </appender>
 
-    <root level="info">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

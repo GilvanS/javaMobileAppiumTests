@@ -62,4 +62,15 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='HOJE']/../..//android.widget.TextView[@text= 'R$ 5.000,00']")
     private WebElement vldSaldoHoje;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Acompanhe seus gastos']")
+    private WebElement vldAcompanheSeusGastos;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Modo escuro']")
+    private WebElement vldModoEscuro;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text= 'EXPERIMENTE O MODO ESCURO']")
+    private WebElement btnExperimenteOModoEscuro;
+
+
+
 }

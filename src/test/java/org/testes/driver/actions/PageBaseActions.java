@@ -1,6 +1,8 @@
 package org.testes.driver.actions;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Collections;
+import java.util.Map;
+
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.Pause;
@@ -167,10 +171,10 @@ public class PageBaseActions {
      */
     public void hideKeyboard() {
         try {
-            if (driver instanceof io.appium.java_client.android.AndroidDriver) {
-                ((io.appium.java_client.android.AndroidDriver) driver).hideKeyboard();
-            } else if (driver instanceof io.appium.java_client.ios.IOSDriver) {
-                ((io.appium.java_client.ios.IOSDriver) driver).hideKeyboard();
+            if (driver instanceof AndroidDriver) {
+                ((AndroidDriver) driver).hideKeyboard();
+            } else if (driver instanceof IOSDriver) {
+                ((IOSDriver) driver).hideKeyboard();
             } else {
                 log.warn("hideKeyboard não suportado para o tipo de driver: " + driver.getClass().getSimpleName());
             }
@@ -380,7 +384,7 @@ public class PageBaseActions {
         int y = point.getY();
         // Appium 9.x: usar executeScript para mobile: doubleTap
         try {
-            driver.executeScript("mobile: doubleTap", java.util.Map.of("x", x, "y", y));
+            driver.executeScript("mobile: doubleTap", Map.of("x", x, "y", y));
         } catch (Exception e) {
             log.warn("Falha ao executar doubleTap: " + e.getMessage());
         }
@@ -774,5 +778,6 @@ public class PageBaseActions {
             log.error("Erro ao clicar no meio da tela: {}", e.getMessage());
         }
     }
+
 
 }

@@ -73,6 +73,18 @@ public class HomeActions {
         PrintScreen.screenshot("validacao_tendencia_saldo");
     }
 
+    public static void validarAcompanheSeusGastos() {
+        log.info("Validando a exibição do banner 'Acompanhe seus gastos'");
+        acoes().waitForVisibility(homePage().getVldAcompanheSeusGastos());
+        assertTrue(homePage().getVldAcompanheSeusGastos().isDisplayed());
+    }
+
+    public static void selecionarModoEscuro() throws IOException {
+        log.info("Selecionando o banner 'Modo escuro'");
+        acoes().horizontalSwipeLeft(homePage().getVldAcompanheSeusGastos(), homePage().getVldModoEscuro(),3);
+        acoes().click(homePage().getBtnExperimenteOModoEscuro());
+    }
+
     // ============================================================================
     // MÉTODOS REMOVIDOS - DOCUMENTAÇÃO PARA USO FUTURO
     // ============================================================================

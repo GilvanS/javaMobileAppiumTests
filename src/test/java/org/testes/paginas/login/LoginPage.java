@@ -55,5 +55,4 @@ public class LoginPage extends PageBaseActions {
     private WebElement btnEntrar;
 
 
-
 }

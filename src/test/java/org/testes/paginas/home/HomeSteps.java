@@ -28,5 +28,14 @@ public class HomeSteps {
         HomeActions.clicarBtnDetalheDaConta();
     }
 
+    @When("valido a exibição do banner 'Acompanhe seus gastos' na tela 'Home'")
+    public void validoAExibiçãoDoBannerNaTela(String string, String string2) {
+        HomeActions.validarAcompanheSeusGastos();
+    }
+    @When("seleciono o banner 'Modo escuro' na tela Home")
+    public void selecionoOBannerNaTelaHome(String string) throws IOException {
+        HomeActions.selecionarModoEscuro();
+    }
+
 
 }
