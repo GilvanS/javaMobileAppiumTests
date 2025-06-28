@@ -2,7 +2,6 @@ package org.testes.paginas.home;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.AppiumDriver;
-import io.cucumber.java.zh_cn.假如;
 import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -85,6 +84,14 @@ public class HomePage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text= 'EXPERIMENTE O MODO ESCURO']")
     private WebElement btnExperimenteOModoEscuro;
+
+    @AndroidFindBy(xpath = "//android.widget.ImageButton[@resource-id='com.droid4you.application.wallet:id/fab_toggle_button']")
+    private WebElement btnAdd;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Novo registro']/..//android.widget.ImageButton[contains(@resource-id, 'id/fab_toggle_button')]")
+    private WebElement btnNovoRegistro;
+
+
 
 
 

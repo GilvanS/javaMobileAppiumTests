@@ -51,4 +51,19 @@ public class HomeSteps {
         HomeActions.validarModoEscuroAtivo();
     }
 
+    @When("clico no botão Add na tela Home")
+    public void clicoNoBotãoAddNaTelaHome() {
+        HomeActions.clicarBtnAdd();
+    }
+    @When("clico no botão Novo registro na tela Home")
+    public void clicoNoBotãoNovoRegistroNaTelaHome() {
+        HomeActions.clicarBtnNovoRegistro();
+    }
+
+
+
+
+
+
+
 }

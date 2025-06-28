@@ -3,15 +3,12 @@ package org.testes.paginas.home;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.testes.driver.manager.SaldoManager;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.paginas.popup.PopupActions;
 import static org.testes.utils.Context.acoes;
 import org.utilidades.evidencia.PrintScreen;
-
 import lombok.extern.slf4j.Slf4j;
-import org.openqa.selenium.By;
 
 @Slf4j
 public class HomeActions {
@@ -98,6 +95,16 @@ public class HomeActions {
         log.info("Validando o botao 'Modo escuro' ativo");
         acoes().verticalSwipeDownAndSearch(homePage().getVldDrawerMenu(), homePage().getVldModoEscuroMenu(),3);
         acoes().waitForVisibility(homePage().getVldModoEscuroMenu());
+    }
+
+    public static void clicarBtnAdd() {
+        log.info("Clico no botão 'Add'");
+        acoes().click(homePage().getBtnAdd());
+    }
+
+    public static void clicarBtnNovoRegistro() {
+        log.info("Clico no botão 'Novo registro'");
+        acoes().click(homePage().getBtnNovoRegistro());
     }
 
     // ============================================================================
