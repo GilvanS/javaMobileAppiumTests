@@ -21,9 +21,6 @@ public class HomeActions {
         return MasterPageFactory.getPage(HomePage.class);
     }
 
-    /**
-     * Fecha todos os popups na tela Home
-     */
     public static void fecharTodosPopups() {
         popupActions.fecharTodosPopups(
             homePage().getLblEncontreSeuBanco(), 
@@ -33,7 +30,6 @@ public class HomeActions {
 
     public static void validarLblInicio() throws IOException {
         fecharTodosPopups();
-        
         log.info("valido a exibição da frase 'Inicio' na tela 'Home'");
         acoes().waitForVisibility(homePage().getVldTxtInicio());
         PrintScreen.screenshot("validacao_frase_inicio");
@@ -46,7 +42,6 @@ public class HomeActions {
 
     public static void visualizarValorSaldo() throws IOException {
         fecharTodosPopups();
-        
         log.info("Visualizando valor do saldo na tela Home");
         acoes().waitForVisibility(homePage().getTxtValorSaldo());
         String valorSaldo = homePage().getTxtValorSaldo().getText();
