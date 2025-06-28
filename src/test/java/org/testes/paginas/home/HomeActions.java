@@ -81,28 +81,16 @@ public class HomeActions {
             
             log.info("Fechando popup de introdução");
             
-            // Faz cliques até fechar o popup ou atingir limite
+            // Faz 3 cliques diretos no meio da tela
             for (int i = 1; i <= 3; i++) {
                 acoes().clicarMeioTela();
                 acoes().sleep(1);
-                
-                // Verifica se o popup foi fechado
-                try {
-                    if (!homePage().getLblIntroducaoUm().isDisplayed()) {
-                        log.info("Popup de introdução fechado no clique {}", i);
-                        return; // Sai do método se o popup foi fechado
-                    }
-                } catch (Exception e) {
-                    // Elemento não está mais visível, popup fechado
-                    log.info("Popup de introdução fechado no clique {}", i);
-                    return;
-                }
             }
             
-            // Se chegou aqui, verifica se ainda precisa de cliques adicionais
+            // Verifica se ainda existe o elemento de introdução
             try {
                 if (homePage().getLblIntroducaoUm().isDisplayed()) {
-                    log.info("Popup ainda visivel, fazendo cliques adicionais");
+                    log.info("Popup de introdução ainda visivel, fazendo cliques adicionais");
                     // Faz mais 2 cliques se ainda estiver visível
                     for (int i = 1; i <= 2; i++) {
                         acoes().clicarMeioTela();

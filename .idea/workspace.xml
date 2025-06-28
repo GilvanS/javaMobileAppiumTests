@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto" />
+    <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
