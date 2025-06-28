@@ -27,153 +27,82 @@ public class HomeActions {
      * Configura o PopupModel para a tela Home
      */
     public static PopupModel getPopupModelHome() {
-        log.info("Configurando PopupModel para tela Home");
-        
         PopupModel popupModel = new PopupModel("Home");
-        
-        // Define os elementos esperados (elementos que indicam que a tela está carregada)
         popupModel.setElementosEsperados(homePage().getVldTxtInicio());
-        
-        // Define os elementos identificadores do popup (elementos que indicam que o popup está presente)
-        // Apenas popup de banco - popup de introdução é tratado separadamente
         popupModel.setElementosIdentificadores(
             homePage().getLblEncontreSeuBanco(),
             homePage().getVldTxtVoceJaTentouEncontrarEConectarSeuBanco()
         );
-        
-        // Define os elementos de ação (botões para fechar o popup)
-        // Apenas popup de banco - popup de introdução é tratado separadamente
         popupModel.setElementosDeAcao(homePage().getBtnFechar());
-        
-        // Configura delay (false por padrão, pode ser configurado via properties se necessário)
         popupModel.setDelay(false);
-        
-        log.info("PopupModel configurado com sucesso para tela Home");
-        log.info("Elementos identificadores: lblEncontreSeuBanco, vldTxtVoceJaTentouEncontrarEConectarSeuBanco");
-        log.info("Elementos de ação: btnFechar");
-        log.info("Elementos esperados: vldTxtInicio");
-        
         return popupModel;
     }
 
     /**
-     * Fecha o popup de banco de forma direta sem usar PopupModel
+     * Fecha o popup de banco
      */
-    public static void fecharPopupBanco() {
+    private static boolean fecharPopupBanco() {
         try {
             if (homePage().getLblEncontreSeuBanco().isDisplayed()) {
                 log.info("Fechando popup de banco");
                 acoes().click(homePage().getBtnFechar());
                 acoes().sleep(2);
+                return true; // Popup de banco foi fechado
             }
         } catch (Exception e) {
             // Popup de banco não está visível
         }
+        return false; // Popup de banco não foi fechado
     }
 
     /**
-     * Fecha o popup de introdução que aparece 3 vezes
+     * Fecha o popup de introdução
      */
-    public static void fecharPopupIntroducao() {
+    private static void fecharPopupIntroducao() {
         try {
-            // Aguarda mais tempo para o popup aparecer após fechar o popup de banco
-            acoes().sleep(3);
-            
+            acoes().sleep(1);
             log.info("Fechando popup de introdução");
             
-            // Faz 3 cliques diretos no meio da tela
+            // Sempre força 3 cliques para avançar o popup de introdução
             for (int i = 1; i <= 3; i++) {
                 acoes().clicarMeioTela();
                 acoes().sleep(1);
             }
             
-            // Verifica se ainda existe o elemento de introdução
+            log.info("Introdução finalizada, prosseguindo para proxima etapa");
+            
+            // Verifica se precisa de cliques adicionais
             try {
                 if (homePage().getLblIntroducaoUm().isDisplayed()) {
                     log.info("Popup de introdução ainda visivel, fazendo cliques adicionais");
-                    // Faz mais 2 cliques se ainda estiver visível
                     for (int i = 1; i <= 2; i++) {
                         acoes().clicarMeioTela();
                         acoes().sleep(1);
                     }
                 }
             } catch (Exception e) {
-                // Elemento não está mais visível, popup fechado com sucesso
+                // Popup fechado com sucesso
             }
-            
         } catch (Exception e) {
             log.info("Erro ao fechar popup de introdução: {}", e.getMessage());
         }
     }
 
     /**
-     * Fecha os popups se estiverem visíveis na tela Home
-     */
-    public static void fecharPopups() {
-        try {
-            if (isPopupVisivel()) {
-                // Fecha popup de banco
-                try {
-                    if (homePage().getLblEncontreSeuBanco().isDisplayed()) {
-                        acoes().click(homePage().getBtnFechar());
-                        acoes().sleep(2);
-                    }
-                } catch (Exception e) {
-                    // Popup de banco não está visível
-                }
-                
-                // Fecha popup de introdução
-                fecharPopupIntroducao();
-            }
-        } catch (Exception e) {
-            log.info("Nenhum popup encontrado");
-        }
-    }
-
-    /**
-     * Fecha os popups usando PopupModel e PopupActions
-     */
-    public static void fecharPopupBancoComPopupModel() {
-        try {
-            popupActions.verificarPopUpsAteEncontrarElementoEsperado(getPopupModelHome(), 5);
-            
-            // Após fechar o popup de banco, verifica se o popup de introdução apareceu
-            fecharPopupIntroducao();
-            
-        } catch (Exception e) {
-            fecharPopups();
-        }
-    }
-
-    /**
-     * Método principal para fechar todos os popups na tela Home
-     * Usa abordagem direta para evitar interferências
+     * Fecha todos os popups na tela Home
      */
     public static void fecharTodosPopups() {
         log.info("Fechando popups na tela Home");
         
-        // Primeiro fecha o popup de banco de forma direta
-        fecharPopupBanco();
+        // Fecha popup de banco e verifica se foi fechado
+        boolean popupBancoFechado = fecharPopupBanco();
         
-        // Depois fecha o popup de introdução
-        fecharPopupIntroducao();
+        // Só fecha popup de introdução se o popup de banco foi fechado
+        if (popupBancoFechado) {
+            fecharPopupIntroducao();
+        }
         
         log.info("Popups fechados");
-    }
-
-    /**
-     * Verifica se o popup de banco está visível de forma segura
-     */
-    private static boolean isPopupVisivel() {
-        try {
-            // Verifica popup de banco
-            if (homePage().getLblEncontreSeuBanco().isDisplayed()) {
-                return true;
-            }
-            return false;
-        } catch (Exception e) {
-            return false;
-        }
     }
 
     /**
