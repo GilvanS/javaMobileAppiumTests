@@ -5,7 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/aluguelDeCarros/AluguelDeCarrosSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/CarrinhoDeComprasSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/checkout/CheckoutActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/checkout/CheckoutPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/checkout/CheckoutSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/hotel/HotelSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacoteRecomendado/PacoteRecomendadoSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/pacotes/PacotesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/passagens/PassagensActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/passagens/PassagensPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/passagens/PassagensSteps.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

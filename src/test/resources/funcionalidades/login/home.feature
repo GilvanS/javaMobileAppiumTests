@@ -9,17 +9,17 @@ Feature: Validar tela de home
 
   @CT-1001 @wallet
   Scenario: Validar Saldo em conta
-    Given visualizo o valor do saldo na tela Home
-    Then valido o valor do saldo no campo Tendencia do saldo na tela Home
+    Given visualizo o 'Valor' do saldo na tela 'Home'
+    Then valido o valor do saldo no campo 'Tendencia do saldo' na tela 'Home'
 
   @CT-1002
   Scenario: Validar Detalhe da conta
-    Given valido a exibição da frase Inicio na tela Home
-    When clico no botão Detalhe da conta na tela Home
-    And visualiso o valor do saldo na tela Detalhe da conta
-    And clico no botão voltar na tela Detalhe da conta
-    Given visualizo o valor do saldo na tela Home
-    Then valido o valor do saldo no campo Tendencia do saldo na tela Home
+    Given valido a exibição da frase 'Inicio' na tela 'Home'
+    When clico no botão 'Detalhe da conta' na tela 'Home'
+    And visualiso o 'Valor' do saldo na tela 'Detalhe da conta'
+    And clico no botão 'Voltar' na tela 'Detalhe da conta'
+    Given visualizo o 'Valor' do saldo na tela 'Home'
+    Then valido o valor do saldo no campo 'Tendencia do saldo' na tela 'Home'
 
 
 
