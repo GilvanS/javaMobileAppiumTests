@@ -29,13 +29,13 @@ public class HomeSteps {
     }
 
     @When("valido a exibição do banner 'Acompanhe seus gastos' na tela 'Home'")
-    public void validoAExibiçãoDoBannerNaTela(String string, String string2) {
+    public void validoAExibicaoDoBannerNaTela() {
         HomeActions.validarAcompanheSeusGastos();
     }
+    
     @When("seleciono o banner 'Modo escuro' na tela Home")
-    public void selecionoOBannerNaTelaHome(String string) throws IOException {
+    public void selecionoOBannerNaTelaHome() throws IOException {
         HomeActions.selecionarModoEscuro();
     }
-
 
 }

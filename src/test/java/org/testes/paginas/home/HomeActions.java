@@ -76,7 +76,6 @@ public class HomeActions {
     public static void validarAcompanheSeusGastos() {
         log.info("Validando a exibição do banner 'Acompanhe seus gastos'");
         acoes().waitForVisibility(homePage().getVldAcompanheSeusGastos());
-        assertTrue(homePage().getVldAcompanheSeusGastos().isDisplayed());
     }
 
     public static void selecionarModoEscuro() throws IOException {
