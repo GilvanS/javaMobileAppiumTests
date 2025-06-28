@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/CategoriaActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/CategoriaPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/CategoriaSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/receita/ReceitaActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/receita/ReceitaPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/categoria/receita/ReceitaSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

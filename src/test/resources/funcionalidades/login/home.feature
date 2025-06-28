@@ -41,11 +41,11 @@ Feature: Validar tela de home
     And clico no botão Receita na tela Registro
     And clico no botão Categoria na tela Registro
     And clico no botão Receita na tela Categoria
-#    And clico no botão Salário faturas na tela Receita
-#    And preencho o campo valor na tela Registro
-#    And clico no botão Salvar na tela Registro
-#    When clico no botão 'Detalhe da conta' na tela 'Home'
-#    And visualiso o 'Valor' do saldo na tela 'Detalhe da conta'
-#    Then valido o valor na tela 'Detalhe da conta'
+    And clico no botão Salário faturas na tela Receita
+    And preencho o campo valor na tela Registro
+    And clico no botão Salvar na tela Registro
+    When clico no botão 'Detalhe da conta' na tela 'Home'
+    And visualiso o 'Valor' do saldo na tela 'Detalhe da conta'
+    Then valido o valor na tela 'Detalhe da conta'
 
 

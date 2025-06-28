@@ -10,21 +10,42 @@ import static org.testes.utils.Context.acoes;
 @Slf4j
 public class RegistroActions {
 
-    private static final PopupActions popupActions = new PopupActions();
-
     public static RegistroPage registroPage() {
         return MasterPageFactory.getPage(RegistroPage.class);
     }
 
-    public static void fecharTodosPopups() {
-        popupActions.fecharTodosPopups(
-                homePage().getLblEncontreSeuBanco(),
-                homePage().getBtnFechar()
-        );
-    }
     public static void clicarBtnReceita() {
         log.info("clico no botão Receita na tela Registro");
+        // Fechar popup de introdução se estiver visível
+        fecharPopupIntroducao();
         acoes().click(registroPage().getBtnReceita());
+    }
+
+    /**
+     * Fecha popup de introdução com cliques no meio da tela
+     */
+    private static void fecharPopupIntroducao() {
+        try {
+            acoes().sleep(1);
+            log.info("Fechando popup de introdução na tela Registro");
+            for (int i = 1; i <= 2; i++) {
+                acoes().clicarMeioTela();
+                acoes().sleep(1);
+            }
+            log.info("Introdução finalizada na tela Registro, prosseguindo para proxima etapa");
+            // Verifica se precisa de cliques adicionais
+            try {
+                log.info("Fazendo cliques adicionais para garantir fechamento");
+                for (int i = 1; i <= 2; i++) {
+                    acoes().clicarMeioTela();
+                    acoes().sleep(1);
+                }
+            } catch (Exception e) {
+                // Popup fechado com sucesso
+            }
+        } catch (Exception e) {
+            log.info("Erro ao fechar popup de introdução na tela Registro: {}", e.getMessage());
+        }
     }
 
     public static void clicarBtnCategoria() {
