@@ -20,7 +20,7 @@ public class RegistroSteps {
     }
     @When("clico no botão Salvar na tela Registro")
     public void clicoNoBotãoOkNaTelaRegistro() {
-
+        RegistroActions.clicarBtnSalvar();
     }
 
 }

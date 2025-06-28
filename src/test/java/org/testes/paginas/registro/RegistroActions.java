@@ -3,7 +3,7 @@ package org.testes.paginas.registro;
 import lombok.extern.slf4j.Slf4j;
 import org.testes.driver.page.MasterPageFactory;
 import org.testes.paginas.popup.PopupActions;
-
+import org.testes.driver.manager.SaldoManager;
 import static org.testes.paginas.home.HomeActions.homePage;
 import static org.testes.utils.Context.acoes;
 
@@ -56,6 +56,19 @@ public class RegistroActions {
     public static void preencherValor() {
         String valor = "100";
         log.info("preencho o campo valor na tela Registro");
-        acoes().click(registroPage().digitarValor(valor));
+        
+        // Armazenar o valor digitado para validação posterior
+        SaldoManager.setValorRegistro("R$ " + valor + ",00");
+        
+        // Clicar nos dígitos individualmente
+        for (char digito : valor.toCharArray()) {
+            acoes().click(registroPage().digitarValor(String.valueOf(digito)));
+            acoes().sleep(1); // Pequena pausa entre os cliques
+        }
+    }
+
+    public static void clicarBtnSalvar() {
+        log.info("clico no botão Salvar na tela Registro");
+        acoes().click(registroPage().getBtnSalvar());
     }
 }

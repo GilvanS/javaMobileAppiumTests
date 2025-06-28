@@ -17,5 +17,6 @@ public class DetalheDaContaSteps {
 
 	@Then("valido o valor na tela 'Detalhe da conta'")
 	public void validoOValorNaTela() {
+		DetalheDaContaActions.validarSaldoAposRegistro();
 	}
 }

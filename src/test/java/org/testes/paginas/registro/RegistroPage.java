@@ -5,13 +5,16 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testes.driver.actions.PageBaseActions;
+import org.openqa.selenium.support.PageFactory;
 
 @Getter
-public class RegistroPage extends PageBaseActions {
+public class RegistroPage {
+
+    private final AppiumDriver driver;
 
     public RegistroPage(AppiumDriver driver) {
-        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='RECEITA']")
@@ -33,12 +36,10 @@ public class RegistroPage extends PageBaseActions {
     private WebElement txtAmount;
 
     public WebElement digitarValor(String valor) {
-        return driver.findElement(By.xpath("//android.widget.Button[contains(@resource-id, 'id/button_calculator_"+ valor +"')]']"));
+        return driver.findElement(By.xpath("//android.widget.Button[@text='" + valor + "']"));
     }
 
     @AndroidFindBy(id = "com.droid4you.application.wallet:id/editText_value")
     private WebElement txtValor;
-
-
 
 }
