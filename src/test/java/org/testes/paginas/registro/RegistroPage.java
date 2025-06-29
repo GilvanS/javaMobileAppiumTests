@@ -36,7 +36,34 @@ public class RegistroPage {
     private WebElement txtAmount;
 
     public WebElement digitarValor(String valor) {
-        return driver.findElement(By.xpath("//android.widget.Button[@text='" + valor + "']"));
+        // Tentar diferentes localizadores para encontrar o botão da calculadora
+        try {
+            // Primeiro, tentar com resource-id específico da calculadora
+            return driver.findElement(By.xpath("//android.widget.Button[@resource-id='com.droid4you.application.wallet:id/button_" + valor + "']"));
+        } catch (Exception e1) {
+            try {
+                // Segundo, tentar com resource-id genérico
+                return driver.findElement(By.xpath("//android.widget.Button[@resource-id='*button*" + valor + "*']"));
+            } catch (Exception e2) {
+                try {
+                    // Terceiro, tentar com content-desc
+                    return driver.findElement(By.xpath("//android.widget.Button[@content-desc='" + valor + "']"));
+                } catch (Exception e3) {
+                    try {
+                        // Quarto, tentar com texto exato
+                        return driver.findElement(By.xpath("//android.widget.Button[@text='" + valor + "']"));
+                    } catch (Exception e4) {
+                        try {
+                            // Quinto, tentar com texto parcial
+                            return driver.findElement(By.xpath("//android.widget.Button[contains(@text,'" + valor + "')]"));
+                        } catch (Exception e5) {
+                            // Sexto, tentar com qualquer elemento clicável que contenha o valor
+                            return driver.findElement(By.xpath("//*[@text='" + valor + "' and @clickable='true']"));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @AndroidFindBy(id = "com.droid4you.application.wallet:id/editText_value")

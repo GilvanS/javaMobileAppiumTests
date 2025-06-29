@@ -36,22 +36,49 @@ public class SaldoManager {
 
 	/**
 	 * Converte valor monetário brasileiro para double
-	 * @param valorMonetario Valor no formato "R$ 1.234,56"
+	 * @param valorMonetario Valor no formato "R$ 1.234,56" ou "R$ 100"
 	 * @return Valor como double
 	 */
 	public static double converterParaDouble(String valorMonetario) {
 		try {
-			// Remove "R$ " e todos os tipos de espaços
-			String valorLimpo = valorMonetario.replace("R$", "").replaceAll("\\s+", "");
+			// Remove "R$ " e todos os tipos de espaços (incluindo não-quebráveis)
+			String valorLimpo = valorMonetario.replace("R$", "").trim();
+			valorLimpo = valorLimpo.replaceAll("[\\s\\u00A0]+", ""); // Remove espaços normais e não-quebráveis
 			
 			// Remove pontos (separadores de milhares) e substitui vírgula por ponto
 			valorLimpo = valorLimpo.replace(".", "").replace(",", ".");
+			
+			// Se não tem parte decimal, adiciona .0
+			if (!valorLimpo.contains(".")) {
+				valorLimpo += ".0";
+			}
 			
 			// Converte para double
 			return Double.parseDouble(valorLimpo);
 		} catch (NumberFormatException e) {
 			throw new RuntimeException("Erro ao converter valor monetário: " + valorMonetario, e);
 		}
+	}
+
+	/**
+	 * Normaliza valor monetário removendo formatação
+	 * @param valorMonetario Valor no formato "R$ 1.234,56" ou "R$ 100"
+	 * @return Valor normalizado como string numérica
+	 */
+	public static String normalizarValorMonetario(String valorMonetario) {
+		// Remove "R$ " e todos os tipos de espaços
+		String valorLimpo = valorMonetario.replace("R$", "").trim();
+		valorLimpo = valorLimpo.replaceAll("[\\s\\u00A0]+", "");
+		
+		// Remove pontos (separadores de milhares) e substitui vírgula por ponto
+		valorLimpo = valorLimpo.replace(".", "").replace(",", ".");
+		
+		// Se não tem parte decimal, adiciona .00
+		if (!valorLimpo.contains(".")) {
+			valorLimpo += ".00";
+		}
+		
+		return valorLimpo;
 	}
 
 	/**

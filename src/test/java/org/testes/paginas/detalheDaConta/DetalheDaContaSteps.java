@@ -10,6 +10,11 @@ public class DetalheDaContaSteps {
 		DetalheDaContaActions.visualizarValorSaldoHoje();
 	}
 
+	@When("capturo o valor do saldo atual na tela 'Detalhe da conta'")
+	public void capturoOValorDoSaldoAtualNaTelaDetalheDaConta() {
+		DetalheDaContaActions.capturarSaldoAtual();
+	}
+
 	@When("clico no botão 'Voltar' na tela 'Detalhe da conta'")
 	public void clicoNoBotaoVoltarNaTelaDetalheDaConta() {
 		DetalheDaContaActions.clicarBtnVoltar();

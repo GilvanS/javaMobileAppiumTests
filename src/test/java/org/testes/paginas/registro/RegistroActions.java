@@ -55,7 +55,7 @@ public class RegistroActions {
 
     public static void preencherValor() {
         String valor = "100";
-        log.info("preencho o campo valor na tela Registro");
+        log.info("preencho o campo com valor R$ " + valor + " na tela Registro");
         
         // Armazenar o valor digitado para validação posterior
         SaldoManager.setValorRegistro("R$ " + valor + ",00");

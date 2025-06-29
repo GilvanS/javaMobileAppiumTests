@@ -22,23 +22,56 @@ public class DetalheDaContaActions {
 		log.info("Valor do saldo {}", valorSaldoHoje);
 	}
 
+	/**
+	 * Captura o valor do saldo atual sem sobrescrever o saldo anterior
+	 */
+	public static String capturarSaldoAtual() {
+		log.info("capturando valor do saldo atual na tela 'Detalhe da conta'");
+		acoes().waitForVisibility(detalheDaContaPage().getValorSaldoHoje());
+		String valorSaldoHoje = detalheDaContaPage().getValorSaldoHoje().getText();
+		log.info("Saldo atual capturado: {}", valorSaldoHoje);
+		return valorSaldoHoje;
+	}
+
 	public static void validarSaldoAposRegistro() {
 		log.info("valido o valor na tela 'Detalhe da conta'");
 		
-		// Aguardar visibilidade do elemento de saldo
-		acoes().waitForVisibility(detalheDaContaPage().getValorSaldoHoje());
-		
-		// Capturar o saldo atual
-		String saldoAtual = detalheDaContaPage().getValorSaldoHoje().getText();
+		// Capturar saldo atual sem sobrescrever o anterior
+		String saldoAtual = capturarSaldoAtual();
 		log.info("Saldo atual na tela: {}", saldoAtual);
+
+		// Obter saldo anterior e valor digitado
+		String saldoAnterior = SaldoManager.getSaldo();
+		String valorDigitado = SaldoManager.getValorRegistro();
 		
-		// Calcular o saldo esperado
-		String saldoEsperado = SaldoManager.calcularSaldoEsperado();
-		log.info("Saldo esperado: {}", saldoEsperado);
+		log.info("Saldo anterior: {}", saldoAnterior);
+		log.info("Valor digitado: {}", valorDigitado);
+
+		// Normalizar valores para comparação
+		String saldoAtualNormalizado = SaldoManager.normalizarValorMonetario(saldoAtual);
+		String saldoAnteriorNormalizado = SaldoManager.normalizarValorMonetario(saldoAnterior);
+		String valorDigitadoNormalizado = SaldoManager.normalizarValorMonetario(valorDigitado);
 		
-		// Validar se os valores são iguais
-		assertEquals(saldoEsperado, saldoAtual, "O saldo deve ser igual ao valor esperado após o registro");
-		log.info("Validacao do saldo: SUCESSO - Valores conferem");
+		log.info("Saldo atual normalizado: {}", saldoAtualNormalizado);
+		log.info("Saldo anterior normalizado: {}", saldoAnteriorNormalizado);
+		log.info("Valor digitado normalizado: {}", valorDigitadoNormalizado);
+
+		// Converter para double para cálculo
+		double saldoAtualDouble = SaldoManager.converterParaDouble(saldoAtual);
+		double saldoAnteriorDouble = SaldoManager.converterParaDouble(saldoAnterior);
+		double valorDigitadoDouble = SaldoManager.converterParaDouble(valorDigitado);
+
+		// Calcular diferença
+		double diferenca = saldoAtualDouble - saldoAnteriorDouble;
+		
+		log.info("Calculo: {} - {} = {}", saldoAtualDouble, saldoAnteriorDouble, diferenca);
+		
+		// Validar se a diferença é igual ao valor digitado
+		assertEquals(valorDigitadoDouble, diferenca, 0.01, 
+			"A diferença entre o saldo atual e anterior deve ser igual ao valor digitado");
+		
+		log.info("Validacao do saldo: SUCESSO - Diferenca de R$ %.2f confere com valor digitado R$ %.2f", 
+			diferenca, valorDigitadoDouble);
 	}
 
 	public static void clicarBtnVoltar() {

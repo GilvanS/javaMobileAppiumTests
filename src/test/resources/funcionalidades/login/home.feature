@@ -45,7 +45,7 @@ Feature: Validar tela de home
     And preencho o campo valor na tela Registro
     And clico no botão Salvar na tela Registro
     When clico no botão 'Detalhe da conta' na tela 'Home'
-    And visualiso o 'Valor' do saldo na tela 'Detalhe da conta'
+    And capturo o valor do saldo atual na tela 'Detalhe da conta'
     Then valido o valor na tela 'Detalhe da conta'
 
 

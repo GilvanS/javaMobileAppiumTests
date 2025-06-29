@@ -7,6 +7,13 @@
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/manager/SaldoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/driver/manager/SaldoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/driver/manager/SaldoManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/detalheDaConta/DetalheDaContaSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/registro/RegistroPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,28 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CucumberTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CucumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstMobileTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstMobileTest.loginTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;developer/wallet&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/myGithub/javaMobileAppiumTests&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/CURSO_MOBILE/MobileAppiumTests/src/main/java/org/mobile/appiumtests/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor": "Run",
+    "Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor": "Run",
+    "JUnit.CucumberTest (1).executor": "Run",
+    "JUnit.CucumberTest.executor": "Run",
+    "JUnit.FirstMobileTest.executor": "Run",
+    "JUnit.FirstMobileTest.loginTest.executor": "Run",
+    "JUnit.SaldoManagerTest.testCalcularSaldoEsperado.executor": "Run",
+    "JUnit.SaldoManagerTest.testConverterParaDouble.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "developer/wallet",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/myGithub/javaMobileAppiumTests",
+    "onboarding.tips.debug.path": "C:/CURSO_MOBILE/MobileAppiumTests/src/main/java/org/mobile/appiumtests/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.utils" />
@@ -90,27 +99,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CucumberTest (1)">
-    <configuration name="Scenario: Validar acesso ao Ebac Store" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Home.feature" />
-      <option name="GLUE" value="utils testes.login" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="MobileAppiumTests" />
-      <option name="NAME_FILTER" value="^Validar acesso ao Ebac Store$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Validar acesso ao Ebac Store$&quot;" />
-      <shortenClasspath name="NONE" />
-      <option name="SUGGESTED_NAME" value="Scenario: Validar acesso ao Ebac Store" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: Validar cadastro de usuario no Ebac Store" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Home.feature" />
@@ -180,30 +168,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstMobileTest.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MobileAppiumTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstMobileTest" />
-      <option name="METHOD_NAME" value="loginTest" />
+    <configuration name="SaldoManagerTest.testCalcularSaldoEsperado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="baseConhecimento" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.testes.driver.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.testes.driver.manager" />
+      <option name="MAIN_CLASS_NAME" value="org.testes.driver.manager.SaldoManagerTest" />
+      <option name="METHOD_NAME" value="testCalcularSaldoEsperado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaldoManagerTest.testConverterParaDouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="baseConhecimento" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.testes.driver.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.testes.driver.manager" />
+      <option name="MAIN_CLASS_NAME" value="org.testes.driver.manager.SaldoManagerTest" />
+      <option name="METHOD_NAME" value="testConverterParaDouble" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cucumber Java.Scenario: Validar acesso ao Ebac Store" />
       <item itemvalue="Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store" />
+      <item itemvalue="JUnit.SaldoManagerTest.testCalcularSaldoEsperado" />
+      <item itemvalue="JUnit.SaldoManagerTest.testConverterParaDouble" />
       <item itemvalue="JUnit.CucumberTest (1)" />
       <item itemvalue="JUnit.CucumberTest" />
-      <item itemvalue="JUnit.FirstMobileTest.loginTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CucumberTest (1)" />
+        <item itemvalue="JUnit.SaldoManagerTest.testCalcularSaldoEsperado" />
+        <item itemvalue="JUnit.SaldoManagerTest.testConverterParaDouble" />
         <item itemvalue="JUnit.CucumberTest" />
         <item itemvalue="Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store" />
-        <item itemvalue="Cucumber Java.Scenario: Validar acesso ao Ebac Store" />
-        <item itemvalue="JUnit.FirstMobileTest.loginTest" />
       </list>
     </recent_temporary>
   </component>
