@@ -21,7 +21,7 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='CONECTAR COM O GOOGLE']")
     private WebElement btnConectarComGoogle;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.google.android.gms:id/account_display_name' and @text='4Win Teste 15']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.google.android.gms:id/account_display_name' and @text='Rosilda Dos Santos Andrade Pereira']")
     private WebElement btnContaGoogle;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Sincronização em andamento']")
@@ -33,7 +33,7 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.Switch[@resource-id='com.droid4you.application.wallet:id/enable_biometrics_switch']")
     private WebElement btnHabilitarBiometriaFace;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text= 'CONCLUIR']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text= 'CONFIRMAR']")
     private WebElement btnConcluir;
 
     @AndroidFindBy(xpath = "//*[@content-desc= 'Entre para aproveitar a melhor experiência']")
