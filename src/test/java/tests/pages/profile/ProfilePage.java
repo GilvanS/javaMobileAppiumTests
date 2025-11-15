@@ -11,15 +11,22 @@ public class ProfilePage extends MasterPageFactory {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Sign up']")
     private WebElement clicarBtnSignUp;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Sign in']")
+    @AndroidFindBy(accessibility = "firstNameInput")
     private WebElement campoFirstName;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Sign in']")
+    @AndroidFindBy(accessibility = "lastNameInput")
     private WebElement campoLastName;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text= 'Sign in']")
+    @AndroidFindBy(accessibility = "phoneInput")
+    private WebElement campoPhone;
+
+    @AndroidFindBy(accessibility = "emailInput")
     private WebElement campoEmail;
 
+    @AndroidFindBy(accessibility = "passwordInput")
+    private WebElement campoPassword;
 
+    @AndroidFindBy(accessibility = "confirmPasswordInput")
+    private WebElement campoConfirmPassword;
 
 }
