@@ -14,17 +14,15 @@ import java.time.Duration;
 
 public class Actions {
 
-    private Actions element;
-
     public static void click(WebElement element) {
         waitElement(element).click();
     }
-    public static void sendKeys(String value){
+    public static void sendKeys(WebElement element, String value){
         element.sendKeys(value);
         delay(Constants.SEND_KEYS_DELAY_IN_MILLISECONDS);
     }
 
-    public void delay(){
+    public static void delay(){
         delay(Constants.DEFAULT_DELAY_IN_MILLISECONDS);
     }
 
@@ -79,7 +77,7 @@ public class Actions {
 
     }
 
-    public void delay(int milliseconds){
+    public static void delay(int milliseconds){
         try {
             Thread.sleep(milliseconds);
         } catch (Exception e) {

@@ -34,7 +34,7 @@ public class ProfileLogic {
     }
     public static void btnPhone() throws Exception {
         log.info("Telefone: {}", RandomGenerator.mobileNumber());
-        Actions.sendKeys(RandomGenerator.mobileNumber());
+        Actions.sendKeys(profilePage().getCampoPhone(), RandomGenerator.mobileNumber());
         Actions.sleep(2000);
     }
     public static void btnEmail() throws Exception {
@@ -44,13 +44,13 @@ public class ProfileLogic {
     }
     public static void btnPassword() throws Exception {
         log.info("Senha: {}", "Passord1");
-        Actions.sendKeys("Passord1");
+        Actions.sendKeys(profilePage().getCampoPassword(), "Passord1");
         Actions.sleep(2000);
 
     }
     public static void btnConfirmPassword() throws Exception {
         log.info("Confirmar Senha: {}", "Passord1");
-        Actions.sendKeys("Passord1");
+        Actions.sendKeys(profilePage().getCampoConfirmPassword(), "Passord1");
         Actions.sleep(2000);
 
     }

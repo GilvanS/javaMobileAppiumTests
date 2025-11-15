@@ -19,7 +19,7 @@ public class AppiumDriverHelper {
         capabilities.setCapability("appium:appActivity", ".view.activities.SplashActivity");
         capabilities.setCapability("platformName", "android");
         capabilities.setCapability("automationName", "uiautomator2");
-        capabilities.setCapability("deviceName", "emulator-5554");
+        capabilities.setCapability("deviceName", "RXCXB02B93D");
         capabilities.setCapability("appium:ignoreHiddenApiPolicyError", true);
         capabilities.setCapability("ensureWebviewsHavePages", true);
         capabilities.setCapability("newCommandTimeout", 3600);

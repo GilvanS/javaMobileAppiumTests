@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfileLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfileLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/utils/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/utils/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/utils/AppiumDriverHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
