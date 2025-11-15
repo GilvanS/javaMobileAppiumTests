@@ -9,6 +9,7 @@ import org.testes.paginas.popup.PopupActions;
 import static org.testes.utils.Context.acoes;
 import org.utilidades.evidencia.PrintScreen;
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.By;
 
 @Slf4j
 public class HomeActions {
@@ -78,7 +79,8 @@ public class HomeActions {
 
     public static void selecionarModoEscuro() throws IOException {
         log.info("Selecionando o banner 'Modo escuro'");
-        acoes().horizontalSwipeLeft(homePage().getVldBannerswipe(), homePage().getVldModoEscuro(),3);
+        int anchor = homePage().getVldBannerswipe().getLocation().getY();
+        acoes().horizontalSwipeLeft(anchor, homePage().getVldModoEscuro(),3);
     }
 
     public static void clicarBtnExperimenteModoEscuro() {
@@ -93,7 +95,7 @@ public class HomeActions {
 
     public static void validarModoEscuroAtivo() throws IOException {
         log.info("Validando o botao 'Modo escuro' ativo");
-        acoes().verticalSwipeDownAndSearch(homePage().getVldDrawerMenu(), homePage().getVldModoEscuroMenu(),3);
+        acoes().verticalSwipeDownAndSearch(By.id("br.com.xp.carteira:id/drawer_menu"), 3);
         acoes().waitForVisibility(homePage().getVldModoEscuroMenu());
     }
 
@@ -133,7 +135,7 @@ public class HomeActions {
      * }
      * 
      * // Para validar exibição da tela Home:
-     * public static void validarExibicaoTelaHome() {
+     * public static void validarExibicaoTelaHome() {.
      *     log.info("Valido a exibição da tela Home");
      *     popupActions.verificarPopUpsAteEncontrarElementoEsperado(getPopupModelHome());
      *     assertTrue(acoes().waitForElementToBeVisible(homePage().getVldTxtInicio(), 10).isDisplayed(), 

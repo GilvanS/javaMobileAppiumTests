@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 @Slf4j
@@ -16,14 +18,14 @@ public class AppiumDriverHelper {
         capabilities.setCapability("appium:appPackage", "com.droid4you.application.wallet");
         capabilities.setCapability("appium:appActivity", "com.droid4you.application.wallet.SplashScreenActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:deviceName", "192.168.0.109:5555"); // S24+ RXCXB02B93D   motoG 0078720227
+        capabilities.setCapability("appium:deviceName", "RXCXB02B93D"); // S24+ RXCXB02B93D   motoG 0078720227
         capabilities.setCapability("appium:automationName", "uiautomator2");   // 192.168.16.89:5555
         capabilities.setCapability("appium:noReset", false);
         return capabilities;
     }
 
-    public static URL getURL() throws MalformedURLException {
-        return new URL("http://127.0.0.1:4723/");
+    public static URL getURL() throws MalformedURLException, URISyntaxException {
+        return new URI("http://127.0.0.1:4723/").toURL();
     }
 
     public static AppiumDriver getDriver() {

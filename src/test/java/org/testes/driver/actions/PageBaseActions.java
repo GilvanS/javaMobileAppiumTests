@@ -374,23 +374,6 @@ public class PageBaseActions {
     }
 
     /**
-     * Realiza double tap no elemento usando coordenadas.
-     * @param element WebElement
-     * @param seconds Tempo máximo de espera
-     */
-    public void doubleTap(WebElement element, int seconds) {
-        Point point = element.getLocation();
-        int x = point.getX();
-        int y = point.getY();
-        // Appium 9.x: usar executeScript para mobile: doubleTap
-        try {
-            driver.executeScript("mobile: doubleTap", Map.of("x", x, "y", y));
-        } catch (Exception e) {
-            log.warn("Falha ao executar doubleTap: " + e.getMessage());
-        }
-    }
-
-    /**
      * Swipe vertical para cima usando porcentagem customizada da tela.
      */
     public void verticalSwipeUp(double startPercentage, double endPercentage) throws IOException {
@@ -414,19 +397,6 @@ public class PageBaseActions {
     }
 
     /**
-     * Swipe horizontal em um elemento por porcentagem.
-     */
-    public void horizontalSwipe(WebElement element, double startPercentage, double endPercentage) throws IOException {
-        Rectangle rect = element.getRect();
-        double anchorPercentage = 0.5;
-        Dimension size = driver.manage().window().getSize();
-        int anchor = (int) (rect.getY() + (rect.height * anchorPercentage));
-        int startPoint = (int) (size.width * startPercentage);
-        int endPoint = (int) (size.width * endPercentage);
-        swipe(startPoint, anchor, endPoint, anchor);
-    }
-
-    /**
      * Swipe horizontal por âncora e porcentagem.
      */
     public void horizontalSwipe(int anchor, double startPercentage, double endPercentage) throws IOException {
@@ -437,45 +407,10 @@ public class PageBaseActions {
     }
 
     /**
-     * Swipe horizontal para a direita.
-     */
-    public boolean horizontalSwipeRight(WebElement ref, WebElement expected, int attempts) throws IOException {
-        return horizontalSwipe(ref, expected, 0.20, 0.80, attempts);
-    }
-
-    /**
-     * Swipe horizontal para a esquerda.
-     */
-    public boolean horizontalSwipeLeft(WebElement ref, WebElement expected, int attempts) throws IOException {
-        return horizontalSwipe(ref, expected, 0.80, 0.20, attempts);
-    }
-
-    /**
      * Swipe horizontal para a esquerda por âncora.
      */
     public boolean horizontalSwipeLeft(int anchor, WebElement expected, int attempts) throws IOException {
         return horizontalSwipe(anchor, expected, 0.80, 0.20, attempts);
-    }
-
-    /**
-     * Swipe horizontal com busca de elemento.
-     */
-    public boolean horizontalSwipe(WebElement ref, WebElement expected, double startPercentage, double endPercentage, int attempts) throws IOException {
-        boolean displayed = false;
-        boolean swipe = false;
-        int counter = 0;
-        do {
-            try {
-                displayed = expected.isDisplayed();
-            } catch (Exception ignored) {}
-            if (!displayed) {
-                horizontalSwipe(ref, startPercentage, endPercentage);
-                swipe = true;
-            }
-            counter++;
-        } while (!displayed && counter < attempts);
-        if (swipe) delay(3000);
-        return displayed;
     }
 
     public boolean horizontalSwipe(int anchor, WebElement expected, double startPercentage, double endPercentage, int attempts) throws IOException {
@@ -545,22 +480,8 @@ public class PageBaseActions {
         return verticalSwipeUpAndSearch(element, 5);
     }
 
-    public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, int attempts) throws IOException {
-        return verticalSwipeDownAndSearch(ref, element, 0.55, 0.15, attempts);
-    }
-
     public boolean verticalSwipeDownAndSearch(WebElement element, int attempts) throws IOException {
         return verticalSwipeDownAndSearch(0.50, 0.55, 0.10, element, attempts);
-    }
-
-    public boolean verticalSwipeDownAndSearch(WebElement ref, WebElement element, double startPercentage, double endPercentage, int attempts) throws IOException {
-        Rectangle rect = ref.getRect();
-        Dimension size = driver.manage().window().getSize();
-        double anchorPercentage = 0.50;
-        int anchor = (int) (rect.getY() + (rect.width * anchorPercentage));
-        int startPoint = (int) (size.height * startPercentage);
-        int endPoint = (int) (size.height * endPercentage);
-        return verticalSwipeDownAndSearch(anchor, startPoint, endPoint, element, attempts);
     }
 
     public boolean verticalSwipeDownAndSearch(WebElement element) throws IOException {

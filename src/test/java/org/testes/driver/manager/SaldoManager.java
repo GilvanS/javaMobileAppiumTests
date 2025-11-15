@@ -87,7 +87,7 @@ public class SaldoManager {
 	 * @return Valor no formato "R$ 1.234,56"
 	 */
 	public static String converterParaMonetario(double valor) {
-		NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
 		return format.format(valor);
 	}
 

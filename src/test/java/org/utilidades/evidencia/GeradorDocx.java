@@ -16,6 +16,8 @@ import org.utilidades.dados.Usuario;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -328,9 +330,9 @@ public class GeradorDocx {
         return stepsList;
     }
 
-    public static URL getURL() throws MalformedURLException {
+    public static URL getURL() throws MalformedURLException, URISyntaxException {
         // Se o servidor Appium está rodando com --base-path /wd/hub
-        return new URL("http://127.0.0.1:4723/wd/hub");
+        return new URI("http://127.0.0.1:4723/wd/hub").toURL();
         // Se está rodando sem base-path, use apenas:
         // return new URL("http://127.0.0.1:4723/");
     }
