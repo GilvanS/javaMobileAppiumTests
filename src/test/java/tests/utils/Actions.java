@@ -19,7 +19,7 @@ public class Actions {
     public static void click(WebElement element) {
         waitElement(element).click();
     }
-    public void sendKeys(String value){
+    public static void sendKeys(String value){
         element.sendKeys(value);
         delay(Constants.SEND_KEYS_DELAY_IN_MILLISECONDS);
     }

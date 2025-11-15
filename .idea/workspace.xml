@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/pages/home/HomeLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/pages/home/HomeLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfileLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfileLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/pages/profile/ProfilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/utils/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/utils/Actions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +28,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2otQFiYOSOuit4XvaVQYvb2hgh6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -42,6 +39,7 @@
   "keyToString": {
     "Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor": "Run",
     "Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor": "Run",
+    "JUnit.CucumberTest (1).executor": "Run",
     "JUnit.CucumberTest.executor": "Run",
     "JUnit.FirstMobileTest.executor": "Run",
     "JUnit.FirstMobileTest.loginTest.executor": "Run",
@@ -70,7 +68,7 @@
       <recent name="tests.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CucumberTest">
+  <component name="RunManager" selected="JUnit.CucumberTest (1)">
     <configuration name="Scenario: Validar acesso ao Ebac Store" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Home.feature" />
@@ -113,6 +111,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CucumberTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="baseConhecimento" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="execution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="execution" />
+      <option name="MAIN_CLASS_NAME" value="execution.CucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MobileAppiumTests" />
       <extension name="coverage">
@@ -144,11 +157,13 @@
     <list>
       <item itemvalue="Cucumber Java.Scenario: Validar acesso ao Ebac Store" />
       <item itemvalue="Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store" />
+      <item itemvalue="JUnit.CucumberTest (1)" />
       <item itemvalue="JUnit.CucumberTest" />
       <item itemvalue="JUnit.FirstMobileTest.loginTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CucumberTest (1)" />
         <item itemvalue="JUnit.CucumberTest" />
         <item itemvalue="Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store" />
         <item itemvalue="Cucumber Java.Scenario: Validar acesso ao Ebac Store" />

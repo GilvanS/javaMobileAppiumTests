@@ -39,7 +39,7 @@ public class ProfileLogic {
     }
     public static void btnEmail() throws Exception {
         log.info("Email: {}", email);
-        profilePage()
+        profilePage();
 
     }
     public static void btnPassword() throws Exception {
