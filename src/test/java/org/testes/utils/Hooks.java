@@ -23,17 +23,29 @@ public class Hooks {
     @BeforeAll
     public static void setUpServer() {
         if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE) {
-            log.info("Inicializando o servidor do Appium em novo terminal...");
-            try {
-                File batFile = new File("run_appium.bat");
-                // Remove /min to let user see the window. Added title "Appium Server"
-                String command = "cmd /c start \"Appium Server\" \"" + batFile.getAbsolutePath() + "\"";
-                Runtime.getRuntime().exec(command);
+            if (isServerRunning(4723)) {
+                log.info("Servidor Appium já está em execução na porta 4723. Utilizando instância existente.");
+            } else {
+                log.info("Servidor Appium não detectado. Inicializando em novo terminal...");
+                try {
+                    File batFile = new File("run_appium.bat");
+                    // Remove /min to let user see the window. Added title "Appium Server"
+                    String command = "cmd /c start \"Appium Server\" \"" + batFile.getAbsolutePath() + "\"";
+                    Runtime.getRuntime().exec(command);
 
-                waitForServer(4723, 20); // Wait up to 20 seconds
-            } catch (Exception e) {
-                log.error("Falha ao iniciar o Appium: " + e.getMessage());
+                    waitForServer(4723, 20); // Wait up to 20 seconds
+                } catch (Exception e) {
+                    log.error("Falha ao iniciar o Appium: " + e.getMessage());
+                }
             }
+        }
+    }
+
+    private static boolean isServerRunning(int port) {
+        try (Socket socket = new Socket("127.0.0.1", port)) {
+            return true;
+        } catch (IOException e) {
+            return false;
         }
     }
 
@@ -41,14 +53,13 @@ public class Hooks {
         log.info("Aguardando servidor Appium na porta " + port + "...");
         long endTime = System.currentTimeMillis() + (timeoutSeconds * 1000);
         while (System.currentTimeMillis() < endTime) {
-            try (Socket socket = new Socket("127.0.0.1", port)) {
+            if (isServerRunning(port)) {
                 log.info("Servidor Appium detectado!");
                 return;
-            } catch (IOException e) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ignored) {
-                }
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ignored) {
             }
         }
         log.error("Timeout: Servidor Appium não respondeu na porta " + port + " após " + timeoutSeconds + " segundos.");
@@ -57,13 +68,7 @@ public class Hooks {
     @AfterAll
     public static void tearDownServer() {
         if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE) {
-            log.info("Finalizando o servidor do Appium (Matando processo node.exe)");
-            try {
-                // Mata o processo do Node (Appium)
-                Runtime.getRuntime().exec("taskkill /F /IM node.exe");
-            } catch (Exception e) {
-                log.error("Falha ao matar o Appium: " + e.getMessage());
-            }
+            log.info("Mantendo servidor Appium em execução para próximos testes (Conforme solicitado).");
         }
     }
 

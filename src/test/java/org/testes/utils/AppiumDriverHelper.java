@@ -27,7 +27,7 @@ public class AppiumDriverHelper {
     }
 
     public static URL getURL() throws MalformedURLException, URISyntaxException {
-        return new URI("http://127.0.0.1:4723/wd/hub").toURL();
+        return new URI("http://127.0.0.1:4723/").toURL();
     }
 
     public static AppiumDriver getDriver() {
