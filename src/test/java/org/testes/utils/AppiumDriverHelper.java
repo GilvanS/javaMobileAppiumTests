@@ -12,6 +12,8 @@ import java.net.URL;
 @Slf4j
 public class AppiumDriverHelper {
 
+    private static AppiumDriver driver;
+
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -29,20 +31,14 @@ public class AppiumDriverHelper {
     }
 
     public static AppiumDriver getDriver() {
-
-        AppiumDriver driver = null;
-
-        try {
-            driver = new AppiumDriver(getURL(), getCapabilities());
-        } catch (Exception e) {
-//            log.error("Error on driver instantiation", e);
-            System.out.println("Error on driver instantiation" + e);
-            throw new RuntimeException(e);
+        if (driver == null) {
+            try {
+                driver = new AppiumDriver(getURL(), getCapabilities());
+            } catch (Exception e) {
+                System.out.println("Error on driver instantiation" + e);
+                throw new RuntimeException(e);
+            }
         }
-
         return driver;
-
     }
-
-
 }

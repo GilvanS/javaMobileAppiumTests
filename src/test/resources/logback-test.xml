@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Suppress Appium and Selenium verbose logs -->
+    <logger name="io.appium.java_client" level="WARN"/>
+    <logger name="org.openqa.selenium" level="WARN"/>
+    
+    <!-- Keep project logs at INFO -->
+    <logger name="org.testes" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
