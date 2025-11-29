@@ -23,7 +23,11 @@ public class HomeActions {
 
     public static void validarOTextoOla() {
         log.info("Validando que estou na tela inicial");
-        assertTrue(acoes().waitForVisibility(homePage().getTextoOla()).isDisplayed());
+        org.junit.jupiter.api.Assertions.assertAll("Validação da Home",
+                () -> assertTrue(acoes().waitForVisibility(homePage().getTextoOla()).isDisplayed(),
+                        "Texto 'Olá' não está visível"),
+                () -> assertTrue(homePage().getBtnEntreNaConta().isDisplayed(),
+                        "Botão 'Entre na conta' não está visível"));
     }
 
     public static void clicarNoBotaoEntreNaSuaConta() {

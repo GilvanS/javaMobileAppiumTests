@@ -40,7 +40,7 @@ public class Usuario {
         return obterInformacao(getTag(), 9);
     }
 
-    private static String obterInformacao(String tag, int coluna) {
+    protected static String obterInformacao(String tag, int coluna) {
         String informacao = null;
 
         try {

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,6 +261,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/pages/home/HomeSteps.java</url>
           <line>19</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/utilidades/dados/Usuario.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

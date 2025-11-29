@@ -14,21 +14,30 @@ public class Hooks {
     @Getter
     public static AppiumDriver driver;
 
-    //    @BeforeAll
+    // Controle: Mude para 'false' se quiser iniciar o Appium manualmente em outro
+    // terminal
+    private static final boolean GERENCIAR_SERVIDOR_AUTOMATICAMENTE = true;
+
+    @BeforeAll
     public static void setUpServer() {
-        log.info("Inicializando o servidor do Appium");
-        server = new AppiumServiceBuilder()
-                .usingPort(4723)
-                .withArgument(() -> "--base-path", "/wd/hub")
-                .build();
-        server.start();
+        if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE) {
+            log.info("Inicializando o servidor do Appium (Logs em target/appium_server.log)");
+            server = new AppiumServiceBuilder()
+                    .usingPort(4723)
+                    .withArgument(() -> "--base-path", "/wd/hub")
+                    .withLogFile(new java.io.File("target/appium_server.log")) // Oculta logs do console
+                    .build();
+            server.start();
+        }
     }
 
-    //    @AfterAll
+    @AfterAll
     public static void tearDownServer() {
-        log.info("Finalizando o servidor do Appium");
-        if (server != null) server.stop();
-        server = null;
+        if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE && server != null) {
+            log.info("Finalizando o servidor do Appium");
+            server.stop();
+            server = null;
+        }
     }
 
     @Before

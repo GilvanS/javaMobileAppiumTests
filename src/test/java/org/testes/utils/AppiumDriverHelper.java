@@ -18,14 +18,14 @@ public class AppiumDriverHelper {
         capabilities.setCapability("appium:appPackage", "com.fintechbank.app");
         capabilities.setCapability("appium:appActivity", "com.fintechbank.app.MainActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:deviceName", "emulator-5554"); // emulator-5554 // S24+ RXCXB02B93D
-        capabilities.setCapability("appium:automationName", "uiautomator2");   // 192.168.16.89:5555
+        capabilities.setCapability("appium:deviceName", "emulator-5554");
+        capabilities.setCapability("appium:automationName", "uiautomator2");
         capabilities.setCapability("appium:noReset", false);
         return capabilities;
     }
 
     public static URL getURL() throws MalformedURLException, URISyntaxException {
-        return new URI("http://127.0.0.1:4723/").toURL();
+        return new URI("http://127.0.0.1:4723/wd/hub").toURL();
     }
 
     public static AppiumDriver getDriver() {
