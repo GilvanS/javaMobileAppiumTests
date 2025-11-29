@@ -15,10 +15,10 @@ public class AppiumDriverHelper {
     public static DesiredCapabilities getCapabilities() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("appium:appPackage", "com.droid4you.application.wallet");
-        capabilities.setCapability("appium:appActivity", "com.droid4you.application.wallet.SplashScreenActivity");
+        capabilities.setCapability("appium:appPackage", "com.fintechbank.app");
+        capabilities.setCapability("appium:appActivity", "com.fintechbank.app.MainActivity");
         capabilities.setCapability("appium:autoGrantPermissions", true);
-        capabilities.setCapability("appium:deviceName", "RXCXB02B93D"); // S24+ RXCXB02B93D   motoG 0078720227
+        capabilities.setCapability("appium:deviceName", "emulator-5554"); // emulator-5554 // S24+ RXCXB02B93D
         capabilities.setCapability("appium:automationName", "uiautomator2");   // 192.168.16.89:5555
         capabilities.setCapability("appium:noReset", false);
         return capabilities;

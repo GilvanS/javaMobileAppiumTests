@@ -14,7 +14,18 @@
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <commons-io.version>2.15.1</commons-io.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -33,6 +44,10 @@
         <exclusion>
           <groupId>org.seleniumhq.selenium</groupId>
           <artifactId>selenium-support</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -122,6 +137,14 @@
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>5.4.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Apache Commons IO - Required by POI 5.4.1 (needs 2.13.0+ for BoundedInputStream.builder()) -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons-io.version}</version>
       <scope>test</scope>
     </dependency>
 

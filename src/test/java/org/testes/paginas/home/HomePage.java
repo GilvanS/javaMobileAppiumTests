@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import lombok.Getter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testes.driver.actions.PageBaseActions;
 
 @Getter
@@ -13,6 +14,27 @@ public class HomePage extends PageBaseActions {
     public HomePage(AppiumDriver driver) {
         super(driver);
     }
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Olá!']")
+    private WebElement textoOla;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Entre na conta']")
+    private WebElement btnEntreNaConta;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='cpf']")
+    private WebElement btnCampoCpf;
+
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='password']")
+    private WebElement btnCampoSenha;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Entrar']")
+    private WebElement btnEntrar;
+
+    @AndroidFindBy(xpath = "//*[text()='Acessar minha conta']/attribute::*\n")
+    private WebElement msgAcessoMinhaConta;
+
+    @AndroidFindBy(xpath = "//*[text()= 'Não é cliente? Abra uma conta']")
+    private WebElement msgNaoClienteAbraUmaConta;
 
     // Elementos para validação de saldo
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[contains(@text, 'R$')]")
