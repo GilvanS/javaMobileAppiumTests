@@ -24,9 +24,9 @@ public class Hooks {
     public static void setUpServer() {
         if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE) {
             if (isServerRunning(4723)) {
-                log.info("Servidor Appium já está em execução na porta 4723. Utilizando instância existente.");
+                log.info("Servidor Appium ja esta em execucao na porta 4723. Utilizando instancia existente.");
             } else {
-                log.info("Servidor Appium não detectado. Inicializando em novo terminal...");
+                log.info("Servidor Appium nao detectado. Inicializando em novo terminal...");
                 try {
                     File batFile = new File("run_appium.bat");
                     // Remove /min to let user see the window. Added title "Appium Server"
@@ -62,13 +62,13 @@ public class Hooks {
             } catch (InterruptedException ignored) {
             }
         }
-        log.error("Timeout: Servidor Appium não respondeu na porta " + port + " após " + timeoutSeconds + " segundos.");
+        log.error("Timeout: Servidor Appium nao respondeu na porta " + port + " apos " + timeoutSeconds + " segundos.");
     }
 
     @AfterAll
     public static void tearDownServer() {
         if (GERENCIAR_SERVIDOR_AUTOMATICAMENTE) {
-            log.info("Mantendo servidor Appium em execução para próximos testes (Conforme solicitado).");
+            log.info("Mantendo servidor Appium em execucao para proximos testes (Conforme solicitado).");
         }
     }
 

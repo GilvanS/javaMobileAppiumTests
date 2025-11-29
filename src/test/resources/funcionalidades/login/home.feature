@@ -10,3 +10,4 @@ Feature: Validar tela de home
     And preencho o campo Senha com 'admin999' 'tela inicial'
     And clico no botao 'Entrar' 'tela inicial'
     Then devo ver a mensagem de boas vindas 'Bem-vindo!' 'tela Home'
+    And clico no botao 'Comecar a usar' na 'tela Home'

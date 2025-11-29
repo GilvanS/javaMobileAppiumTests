@@ -55,4 +55,9 @@ public class HomeActions {
                         "Texto 'Bem-vindo!' não está visível"));
     }
 
+    public static void clicarBtnComecarAUsar() {
+        log.info("Clicando no botão 'Começar a usar'");
+        acoes().click(homePage().getBtnComecarAUsar());
+    }
+
 }

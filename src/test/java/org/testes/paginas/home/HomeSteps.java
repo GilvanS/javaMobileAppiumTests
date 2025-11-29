@@ -41,4 +41,9 @@ public class HomeSteps {
     public void devoVerAMensagemDeBoasVindasAcessoMinhaContaTelaHome(String mensagem, String tela) {
         HomeActions.validarAcessoMinhaConta();
     }
+
+    @And("clico no botao {string} na {string}")
+    public void clicoNoBotaoComecarAUsarNaTelaHome(String mensagem, String tela) {
+        HomeActions.clicarBtnComecarAUsar();
+    }
 }

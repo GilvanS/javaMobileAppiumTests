@@ -39,6 +39,9 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
     private WebElement vldBemVindo;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
+    private WebElement btnComecarAUsar;
+
 
     // Elementos para validação de saldo
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[contains(@text, 'R$')]")
