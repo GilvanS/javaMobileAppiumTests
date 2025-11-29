@@ -7,14 +7,6 @@
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/CucumberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/home/HomeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testes/utils/AppiumDriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,32 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CucumberTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CucumberTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstMobileTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstMobileTest.loginTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaldoManagerTest.testCalcularSaldoEsperado.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SaldoManagerTest.testConverterParaDouble.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;developer/wallet&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/myGithub/javaMobileAppiumTests&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/CURSO_MOBILE/MobileAppiumTests/src/main/java/org/mobile/appiumtests/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor": "Run",
+    "Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor": "Run",
+    "JUnit.CucumberTest (1).executor": "Run",
+    "JUnit.CucumberTest.executor": "Run",
+    "JUnit.FirstMobileTest.executor": "Run",
+    "JUnit.FirstMobileTest.loginTest.executor": "Run",
+    "JUnit.SaldoManagerTest.testCalcularSaldoEsperado.executor": "Run",
+    "JUnit.SaldoManagerTest.testConverterParaDouble.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "developer/fintech",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/myGithub/javaMobileAppiumTests",
+    "onboarding.tips.debug.path": "C:/CURSO_MOBILE/MobileAppiumTests/src/main/java/org/mobile/appiumtests/Main.java",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.utils" />
