@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import org.testes.driver.page.MasterPageFactory;
 import static org.testes.utils.Context.acoes;
-
-import org.testes.paginas.home.HomePage;
 import org.utilidades.dados.Usuario;
 import org.utilidades.evidencia.PrintScreen;
 
