@@ -18,22 +18,27 @@ public class HomeSteps {
 
 
     @And("clico no botão Entre na conta na {string}")
-    public void clicoNoBotãoEntreNaContaNaTelaInicial() {
+    public void clicoNoBotãoEntreNaContaNaTelaInicial(String tela) {
+        HomeActions.clicarNoBotaoEntreNaSuaConta();
     }
 
     @And("preencho o campo CPF com {string} {string}")
-    public void preenchoOCampoCPFComTelaInicial(int arg0) {
+    public void preenchoOCampoCPFComTelaInicial(String cpf, String tela) {
+        HomeActions.clicarCampoCpf();
     }
 
     @And("preencho o campo Senha com {string} {string}")
-    public void preenchoOCampoSenhaComAdminTelaInicial(int arg0) {
+    public void preenchoOCampoSenhaComAdminTelaInicial(String senha, String tela) {
+        HomeActions.clicarCampoSenha();
     }
 
     @And("clico no botao {string} {string}")
-    public void clicoNoBotaoEntrarTelaInicial() {
+    public void clicoNoBotaoEntrarTelaInicial(String botao, String tela) {
+        HomeActions.clicarBrnEntrar();
     }
 
     @Then("devo ver a mensagem de boas vindas {string} {string}")
-    public void devoVerAMensagemDeBoasVindasAcessoMinhaContaTelaHome() {
+    public void devoVerAMensagemDeBoasVindasAcessoMinhaContaTelaHome(String mensagem, String tela) {
+        HomeActions.validarAcessoMinhaConta();
     }
 }
