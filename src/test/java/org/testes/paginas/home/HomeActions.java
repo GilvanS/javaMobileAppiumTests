@@ -15,39 +15,9 @@ public class HomeActions {
         return MasterPageFactory.getPage(HomePage.class);
     }
 
-    public static void validarOTextoOla() {
-        log.info("Validando que estou na tela inicial");
-        Assertions.assertAll("Validação da Home",
-                () -> assertTrue(acoes().waitForVisibility(homePage().getTextoOla()).isDisplayed(),
-                        "Texto 'Olá' não está visível"),
-                () -> assertTrue(homePage().getBtnEntreNaConta().isDisplayed(),
-                        "Botão 'Entre na conta' não está visível"));
-    }
-
-    public static void clicarNoBotaoEntreNaSuaConta() {
-        log.info("Clicando no botão 'Entre na sua conta'");
-        acoes().click(homePage().getBtnEntreNaConta());
-    }
-
-    public static void clicarCampoCpf() {
-        log.info("Clicando no campo 'CPF'");
-        acoes().click(homePage().getBtnCampoCpf());
-        acoes().sendKeys(homePage().getBtnCampoCpf(), "11111111111");
-    }
-
-    public static void clicarCampoSenha() {
-        log.info("Clicando no campo 'Senha'");
-        acoes().click(homePage().getBtnCampoSenha());
-        acoes().sendKeys(homePage().getBtnCampoSenha(), "admin999");
-    }
-
-    public static void clicarBrnEntrar() {
-        log.info("Clicando no botão 'Entrar'");
-        acoes().click(homePage().getBtnEntrar());
-    }
-
     public static void validarAcessoMinhaConta() {
         log.info("Validando a mensagem de boas vindas");
+        acoes().sleep(5);
         Assertions.assertAll("Validação da Tela Home",
                 () -> assertTrue(acoes().waitForVisibility(homePage().getVldBemVindo()).isDisplayed(),
                         "Texto 'Bem-vindo!' não está visível"),
@@ -60,4 +30,8 @@ public class HomeActions {
         acoes().click(homePage().getBtnComecarAUsar());
     }
 
+    public static void clicarMenuPix() {
+        log.info("Clicando no menu 'PIX'");
+        acoes().click(homePage().getBtnMenuPix());
+    }
 }

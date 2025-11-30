@@ -15,29 +15,17 @@ public class HomePage extends PageBaseActions {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Olá!']")
-    private WebElement textoOla;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
+    private WebElement vldBemVindo;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Entre na conta']")
-    private WebElement btnEntreNaConta;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='cpf']")
-    private WebElement btnCampoCpf;
-
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='password']")
-    private WebElement btnCampoSenha;
-
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Entrar']")
-    private WebElement btnEntrar;
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='qr_code_2 PIX']")
+    private WebElement btnMenuPix;
 
     @AndroidFindBy(xpath = "//*[text()='Acessar minha conta']/attribute::*\n")
     private WebElement msgAcessoMinhaConta;
 
     @AndroidFindBy(xpath = "//*[text()= 'Não é cliente? Abra uma conta']")
     private WebElement msgNaoClienteAbraUmaConta;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
-    private WebElement vldBemVindo;
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
     private WebElement btnComecarAUsar;

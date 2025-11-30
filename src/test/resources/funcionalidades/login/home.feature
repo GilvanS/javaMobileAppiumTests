@@ -1,8 +1,6 @@
-@all
-Feature: Validar tela de home
+Feature: Minhas chaves pix
 
-  @CT-01.1
-  Scenario: Validar acesso a tela home
+  Background:
     Given que estou na pagina inicial
     When valido o titulo da pagina como 'Olá!'
     And clico no botão Entre na conta na 'tela inicial'
@@ -11,3 +9,15 @@ Feature: Validar tela de home
     And clico no botao 'Entrar' 'tela inicial'
     Then devo ver a mensagem de boas vindas 'Bem-vindo!' 'tela Home'
     And clico no botao 'Comecar a usar' na 'tela Home'
+
+  @CT-02.1
+   Scenario: Validar cadastro de chave PIX
+    Given que estou na tela Home
+    When clico no menu 'PIX' na 'tela Home'
+    And clico no botao 'Minhas Chaves' na 'tela PIX'
+    And clico no botao 'Cadastrar Nova Chave' na 'tela Minhas Chaves PIX'
+    And seleciono o tipo de chave para cadastro na tela 'tela Minhas Chaves PIX'
+    And preencho o campo chave com 'email' 'tela Minhas Chaves PIX'
+    And clico no botao 'Cadastrar' na 'tela Minhas Chaves PIX'
+    Then valido a mensagem de sucesso 'Chave cadastrada com sucesso!' na 'tela Minhas Chaves PIX'
+    And valido a chave cadastrada na lista de chaves na 'tela Minhas Chaves PIX'
