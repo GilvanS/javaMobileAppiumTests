@@ -14,12 +14,12 @@ public class LoginSteps {
         LoginActions.clicarNoBotaoEntreNaSuaConta();
     }
 
-    @And("preencho o campo CPF com '11111111111' 'tela inicial'")
+    @And("preencho o campo CPF na 'tela inicial'")
     public void preenchoOCampoCPFComTelaInicial() {
         LoginActions.clicarCampoCpf();
     }
 
-    @And("preencho o campo Senha com 'admin999' 'tela inicial'")
+    @And("preencho o campo Senha na 'tela inicial'")
     public void preenchoOCampoSenhaComAdminTelaInicial() {
         LoginActions.clicarCampoSenha();
     }

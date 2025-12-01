@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.com.fintech.core.driver.page.MasterPageFactory;
 import org.com.fintech.test.manager.SaldoManager;
 
-import static org.com.fintech.test.utils.Context.acoes;
+import static org.com.fintech.core.support.Context.acoes;
 
 @Slf4j
 public class RegistroActions {

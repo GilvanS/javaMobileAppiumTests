@@ -7,7 +7,7 @@ import org.com.fintech.core.driver.page.MasterPageFactory;
 import org.com.fintech.test.utils.Usuario;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.com.fintech.test.utils.Context.acoes;
+import static org.com.fintech.core.support.Context.acoes;
 
 @Slf4j
 public class PixActions {

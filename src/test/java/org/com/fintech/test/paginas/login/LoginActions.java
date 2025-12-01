@@ -1,21 +1,24 @@
 package org.com.fintech.test.paginas.login;
 
+import org.com.fintech.core.support.Context;
+import org.com.fintech.test.sheets.login.LoginModel;
 import org.junit.jupiter.api.Assertions;
 import org.com.fintech.core.driver.page.MasterPageFactory;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.com.fintech.test.utils.Context.acoes;
+import static org.com.fintech.core.support.Context.acoes;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class LoginActions {
 
-
+    private static LoginModel loginModel;
 
     public static LoginPage loginPage(){
         return MasterPageFactory.getPage(LoginPage.class);
+        loginModel = (LoginModel) Context.getData();
     }
 
     public static void validarOTextoOla() {
@@ -33,16 +36,26 @@ public class LoginActions {
         acoes().click(loginPage().getBtnEntreNaConta());
     }
 
-    public static void clicarCampoCpf() {
+    public void clicarCampoCpf() {
+        String cpf = loginModel.getCpf();
+        clicarCampoCpf(cpf);
+    }
+
+    public void clicarCampoCpf(String cpf) {
         log.info("Clicando no campo 'CPF'");
         acoes().click(loginPage().getBtnCampoCpf());
-        acoes().sendKeys(loginPage().getBtnCampoCpf(), "11111111111");
+        acoes().sendKeys(loginPage().getBtnCampoCpf(), cpf);
     }
 
     public static void clicarCampoSenha() {
+        String senha = loginModel.getSenha();
+        clicarCampoSenha(senha);
+    }
+
+    public static void clicarCampoSenha(String senha) {
         log.info("Clicando no campo 'Senha'");
         acoes().click(loginPage().getBtnCampoSenha());
-        acoes().sendKeys(loginPage().getBtnCampoSenha(), "admin999");
+        acoes().sendKeys(loginPage().getBtnCampoSenha(), senha);
     }
 
     public static void clicarBrnEntrar() {

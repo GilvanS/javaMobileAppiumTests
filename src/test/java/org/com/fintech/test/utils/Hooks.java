@@ -5,6 +5,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.cucumber.java.*;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.com.fintech.core.support.Context;
 
 import java.io.File;
 import java.io.IOException;
@@ -78,7 +79,7 @@ public class Hooks {
         log.info(scenario.getId());
         log.info("Inicializando o driver");
         driver = org.com.fintech.test.utils.AppiumDriverHelper.getDriver();
-        org.com.fintech.test.utils.Context.inicializar(driver);
+        Context.inicializar(driver);
         String deviceName = driver.getCapabilities().getCapability("deviceName").toString();
         org.com.fintech.test.utils.HooksDados.setDeviceName(deviceName.replace(".", "").replace(":", "_"));
     }

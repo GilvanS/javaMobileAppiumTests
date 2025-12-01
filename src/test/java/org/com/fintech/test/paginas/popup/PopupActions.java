@@ -1,7 +1,7 @@
 package org.com.fintech.test.paginas.popup;
 
 import org.openqa.selenium.WebElement;
-import static org.com.fintech.test.utils.Context.acoes;
+import static org.com.fintech.core.support.Context.acoes;
 
 import lombok.extern.slf4j.Slf4j;
 

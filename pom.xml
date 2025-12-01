@@ -120,6 +120,7 @@
       <version>2.24.3</version>
     </dependency>
 
+    <!-- Apache POI para manipulação de Excel -->
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
@@ -140,6 +141,46 @@
       <artifactId>commons-io</artifactId>
       <version>${commons-io.version}</version>
       <scope>test</scope>
+    </dependency>
+
+    <!-- Geração de PDF (iText) -->
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>kernel</artifactId>
+      <version>8.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>layout</artifactId>
+      <version>8.0.4</version>
+    </dependency>
+
+    <!-- Apache HttpClient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
+      <version>5.3.1</version>
+    </dependency>
+
+    <!-- Manipulação de Dados (CSV, Excel, JSON) -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.18.2</version>
+    </dependency>
+
+    <!-- Leitura de Excel como Banco de Dados -->
+    <dependency>
+      <groupId>com.codoid.products</groupId>
+      <artifactId>fillo</artifactId>
+      <version>1.18</version>
+    </dependency>
+
+    <!-- Leitura de CSV -->
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>5.9</version>
     </dependency>
 
   </dependencies>
