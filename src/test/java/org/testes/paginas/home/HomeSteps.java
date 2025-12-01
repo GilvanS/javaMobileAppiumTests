@@ -28,7 +28,6 @@ public class HomeSteps {
         HomeActions.clicarMenuPix();
     }
 
-
     @And("clico no botao 'Comecar a usar' na 'tela Home'")
     public void clicoNoBotaoGenerico() {
         HomeActions.clicarBtnComecarAUsar();

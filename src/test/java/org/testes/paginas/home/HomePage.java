@@ -18,8 +18,12 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
     private WebElement vldBemVindo;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='qr_code_2 PIX']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='PIX']")
     private WebElement btnMenuPix;
+
+    @AndroidFindBy(xpath = "(//android.widget.Button[@text='credit_card Cartões'])[1]")
+    private WebElement btnMenuCartoes;
+
 
     @AndroidFindBy(xpath = "//*[text()='Acessar minha conta']/attribute::*\n")
     private WebElement msgAcessoMinhaConta;

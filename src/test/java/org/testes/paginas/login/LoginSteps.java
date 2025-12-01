@@ -10,7 +10,7 @@ public class LoginSteps {
     }
 
     @And("clico no botão Entre na conta na 'tela inicial'")
-    public void clicoNoBotãoEntreNaContaNaTelaInicial() {
+    public void clicoNoBotãoEntreNaContaNaTelaInicial() throws InterruptedException {
         LoginActions.clicarNoBotaoEntreNaSuaConta();
     }
 

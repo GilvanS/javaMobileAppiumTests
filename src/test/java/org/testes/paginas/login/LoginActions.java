@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.testes.driver.page.MasterPageFactory;
 
+import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.testes.utils.Context.acoes;
 import org.utilidades.dados.Usuario;
@@ -30,8 +31,9 @@ public class LoginActions {
                         "Botão 'Entre na conta' não está visível"));
     }
 
-    public static void clicarNoBotaoEntreNaSuaConta() {
+    public static void clicarNoBotaoEntreNaSuaConta() throws InterruptedException {
         log.info("Clicando no botão 'Entre na sua conta'");
+        sleep(5000);
         acoes().click(loginPage().getBtnEntreNaConta());
     }
 
