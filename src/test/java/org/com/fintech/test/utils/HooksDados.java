@@ -1,0 +1,41 @@
+package org.com.fintech.test.utils;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Collection;
+
+
+
+public class HooksDados {
+
+
+    @Getter
+    private static String tagCenario;
+
+    @Getter
+    @Setter
+    private static String deviceName;
+
+    @Before
+    public void pegarTagCenario(Scenario cenario) {
+        tagCenario = extrairTagDoCenario(cenario.getSourceTagNames());
+    }
+
+
+    /**
+     * Metodo privado para extrair a TAG do cenario atual a partir da lista de nomes de tags.
+     *
+     * @param sourceTagNames A colecao de nomes de tags do cenario atual.
+     * @return A TAG do cenario, sem o prefixo "@".
+     */
+    private String extrairTagDoCenario(Collection<String> sourceTagNames) {
+        for (String tagName : sourceTagNames) {
+            if (tagName.startsWith("@") && tagName.contains("CT-") && !tagName.equals("@feature")) {
+                return tagName.substring(1); // Remove o "@" da TAG
+            }
+        }
+        return null;
+    }
+}

@@ -68,7 +68,7 @@ Um teste unitário que roda em milissegundos e valida todas as tags.
 // src/test/java/org/testes/unitarios/UsuarioTest.java
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
-import org.utilidades.dados.Usuario;
+import org.com.fintech.test.utils.Usuario;
 import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;

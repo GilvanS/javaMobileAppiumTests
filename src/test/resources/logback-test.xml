@@ -10,7 +10,7 @@
     <logger name="org.openqa.selenium" level="WARN"/>
     
     <!-- Keep project logs at INFO -->
-    <logger name="org.testes" level="INFO"/>
+    <logger name="org.com.fintech.test" level="INFO"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT" />

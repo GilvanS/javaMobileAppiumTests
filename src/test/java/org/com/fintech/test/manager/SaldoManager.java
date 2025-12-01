@@ -1,0 +1,109 @@
+package org.com.fintech.test.manager;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class SaldoManager {
+
+	private static final ThreadLocal<String> saldo = new ThreadLocal<>();
+	private static final ThreadLocal<String> saldoHoje = new ThreadLocal<>();
+	private static final ThreadLocal<String> valorRegistro = new ThreadLocal<>();
+
+	public static String getSaldo() {
+		return saldo.get();
+	}
+
+	public static String getSaldoHoje() {
+		return saldoHoje.get();
+	}
+
+	public static String getValorRegistro() {
+		return valorRegistro.get();
+	}
+
+	public static void setSaldo(String valor) {
+		saldo.set(valor);
+	}
+
+	public static void setSaldoHoje(String valor) {
+		saldoHoje.set(valor);
+	}
+
+	public static void setValorRegistro(String valor) {
+		valorRegistro.set(valor);
+	}
+
+	/**
+	 * Converte valor monetário brasileiro para double
+	 * @param valorMonetario Valor no formato "R$ 1.234,56" ou "R$ 100"
+	 * @return Valor como double
+	 */
+	public static double converterParaDouble(String valorMonetario) {
+		try {
+			// Remove "R$ " e todos os tipos de espaços (incluindo não-quebráveis)
+			String valorLimpo = valorMonetario.replace("R$", "").trim();
+			valorLimpo = valorLimpo.replaceAll("[\\s\\u00A0]+", ""); // Remove espaços normais e não-quebráveis
+			
+			// Remove pontos (separadores de milhares) e substitui vírgula por ponto
+			valorLimpo = valorLimpo.replace(".", "").replace(",", ".");
+			
+			// Se não tem parte decimal, adiciona .0
+			if (!valorLimpo.contains(".")) {
+				valorLimpo += ".0";
+			}
+			
+			// Converte para double
+			return Double.parseDouble(valorLimpo);
+		} catch (NumberFormatException e) {
+			throw new RuntimeException("Erro ao converter valor monetário: " + valorMonetario, e);
+		}
+	}
+
+	/**
+	 * Normaliza valor monetário removendo formatação
+	 * @param valorMonetario Valor no formato "R$ 1.234,56" ou "R$ 100"
+	 * @return Valor normalizado como string numérica
+	 */
+	public static String normalizarValorMonetario(String valorMonetario) {
+		// Remove "R$ " e todos os tipos de espaços
+		String valorLimpo = valorMonetario.replace("R$", "").trim();
+		valorLimpo = valorLimpo.replaceAll("[\\s\\u00A0]+", "");
+		
+		// Remove pontos (separadores de milhares) e substitui vírgula por ponto
+		valorLimpo = valorLimpo.replace(".", "").replace(",", ".");
+		
+		// Se não tem parte decimal, adiciona .00
+		if (!valorLimpo.contains(".")) {
+			valorLimpo += ".00";
+		}
+		
+		return valorLimpo;
+	}
+
+	/**
+	 * Converte double para formato monetário brasileiro
+	 * @param valor Valor como double
+	 * @return Valor no formato "R$ 1.234,56"
+	 */
+	public static String converterParaMonetario(double valor) {
+		NumberFormat format = NumberFormat.getCurrencyInstance(Locale.of("pt", "BR"));
+		return format.format(valor);
+	}
+
+	/**
+	 * Calcula o saldo esperado após adicionar o valor do registro
+	 * @return Saldo esperado no formato monetário
+	 */
+	public static String calcularSaldoEsperado() {
+		double saldoAtual = converterParaDouble(getSaldo());
+		double valorRegistro = converterParaDouble(getValorRegistro());
+		double saldoEsperado = saldoAtual + valorRegistro;
+		return converterParaMonetario(saldoEsperado);
+	}
+
+	public static void remove() {
+		saldo.remove();
+		saldoHoje.remove();
+		valorRegistro.remove();
+	}
+}
