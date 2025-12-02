@@ -86,8 +86,18 @@ public class Hooks {
 
     @After
     public void tearDownDriver(Scenario scenario) {
-        if (driver != null) driver.quit();
+        if (driver != null) {
+            try {
+                driver.quit();
+            } catch (Exception e) {
+                log.warn("Erro ao fechar o driver: " + e.getMessage());
+            }
+        }
         driver = null;
+        // Limpa a referência no AppiumDriverHelper para garantir que um novo driver será criado
+        org.com.fintech.test.utils.AppiumDriverHelper.reset();
+        // Limpa o Context também
+        Context.remove();
     }
 
 }

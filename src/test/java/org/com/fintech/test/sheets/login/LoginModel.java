@@ -13,5 +13,6 @@ public class LoginModel implements DataModel {
 
 	private String cpf;
 	private String senha;
-	private String idUsuario; // O UUID do usuário
+	private String idUsuario;
+	private String email;// O UUID do usuário
 }

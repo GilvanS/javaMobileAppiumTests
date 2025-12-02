@@ -17,6 +17,8 @@ public class LoginDataSheet {
     private static final String FIELD_CPF = "CPF";
     private static final String FIELD_SENHA = "SENHA";
     private static final String FIELD_ID_USUARIO_NA_PLANILHA = "ID";
+    private static final String FIELD_EMAIL = "EMAIL";
+
 
     private final Map<String, String> scenarioData;
 
@@ -41,11 +43,21 @@ public class LoginDataSheet {
     }
 
     public LoginModel getData() {
+        String cpf = random(getField(FIELD_CPF));
+        String senha = getField(FIELD_SENHA);
+        String idUsuario = getField(FIELD_ID_USUARIO_NA_PLANILHA);
+        String email = getField(FIELD_EMAIL);
+
         return LoginModel.builder()
-                .cpf(random(getField(FIELD_CPF)))
-                .senha(getField(FIELD_SENHA))
-                .idUsuario(getField(FIELD_ID_USUARIO_NA_PLANILHA))
+                .cpf(cpf)
+                .senha(senha)
+                .idUsuario(idUsuario)
+                .email(email)
                 .build();
+    }
+
+    public String getEmail() {
+        return getField(FIELD_EMAIL);
     }
 
     /**
@@ -57,7 +69,16 @@ public class LoginDataSheet {
     }
 
     private String getField(String fieldName) {
-        return scenarioData.getOrDefault(fieldName, "");
+        // Busca case-insensitive (ExcelDataReader converte tudo para maiúsculas)
+        String fieldNameUpper = fieldName.toUpperCase();
+        String value = scenarioData.get(fieldNameUpper);
+        
+        if (value == null || value.isEmpty()) {
+            // Tenta buscar com o nome exato também
+            value = scenarioData.get(fieldName);
+        }
+        
+        return value != null ? value : "";
     }
 
     private String random(String field) {

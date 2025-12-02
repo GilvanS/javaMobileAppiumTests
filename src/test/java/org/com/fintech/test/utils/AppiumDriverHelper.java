@@ -31,7 +31,8 @@ public class AppiumDriverHelper {
     }
 
     public static AppiumDriver getDriver() {
-        if (driver == null) {
+        // Verifica se o driver existe e ainda está válido (não foi fechado)
+        if (driver == null || isDriverClosed(driver)) {
             try {
                 driver = new AppiumDriver(getURL(), getCapabilities());
             } catch (Exception e) {
@@ -40,5 +41,27 @@ public class AppiumDriverHelper {
             }
         }
         return driver;
+    }
+
+    /**
+     * Verifica se o driver foi fechado tentando acessar uma propriedade básica.
+     */
+    private static boolean isDriverClosed(AppiumDriver driver) {
+        try {
+            // Tenta acessar uma propriedade básica do driver. Se foi fechado, lançará exceção
+            driver.getCapabilities();
+            return false;
+        } catch (Exception e) {
+            // Se houver exceção, o driver foi fechado
+            return true;
+        }
+    }
+
+    /**
+     * Limpa a referência estática do driver.
+     * Deve ser chamado após fechar o driver para garantir que um novo será criado no próximo teste.
+     */
+    public static void reset() {
+        driver = null;
     }
 }

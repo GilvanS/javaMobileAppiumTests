@@ -28,6 +28,9 @@ public class Context {
 		return data.get();
 	}
 
+	public static void setData(DataModel dataModel) {
+		data.set(dataModel);
+	}
 
 	public static void remove() {
 		driver.remove();

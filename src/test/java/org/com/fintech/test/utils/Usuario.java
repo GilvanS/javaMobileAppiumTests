@@ -2,6 +2,8 @@ package org.com.fintech.test.utils;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.usermodel.DateUtil;
+import org.com.fintech.core.support.Context;
+import org.com.fintech.test.sheets.login.LoginModel;
 import org.com.fintech.test.utils.HooksDados;
 
 import java.io.FileInputStream;
@@ -15,12 +17,36 @@ public class Usuario {
         return HooksDados.getTagCenario();
     }
 
+    /**
+     * Obtém o email do LoginModel carregado no Context.
+     * Se não houver dados no Context, retorna null.
+     */
     public static String getEmail() {
-        return obterInformacao(getTag(), 3);
+        try {
+            LoginModel loginModel = (LoginModel) Context.getData();
+            if (loginModel != null) {
+                return loginModel.getEmail();
+            }
+        } catch (Exception e) {
+            // Se houver erro ao obter do Context, retorna null silenciosamente
+        }
+        return null;
     }
 
+    /**
+     * Obtém a senha do LoginModel carregado no Context.
+     * Se não houver dados no Context, retorna null.
+     */
     public static String getSenha() {
-        return obterInformacao(getTag(), 4);
+        try {
+            LoginModel loginModel = (LoginModel) Context.getData();
+            if (loginModel != null) {
+                return loginModel.getSenha();
+            }
+        } catch (Exception e) {
+            // Se houver erro ao obter do Context, retorna null silenciosamente
+        }
+        return null;
     }
 
     public static String getCidadeOrigem() {
@@ -86,10 +112,7 @@ public class Usuario {
             e.printStackTrace();
         }
 
-        if (informacao == null) {
-            System.out.println("Informação não encontrada para a tag " + tag + " na coluna " + coluna);
-        }
-
+        // Não imprime aviso se a informação não for encontrada, pois alguns métodos podem não ser usados em todos os cenários
         return informacao;
     }
 

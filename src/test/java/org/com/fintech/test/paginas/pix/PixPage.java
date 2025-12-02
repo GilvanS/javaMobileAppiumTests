@@ -42,6 +42,9 @@ public class PixPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Chave cadastrada com sucesso.']")
     private WebElement msgSucessoCadastro;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='OK']")
+    private WebElement btnOk;
+
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Fechar']")
     private WebElement btnFechar;
 
@@ -53,5 +56,14 @@ public class PixPage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, '@')]")
     private WebElement listaChaves;
+
+    @AndroidFindBy(xpath = "//android.widget.ListView/android.view.View/android.widget.Button")
+    private WebElement btnExcluirChave;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Sim, remover']")
+    private WebElement btnSimRemoverChave;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Chave removida']")
+    private WebElement msgChaveRemovida;
 
 }

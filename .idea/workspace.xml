@@ -5,33 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/data/DataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/data/DataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/data/DataSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/exceptions/DataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/logger/Console.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/logger/ContextTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/logger/LogFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/resource/ResourceUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/ExcelDataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginDataSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/DataUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/GeradorDeCpf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/support/data/DataResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/detalheDaConta/DetalheDaContaActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/detalheDaConta/DetalheDaContaActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/resource/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/resource/ResourceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/CucumberTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/popup/PopupActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/popup/PopupActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/RegistroActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/RegistroActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/categoria/CategoriaActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/categoria/CategoriaActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/categoria/receita/ReceitaActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/registro/categoria/receita/ReceitaActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginDataSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginDataSheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/AppiumDriverHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/HooksDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/HooksDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/support/data/DataResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/support/data/DataResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +88,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "Lombok",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>

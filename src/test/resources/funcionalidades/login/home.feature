@@ -21,3 +21,12 @@ Feature: Minhas chaves pix
     And clico no botao 'Cadastrar' na 'tela Minhas Chaves PIX'
     Then valido a mensagem de sucesso 'Chave cadastrada com sucesso!' na 'tela Minhas Chaves PIX'
     And valido a chave cadastrada na lista de chaves na 'tela Minhas Chaves PIX'
+
+  @CT-02.2
+  Scenario: Validar Exclusão da chave PIX Email
+    Given que estou na tela Home
+    When clico no menu 'PIX' na 'tela Home'
+    And clico no botao 'Minhas Chaves' na 'tela PIX'
+    And clico no botão excluir chave pix Email na 'tela Minhas Chaves PIX'
+    Then valido a mensagem de sucesso 'Chave removida' na 'tela Minhas Chaves PIX'
+    And valido a mensagem de sucesso 'Nenhuma chave PIX cadastrada.' na 'tela Minhas Chaves PIX'

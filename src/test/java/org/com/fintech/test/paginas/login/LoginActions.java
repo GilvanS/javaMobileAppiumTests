@@ -1,13 +1,13 @@
 package org.com.fintech.test.paginas.login;
 
+import static java.lang.Thread.sleep;
+
+import org.com.fintech.core.driver.page.MasterPageFactory;
 import org.com.fintech.core.support.Context;
+import static org.com.fintech.core.support.Context.acoes;
 import org.com.fintech.test.sheets.login.LoginModel;
 import org.junit.jupiter.api.Assertions;
-import org.com.fintech.core.driver.page.MasterPageFactory;
-
-import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.com.fintech.core.support.Context.acoes;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,9 +16,20 @@ public class LoginActions {
 
     private static LoginModel loginModel;
 
+    /**
+     * Garante que o loginModel está inicializado.
+     * @return LoginModel inicializado
+     */
+    private static LoginModel getLoginModel() {
+        if (loginModel == null) {
+            loginModel = (LoginModel) Context.getData();
+        }
+        return loginModel;
+    }
+
     public static LoginPage loginPage(){
+        getLoginModel(); // Garante inicialização
         return MasterPageFactory.getPage(LoginPage.class);
-        loginModel = (LoginModel) Context.getData();
     }
 
     public static void validarOTextoOla() {
@@ -36,24 +47,24 @@ public class LoginActions {
         acoes().click(loginPage().getBtnEntreNaConta());
     }
 
-    public void clicarCampoCpf() {
-        String cpf = loginModel.getCpf();
+    public static void clicarCampoCpf() {
+        String cpf = getLoginModel().getCpf();
         clicarCampoCpf(cpf);
     }
 
-    public void clicarCampoCpf(String cpf) {
-        log.info("Clicando no campo 'CPF'");
+    public static void clicarCampoCpf(String cpf) {
+        log.info("Clicando no campo CPF: " + cpf);
         acoes().click(loginPage().getBtnCampoCpf());
         acoes().sendKeys(loginPage().getBtnCampoCpf(), cpf);
     }
 
     public static void clicarCampoSenha() {
-        String senha = loginModel.getSenha();
+        String senha = getLoginModel().getSenha();
         clicarCampoSenha(senha);
     }
 
     public static void clicarCampoSenha(String senha) {
-        log.info("Clicando no campo 'Senha'");
+        log.info("Clicando no campo Senha: " + senha + " na tela inicial");
         acoes().click(loginPage().getBtnCampoSenha());
         acoes().sendKeys(loginPage().getBtnCampoSenha(), senha);
     }

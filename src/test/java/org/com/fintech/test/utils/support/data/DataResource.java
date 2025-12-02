@@ -6,7 +6,7 @@ import org.com.fintech.core.support.resource.ResourceUtils;
 public class DataResource {
 
 	// Define o diretório padrão para os arquivos de dados.
-	private static final String DATA_FOLDER = "data/";
+	private static final String DATA_FOLDER = "dados/";
 
 	/**
 	 * Obtém o caminho completo para um arquivo de dados, assumindo que ele está

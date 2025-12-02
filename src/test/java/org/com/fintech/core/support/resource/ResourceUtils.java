@@ -1,6 +1,8 @@
 package org.com.fintech.core.support.resource;
 
 import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 public class ResourceUtils {
@@ -17,14 +19,28 @@ public class ResourceUtils {
 		// 1. Tenta carregar diretamente do ClassLoader (método padrão)
 		URL resourceUrl = ResourceUtils.class.getClassLoader().getResource(resourceName);
 		if (resourceUrl != null) {
-			return new File(resourceUrl.getPath()).getAbsolutePath();
+			try {
+				// Usa toURI() para lidar melhor com espaços e caracteres especiais em Windows
+				return new File(resourceUrl.toURI()).getAbsolutePath();
+			} catch (URISyntaxException e) {
+				// Se toURI() falhar, tenta com getPath() (pode ter problemas com espaços)
+				String path = resourceUrl.getPath();
+				// Remove o prefixo "/" no Windows se necessário
+				if (path.startsWith("/") && System.getProperty("os.name").toLowerCase().contains("win")) {
+					path = path.substring(1);
+				}
+				return new File(path).getAbsolutePath();
+			}
 		}
 
 		// 2. Se falhar, tenta caminhos relativos comuns a partir da raiz do projeto
 		String[] possiblePaths = {
 				"src/main/resources/",
 				"src/test/resources/",
+				"src/test/resources/dados/",
+				"src/main/resources/dados/",
 				"data/",
+				"dados/",
 				"" // Raiz do projeto
 		};
 
