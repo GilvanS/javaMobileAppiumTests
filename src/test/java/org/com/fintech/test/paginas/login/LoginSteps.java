@@ -1,37 +1,33 @@
 package org.com.fintech.test.paginas.login;
 
 import io.cucumber.java.en.*;
+import org.com.fintech.test.paginas.home.HomeActions;
 
 public class LoginSteps {
 
-    @When("valido o titulo da pagina como 'Olá!'")
-    public void validoOTituloDaPaginaComoOlá() {
-        LoginActions.validarOTextoOla();
+    private final LoginActions loginActions;
+    
+    public LoginSteps() {
+        loginActions = new LoginActions();
+    }
+    
+    @When("valido o titulo da pagina como {string}")
+    public void validoOTituloDaPaginaComo(String texto) {
+        LoginActions.validarMesagemPorChave(texto);
     }
 
-    @And("clico no botão Entre na conta na 'tela inicial'")
-    public void clicoNoBotãoEntreNaContaNaTelaInicial() throws InterruptedException {
-        LoginActions.clicarNoBotaoEntreNaSuaConta();
+    @And("clico no botão {string} da conta na {string}")
+    public void clicoNoBotãoEntreNaContaNaTelaInicial(String nomeBotao, String tela) {
+            LoginActions.btnPorNome(nomeBotao);
     }
 
-    @And("preencho o campo CPF na 'tela inicial'")
-    public void preenchoOCampoCPFComTelaInicial() {
-        LoginActions.clicarCampoCpf();
+    @And("preencho o campo CPF na {string}")
+    public void preenchoOCampoCPFComTelaInicial(String tela) {
+            LoginActions.preencherCampoPorNome("CPF");
     }
 
-    @And("preencho o campo Senha na 'tela inicial'")
-    public void preenchoOCampoSenhaComAdminTelaInicial() {
-        LoginActions.clicarCampoSenha();
+    @And("preencho o campo Senha na {string}")
+    public void preenchoOCampoSenhaComAdminTelaInicial(String tela) {
+            LoginActions.preencherCampoPorNome("Senha");
     }
-
-    @And("clico no botao 'Entrar' 'tela inicial'")
-    public void clicoNoBotaoEntrarTelaInicial() {
-        LoginActions.clicarBrnEntrar();
-    }
-
-    @Given("clico no botão 'COMECE AGORA' na tela 'Home'")
-    public void clicoNoBotaoCOMECEAGORANaTelaHome() {
-        LoginActions.clicarBtnComeceAgora();
-    }
-
 }

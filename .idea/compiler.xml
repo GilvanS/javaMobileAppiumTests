@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="baseConhecimento" />
+        <module name="treinamento.java" />
         <module name="MobileAppiumTests" />
       </profile>
     </annotationProcessing>

@@ -15,19 +15,19 @@ public class PixPage extends PageBaseActions {
 
 
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Minhas Chaves']")
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Minhas Chaves']")
     private WebElement btnMinhasChaves;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Cadastrar Nova Chave']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Cadastrar Nova Chave']")
     private WebElement btnCadastrarNovaChave;
 
     @AndroidFindBy(xpath = "//android.view.View[@resource-id='keyType']")
     private WebElement btnTipoChave;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[contains(@text, 'Chave de CPF')]")
+    @AndroidFindBy(xpath = "//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='E-mail']")
     private WebElement btnTipoChaveCPF;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[contains(@text, 'Chave de celular')]")
+    @AndroidFindBy(xpath = "//android.widget.CheckedTextView[@resource-id='android:id/text1' and @text='CPF']")
     private WebElement btnTipoChaveCelular;
 
     @AndroidFindBy(xpath = "//android.widget.Button[contains(@text, 'Chave de e-mail')]")
@@ -36,10 +36,13 @@ public class PixPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='keyValue']")
     private WebElement inputChave;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Cadastrar Chave']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='O valor da chave é obrigatório.']")
+    private WebElement vldTxtChaveObrigatoria;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Cadastrar']")
     private WebElement btnCadastrar;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Chave cadastrada com sucesso.']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='toast-message']")
     private WebElement msgSucessoCadastro;
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='OK']")
@@ -60,7 +63,7 @@ public class PixPage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.ListView/android.view.View/android.widget.Button")
     private WebElement btnExcluirChave;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Sim, remover']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Confirmar exclusão']")
     private WebElement btnSimRemoverChave;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Chave removida']")

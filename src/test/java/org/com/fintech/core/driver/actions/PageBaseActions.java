@@ -28,7 +28,7 @@ public class PageBaseActions {
 
     private static final Logger log = LoggerFactory.getLogger(PageBaseActions.class);
     protected final AppiumDriver driver;
-    protected final int DEFAULT_TIMEOUT_SECONDS = 10;
+    protected final int DEFAULT_TIMEOUT_SECONDS = 30;
 
     /**
      * Realiza um swipe horizontal usando coordenadas específicas até encontrar o elemento.

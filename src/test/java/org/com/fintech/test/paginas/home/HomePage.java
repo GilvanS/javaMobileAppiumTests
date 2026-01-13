@@ -7,22 +7,61 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.com.fintech.core.driver.actions.PageBaseActions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Getter
 public class HomePage extends PageBaseActions {
+
+    private Map<String, WebElement> elementosPorTexto;
+    private Map<String, WebElement> btnPorAcao;
 
     public HomePage(AppiumDriver driver) {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
+    private void iniciarElementoPorTexto() {
+        if (elementosPorTexto == null) {
+            elementosPorTexto = new HashMap<>();
+            elementosPorTexto.put("Bem-vindo!", vldBemVindo);
+            elementosPorTexto.put("PIX", btnMenuPix);
+            elementosPorTexto.put("Não é cliente? Abra uma conta", msgNaoClienteAbraUmaConta);
+            elementosPorTexto.put("Acessar minha conta", msgAcessoMinhaConta);
+            elementosPorTexto.put("Começar a usar", btnComecarAUsar);
+            elementosPorTexto.put("close", btnFechar);
+            elementosPorTexto.put("Dinheiro", txtValorSaldo);
+            elementosPorTexto.put("COMECE AGORA", btnComeceAgora);
+        }
+    }
+
+    private void iniciarBtnPorAcao() {
+        if (btnPorAcao == null) {
+            btnPorAcao = new HashMap<>();
+            btnPorAcao.put("COMECE AGORA", btnComeceAgora);
+        }
+    }
+
+    public WebElement getElementoPorTexto(String chave) {
+        iniciarElementoPorTexto();
+        return elementosPorTexto.get(chave);
+    }
+
+    public WebElement getBtnPorNome(String chave) {
+        iniciarBtnPorAcao();
+        return btnPorAcao.get(chave);
+    }
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='COMECE AGORA']")
+    private WebElement btnComeceAgora;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='prelogin-title']")
     private WebElement vldBemVindo;
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='PIX']")
+    @AndroidFindBy(xpath = "//android.view.View[@text='PIX']")
     private WebElement btnMenuPix;
 
     @AndroidFindBy(xpath = "(//android.widget.Button[@text='credit_card Cartões'])[1]")
     private WebElement btnMenuCartoes;
-
 
     @AndroidFindBy(xpath = "//*[text()='Acessar minha conta']/attribute::*\n")
     private WebElement msgAcessoMinhaConta;
@@ -32,7 +71,6 @@ public class HomePage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
     private WebElement btnComecarAUsar;
-
 
     // Elementos para validação de saldo
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[contains(@text, 'R$')]")
@@ -110,9 +148,5 @@ public class HomePage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Novo registro']/..//android.widget.ImageButton[contains(@resource-id, 'id/fab_toggle_button')]")
     private WebElement btnNovoRegistro;
-
-
-
-
 
 }

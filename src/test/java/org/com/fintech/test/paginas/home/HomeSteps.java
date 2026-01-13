@@ -1,8 +1,7 @@
 package org.com.fintech.test.paginas.home;
 
-import java.io.IOException;
-
 import io.cucumber.java.en.*;
+import org.com.fintech.test.paginas.login.LoginActions;
 
 
 public class HomeSteps {
@@ -11,9 +10,19 @@ public class HomeSteps {
     public void queEstouNaPaginaInicial() {
     }
 
+    @Then("devo ver a mensagem {string} na {string}")
+    public void devoVerAMensagemBemVindoNaTelaHome(String mensagem, String tela) {
+        HomeActions.validarTextoPorChave(mensagem);
+    }
+
+    @And("clico no botao {string} na {string}")
+    public void clicoNoBotaoEntrarNaTelaInicial(String nomeBotao, String tela) {
+        HomeActions.btnPorNome(nomeBotao);
+    }
+
     @Then("devo ver a mensagem de boas vindas 'Bem-vindo!' 'tela Home'")
     public void devoVerAMensagemDeBoasVindasAcessoMinhaContaTelaHome() {
-        org.com.fintech.test.paginas.home.HomeActions.validarAcessoMinhaConta();
+        HomeActions.validarAcessoMinhaConta();
     }
 
     @Given("que estou na tela Home")
@@ -23,12 +32,12 @@ public class HomeSteps {
 
     @When("clico no menu 'PIX' na 'tela Home'")
     public void clicoNoMenuPIXNaTelaHome() {
-        org.com.fintech.test.paginas.home.HomeActions.clicarMenuPix();
+        HomeActions.clicarMenuPix();
     }
 
     @And("clico no botao 'Comecar a usar' na 'tela Home'")
     public void clicoNoBotaoGenerico() {
-        org.com.fintech.test.paginas.home.HomeActions.clicarBtnComecarAUsar();
+        HomeActions.clicarBtnComecarAUsar();
     }
 
 

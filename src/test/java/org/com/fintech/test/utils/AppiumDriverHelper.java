@@ -23,6 +23,7 @@ public class AppiumDriverHelper {
         capabilities.setCapability("appium:deviceName", "emulator-5554");
         capabilities.setCapability("appium:automationName", "uiautomator2");
         capabilities.setCapability("appium:noReset", false);
+        capabilities.setCapability("appium:adbExecTimeout", 60000);
         return capabilities;
     }
 

@@ -5,23 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5355afda-b732-46b6-97d6-e4c1a093ab08" name="Changes" comment="novo projeto">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ANALISE_ORGANIZACAO_PROJETO.md" beforeDir="false" afterPath="$PROJECT_DIR$/ANALISE_ORGANIZACAO_PROJETO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/driver/actions/PageBaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/driver/actions/PageBaseActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/Context.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/resource/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/core/support/resource/ResourceUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/CucumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/CucumberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/home/HomeSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/pix/PixSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginDataSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginDataSheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/sheets/login/LoginModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/AppiumDriverHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/AppiumDriverHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/HooksDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/HooksDados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/support/data/DataResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/com/fintech/test/utils/support/data/DataResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dados/MassaDados.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/funcionalidades/login/login.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +59,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/test/java/org/testes/paginas/carrinho_de_compras/checkout/CheckoutSteps.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -67,9 +78,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GeradorMegaSena.executor": "Run",
     "Cucumber Java.Scenario: Validar acesso ao Ebac Store.executor": "Run",
     "Cucumber Java.Scenario: Validar cadastro de usuario no Ebac Store.executor": "Run",
     "JUnit.CucumberTest (1).executor": "Run",
+    "JUnit.CucumberTest (2).executor": "Run",
     "JUnit.CucumberTest.executor": "Run",
     "JUnit.FirstMobileTest.executor": "Run",
     "JUnit.FirstMobileTest.loginTest.executor": "Run",
@@ -77,8 +90,10 @@
     "JUnit.SaldoManagerTest.testConverterParaDouble.executor": "Run",
     "JUnit.UsuarioTest.validarLeituraDeDados.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "developer/fintechNovaEstrutura",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -103,6 +118,9 @@
       <recent name="I:\MobileAppiumTests\src\test\java\org\com\fintech\core\support" />
       <recent name="F:\myGithub\javaMobileAppiumTests" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\MobileAppiumTests\src\test\java\org\com\fintech\test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.com.fintech.test.utils" />
       <recent name="org.com.fintech.test.sheets" />
@@ -111,9 +129,37 @@
       <recent name="org.testes.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CucumberTest (1)">
+  <component name="RunManager" selected="JUnit.CucumberTest (2)">
+    <configuration name="GeradorMegaSena" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.com.fintech.test.GeradorMegaSena" />
+      <module name="treinamento.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.com.fintech.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CucumberTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="baseConhecimento" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.com.fintech.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.com.fintech.test" />
+      <option name="MAIN_CLASS_NAME" value="org.com.fintech.test.CucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CucumberTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="treinamento.java" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.com.fintech.test.*" />
@@ -175,38 +221,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SaldoManagerTest.testCalcularSaldoEsperado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="baseConhecimento" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.com.fintech.test.driver.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.testes.driver.manager" />
-      <option name="MAIN_CLASS_NAME" value="org.testes.driver.manager.SaldoManagerTest" />
-      <option name="METHOD_NAME" value="testCalcularSaldoEsperado" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SaldoManagerTest.testConverterParaDouble" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="baseConhecimento" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.com.fintech.test.driver.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.testes.driver.manager" />
-      <option name="MAIN_CLASS_NAME" value="org.testes.driver.manager.SaldoManagerTest" />
-      <option name="METHOD_NAME" value="testConverterParaDouble" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsuarioTest.validarLeituraDeDados" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="baseConhecimento" />
       <extension name="coverage">
@@ -224,21 +238,28 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GeradorMegaSena" />
+      <item itemvalue="JUnit.CucumberTest (2)" />
       <item itemvalue="JUnit.UsuarioTest.validarLeituraDeDados" />
-      <item itemvalue="JUnit.SaldoManagerTest.testCalcularSaldoEsperado" />
-      <item itemvalue="JUnit.SaldoManagerTest.testConverterParaDouble" />
       <item itemvalue="JUnit.CucumberTest (1)" />
       <item itemvalue="JUnit.CucumberTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CucumberTest (2)" />
+        <item itemvalue="Application.GeradorMegaSena" />
         <item itemvalue="JUnit.CucumberTest (1)" />
         <item itemvalue="JUnit.CucumberTest (1)" />
         <item itemvalue="JUnit.UsuarioTest.validarLeituraDeDados" />
-        <item itemvalue="JUnit.SaldoManagerTest.testCalcularSaldoEsperado" />
-        <item itemvalue="JUnit.SaldoManagerTest.testConverterParaDouble" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -293,12 +314,15 @@
           <line>39</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/com/fintech/test/paginas/login/LoginSteps.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

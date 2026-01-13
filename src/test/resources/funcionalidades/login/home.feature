@@ -1,12 +1,13 @@
+@pix @all
 Feature: Minhas chaves pix
 
   Background:
     Given que estou na pagina inicial
     When valido o titulo da pagina como 'Olá!'
-    And clico no botão Entre na conta na 'tela inicial'
+    And clico no botão 'Entre' da conta na 'tela inicial'
     And preencho o campo CPF na 'tela inicial'
     And preencho o campo Senha na 'tela inicial'
-    And clico no botao 'Entrar' 'tela inicial'
+    And clico no botao 'Entrar' na 'tela inicial'
     Then devo ver a mensagem de boas vindas 'Bem-vindo!' 'tela Home'
     And clico no botao 'Comecar a usar' na 'tela Home'
 
