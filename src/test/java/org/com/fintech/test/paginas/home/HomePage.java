@@ -38,6 +38,8 @@ public class HomePage extends PageBaseActions {
         if (btnPorAcao == null) {
             btnPorAcao = new HashMap<>();
             btnPorAcao.put("COMECE AGORA", btnComeceAgora);
+            btnPorAcao.put("Entrar", btnEntrar);
+            btnPorAcao.put("Começar a usar", btnComecarAUsar);
         }
     }
 
@@ -54,11 +56,17 @@ public class HomePage extends PageBaseActions {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='COMECE AGORA']")
     private WebElement btnComeceAgora;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='prelogin-title']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
+    private WebElement btnComecarAUsar;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Bem-vindo!']")
     private WebElement vldBemVindo;
 
     @AndroidFindBy(xpath = "//android.view.View[@text='PIX']")
     private WebElement btnMenuPix;
+
+    @AndroidFindBy(accessibility = "entrar")
+    private WebElement btnEntrar;
 
     @AndroidFindBy(xpath = "(//android.widget.Button[@text='credit_card Cartões'])[1]")
     private WebElement btnMenuCartoes;
@@ -68,9 +76,6 @@ public class HomePage extends PageBaseActions {
 
     @AndroidFindBy(xpath = "//*[text()= 'Não é cliente? Abra uma conta']")
     private WebElement msgNaoClienteAbraUmaConta;
-
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
-    private WebElement btnComecarAUsar;
 
     // Elementos para validação de saldo
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Dinheiro']/ancestor::android.widget.RelativeLayout[1]/descendant::android.widget.TextView[contains(@text, 'R$')]")

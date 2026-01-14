@@ -25,6 +25,15 @@ public class LoginPage extends PageBaseActions {
         if (elementoPorTexto == null) {
             elementoPorTexto = new HashMap<>();
             elementoPorTexto.put("Olá!", textoOla);
+            elementoPorTexto.put("Entre na conta", btnEntreNaConta);
+            elementoPorTexto.put("Não é cliente? Abra uma conta", btnNaoECliente);
+            elementoPorTexto.put("Não tem uma conta? Cadastre-se", btnNaoTemUmaConta);
+            elementoPorTexto.put("CPF", btnCampoCpf);
+            elementoPorTexto.put("Senha", btnCampoSenha);
+            elementoPorTexto.put("Entrar", btnEntrar);
+            elementoPorTexto.put("CPF ou senha inválidos.", msgErroLogin);
+            elementoPorTexto.put("CPF deve ter 11 numeros", msgErroLogin);
+
         }
     }
 
@@ -32,9 +41,12 @@ public class LoginPage extends PageBaseActions {
         if (btnPorAcao == null) {
             btnPorAcao = new HashMap<>();
             btnPorAcao.put("Entre na conta", btnEntreNaConta);
+            btnPorAcao.put("Não é cliente? Abra uma conta", btnNaoECliente);
+            btnPorAcao.put("Não tem uma conta? Cadastre-se", btnNaoTemUmaConta);
             btnPorAcao.put("CPF", btnCampoCpf);
             btnPorAcao.put("Senha", btnCampoSenha);
             btnPorAcao.put("Entrar", btnEntrar);
+            btnPorAcao.put("Começar a usar", btnComecarAUsar); // Tela Home
         }
     }
 
@@ -54,6 +66,12 @@ public class LoginPage extends PageBaseActions {
     @AndroidFindBy(accessibility = "Entre na conta")
     private WebElement btnEntreNaConta;
 
+    @AndroidFindBy(accessibility = "Não é cliente? Abra uma conta")
+    private WebElement btnNaoECliente;
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='login-signup-section']")
+    private WebElement btnNaoTemUmaConta;
+
     @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='cpf']")
     private WebElement btnCampoCpf;
 
@@ -62,5 +80,15 @@ public class LoginPage extends PageBaseActions {
 
     @AndroidFindBy(accessibility = "entrar")
     private WebElement btnEntrar;
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='login-error-message']")
+    private WebElement msgErroLogin;
+
+
+
+    // Tela Home
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Começar a usar']")
+    private WebElement btnComecarAUsar;
+
 
 }

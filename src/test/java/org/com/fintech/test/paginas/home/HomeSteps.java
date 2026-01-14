@@ -15,11 +15,6 @@ public class HomeSteps {
         HomeActions.validarTextoPorChave(mensagem);
     }
 
-    @And("clico no botao {string} na {string}")
-    public void clicoNoBotaoEntrarNaTelaInicial(String nomeBotao, String tela) {
-        HomeActions.btnPorNome(nomeBotao);
-    }
-
     @Then("devo ver a mensagem de boas vindas 'Bem-vindo!' 'tela Home'")
     public void devoVerAMensagemDeBoasVindasAcessoMinhaContaTelaHome() {
         HomeActions.validarAcessoMinhaConta();
@@ -27,21 +22,6 @@ public class HomeSteps {
 
     @Given("que estou na tela Home")
     public void queEstouNaTelaHome() {
-
     }
-
-    @When("clico no menu 'PIX' na 'tela Home'")
-    public void clicoNoMenuPIXNaTelaHome() {
-        HomeActions.clicarMenuPix();
-    }
-
-    @And("clico no botao 'Comecar a usar' na 'tela Home'")
-    public void clicoNoBotaoGenerico() {
-        HomeActions.clicarBtnComecarAUsar();
-    }
-
-
-
-
 
 }

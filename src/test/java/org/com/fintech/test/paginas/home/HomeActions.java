@@ -34,7 +34,8 @@ public class HomeActions {
     public static void validarTextoPorChave(String chaveMensagem) {
         log.info("Validando texto na Home: {}", chaveMensagem);
         WebElement elemento = homePage().getElementoPorTexto(chaveMensagem);
-        assertTrue((BooleanSupplier) acoes().waitForVisibility(elemento), "Elemento não está visível na tela Home");
+        assertNotNull(elemento, "Elemento não encontrado no mapa da Home: " + chaveMensagem);
+        assertTrue(acoes().waitForVisibility(elemento).isDisplayed(), "Elemento não está visível na tela Home");
     }
 
     public static void btnPorNome(String nomeBotao) {
@@ -70,13 +71,4 @@ public class HomeActions {
                         "Texto 'Bem-vindo!' não está visível"));
     }
 
-    public static void clicarBtnComecarAUsar() {
-        log.info("Clicando no botão 'Começar a usar'");
-        acoes().click(homePage().getBtnComecarAUsar());
-    }
-
-    public static void clicarMenuPix() {
-        log.info("Clicando no menu 'PIX'");
-        acoes().click(homePage().getBtnMenuPix());
-    }
 }
